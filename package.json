@@ -1,0 +1,16 @@
+{
+  "name": "prompt-optimizer-skill",
+  "version": "1.0.0",
+  "description": "Claude Code skill for optimizing user prompts. Analyzes simple prompts and generates enhanced, structured prompts based on model capabilities.",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "prompt",
+    "prompt-engineering",
+    "ai"
+  ],
+  "files": [
+    "SKILL.md",
+    "references/"
+  ]
+}

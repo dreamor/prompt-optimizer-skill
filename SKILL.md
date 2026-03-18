@@ -1,196 +1,335 @@
 ---
-name: prompt-optimizer
-description: Optimize user prompts. Triggers when user asks to optimize prompts, improve prompts, write prompts, or inputs simple prompts. Analyzes and enhances prompts based on model capabilities, asks clarifying questions when user input is vague.
+name: prompt-engineering-expert
+description: Expert prompt engineering assistant. Automatically optimizes user prompts using advanced techniques like role assignment, chain-of-thought, few-shot examples, structured formatting, and constraint specification.
 ---
 
-# Prompt Optimizer
+# Prompt Engineering Expert
 
-Optimizes simple user prompts based on model capabilities to generate clearer, more specific, and more effective prompts. Actively asks clarifying questions in steps when user input is vague.
+An expert system for analyzing, optimizing, and crafting high-quality prompts using proven prompt engineering techniques.
 
 ---
 
 ## Trigger Scenarios
 
-Trigger this skill when user has the following intents:
+Trigger this skill when:
 
-- Explicitly asks to optimize prompts: "optimize this prompt", "improve this prompt", "make this better"
-- Asks to write a prompt: "help me write a prompt", "give me a prompt"
-- Expects improvement after inputting a simple prompt
-- Expresses dissatisfaction with prompt results: "the output is not good", "not what I expected"
+- User asks to optimize, improve, or enhance a prompt
+- User inputs a vague or simple prompt
+- User expresses dissatisfaction with AI outputs
+- User asks for help writing prompts
+- User wants to learn prompt engineering techniques
+
+---
+
+## Core Principles
+
+### 1. CLARITY Framework
+
+When optimizing prompts, apply the **CLARITY** framework:
+
+| Element | Description |
+|---------|-------------|
+| **C**ontext | Provide relevant background and situation |
+| **L**ogic | Define the reasoning approach (step-by-step, first principles, etc.) |
+| **A**ction | Specify the exact task or action to perform |
+| **R**ole | Assign a specific expert role to the AI |
+| **I**nput/Output | Define input format and expected output structure |
+| **T**one | Specify writing style, tone, and voice |
+| **Y**ardstick | Set constraints, requirements, and quality criteria |
+
+### 2. Advanced Techniques
+
+Apply these techniques based on task complexity:
+
+| Technique | When to Use | Example |
+|-----------|-------------|---------|
+| **Role Assignment** | Always apply | "You are a senior software architect..." |
+| **Chain-of-Thought** | Complex reasoning tasks | "Think step by step and show your reasoning" |
+| **Few-Shot Examples** | Pattern-based tasks | Provide 2-3 input/output examples |
+| **Structured Output** | Data extraction, analysis | "Output in JSON format with keys: ..." |
+| **Constraint Specification** | All prompts | Word limits, format requirements, exclusions |
+| **Meta-Prompting** | Self-improvement tasks | "Review and improve your answer before finalizing" |
 
 ---
 
 ## Instructions
 
-When detecting that user needs to optimize prompts, execute the following steps:
+### Step 1: Analyze the Input Prompt
 
-### 1. Analyze User Prompt
+Evaluate the user's prompt against these criteria:
 
-First analyze the user's prompt and check for the following issues:
+1. **Specificity**: Is the task clearly defined?
+2. **Context**: Is there sufficient background information?
+3. **Constraints**: Are there format, length, or style requirements?
+4. **Role**: Is there an assigned expert role?
+5. **Examples**: Are there examples for pattern-based tasks?
+6. **Output Format**: Is the expected output structure defined?
 
-- **Unclear objective**: No description of expected output or result
-- **Missing context**: Lacks necessary background information
-- **Missing constraints**: No constraints on format, length, style, etc.
-- **Missing role**: No role specified for the AI
-- **Missing examples**: Complex tasks lack example demonstrations
+### Step 2: Identify Gaps
 
-### 2. Determine if Clarification is Needed
+For each missing element from the CLARITY framework, note it for addition.
 
-**If user prompt is clear enough**, proceed directly to optimization.
+### Step 3: Ask Clarifying Questions (If Needed)
 
-**If user prompt is vague or incomplete**, ask clarifying questions in steps. Based on understanding of the prompt, ask **1-3** most critical questions:
+If critical information is missing, ask **1-3 targeted questions**:
 
-Example clarifying questions:
+- "What is your specific use case or goal?"
+- "Who is the target audience for this output?"
+- "What format do you need the output in?"
+- "Are there any constraints or requirements I should know?"
 
-- "Who is your target audience? (e.g., beginners, professionals, students)"
-- "What is your expected output format? (e.g., code, article, list, table)"
-- "Are there any specific constraints? (e.g., word limit, style requirements, must-include points)"
-- "What scenario is this prompt for? (e.g., code generation, copywriting, data analysis, tutoring)"
+### Step 4: Generate Optimized Prompt
 
-**Note**: Don't ask too many questions at once. Focus on the 1-3 most critical questions.
-
-### 3. Optimize Prompt
-
-Based on user feedback and the original prompt, optimize using the following framework:
-
-#### Prompt Optimization Framework
+Create the optimized prompt using this structure:
 
 ```markdown
 # Role
-You are a [specific role], skilled in [relevant skills]
-
-# Task
-[Clearly describe the task objective]
+You are [specific expert role], specializing in [relevant domain].
 
 # Context
-[Necessary background information]
+[Relevant background information and situation]
+
+# Task
+[Clear, specific action verb + objective]
+
+# Instructions
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
 # Constraints
-- [Constraint 1]
-- [Constraint 2]
-- ...
+- [Constraint 1: e.g., Word count, format]
+- [Constraint 2: e.g., Style, tone]
+- [Constraint 3: e.g., What to avoid]
 
 # Output Format
-[Desired output format and structure]
+[Specific structure: headers, sections, JSON, table, etc.]
 
 # Examples (optional)
-Input example: ...
-Expected output: ...
+Input: ...
+Output: ...
+
+# Quality Criteria
+[How to evaluate success]
 ```
 
-### 4. Provide Optimized Versions
+### Step 5: Provide Explanation
 
-Provide **1-2** optimized versions:
+Explain what was optimized and why:
 
-- **Standard version**: Generic, balanced optimization
-- **Advanced version** (optional): Version with more detailed constraints and examples
-
-Each version should:
-
-- Preserve user's original intent
-- Add necessary context and constraints
-- Use clear structured format
-- Be ready to use directly
-
-### 5. Explain Optimizations
-
-Briefly explain what optimizations were made and why:
-
-- What elements were added
-- Why these changes were made
-- What the expected effects are
+- **Added Role**: Explains why this role was chosen
+- **Added Context**: Provides necessary background
+- **Added Constraints**: Ensures output meets requirements
+- **Structure**: Improves clarity and actionability
 
 ---
 
 ## Examples
 
-### Example 1: Simple Prompt Optimization
+### Example 1: Code Generation
 
-**User input**: "optimize this: write a python function"
+**User Input**: "write a function to sort a list"
 
-**Agent response**:
-```
-I'll help you optimize this prompt. Currently it's quite brief and I need more information:
-
-1. What functionality should the function implement? (e.g., data processing, file operations, API calls)
-2. What are the inputs and outputs?
-3. Any specific requirements or constraints? (e.g., performance, error handling, code style)
-
-Please provide these details and I'll generate a more complete prompt.
-```
-
-### Example 2: Medium Prompt Optimization
-
-**User input**: "optimize: write a product description"
-
-**Agent optimizes directly after analysis**:
+**Optimized Prompt**:
 
 ```markdown
-## Optimized Prompt (Standard Version)
+# Role
+You are a senior Python developer specializing in algorithms and data structures.
 
-You are a professional e-commerce copywriter, skilled in highlighting product selling points with concise and powerful language.
+# Task
+Implement a robust sorting function with comprehensive error handling.
 
-Please write a product description for the following:
+# Instructions
+1. Implement the function with type hints following Python 3.10+ standards
+2. Include detailed docstrings with examples in Google style
+3. Handle edge cases: empty list, None values, mixed types
+4. Provide both ascending and descending sort options
+5. Include time and space complexity analysis
 
-- Product name: [Fill in]
-- Target audience: [Fill in]
-- Core features/selling points: [Fill in]
+# Constraints
+- Use only Python standard library
+- Follow PEP 8 style guidelines
+- Include at least 5 test cases covering edge cases
+- Keep function under 50 lines (excluding tests and docs)
 
-Requirements:
-1. Highlight the core advantages and differentiating features
-2. Use vivid, specific language, avoid empty adjectives
-3. Include usage scenario descriptions to create user immersion
-4. Keep word count between 150-200 characters
+# Output Format
+1. Function implementation with type hints
+2. Comprehensive docstring with examples
+3. Complexity analysis table
+4. Test suite with pytest-style assertions
+5. Usage examples
 
-Output format:
-- Title (within 15 characters, eye-catching)
-- Body (3-4 selling points, 1-2 sentences each)
-- Call to action (guide to purchase)
+# Quality Criteria
+- Function passes all test cases
+- Code is idiomatic Python
+- Documentation is clear and complete
 ```
 
-### Example 3: Code Generation Prompt Optimization
+---
 
-**User input**: "write a quicksort"
+### Example 2: Content Writing
 
-**Agent optimization**:
+**User Input**: "write a blog post about AI"
+
+**Optimized Prompt**:
 
 ```markdown
-I'll help you optimize this prompt to generate higher quality code:
+# Role
+You are a technology journalist and AI researcher with 10+ years of experience writing for tech-savvy audiences.
 
-## Optimized Prompt
+# Context
+The blog targets software developers and tech professionals who want to understand practical AI applications in their work.
 
-You are a senior Python engineer, skilled in algorithm implementation and code teaching.
+# Task
+Write an informative blog post about practical AI tools and techniques for developers.
 
-Please implement the quicksort algorithm in Python with the following requirements:
+# Instructions
+1. Start with a compelling hook about AI's impact on development
+2. Cover 3-5 specific AI tools developers can use today
+3. Include real-world examples and code snippets where relevant
+4. Address common concerns and misconceptions
+5. End with actionable next steps
 
-1. Implement a complete quicksort function with necessary parameter and return type annotations
-2. Add detailed comments explaining key steps and algorithm principles
-3. Handle edge cases (empty list, single element, duplicate elements, etc.)
-4. Provide time and space complexity analysis
-5. Include 2-3 usage examples
+# Constraints
+- Target audience: intermediate to senior developers
+- Tone: informative, practical, slightly conversational
+- Length: 1,500-2,000 words
+- Avoid overly technical jargon; explain concepts clearly
+- Include a brief author bio at the end
 
-Output format:
-- Algorithm principle introduction (1-2 sentences)
-- Complete code implementation (with type annotations and comments)
-- Complexity analysis
-- Usage examples
+# Output Format
+1. Catchy headline (under 60 characters)
+2. Introduction with hook and thesis
+3. Body sections with clear subheadings
+4. Conclusion with call-to-action
+5. Author bio (2-3 sentences)
+
+# Quality Criteria
+- Readers can identify 3+ tools to try immediately
+- Tone balances expertise with accessibility
+- No factual errors about AI capabilities
+```
+
+---
+
+### Example 3: Data Analysis
+
+**User Input**: "analyze this data"
+
+**Optimized Prompt**:
+
+```markdown
+# Role
+You are a senior data analyst specializing in exploratory data analysis and business intelligence.
+
+# Task
+Perform comprehensive exploratory analysis on the provided dataset and extract actionable insights.
+
+# Instructions
+1. Begin with data quality assessment (missing values, outliers, anomalies)
+2. Calculate descriptive statistics for all relevant variables
+3. Identify patterns, correlations, and trends
+4. Segment data by key dimensions where applicable
+5. Formulate 3-5 data-driven recommendations
+
+# Constraints
+- Use statistical significance testing where appropriate (p < 0.05)
+- Highlight any data quality issues that affect analysis reliability
+- Avoid speculation; base all conclusions on the data
+- Prioritize insights by business impact
+
+# Output Format
+1. Executive Summary (5-7 bullet points)
+2. Data Quality Report
+3. Key Findings (with supporting statistics)
+4. Visualizations (describe what charts to create)
+5. Recommendations with implementation priorities
+
+# Quality Criteria
+- All statistical claims are supported by data
+- Recommendations are specific and actionable
+- Analysis is reproducible based on description
+```
+
+---
+
+## Prompt Patterns Library
+
+### Chain-of-Thought Pattern
+
+```markdown
+Before providing your final answer, work through the problem step by step.
+For each step, explain your reasoning clearly.
+Only after showing all reasoning, provide the final answer.
+```
+
+### Few-Shot Pattern
+
+```markdown
+Here are examples of the expected input-output format:
+
+Example 1:
+Input: [example input]
+Output: [example output]
+
+Example 2:
+Input: [example input]
+Output: [example output]
+
+Now process the following:
+Input: [user input]
+```
+
+### Critique-Refine Pattern
+
+```markdown
+After generating your initial response:
+1. Review your answer against the requirements
+2. Identify any gaps, errors, or areas for improvement
+3. Revise your answer to address these issues
+4. Explain what you changed and why
+```
+
+### Role-Play Pattern
+
+```markdown
+You are [specific expert persona].
+Your background: [relevant experience and expertise]
+Your communication style: [formal/casual/technical/etc.]
+Your goal: [specific objective]
+
+Respond as this persona would, drawing on their expertise and perspective.
 ```
 
 ---
 
 ## Best Practices
 
-- **Keep it conversational**: Communicate with users in a friendly tone, not stiff
-- **Step by step**: Complex prompts can be optimized iteratively over multiple rounds
-- **Explain why**: Tell users why changes were made to help them learn
-- **Preserve intent**: Optimization is not rewriting, stay faithful to user's original intent
-- **Be flexible**: Adjust optimization strategy based on user feedback
+1. **Be Specific**: Replace vague verbs with specific actions
+   - "Improve this" -> "Refactor to reduce cyclomatic complexity below 10"
+
+2. **Provide Context**: Include relevant background for better responses
+   - "Write an email" -> "Write a follow-up email to a client who hasn't responded to a proposal sent 2 weeks ago"
+
+3. **Set Constraints**: Define boundaries to focus the response
+   - Word limits, format requirements, what to exclude
+
+4. **Assign Role**: Give AI a specific expert identity
+   - "You are a UX designer with 15 years of experience..."
+
+5. **Show Examples**: For pattern-based tasks, provide input/output examples
+
+6. **Request Structure**: Specify output format explicitly
+   - Headers, sections, JSON, tables, bullet points
+
+7. **Define Success**: State quality criteria or evaluation rubric
 
 ---
 
 ## Notes
 
-- If user explicitly wants a simple prompt, don't over-optimize
-- For technical prompts, ensure terminology accuracy
-- For creative prompts, leave enough room for creativity
-- Always provide complete prompts ready to use directly
+- Always preserve the user's original intent
+- Don't over-engineer simple prompts
+- Explain why each optimization was made
+- Offer multiple versions when appropriate (basic, enhanced, expert)
+- Encourage iterative refinement

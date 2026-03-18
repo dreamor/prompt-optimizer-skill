@@ -1,16 +1,16 @@
-# Prompt Optimizer Skill
+# Prompt Engineering Expert
 
-Claude Code Prompt Optimization Skill - Optimizes simple user prompts based on model capabilities.
+Expert prompt engineering assistant for Claude Code. Automatically optimizes user prompts using advanced techniques like role assignment, chain-of-thought, few-shot examples, and structured formatting.
 
 ---
 
 ## Features
 
-- **Intelligent Analysis**: Checks for missing objectives, context, constraints, roles, and other elements
-- **Step-by-step Clarification**: Asks only 1-3 most critical questions when information is insufficient
-- **Structured Optimization**: Uses Role/Task/Context/Constraints/Output framework
-- **Multiple Versions**: Provides standard and advanced versions (optional)
-- **Explanation**: Explains what improvements were made and why
+- **CLARITY Framework**: Systematic approach covering Context, Logic, Action, Role, Input/Output, Tone, and Yardstick
+- **Advanced Techniques**: Chain-of-thought, few-shot examples, structured output, constraint specification
+- **Pattern Library**: Reusable patterns for common scenarios
+- **Multi-Domain Support**: Code generation, content writing, data analysis, and more
+- **Educational**: Explains why each optimization was made
 
 ---
 
@@ -22,7 +22,7 @@ git clone https://github.com/dreamor/prompt-optimizer-skill.git
 
 # Install in Claude Code
 cd ~/.claude/skills/
-ln -s /path/to/prompt-optimizer-skill prompt-optimizer
+ln -s /path/to/prompt-optimizer-skill prompt-engineering-expert
 ```
 
 ---
@@ -31,49 +31,84 @@ ln -s /path/to/prompt-optimizer-skill prompt-optimizer
 
 In Claude Code conversation:
 
-- Simply say "optimize this prompt: xxx"
-- Or "improve this prompt"
-- Or use the `/prompt-optimizer` command
+- Say "optimize this prompt: [your prompt]"
+- Or "improve this: [your prompt]"
+- Or use `/prompt-engineering-expert` command
 
 ---
 
-## Examples
+## The CLARITY Framework
 
-### Input
+| Element | Description |
+|---------|-------------|
+| **C**ontext | Provide relevant background and situation |
+| **L**ogic | Define the reasoning approach |
+| **A**ction | Specify the exact task or action |
+| **R**ole | Assign a specific expert role |
+| **I**nput/Output | Define input format and expected output |
+| **T**one | Specify writing style, tone, and voice |
+| **Y**ardstick | Set constraints, requirements, and quality criteria |
+
+---
+
+## Example
+
+### Before
 ```
-write a quicksort
+write a function to sort a list
 ```
 
-### Optimized
-
+### After
 ```markdown
-You are a senior Python engineer, skilled in algorithm implementation and code teaching.
+# Role
+You are a senior Python developer specializing in algorithms and data structures.
 
-Please implement the quicksort algorithm in Python with the following requirements:
+# Task
+Implement a robust sorting function with comprehensive error handling.
 
-1. Implement a complete quicksort function with necessary parameter and return type annotations
-2. Add detailed comments explaining key steps and algorithm principles
-3. Handle edge cases (empty list, single element, duplicate elements, etc.)
-4. Provide time and space complexity analysis
-5. Include 2-3 usage examples
+# Instructions
+1. Implement with type hints following Python 3.10+ standards
+2. Include detailed docstrings with examples in Google style
+3. Handle edge cases: empty list, None values, mixed types
+4. Provide both ascending and descending sort options
+5. Include time and space complexity analysis
 
-Output format:
-- Algorithm principle introduction (1-2 sentences)
-- Complete code implementation (with type annotations and comments)
-- Complexity analysis
-- Usage examples
+# Constraints
+- Use only Python standard library
+- Follow PEP 8 style guidelines
+- Include at least 5 test cases
+- Keep function under 50 lines (excluding tests)
+
+# Output Format
+1. Function implementation with type hints
+2. Comprehensive docstring with examples
+3. Complexity analysis table
+4. Test suite with pytest-style assertions
+5. Usage examples
 ```
 
 ---
 
-## Trigger Scenarios
+## Prompt Patterns
 
-This skill is automatically triggered when user has the following intents:
+### Chain-of-Thought
+```markdown
+Think step by step and show your reasoning before providing the final answer.
+```
 
-- Explicitly asks to optimize prompts: "optimize this prompt", "improve this prompt"
-- Asks to write a prompt: "help me write a prompt", "give me a prompt"
-- Expects improvement after inputting a simple prompt
-- Expresses dissatisfaction with prompt results: "the output is not good", "not what I expected"
+### Few-Shot Examples
+```markdown
+Example 1:
+Input: ...
+Output: ...
+
+Now process: [user input]
+```
+
+### Critique-Refine
+```markdown
+After generating your answer, review it for gaps and improve before finalizing.
+```
 
 ---
 

@@ -1,9 +1,9 @@
 ---
-name: prompt-engineering-expert
+name: prompt-optimizer
 description: Expert prompt engineering assistant. Automatically optimizes user prompts using advanced techniques like role assignment, chain-of-thought, few-shot examples, structured formatting, and constraint specification.
 ---
 
-# Prompt Engineering Expert
+# Prompt Optimizer
 
 An expert system for analyzing, optimizing, and crafting high-quality prompts using proven prompt engineering techniques.
 

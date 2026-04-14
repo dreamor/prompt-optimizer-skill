@@ -22,7 +22,7 @@ git clone https://github.com/dreamor/prompt-optimizer-skill.git
 
 # Install in Claude Code
 cd ~/.claude/skills/
-ln -s /path/to/prompt-optimizer-skill prompt-engineering-expert
+ln -s /path/to/prompt-optimizer-skill prompt-optimizer
 ```
 
 ---

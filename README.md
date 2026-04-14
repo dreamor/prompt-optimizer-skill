@@ -33,7 +33,7 @@ In Claude Code conversation:
 
 - Say "optimize this prompt: [your prompt]"
 - Or "improve this: [your prompt]"
-- Or use `/prompt-engineering-expert` command
+- Or use `/prompt-optimizer` command
 
 ---
 

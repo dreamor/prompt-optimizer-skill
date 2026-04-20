@@ -371,20 +371,3 @@ Contributions are welcome! Please check [CHANGELOG.md](CHANGELOG.md) to understa
 MIT License - See [LICENSE](LICENSE) file for details
 
 ---
-
-## 🙏 Acknowledgments
-
-- Thanks to all prompt engineering pioneers for their framework designs
-- Thanks to the Claude Code team for providing the Skill platform
-
----
-
-## 📮 Feedback
-
-For questions or suggestions, please contact us via:
-- Submit a GitHub Issue
-- Send an email to: [your-email@example.com]
-
----
-
-**Made with ❤️ for the Claude Code community**

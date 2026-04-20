@@ -40,6 +40,7 @@ Install directly from GitHub using the marketplace command:
 
 ```bash
 /plugin marketplace add dreamor/prompt-optimizer-skill
+/plugin install prompt-optimizer@prompt-optimizer-skill
 ```
 
 ---
@@ -75,7 +76,7 @@ npx prompt-optimizer-skill optimize "Write code" --expert     # Expert version
 
 ---
 
-### Method 4: Symbolic Link (Development/Customization)
+### Method 3: Symbolic Link (Development/Customization)
 
 Suitable for users who need to modify or customize:
 
@@ -88,7 +89,7 @@ cd ~/.claude/skills/
 ln -s /path/to/prompt-optimizer-skill prompt-optimizer
 ```
 
-### Method 5: Direct Copy
+### Method 4: Direct Copy
 
 ```bash
 # Clone the repository

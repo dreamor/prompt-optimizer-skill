@@ -1,16 +1,33 @@
 {
   "name": "prompt-optimizer-skill",
-  "version": "1.0.0",
-  "description": "Claude Code skill for optimizing user prompts. Analyzes simple prompts and generates enhanced, structured prompts based on model capabilities.",
+  "version": "2.0.0",
+  "description": "专业的 Claude Code Skill，将简单指令转化为生产级 Prompt。基于 CLARITY 框架，支持 57 个提示词框架，提供质量验证和多版本输出。",
   "keywords": [
     "claude-code",
     "skill",
     "prompt",
     "prompt-engineering",
-    "ai"
+    "ai",
+    "prompt-optimizer",
+    "clarity-framework"
   ],
   "files": [
     "SKILL.md",
+    "README.md",
+    "CHANGELOG.md",
+    "VERSION",
+    "frameworks/",
+    "tests/",
     "references/"
-  ]
+  ],
+  "author": "dreamor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dreamor/prompt-optimizer-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dreamor/prompt-optimizer-skill/issues"
+  },
+  "homepage": "https://github.com/dreamor/prompt-optimizer-skill#readme"
 }

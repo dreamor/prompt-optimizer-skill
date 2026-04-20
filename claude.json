@@ -1,0 +1,54 @@
+{
+  "name": "prompt-optimizer",
+  "version": "2.0.0",
+  "description": "专业的 Prompt 优化助手，将简单指令转化为生产级 Prompt",
+  "type": "skill",
+  "entry": "SKILL.md",
+  "author": "dreamor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dreamor/prompt-optimizer-skill.git"
+  },
+  "keywords": [
+    "prompt",
+    "prompt-engineering",
+    "claude-code",
+    "skill",
+    "ai",
+    "optimization"
+  ],
+  "categories": [
+    "productivity",
+    "development",
+    "writing"
+  ],
+  "commands": {
+    "optimize": {
+      "description": "优化用户提供的 prompt",
+      "usage": "optimize [你的 prompt]"
+    },
+    "frameworks": {
+      "description": "列出所有可用的提示词框架",
+      "usage": "frameworks [--list|--detail]"
+    },
+    "test": {
+      "description": "运行测试用例验证 skill 功能",
+      "usage": "test"
+    }
+  },
+  "hooks": {
+    "onInstall": {
+      "description": "安装后显示欢迎信息",
+      "command": "cat WELCOME.md"
+    }
+  },
+  "config": {
+    "defaultVersion": "enhanced",
+    "language": "zh-CN",
+    "validation": true
+  },
+  "compatibility": {
+    "claude-code": ">=1.0.0"
+  }
+}

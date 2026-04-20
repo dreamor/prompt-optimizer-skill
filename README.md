@@ -12,26 +12,78 @@
 ### 🎯 核心能力
 
 - **CLARITY 框架**: 系统化的提示词优化方法，覆盖 7 个关键要素
-- **57 个提示词框架**: 按复杂度和领域分类，详细定义和使用示例
+- **61 个提示词框架**: 按复杂度和领域分类，详细定义和使用示例
 - **质量验证**: 自动生成后通过 7 点检查清单验证质量
 - **多版本输出**: 基础版/进阶版/专家版，适应不同场景需求
 - **边界处理**: 智能处理模糊输入和用户拒绝澄清的情况
+- **多种安装方式**: 支持 Claude Plugin、npx、本地安装
 
 ### 🆕 v2.0 新特性
 
 | 特性 | 说明 |
 |------|------|
-| **框架库** | 57 个框架的详细定义，包含结构、示例、最佳实践 |
+| **框架库** | 61 个框架的详细定义，包含结构、示例、最佳实践 |
 | **质量验证** | CLARITY 7 点检查清单，确保输出质量 |
 | **多版本** | 根据需求提供不同详细程度的优化结果 |
 | **边界处理** | 优雅处理模糊输入和拒绝澄清的情况 |
-| **测试套件** | 15 个测试用例，覆盖各种使用场景 |
+| **测试套件** | 34 个测试用例，覆盖各种使用场景 |
+| **Claude Plugin** | 支持通过 Claude Code 插件系统安装 |
+| **npx 支持** | 无需安装，直接通过 npx 使用 |
 
 ---
 
 ## 📦 安装
 
-### 方法 1: 符号链接（推荐，便于更新）
+### 方式 1: Claude Plugin 安装（推荐）
+
+通过 Claude Code 插件系统直接安装：
+
+```bash
+# 使用 Claude Code 安装命令
+claude plugin install prompt-optimizer
+
+# 或指定完整名称
+claude plugin install prompt-optimizer-skill
+```
+
+安装后，Claude Code 会自动识别并加载该 skill。
+
+---
+
+### 方式 2: npx 使用（无需安装）
+
+直接通过 npx 使用，无需本地安装：
+
+```bash
+# 优化提示词
+npx prompt-optimizer-skill optimize "写一封邮件给客户"
+
+# 查看所有框架
+npx prompt-optimizer-skill frameworks
+
+# 运行测试
+npx prompt-optimizer-skill test
+
+# 查看帮助
+npx prompt-optimizer-skill help
+```
+
+**快捷命令**：
+```bash
+# 使用简短别名
+npx pos "写一封邮件给客户"
+
+# 指定输出版本
+npx prompt-optimizer-skill optimize "写代码" --basic      # 基础版
+npx prompt-optimizer-skill optimize "写代码" --enhanced   # 进阶版（默认）
+npx prompt-optimizer-skill optimize "写代码" --expert     # 专家版
+```
+
+---
+
+### 方式 3: 符号链接（开发/自定义）
+
+适合需要修改或自定义的用户：
 
 ```bash
 # 克隆仓库
@@ -42,7 +94,7 @@ cd ~/.claude/skills/
 ln -s /path/to/prompt-optimizer-skill prompt-optimizer
 ```
 
-### 方法 2: 直接复制
+### 方式 4: 直接复制
 
 ```bash
 # 克隆仓库
@@ -55,6 +107,13 @@ cp -r prompt-optimizer-skill ~/.claude/skills/prompt-optimizer
 ### 验证安装
 
 ```bash
+# Claude Plugin 方式
+claude plugin list | grep prompt-optimizer
+
+# npx 方式
+npx prompt-optimizer-skill version
+
+# 本地安装方式
 ls -la ~/.claude/skills/prompt-optimizer/
 # 应该看到: SKILL.md, frameworks/, tests/, CHANGELOG.md 等
 ```
@@ -63,7 +122,7 @@ ls -la ~/.claude/skills/prompt-optimizer/
 
 ## 🚀 使用
 
-### 基本用法
+### 方式 A: Claude Code 中使用（Plugin 安装后）
 
 在 Claude Code 对话中:
 
@@ -75,6 +134,32 @@ optimize this prompt: 写一封邮件给客户
 
 ```
 /prompt-optimizer 帮我优化这个提示词
+```
+
+### 方式 B: npx 命令行使用
+
+无需安装，直接使用：
+
+```bash
+# 基础用法
+npx prompt-optimizer-skill "写一封邮件给客户"
+
+# 指定输出版本
+npx prompt-optimizer-skill "写代码" -b    # 基础版
+npx prompt-optimizer-skill "写代码" -e    # 进阶版（默认）
+npx prompt-optimizer-skill "写代码" -x    # 专家版
+
+# 查看所有框架
+npx prompt-optimizer-skill frameworks
+
+# 查看帮助
+npx prompt-optimizer-skill help
+```
+
+### 工作流程
+
+```
+用户输入 → 分析 → 框架选择 → 澄清疑问 → 生成优化 → 质量验证 → 输出结果
 ```
 
 ### 工作流程

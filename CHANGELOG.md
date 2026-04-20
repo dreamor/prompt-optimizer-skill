@@ -55,7 +55,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Restructured SKILL.md**: Clearer workflow with 7 steps (added validation step)
 - **Modular Architecture**: Split monolithic SKILL.md into organized directory structure
-- **Enhanced Installation**: Support for both symlink and copy installation methods
+- **Enhanced Installation**: Support for Claude Plugin, npx, symlink and copy installation methods
+
+### 📦 Installation Methods
+
+- **Claude Plugin**: `claude plugin install prompt-optimizer`
+- **npx**: `npx prompt-optimizer-skill "your prompt"`
+- **Symlink**: `ln -s /path/to/skill ~/.claude/skills/prompt-optimizer`
+- **Copy**: `cp -r skill ~/.claude/skills/prompt-optimizer`
 
 ### 📁 New Structure
 

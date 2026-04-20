@@ -16,7 +16,7 @@
 - **Quality Validation**: Automatic validation using 7-point checklist after generation
 - **Multi-Version Output**: Basic/Enhanced/Expert versions for different scenarios
 - **Boundary Handling**: Intelligent handling of vague inputs and user refusal to clarify
-- **Multiple Installation Methods**: Supports Claude Plugin, npx, and local installation
+- **Multiple Installation Methods**: Supports Claude Marketplace, npx, and local installation
 
 ### 🆕 v2.0 New Features
 
@@ -27,26 +27,20 @@
 | **Multi-Version** | Different optimization levels based on user needs |
 | **Boundary Handling** | Graceful handling of vague inputs and refusal to clarify |
 | **Test Suite** | 34 test cases covering various usage scenarios |
-| **Claude Plugin** | Support for installation via Claude Code plugin system |
+| **Claude Plugin** | Support for installation via Claude Code Marketplace |
 | **npx Support** | Use directly via npx without installation |
 
 ---
 
 ## 📦 Installation
 
-### Method 1: Claude Plugin Installation (Recommended)
+### Method 1: Claude Code Marketplace (Recommended)
 
-Install directly through the Claude Code plugin system:
+Install directly from GitHub using the marketplace command:
 
 ```bash
-# Using Claude Code install command
-claude plugin install prompt-optimizer
-
-# Or specify the full name
-claude plugin install prompt-optimizer-skill
+/plugin marketplace add dreamor/prompt-optimizer-skill
 ```
-
-After installation, Claude Code will automatically recognize and load the skill.
 
 ---
 
@@ -81,7 +75,7 @@ npx prompt-optimizer-skill optimize "Write code" --expert     # Expert version
 
 ---
 
-### Method 3: Symbolic Link (Development/Customization)
+### Method 4: Symbolic Link (Development/Customization)
 
 Suitable for users who need to modify or customize:
 
@@ -94,7 +88,7 @@ cd ~/.claude/skills/
 ln -s /path/to/prompt-optimizer-skill prompt-optimizer
 ```
 
-### Method 4: Direct Copy
+### Method 5: Direct Copy
 
 ```bash
 # Clone the repository
@@ -122,7 +116,7 @@ ls -la ~/.claude/skills/prompt-optimizer/
 
 ## 🚀 Usage
 
-### Method A: Use in Claude Code (After Plugin Installation)
+### Method A: Use in Claude Code (After Marketplace Installation)
 
 In Claude Code conversation:
 

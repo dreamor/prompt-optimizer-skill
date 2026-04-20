@@ -41,6 +41,7 @@ Install directly from GitHub using the marketplace command:
 ```bash
 /plugin marketplace add dreamor/prompt-optimizer-skill
 /plugin install prompt-optimizer@prompt-optimizer-skill
+/reload-plugins
 ```
 
 ---

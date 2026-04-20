@@ -289,20 +289,3 @@ prompt-optimizer-skill/
 MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ---
-
-## 🙏 致谢
-
-- 感谢所有提示词工程先驱者的框架设计
-- 感谢 Claude Code 团队提供的 Skill 平台
-
----
-
-## 📮 反馈
-
-如有问题或建议，请通过以下方式联系：
-- 提交 GitHub Issue
-- 发送邮件至: [your-email@example.com]
-
----
-
-**Made with ❤️ for the Claude Code community**

@@ -1,8 +1,8 @@
-# Prompt Optimizer v2.0
+# Prompt Optimizer v2.1
 
 > A professional Claude Code Skill that transforms simple instructions into production-ready prompts
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---
@@ -330,20 +330,23 @@ View `tests/test-cases.md` for complete test coverage:
 ```
 prompt-optimizer-skill/
 ├── SKILL.md                 # Main skill file
-├── README.md               # This file
-├── CHANGELOG.md            # Changelog
-├── VERSION                 # Current version
-├── claude.json             # Claude Plugin configuration
-├── bin/                    # CLI tools
-│   └── prompt-optimizer.js # npx command line tool
-├── frameworks/             # Framework library
-│   ├── simple/            # Simple frameworks (16)
-│   ├── medium/            # Medium frameworks (33)
-│   ├── complex/           # Complex frameworks (9)
-│   └── patterns/          # Reusable patterns (3)
-├── tests/                 # Test cases
+├── README.md                # This file
+├── CHANGELOG.md             # Changelog
+├── LICENSE                  # MIT License
+├── VERSION                  # Current version
+├── claude.json              # Claude Plugin configuration
+├── package.json             # npm package manifest
+├── bin/                     # CLI tools
+│   └── prompt-optimizer.js  # CLI (template scaffolds + framework lookup)
+├── frameworks/              # Framework library (61 total)
+│   ├── index.json           # Structured metadata (id, category, elements, domains)
+│   ├── simple/              # Simple frameworks (16)
+│   ├── medium/              # Medium frameworks (33)
+│   ├── complex/             # Complex frameworks (9)
+│   └── patterns/            # Reusable patterns (3)
+├── tests/                   # Test cases
 │   └── test-cases.md
-└── references/            # Reference materials
+└── references/              # Reference materials
     └── Frameworks_Summary.md
 ```
 

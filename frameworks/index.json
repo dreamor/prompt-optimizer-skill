@@ -1,0 +1,1723 @@
+{
+  "version": "2.1.0",
+  "total": 61,
+  "by_category": {
+    "simple": 16,
+    "medium": 33,
+    "complex": 9,
+    "patterns": 3
+  },
+  "domains": [
+    "complex_reasoning",
+    "decision_analysis",
+    "dialogue_ai",
+    "education",
+    "general",
+    "image_generation",
+    "innovation",
+    "marketing",
+    "product_development",
+    "research",
+    "strategy_planning",
+    "writing_creation"
+  ],
+  "frameworks": [
+    {
+      "id": "4s-method",
+      "name": "4S-Method",
+      "full_name": "State-Support-Summarize-Suggest",
+      "category": "simple",
+      "file": "frameworks/simple/4S-Method.md",
+      "element_count": 4,
+      "elements": [
+        "State",
+        "Support",
+        "Summarize",
+        "Suggest"
+      ],
+      "domains": [
+        "marketing",
+        "education",
+        "product_development",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Structured content writing",
+        "Speech and presentation design",
+        "Report writing",
+        "Proposal creation",
+        "Educational material development",
+        "Marketing copywriting"
+      ]
+    },
+    {
+      "id": "ape",
+      "name": "APE",
+      "full_name": "Action-Purpose-Expectation",
+      "category": "simple",
+      "file": "frameworks/simple/APE.md",
+      "element_count": 3,
+      "elements": [
+        "Action",
+        "Purpose",
+        "Expectation"
+      ],
+      "domains": [
+        "education",
+        "product_development"
+      ],
+      "use_cases": [
+        "Quick prompt building",
+        "Simple task instructions",
+        "Daily AI interactions",
+        "Lightweight content generation",
+        "Beginner onboarding",
+        "Rapid prototype testing"
+      ]
+    },
+    {
+      "id": "bab",
+      "name": "BAB",
+      "full_name": "Before-After-Bridge",
+      "category": "simple",
+      "file": "frameworks/simple/BAB.md",
+      "element_count": 3,
+      "elements": [
+        "Before",
+        "After",
+        "Bridge"
+      ],
+      "domains": [
+        "marketing",
+        "education",
+        "product_development",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Subscription service promotion",
+        "Fitness app marketing",
+        "Online learning platform promotion",
+        "Eco-friendly product campaigns",
+        "Home service advertising",
+        "Financial planning tool promotion"
+      ]
+    },
+    {
+      "id": "car-par-star",
+      "name": "CAR-PAR-STAR",
+      "full_name": "Context-Action-Result / Problem-Action-Result / Situation-Task-Action-Result",
+      "category": "simple",
+      "file": "frameworks/simple/CAR-PAR-STAR.md",
+      "element_count": 3,
+      "elements": [
+        "CAR",
+        "PAR",
+        "STAR"
+      ],
+      "domains": [
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Interview preparation",
+        "Handling behavioral interview questions",
+        "Describing work experience",
+        "Showcasing achievements",
+        "Resume writing",
+        "Performance review summaries"
+      ]
+    },
+    {
+      "id": "challenge-solution-benefit",
+      "name": "Challenge-Solution-Benefit",
+      "full_name": "Challenge-Solution-Benefit Framework",
+      "category": "simple",
+      "file": "frameworks/simple/Challenge-Solution-Benefit.md",
+      "element_count": 3,
+      "elements": [
+        "Challenge",
+        "Solution",
+        "Benefit"
+      ],
+      "domains": [
+        "marketing",
+        "product_development",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Product marketing copy",
+        "Sales presentations",
+        "Proposal writing",
+        "Case studies",
+        "Investor pitches",
+        "Problem-solving reports"
+      ]
+    },
+    {
+      "id": "eli5",
+      "name": "ELI5",
+      "full_name": "Explain Like I'm 5",
+      "category": "simple",
+      "file": "frameworks/simple/ELI5.md",
+      "element_count": 4,
+      "elements": [
+        "Concept",
+        "Analogy",
+        "Key Points",
+        "Example"
+      ],
+      "domains": [
+        "education",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Explaining complex concepts",
+        "Popularizing technical knowledge",
+        "Simplifying educational content",
+        "Writing user guides",
+        "Science communication writing",
+        "New employee onboarding"
+      ]
+    },
+    {
+      "id": "era",
+      "name": "ERA",
+      "full_name": "Expectation-Role-Action",
+      "category": "simple",
+      "file": "frameworks/simple/ERA.md",
+      "element_count": 3,
+      "elements": [
+        "Expectation",
+        "Role",
+        "Action"
+      ],
+      "domains": [
+        "education",
+        "product_development"
+      ],
+      "use_cases": [
+        "Quick prompt building",
+        "Simple task instructions",
+        "Daily AI interactions",
+        "Lightweight content generation",
+        "Beginner onboarding",
+        "Rapid prototype testing"
+      ]
+    },
+    {
+      "id": "elicitation",
+      "name": "Elicitation",
+      "full_name": "Elicitation Framework",
+      "category": "simple",
+      "file": "frameworks/simple/Elicitation.md",
+      "element_count": 5,
+      "elements": [
+        "Objective",
+        "Methods",
+        "Questions",
+        "Documentation",
+        "Validation"
+      ],
+      "domains": [
+        "decision_analysis",
+        "product_development",
+        "research"
+      ],
+      "use_cases": [
+        "Requirements gathering and analysis",
+        "User research interviews",
+        "Product discovery process",
+        "Project scope definition",
+        "Problem diagnosis",
+        "Knowledge acquisition"
+      ]
+    },
+    {
+      "id": "five-ws-and-one-h",
+      "name": "Five-Ws-and-One-H",
+      "full_name": "5W1H Framework",
+      "category": "simple",
+      "file": "frameworks/simple/Five-Ws-and-One-H.md",
+      "element_count": 6,
+      "elements": [
+        "Who",
+        "What",
+        "When",
+        "Where",
+        "Why",
+        "How"
+      ],
+      "domains": [
+        "decision_analysis",
+        "product_development",
+        "writing_creation",
+        "strategy_planning",
+        "research"
+      ],
+      "use_cases": [
+        "Journalism and news reporting",
+        "Problem analysis and investigation",
+        "Project planning",
+        "Content creation",
+        "Event description",
+        "Research design"
+      ]
+    },
+    {
+      "id": "hamburger-model",
+      "name": "Hamburger-Model",
+      "full_name": "Hamburger Model",
+      "category": "simple",
+      "file": "frameworks/simple/Hamburger-Model.md",
+      "element_count": 4,
+      "elements": [
+        "Top bun",
+        "Vegetable layer",
+        "Patty layer",
+        "Bottom bun"
+      ],
+      "domains": [
+        "education",
+        "product_development",
+        "writing_creation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Paragraph writing instruction",
+        "Essay structure design",
+        "Business document writing",
+        "Speech preparation",
+        "Content outline planning",
+        "Writing skills training"
+      ]
+    },
+    {
+      "id": "help-me-understand",
+      "name": "Help-Me-Understand",
+      "full_name": "Help Me Understand Framework",
+      "category": "simple",
+      "file": "frameworks/simple/Help-Me-Understand.md",
+      "element_count": 4,
+      "elements": [
+        "Topic",
+        "Known",
+        "Questions",
+        "Expectation"
+      ],
+      "domains": [
+        "education",
+        "dialogue_ai"
+      ],
+      "use_cases": [
+        "Learning new concepts",
+        "Knowledge exploration",
+        "Clarifying confusion",
+        "Understanding complex topics",
+        "Guiding AI conversations",
+        "Self-directed learning"
+      ]
+    },
+    {
+      "id": "imagine",
+      "name": "Imagine",
+      "full_name": "Imagine Framework",
+      "category": "simple",
+      "file": "frameworks/simple/Imagine.md",
+      "element_count": 4,
+      "elements": [
+        "Scenario Setting",
+        "Possibility Exploration",
+        "Detail Painting",
+        "Value Discovery"
+      ],
+      "domains": [
+        "product_development",
+        "writing_creation",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Creative writing",
+        "Vision planning",
+        "Product concept design",
+        "Scenario simulation",
+        "Future outlook",
+        "User experience design"
+      ]
+    },
+    {
+      "id": "pee",
+      "name": "PEE",
+      "full_name": "Point-Evidence-Explanation",
+      "category": "simple",
+      "file": "frameworks/simple/PEE.md",
+      "element_count": 3,
+      "elements": [
+        "Point",
+        "Evidence",
+        "Explanation"
+      ],
+      "domains": [
+        "writing_creation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Academic writing",
+        "Essay paragraph writing",
+        "Argumentative articles",
+        "Exam answers",
+        "Analytical writing",
+        "Argumentative essay structure"
+      ]
+    },
+    {
+      "id": "rtf",
+      "name": "RTF",
+      "full_name": "Role-Task-Format",
+      "category": "simple",
+      "file": "frameworks/simple/RTF.md",
+      "element_count": 3,
+      "elements": [
+        "Role",
+        "Task",
+        "Format"
+      ],
+      "domains": [
+        "education"
+      ],
+      "use_cases": [
+        "Data retrieval and queries",
+        "Tutorials and how-to guides",
+        "Scenarios requiring a specific response format",
+        "Handling tasks from simple to complex",
+        "Daily interactions with AI"
+      ]
+    },
+    {
+      "id": "tag",
+      "name": "TAG",
+      "full_name": "Task-Action-Goal",
+      "category": "simple",
+      "file": "frameworks/simple/TAG.md",
+      "element_count": 3,
+      "elements": [
+        "Task",
+        "Action",
+        "Goal"
+      ],
+      "domains": [
+        "education",
+        "product_development"
+      ],
+      "use_cases": [
+        "Quick task definition",
+        "Simplifying AI instructions",
+        "Daily prompt building",
+        "Simple content generation",
+        "Beginner onboarding",
+        "Rapid prototype testing"
+      ]
+    },
+    {
+      "id": "zero-shot",
+      "name": "Zero-shot",
+      "full_name": "Zero-Shot Prompting Framework",
+      "category": "simple",
+      "file": "frameworks/simple/Zero-shot.md",
+      "element_count": 3,
+      "elements": [
+        "Task",
+        "Instructions",
+        "Format"
+      ],
+      "domains": [
+        "writing_creation",
+        "innovation"
+      ],
+      "use_cases": [
+        "Rapid prototyping and testing",
+        "General knowledge queries",
+        "Simple task execution",
+        "Creative generation",
+        "Text summarization",
+        "Basic classification tasks"
+      ]
+    },
+    {
+      "id": "3cs-model",
+      "name": "3Cs-Model",
+      "full_name": "Company-Customers-Competitors",
+      "category": "medium",
+      "file": "frameworks/medium/3Cs-Model.md",
+      "element_count": 4,
+      "elements": [
+        "Company",
+        "Customers",
+        "Competitors",
+        "Strategic Positioning"
+      ],
+      "domains": [
+        "marketing",
+        "decision_analysis",
+        "product_development",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Market strategy planning",
+        "Competitive analysis",
+        "Business model design",
+        "Marketing strategy formulation",
+        "New market entry evaluation",
+        "Brand positioning"
+      ]
+    },
+    {
+      "id": "atomic-prompting",
+      "name": "Atomic-Prompting",
+      "full_name": "Atomic Prompting Framework",
+      "category": "medium",
+      "file": "frameworks/medium/Atomic-Prompting.md",
+      "element_count": 7,
+      "elements": [
+        "Subject",
+        "Action",
+        "Environment",
+        "Style",
+        "Lighting",
+        "Camera",
+        "Quality"
+      ],
+      "domains": [
+        "image_generation"
+      ],
+      "use_cases": [
+        "AI image generation",
+        "Digital art creation",
+        "Complex scene construction",
+        "Tools such as Midjourney / DALL-E 3 / Adobe Firefly",
+        "Visual projects requiring fine-grained control"
+      ]
+    },
+    {
+      "id": "blog",
+      "name": "BLOG",
+      "full_name": "Buyer's Journey-Lead-Opportunity-Growth",
+      "category": "medium",
+      "file": "frameworks/medium/BLOG.md",
+      "element_count": 4,
+      "elements": [
+        "Buyer's Journey",
+        "Lead",
+        "Opportunity",
+        "Growth"
+      ],
+      "domains": [
+        "marketing",
+        "education",
+        "product_development",
+        "writing_creation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Blog article writing",
+        "Content marketing strategy",
+        "Social media content creation",
+        "Educational article writing",
+        "Product introduction copywriting",
+        "Thought leadership content development"
+      ]
+    },
+    {
+      "id": "blooms-taxonomy",
+      "name": "Blooms-Taxonomy",
+      "full_name": "Bloom's Taxonomy",
+      "category": "medium",
+      "file": "frameworks/medium/Blooms-Taxonomy.md",
+      "element_count": 6,
+      "elements": [
+        "Remember",
+        "Understand",
+        "Apply",
+        "Analyze",
+        "Evaluate",
+        "Create"
+      ],
+      "domains": [
+        "education",
+        "product_development",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Educational content design",
+        "Training course development",
+        "Learning objective formulation",
+        "Assessment question design",
+        "Critical thinking cultivation",
+        "Skills progression planning"
+      ]
+    },
+    {
+      "id": "care",
+      "name": "CARE",
+      "full_name": "Context-Action-Result-Example",
+      "category": "medium",
+      "file": "frameworks/medium/CARE.md",
+      "element_count": 4,
+      "elements": [
+        "Context",
+        "Action",
+        "Result",
+        "Example"
+      ],
+      "domains": [
+        "product_development",
+        "dialogue_ai",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Customer service communication",
+        "User experience design",
+        "Content creation guidance",
+        "Product design principles",
+        "Team collaboration standards",
+        "Service quality improvement"
+      ]
+    },
+    {
+      "id": "cidi",
+      "name": "CIDI",
+      "full_name": "Challenge-Ideas-Development-Implementation",
+      "category": "medium",
+      "file": "frameworks/medium/CIDI.md",
+      "element_count": 4,
+      "elements": [
+        "Challenge",
+        "Ideas",
+        "Development",
+        "Implementation"
+      ],
+      "domains": [
+        "product_development",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Problem diagnosis and resolution",
+        "Project planning and execution",
+        "Product development process",
+        "Service improvement projects",
+        "Change management",
+        "Innovation project implementation"
+      ]
+    },
+    {
+      "id": "coast",
+      "name": "COAST",
+      "full_name": "Context-Objective-Actions-Scenario-Task",
+      "category": "medium",
+      "file": "frameworks/medium/COAST.md",
+      "element_count": 5,
+      "elements": [
+        "Context",
+        "Objective",
+        "Actions",
+        "Scenario",
+        "Task"
+      ],
+      "domains": [
+        "product_development",
+        "dialogue_ai",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "AI conversational system design",
+        "Chatbot development",
+        "Virtual assistant configuration",
+        "Customer service automation",
+        "Interactive content creation",
+        "Conversational AI applications"
+      ]
+    },
+    {
+      "id": "chain-of-destiny",
+      "name": "Chain-of-Destiny",
+      "full_name": "Chain of Destiny Framework",
+      "category": "medium",
+      "file": "frameworks/medium/Chain-of-Destiny.md",
+      "element_count": 5,
+      "elements": [
+        "Current State",
+        "Trigger",
+        "Choices",
+        "Outcomes",
+        "Destiny"
+      ],
+      "domains": [
+        "product_development",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Content creation",
+        "Software development",
+        "Design projects",
+        "High-quality tasks",
+        "Refining complex ideas",
+        "Projects requiring iterative improvement"
+      ]
+    },
+    {
+      "id": "chain-of-thought",
+      "name": "Chain-of-Thought",
+      "full_name": "Chain of Thought Framework",
+      "category": "medium",
+      "file": "frameworks/medium/Chain-of-Thought.md",
+      "element_count": 4,
+      "elements": [
+        "Problem",
+        "Reasoning Process",
+        "Intermediate Conclusions",
+        "Final Answer"
+      ],
+      "domains": [
+        "decision_analysis",
+        "complex_reasoning",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Mathematical problem solving",
+        "Market analysis",
+        "Scientific phenomenon explanation",
+        "Complex query processing",
+        "In-depth analysis tasks",
+        "Logical reasoning problems"
+      ]
+    },
+    {
+      "id": "focus",
+      "name": "FOCUS",
+      "full_name": "Features-Objective-Constraints-User-Setup",
+      "category": "medium",
+      "file": "frameworks/medium/FOCUS.md",
+      "element_count": 5,
+      "elements": [
+        "Features",
+        "Objective",
+        "Constraints",
+        "User",
+        "Setup"
+      ],
+      "domains": [
+        "decision_analysis",
+        "product_development",
+        "research"
+      ],
+      "use_cases": [
+        "Product analysis and comparison",
+        "Competitor research",
+        "Feature evaluation",
+        "Procurement decision support",
+        "Technology selection analysis",
+        "Investment evaluation"
+      ]
+    },
+    {
+      "id": "gopa",
+      "name": "GOPA",
+      "full_name": "Goal-Obstacle-Plan-Action",
+      "category": "medium",
+      "file": "frameworks/medium/GOPA.md",
+      "element_count": 4,
+      "elements": [
+        "Goal",
+        "Obstacle",
+        "Plan",
+        "Action"
+      ],
+      "domains": [
+        "product_development",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Goal setting",
+        "Action plan creation",
+        "Project kickoff",
+        "Performance management",
+        "Strategic planning",
+        "Personal development planning"
+      ]
+    },
+    {
+      "id": "grade",
+      "name": "GRADE",
+      "full_name": "Goal-Research-Analysis-Decision-Evaluation",
+      "category": "medium",
+      "file": "frameworks/medium/GRADE.md",
+      "element_count": 5,
+      "elements": [
+        "Goal",
+        "Research",
+        "Analysis",
+        "Decision",
+        "Evaluation"
+      ],
+      "domains": [
+        "decision_analysis",
+        "education",
+        "product_development",
+        "writing_creation",
+        "strategy_planning",
+        "research"
+      ],
+      "use_cases": [
+        "Data analysis",
+        "Content creation",
+        "Strategy development",
+        "Educational tutorials",
+        "Project management",
+        "Report generation"
+      ]
+    },
+    {
+      "id": "hmw",
+      "name": "HMW",
+      "full_name": "How Might We",
+      "category": "medium",
+      "file": "frameworks/medium/HMW.md",
+      "element_count": 4,
+      "elements": [
+        "Problem Definition",
+        "HMW Questions",
+        "Idea Generation",
+        "Solution Selection"
+      ],
+      "domains": [
+        "product_development",
+        "innovation"
+      ],
+      "use_cases": [
+        "Design thinking workshops",
+        "Innovation brainstorming",
+        "Problem reframing",
+        "Product design",
+        "Service improvement",
+        "Team ideation meetings"
+      ]
+    },
+    {
+      "id": "orid",
+      "name": "ORID",
+      "full_name": "Objective-Reflective-Interpretive-Decisional",
+      "category": "medium",
+      "file": "frameworks/medium/ORID.md",
+      "element_count": 4,
+      "elements": [
+        "Objective",
+        "Reflective",
+        "Interpretive",
+        "Decisional"
+      ],
+      "domains": [
+        "decision_analysis",
+        "education"
+      ],
+      "use_cases": [
+        "Meeting facilitation and summarization",
+        "Reflection and retrospectives",
+        "Team discussion facilitation",
+        "Training and learning summaries",
+        "Decision analysis",
+        "Experience extraction"
+      ]
+    },
+    {
+      "id": "prompt",
+      "name": "PROMPT",
+      "full_name": "Problem-Research-Outcome-Methodology-Presentation-Testing",
+      "category": "medium",
+      "file": "frameworks/medium/PROMPT.md",
+      "element_count": 6,
+      "elements": [
+        "Problem",
+        "Research",
+        "Outcome",
+        "Methodology",
+        "Presentation",
+        "Testing"
+      ],
+      "domains": [
+        "decision_analysis",
+        "writing_creation",
+        "strategy_planning",
+        "research"
+      ],
+      "use_cases": [
+        "Business intelligence analysis",
+        "Content creation",
+        "User persona creation",
+        "Complex data summarization",
+        "Strategic insight generation"
+      ]
+    },
+    {
+      "id": "pause",
+      "name": "Pause",
+      "full_name": "Problem-Analysis-Understanding-Solution-Evaluation",
+      "category": "medium",
+      "file": "frameworks/medium/Pause.md",
+      "element_count": 5,
+      "elements": [
+        "Problem",
+        "Analysis",
+        "Understanding",
+        "Solution",
+        "Evaluation"
+      ],
+      "domains": [
+        "decision_analysis",
+        "dialogue_ai"
+      ],
+      "use_cases": [
+        "Reflection before making decisions",
+        "Impulse control",
+        "Complex problem analysis",
+        "Conflict resolution",
+        "Preparation before important conversations",
+        "Emotional management"
+      ]
+    },
+    {
+      "id": "pros-and-cons",
+      "name": "Pros-and-Cons",
+      "full_name": "Pros and Cons Analysis Framework",
+      "category": "medium",
+      "file": "frameworks/medium/Pros-and-Cons.md",
+      "element_count": 5,
+      "elements": [
+        "Decision Item",
+        "Pros",
+        "Cons",
+        "Trade-off Analysis",
+        "Recommendation"
+      ],
+      "domains": [
+        "decision_analysis",
+        "product_development",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Decision analysis",
+        "Product evaluation",
+        "Strategy selection",
+        "Risk assessment",
+        "Investment decisions",
+        "Project feasibility analysis"
+      ]
+    },
+    {
+      "id": "race",
+      "name": "RACE",
+      "full_name": "Role-Action-Context-Expectation",
+      "category": "medium",
+      "file": "frameworks/medium/RACE.md",
+      "element_count": 4,
+      "elements": [
+        "Role",
+        "Action",
+        "Context",
+        "Expectation"
+      ],
+      "domains": [
+        "marketing",
+        "education",
+        "product_development",
+        "dialogue_ai",
+        "writing_creation",
+        "innovation"
+      ],
+      "use_cases": [
+        "Role-play dialogue design",
+        "Customer service script development",
+        "Training scenario simulation",
+        "Creative writing",
+        "Marketing content creation",
+        "Educational material development"
+      ]
+    },
+    {
+      "id": "rhodes",
+      "name": "RHODES",
+      "full_name": "Role-How-Objectives-Details-Examples-Style",
+      "category": "medium",
+      "file": "frameworks/medium/RHODES.md",
+      "element_count": 6,
+      "elements": [
+        "Role",
+        "How",
+        "Objectives",
+        "Details",
+        "Examples",
+        "Style"
+      ],
+      "domains": [
+        "marketing",
+        "writing_creation",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Creative writing",
+        "Marketing content creation",
+        "Projects with strict style and tone requirements",
+        "Tasks requiring highly customized output",
+        "Creative planning"
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "RICE",
+      "full_name": "Reach-Impact-Confidence-Effort",
+      "category": "medium",
+      "file": "frameworks/medium/RICE.md",
+      "element_count": 5,
+      "elements": [
+        "Reach",
+        "Impact",
+        "Confidence",
+        "Effort",
+        "RICE Score"
+      ],
+      "domains": [
+        "marketing",
+        "decision_analysis",
+        "product_development",
+        "writing_creation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "SaaS product feature prioritization",
+        "Marketing campaign planning",
+        "Content creation strategy",
+        "Product launch planning",
+        "Customer support improvement",
+        "Social media strategy",
+        "Budget allocation decisions"
+      ]
+    },
+    {
+      "id": "rise",
+      "name": "RISE",
+      "full_name": "Reflect-Inquire-Suggest-Elevate",
+      "category": "medium",
+      "file": "frameworks/medium/RISE.md",
+      "element_count": 4,
+      "elements": [
+        "Reflect",
+        "Inquire",
+        "Suggest",
+        "Elevate"
+      ],
+      "domains": [
+        "general"
+      ],
+      "use_cases": [
+        "Giving feedback",
+        "Performance review communication",
+        "Mentoring and coaching",
+        "Code review",
+        "Work critique",
+        "Constructive criticism"
+      ]
+    },
+    {
+      "id": "rose",
+      "name": "ROSE",
+      "full_name": "Role-Objective-Scenario-Evaluation",
+      "category": "medium",
+      "file": "frameworks/medium/ROSE.md",
+      "element_count": 4,
+      "elements": [
+        "Role",
+        "Objective",
+        "Scenario",
+        "Evaluation"
+      ],
+      "domains": [
+        "decision_analysis",
+        "product_development",
+        "dialogue_ai"
+      ],
+      "use_cases": [
+        "Role-play scenario design",
+        "AI role definition",
+        "Dialogue system configuration",
+        "Customer service script design",
+        "Virtual assistant development",
+        "Game character design"
+      ]
+    },
+    {
+      "id": "roses",
+      "name": "ROSES",
+      "full_name": "Role-Objective-Scenario-Expected Solution-Steps",
+      "category": "medium",
+      "file": "frameworks/medium/ROSES.md",
+      "element_count": 5,
+      "elements": [
+        "Role",
+        "Objective",
+        "Scenario",
+        "Expected Solution",
+        "Steps"
+      ],
+      "domains": [
+        "product_development",
+        "dialogue_ai",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "AI dialogue system design",
+        "Chatbot development",
+        "Virtual assistant configuration",
+        "Customer service automation",
+        "Interactive content creation",
+        "Conversational AI applications"
+      ]
+    },
+    {
+      "id": "smart",
+      "name": "SMART",
+      "full_name": "Specific-Measurable-Achievable-Relevant-Time-bound",
+      "category": "medium",
+      "file": "frameworks/medium/SMART.md",
+      "element_count": 5,
+      "elements": [
+        "Specific",
+        "Measurable",
+        "Achievable",
+        "Relevant",
+        "Time-bound"
+      ],
+      "domains": [
+        "marketing",
+        "product_development",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Goal setting",
+        "Project planning",
+        "Performance management",
+        "OKR formulation",
+        "Personal development plans",
+        "Marketing goal definition"
+      ]
+    },
+    {
+      "id": "spar",
+      "name": "SPAR",
+      "full_name": "Situation-Problem-Analysis-Response",
+      "category": "medium",
+      "file": "frameworks/medium/SPAR.md",
+      "element_count": 4,
+      "elements": [
+        "Situation",
+        "Problem",
+        "Analysis",
+        "Response"
+      ],
+      "domains": [
+        "decision_analysis",
+        "education",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Debate preparation",
+        "Argumentative essay writing",
+        "Policy analysis",
+        "Decision justification",
+        "Critical thinking training",
+        "Expressing a viewpoint"
+      ]
+    },
+    {
+      "id": "spark",
+      "name": "SPARK",
+      "full_name": "Situation-Problem-Approach-Results-Knowledge",
+      "category": "medium",
+      "file": "frameworks/medium/SPARK.md",
+      "element_count": 5,
+      "elements": [
+        "Situation",
+        "Problem",
+        "Approach",
+        "Results",
+        "Knowledge"
+      ],
+      "domains": [
+        "marketing",
+        "product_development",
+        "writing_creation",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Creative problem solving",
+        "Product or service design innovation",
+        "Marketing strategy development",
+        "Scenarios requiring fresh perspectives",
+        "Creative writing",
+        "Strategic planning"
+      ]
+    },
+    {
+      "id": "spear",
+      "name": "SPEAR",
+      "full_name": "Situation-Problem-Effect-Action-Result",
+      "category": "medium",
+      "file": "frameworks/medium/SPEAR.md",
+      "element_count": 5,
+      "elements": [
+        "Situation",
+        "Problem",
+        "Effect",
+        "Action",
+        "Result"
+      ],
+      "domains": [
+        "marketing",
+        "product_development",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Persuasive writing and presentations",
+        "Marketing copywriting",
+        "Sales proposal design",
+        "Policy advocacy",
+        "Investor pitches",
+        "Product launch presentations"
+      ]
+    },
+    {
+      "id": "socratic-method",
+      "name": "Socratic-Method",
+      "full_name": "Socratic Questioning Method",
+      "category": "medium",
+      "file": "frameworks/medium/Socratic-Method.md",
+      "element_count": 7,
+      "elements": [
+        "Topic",
+        "Clarifying Questions",
+        "Assumption Challenges",
+        "Evidence Inquiry",
+        "Perspective Shifts",
+        "Impact Inference",
+        "Meta-Reflection"
+      ],
+      "domains": [
+        "decision_analysis",
+        "education"
+      ],
+      "use_cases": [
+        "Education and training",
+        "Developing critical thinking",
+        "Facilitating deep discussion",
+        "Problem diagnosis",
+        "Decision analysis",
+        "Self-reflection"
+      ]
+    },
+    {
+      "id": "tqa",
+      "name": "TQA",
+      "full_name": "Topic-Question-Answer",
+      "category": "medium",
+      "file": "frameworks/medium/TQA.md",
+      "element_count": 3,
+      "elements": [
+        "Topic",
+        "Question",
+        "Answer"
+      ],
+      "domains": [
+        "product_development"
+      ],
+      "use_cases": [
+        "Q&A system design",
+        "Knowledge base construction",
+        "FAQ development",
+        "Exam question design",
+        "Technical documentation",
+        "Customer support content"
+      ]
+    },
+    {
+      "id": "trace",
+      "name": "TRACE",
+      "full_name": "Task-Request-Action-Context-Example",
+      "category": "medium",
+      "file": "frameworks/medium/TRACE.md",
+      "element_count": 5,
+      "elements": [
+        "Task",
+        "Request",
+        "Action",
+        "Context",
+        "Example"
+      ],
+      "domains": [
+        "product_development",
+        "dialogue_ai"
+      ],
+      "use_cases": [
+        "Role-play prompt design",
+        "AI assistant configuration",
+        "Dialogue system development",
+        "Virtual character creation",
+        "Content generation guidance",
+        "Interactive experience design"
+      ]
+    },
+    {
+      "id": "traci",
+      "name": "TRACI",
+      "full_name": "Task-Recipient-Action-Context-Impact",
+      "category": "medium",
+      "file": "frameworks/medium/TRACI.md",
+      "element_count": 5,
+      "elements": [
+        "Task",
+        "Recipient",
+        "Action",
+        "Context",
+        "Impact"
+      ],
+      "domains": [
+        "marketing",
+        "education",
+        "product_development",
+        "dialogue_ai",
+        "writing_creation"
+      ],
+      "use_cases": [
+        "Marketing communications",
+        "Educational content creation",
+        "Customer service",
+        "User experience design",
+        "Personalized solution development",
+        "Target audience targeting"
+      ]
+    },
+    {
+      "id": "tree-of-thought",
+      "name": "Tree-of-Thought",
+      "full_name": "Tree of Thought Framework",
+      "category": "medium",
+      "file": "frameworks/medium/Tree-of-Thought.md",
+      "element_count": 6,
+      "elements": [
+        "Problem",
+        "Branch 1",
+        "Branch 2",
+        "Branch 3",
+        "Evaluation",
+        "Best Path"
+      ],
+      "domains": [
+        "decision_analysis",
+        "writing_creation",
+        "complex_reasoning",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Strategic planning and decision-making",
+        "Multi-step problem solving",
+        "Scenario analysis and forecasting",
+        "Creative brainstorming",
+        "Complex project planning",
+        "Risk assessment"
+      ]
+    },
+    {
+      "id": "what-if",
+      "name": "What-If",
+      "full_name": "Hypothetical Analysis Framework",
+      "category": "medium",
+      "file": "frameworks/medium/What-If.md",
+      "element_count": 4,
+      "elements": [
+        "Hypothesis",
+        "Scenario Projection",
+        "Impact Analysis",
+        "Response Strategies"
+      ],
+      "domains": [
+        "decision_analysis",
+        "product_development",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Scenario planning",
+        "Risk assessment",
+        "Innovative thinking",
+        "Strategic analysis",
+        "Product design",
+        "Problem solving"
+      ]
+    },
+    {
+      "id": "crispe",
+      "name": "CRISPE",
+      "full_name": "Capacity-Role-Insight-Statement-Personality-Experiment",
+      "category": "complex",
+      "file": "frameworks/complex/CRISPE.md",
+      "element_count": 6,
+      "elements": [
+        "Capacity",
+        "Role",
+        "Insight",
+        "Statement",
+        "Personality",
+        "Experiment"
+      ],
+      "domains": [
+        "marketing",
+        "decision_analysis",
+        "education",
+        "product_development",
+        "writing_creation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Marketing campaign planning",
+        "Employee training program design",
+        "Product feature prioritization",
+        "Content creation strategy",
+        "Healthcare policy analysis",
+        "Corporate sustainability planning"
+      ]
+    },
+    {
+      "id": "racef",
+      "name": "RACEF",
+      "full_name": "Role-Action-Context-Expectation-Format",
+      "category": "complex",
+      "file": "frameworks/complex/RACEF.md",
+      "element_count": 5,
+      "elements": [
+        "Role",
+        "Action",
+        "Context",
+        "Expectation",
+        "Format"
+      ],
+      "domains": [
+        "marketing",
+        "decision_analysis",
+        "product_development",
+        "innovation",
+        "strategy_planning",
+        "research"
+      ],
+      "use_cases": [
+        "Brainstorming and idea generation",
+        "Data analysis and market research",
+        "Problem-solving and strategic planning",
+        "Product development strategy",
+        "Customer retention strategy",
+        "Digital marketing strategy"
+      ]
+    },
+    {
+      "id": "rascef",
+      "name": "RASCEF",
+      "full_name": "Role-Action-Steps-Context-Examples-Format",
+      "category": "complex",
+      "file": "frameworks/complex/RASCEF.md",
+      "element_count": 6,
+      "elements": [
+        "Role",
+        "Action",
+        "Steps",
+        "Context",
+        "Examples",
+        "Format"
+      ],
+      "domains": [
+        "marketing",
+        "decision_analysis",
+        "product_development",
+        "writing_creation",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Technical documentation",
+        "Instructional design",
+        "Creative storytelling",
+        "Detailed analysis projects",
+        "Complex task execution",
+        "Marketing strategy development"
+      ]
+    },
+    {
+      "id": "relic",
+      "name": "RELIC",
+      "full_name": "Requirements-Effort-Limits-Implementation-Confirmation",
+      "category": "complex",
+      "file": "frameworks/complex/RELIC.md",
+      "element_count": 5,
+      "elements": [
+        "Requirements",
+        "Effort",
+        "Limits",
+        "Implementation",
+        "Confirmation"
+      ],
+      "domains": [
+        "decision_analysis",
+        "education",
+        "product_development"
+      ],
+      "use_cases": [
+        "Customer feedback system optimization",
+        "EdTech product development",
+        "Employee training program design",
+        "Policy implementation evaluation",
+        "Product iteration improvement",
+        "Service quality enhancement"
+      ]
+    },
+    {
+      "id": "risen",
+      "name": "RISEN",
+      "full_name": "Role-Input-Steps-Expectation-Narrowing",
+      "category": "complex",
+      "file": "frameworks/complex/RISEN.md",
+      "element_count": 5,
+      "elements": [
+        "Role",
+        "Input",
+        "Steps",
+        "Expectation",
+        "Narrowing"
+      ],
+      "domains": [
+        "marketing",
+        "education",
+        "product_development",
+        "writing_creation",
+        "strategy_planning",
+        "research"
+      ],
+      "use_cases": [
+        "Marketing campaign planning",
+        "Business plan writing",
+        "Research paper writing",
+        "Product description creation",
+        "Executive summary writing",
+        "Presentation outlines",
+        "Training module development",
+        "Online course design",
+        "Product review writing"
+      ]
+    },
+    {
+      "id": "rodes",
+      "name": "RODES",
+      "full_name": "Role-Objective-Details-Examples-Structure",
+      "category": "complex",
+      "file": "frameworks/complex/RODES.md",
+      "element_count": 5,
+      "elements": [
+        "Role",
+        "Objective",
+        "Details",
+        "Examples",
+        "Structure"
+      ],
+      "domains": [
+        "education",
+        "product_development",
+        "dialogue_ai",
+        "strategy_planning",
+        "research"
+      ],
+      "use_cases": [
+        "Educational content development",
+        "Customer service protocols",
+        "Detailed research queries",
+        "Strategic planning",
+        "Complex problem solving",
+        "Training module creation"
+      ]
+    },
+    {
+      "id": "roses",
+      "name": "ROSES",
+      "full_name": "Role-Objective-Scenario-Expected Solution-Steps",
+      "category": "complex",
+      "file": "frameworks/complex/ROSES.md",
+      "element_count": 5,
+      "elements": [
+        "Role",
+        "Objective",
+        "Scenario",
+        "Expected Solution",
+        "Steps"
+      ],
+      "domains": [
+        "product_development",
+        "dialogue_ai"
+      ],
+      "use_cases": [
+        "Role-play scenario design",
+        "AI role definition",
+        "Dialogue system configuration",
+        "Customer service script design",
+        "Virtual assistant development",
+        "Game character design"
+      ]
+    },
+    {
+      "id": "scamper",
+      "name": "SCAMPER",
+      "full_name": "Substitute-Combine-Adapt-Modify-Put to other uses-Eliminate-Reverse",
+      "category": "complex",
+      "file": "frameworks/complex/SCAMPER.md",
+      "element_count": 7,
+      "elements": [
+        "Substitute",
+        "Combine",
+        "Adapt",
+        "Modify",
+        "Put to other uses",
+        "Eliminate",
+        "Reverse"
+      ],
+      "domains": [
+        "marketing",
+        "product_development",
+        "writing_creation",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Product innovation and improvement",
+        "Service process optimization",
+        "Marketing strategy innovation",
+        "Business model exploration",
+        "Solution design",
+        "Creative brainstorming"
+      ]
+    },
+    {
+      "id": "six-thinking-hats",
+      "name": "Six-Thinking-Hats",
+      "full_name": "Six Thinking Hats",
+      "category": "complex",
+      "file": "frameworks/complex/Six-Thinking-Hats.md",
+      "element_count": 6,
+      "elements": [
+        "White Hat",
+        "Red Hat",
+        "Black Hat",
+        "Yellow Hat",
+        "Green Hat",
+        "Blue Hat"
+      ],
+      "domains": [
+        "decision_analysis",
+        "writing_creation",
+        "innovation",
+        "strategy_planning"
+      ],
+      "use_cases": [
+        "Team decision meetings",
+        "Project planning and evaluation",
+        "Problem analysis and solving",
+        "Creative brainstorming",
+        "Risk assessment",
+        "Strategic planning"
+      ]
+    },
+    {
+      "id": "critique-refine",
+      "name": "Critique-Refine",
+      "full_name": "Critique and Refine Pattern",
+      "category": "patterns",
+      "file": "frameworks/patterns/Critique-Refine.md",
+      "element_count": 4,
+      "elements": [
+        "Initial Generation",
+        "Self-Review",
+        "Refine",
+        "Explain"
+      ],
+      "domains": [
+        "writing_creation"
+      ],
+      "use_cases": [
+        "High-quality content creation",
+        "Code review and improvement",
+        "Complex problem solving",
+        "Tasks requiring multiple rounds of optimization"
+      ]
+    },
+    {
+      "id": "few-shot",
+      "name": "Few-Shot",
+      "full_name": "Few-Shot Examples Pattern",
+      "category": "patterns",
+      "file": "frameworks/patterns/Few-Shot.md",
+      "element_count": 5,
+      "elements": [
+        "Task Description",
+        "Example 1",
+        "Example 2",
+        "Example 3",
+        "Actual Input"
+      ],
+      "domains": [
+        "writing_creation",
+        "innovation"
+      ],
+      "use_cases": [
+        "Specific format output generation",
+        "Language translation and conversion",
+        "Classification and labeling tasks",
+        "Code generation",
+        "Creative writing",
+        "Data format conversion"
+      ]
+    },
+    {
+      "id": "role-play",
+      "name": "Role-Play",
+      "full_name": "Role-Play Pattern",
+      "category": "patterns",
+      "file": "frameworks/patterns/Role-Play.md",
+      "element_count": 5,
+      "elements": [
+        "Role",
+        "Background",
+        "Style",
+        "Goal",
+        "Constraints"
+      ],
+      "domains": [
+        "decision_analysis",
+        "education",
+        "dialogue_ai",
+        "writing_creation",
+        "innovation"
+      ],
+      "use_cases": [
+        "Analysis requiring a professional perspective",
+        "Simulating feedback from a specific group",
+        "Creative writing",
+        "Education and training",
+        "Decision evaluation"
+      ]
+    }
+  ]
+}

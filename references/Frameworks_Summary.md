@@ -1,6 +1,6 @@
 # AI Prompt Framework Summary
 
-> This document summarizes 57 AI prompt engineering frameworks and their corresponding use cases.
+> This document summarizes the 61 AI prompt engineering frameworks bundled with this skill and their corresponding use cases. For structured/queryable metadata, see [`frameworks/index.json`](../frameworks/index.json).
 
 ## Framework Classification Reference
 
@@ -28,7 +28,7 @@
 
 ---
 
-## Complete List of 57 Frameworks
+## Complete List of 61 Frameworks
 
 | # | Framework | Use Cases |
 |:---:|-----------|-----------|
@@ -89,3 +89,7 @@
 | 55 | RODES Framework | Educational content development, customer service protocols, detailed research queries, strategic planning, complex problem solving, training module creation |
 | 56 | SPARK Framework | Creative problem solving, product or service design innovation, marketing strategy development, scenarios requiring fresh perspectives, creative writing, strategic planning |
 | 57 | RASCEF Framework | Technical documentation, instructional design, creative storytelling, detailed analysis projects, complex task execution, marketing strategy development |
+| 58 | ROSE Framework | Role-play scenarios, content creation with specific style, persona-driven writing, scenario simulations, character development |
+| 59 | ROSES (Complex) Framework | Multi-step role-play scenario design, detailed AI persona configuration, complex dialogue systems requiring scenario + steps |
+| 60 | Critique-Refine Pattern | High-quality content creation, code review and improvement, complex problem solving, tasks requiring multiple rounds of optimization |
+| 61 | Role-Play Pattern | Analysis from a professional perspective, simulating feedback from a specific group, creative writing, education and training, decision evaluation |

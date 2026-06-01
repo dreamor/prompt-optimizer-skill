@@ -1,7 +1,7 @@
 ---
 name: prompt-optimizer
-version: 2.0.0
-description: Prompt optimization assistant. Use when the user wants to optimize prompts, improve AI instructions, design better prompts for specific tasks, or select an appropriate prompt framework. Matches the right framework to the task context, asks clarifying questions when necessary, and outputs clearer, more actionable prompt versions.
+version: 2.1.0
+description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt.
 ---
 
 # Prompt Optimizer v2.0
@@ -44,14 +44,16 @@ Trigger this skill when:
 
 ## Workflow
 
-Copy this checklist and track your progress:
-- [ ] Step 1: Analyze User Input
-- [ ] Step 2: Match Scenario and Select Framework
-- [ ] Step 3: Load Framework Details
-- [ ] Step 4: Clarify Ambiguities
-- [ ] Step 5: Generate Optimized Prompt
-- [ ] Step 6: Quality Validation
-- [ ] Step 7: Present Results
+**Track progress with `TaskCreate`** — at Step 1, create one task per workflow step below, then mark each `in_progress` → `completed` as you go. Do not rely on a plain-text checklist; the harness only enforces what's in the task list.
+
+The seven steps:
+1. Analyze User Input
+2. Match Scenario and Select Framework
+3. Load Framework Details
+4. Clarify Ambiguities
+5. Generate Optimized Prompt
+6. Quality Validation
+7. Present Results
 
 ### Step 1: Analyze User Input
 
@@ -132,7 +134,9 @@ Alternative: COAST (if the user needs to emphasize interaction steps)
 
 ### Step 3: Load Framework Details
 
-Load the detailed definition of the selected framework from the `frameworks/` directory:
+**Lookup-first**: read `frameworks/index.json` to resolve the framework's `file`, `elements`, `domains`, and `use_cases`. The index is the source of truth — do not guess paths.
+
+If you need the full structure / example / usage tips, load the resolved file:
 - Simple frameworks: `frameworks/simple/{framework}.md`
 - Medium frameworks: `frameworks/medium/{framework}.md`
 - Complex frameworks: `frameworks/complex/{framework}.md`
@@ -225,37 +229,42 @@ Provide 1–3 versions based on user needs:
 
 **CRITICAL STEP**
 
-Validate the optimized prompt using the **CLARITY Checklist**:
+Validate the optimized prompt using the **CLARITY Checklist**. Each item is a binary pass/fail — apply the rubric below verbatim instead of judging by feel.
 
-| Check Item | Criteria | Status |
-|------------|----------|--------|
-| **C**ontext | Contains sufficient background information | ☐ |
-| **L**ogic | Reasoning approach is clear | ☐ |
-| **A**ction | Specific actions are defined | ☐ |
-| **R**ole | Role is clearly defined | ☐ |
-| **I**nput/Output | Input and output formats are defined | ☐ |
-| **T**one | Tone and style are specified | ☐ |
-| **Y**ardstick | Quality criteria or constraints are set | ☐ |
+| Letter | Pass criterion (must satisfy ALL) |
+|--------|-----------------------------------|
+| **C**ontext | The prompt names the relevant background: domain, situation, prior state, or constraints that frame why the task exists. Generic phrases like "in a business setting" do NOT pass. |
+| **L**ogic | The prompt either (a) prescribes a reasoning method ("think step by step", "first principles", "compare alternatives"), or (b) breaks the task into ordered sub-steps. |
+| **A**ction | The prompt contains at least one specific imperative verb describing what to produce (write, summarize, classify, refactor, design). Vague verbs (improve, optimize, handle) do NOT pass on their own. |
+| **R**ole | The prompt assigns a specific expert identity, including domain and seniority/experience. "You are an assistant" does NOT pass. |
+| **I**nput/Output | The prompt names BOTH the input shape (or assumes raw user text) AND the desired output structure (headings, JSON keys, table columns, length range). |
+| **T**one | The prompt names a style, register, or audience that constrains voice (formal, casual, technical, for executives, for 5-year-olds). |
+| **Y**ardstick | The prompt states at least one measurable acceptance criterion or hard constraint (word count, must include X, must avoid Y, must validate Z). |
 
-**Validation Rules:**
-- Simple task: At least 4/7 items must pass
-- Medium task: At least 5/7 items must pass
-- Complex task: At least 6/7 items must pass
+Compute the score: count items that pass.
 
-**If Validation Fails:**
-1. List the failing check items
-2. Supplement the missing elements
-3. Re-validate until it passes
+**Validation thresholds (by task complexity):**
 
-**Additional Quality Checks:**
+| Task complexity | Required score | Action on fail |
+|-----------------|----------------|----------------|
+| Simple          | ≥ 4 / 7        | Add the lowest-cost missing element |
+| Medium          | ≥ 5 / 7        | Add the 1–2 missing elements with the highest impact |
+| Complex         | ≥ 6 / 7        | Iterate until threshold met; never present below threshold |
 
-| Check Item | Pass Criteria |
-|------------|---------------|
-| Clarity | No vague words (e.g., "improve", "optimize") |
-| Specificity | Includes measurable metrics or criteria |
-| Completeness | Covers all aspects of the user's needs |
-| Feasibility | AI can actually execute the task |
-| Safety | No harmful or inappropriate content |
+**If validation fails:**
+1. List the failing items by name
+2. Generate a one-line patch for each (the exact sentence to add)
+3. Re-apply and re-score
+
+**Additional quality checks** (each is also pass/fail):
+
+| Check | Pass criterion |
+|-------|----------------|
+| Clarity | No vague verbs ("improve", "optimize", "handle") used as the primary action |
+| Specificity | At least one measurable metric, threshold, or named entity |
+| Completeness | Every user-stated requirement appears in the output |
+| Feasibility | A reasonable AI could execute the task without external tools beyond what's named |
+| Safety | No harmful, illegal, or privacy-violating instructions |
 
 ---
 
@@ -385,15 +394,24 @@ Apply these techniques based on task complexity:
 ## References
 
 Framework details can be found in:
-- `frameworks/simple/` - Simple frameworks (≤3 elements)
-- `frameworks/medium/` - Medium frameworks (4-5 elements)
-- `frameworks/complex/` - Complex frameworks (6+ elements)
-- `frameworks/patterns/` - Reusable patterns
-- [Frameworks Summary](references/Frameworks_Summary.md) - Complete list of all frameworks
+- `frameworks/index.json` — structured metadata for all 61 frameworks (id, category, elements, domains, use cases)
+- `frameworks/simple/` — Simple frameworks (≤3 elements)
+- `frameworks/medium/` — Medium frameworks (4-5 elements)
+- `frameworks/complex/` — Complex frameworks (6+ elements)
+- `frameworks/patterns/` — Reusable patterns
+- [Frameworks Summary](references/Frameworks_Summary.md) — Human-readable overview of all 61 frameworks
 
 ---
 
 ## Changelog
+
+### v2.1.0
+- ✨ Added `frameworks/index.json` — structured metadata for all 61 frameworks (used by Step 3 lookup)
+- ✨ Step 6 CLARITY rubric is now binary pass/fail with explicit criteria per letter
+- ✨ Workflow now uses `TaskCreate` for progress tracking instead of a text checklist
+- 🔧 Trimmed SKILL frontmatter description and added explicit trigger keywords
+- 🔧 Deduplicated and renumbered `tests/test-cases.md` (29 unique cases, 8 categories)
+- 📦 Added top-level `LICENSE` file (MIT)
 
 ### v2.0.0 (2024-04-20)
 - ✨ Added detailed framework definition files for all frameworks

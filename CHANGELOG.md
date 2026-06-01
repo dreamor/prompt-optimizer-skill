@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-06-01
+
+### ✨ Added
+
+- **`frameworks/index.json`**: Structured metadata (id, full_name, category, element_count, elements, domains, use_cases) for all 61 frameworks. Step 3 of the SKILL workflow now uses lookup-first instead of guessing file paths.
+- **`LICENSE`** (MIT): Added the actual file the README and `package.json` were already referencing.
+- **CLI `frameworks --json`**: Print `index.json` directly.
+- **CLI `frameworks --filter <domain>`** and **`--category <cat>`**: Query frameworks by inferred domain or by complexity bucket.
+- **CLI `template <text>`**: New name for the `optimize` command, makes it explicit that the CLI prints STATIC scaffolds and does not perform real optimization. `optimize` / `o` remain as aliases.
+- **CLARITY rubric**: Step 6 of the SKILL is now a binary pass/fail checklist with explicit criteria per letter — scores are reproducible across runs.
+
+### 🔧 Changed
+
+- **`SKILL.md` frontmatter description**: Trimmed and now lists explicit trigger phrases so Claude Code's skill router fires reliably.
+- **Workflow tracking**: Step 1 now instructs the agent to use `TaskCreate` for the 7 steps, instead of relying on a plain-text checklist that the harness can't enforce.
+- **CLI help / output banners**: Now state explicitly that the CLI ships static templates and that real optimization happens inside Claude Code.
+
+### 🧹 Removed / Fixed
+
+- **`tests/test-cases.md`**: Deduplicated overlapping cases and renumbered. From 34 entries with duplicate Category 6 / TC-011 / TC-013 to 29 unique cases across 8 clean categories. Added a `bash` sanity script that actually checks the framework counts.
+- **`references/Frameworks_Summary.md`**: Was listing 57 frameworks; now lists all 61 (added Critique-Refine, Role-Play, complex ROSES, ROSE).
+
 ## [2.0.0] - 2024-04-20
 
 ### ✨ Added

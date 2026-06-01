@@ -94,10 +94,11 @@ prompt-optimizer-skill/
 ├── CHANGELOG.md            # This file
 ├── README.md               # Updated documentation
 ├── frameworks/             # Framework definitions
-│   ├── simple/            # 7 simple frameworks
-│   ├── medium/            # 6 medium frameworks
-│   ├── complex/           # 3 complex frameworks
-│   └── patterns/          # 2 reusable patterns
+│   ├── index.json          # Structured metadata (added in v2.1.0)
+│   ├── simple/            # 16 simple frameworks
+│   ├── medium/            # 33 medium frameworks
+│   ├── complex/           # 9 complex frameworks
+│   └── patterns/          # 3 reusable patterns
 ├── tests/                 # Test cases
 │   └── test-cases.md
 └── references/            # Reference materials
@@ -127,8 +128,7 @@ prompt-optimizer-skill/
 
 ## Roadmap
 
-### Planned for v2.1.0
-- [ ] Add 10 more framework definitions
+### Planned for v2.2.0
 - [ ] Interactive web interface for framework selection
 - [ ] Prompt version history and comparison
 - [ ] Batch optimization for multiple prompts

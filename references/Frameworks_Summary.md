@@ -8,23 +8,27 @@
 
 | Complexity | Frameworks |
 |------------|------------|
-| **Simple (≤3 elements)** | APE, ERA, TAG, RTF, BAB, PEE, ELI5 |
-| **Medium (4-5 elements)** | RACE, CIDI, SPEAR, SPAR, FOCUS, SMART, GOPA, ORID, CARE, ROSE, PAUSE, TRACE, GRADE, TRACI, RODES |
-| **Complex (6+ elements)** | RACEF, CRISPE, SCAMPER, Six Thinking Hats, ROSES, PROMPT, RISEN, RASCEF, Atomic Prompting |
+| **Simple (16)** | 4S-Method, APE, BAB, CAR-PAR-STAR, Challenge-Solution-Benefit, ELI5, ERA, Elicitation, Five-Ws-and-One-H, Hamburger-Model, Help-Me-Understand, Imagine, PEE, RTF, TAG, Zero-shot |
+| **Medium (33)** | 3Cs-Model, Atomic-Prompting, BLOG, Blooms-Taxonomy, CARE, CIDI, COAST, Chain-of-Destiny, Chain-of-Thought, FOCUS, GOPA, GRADE, HMW, ORID, PROMPT, Pause, Pros-and-Cons, RACE, RHODES, RICE, RISE, ROSE, ROSES, SMART, SPAR, SPARK, SPEAR, Socratic-Method, TQA, TRACE, TRACI, Tree-of-Thought, What-If |
+| **Complex (9)** | CRISPE, RACEF, RASCEF, RELIC, RISEN, RODES, ROSES-Extended, SCAMPER, Six-Thinking-Hats |
+| **Patterns (3)** | Critique-Refine, Few-Shot, Role-Play |
 
 ### By Domain
 
 | Domain | Recommended Frameworks |
 |--------|----------------------|
-| **Marketing Content** | BAB, SPEAR, Challenge-Solution-Benefit, BLOG, PROMPT, RHODES |
-| **Decision Analysis** | RICE, Pros and Cons, Six Thinking Hats, Tree of Thought, PAUSE, What If |
-| **Education & Training** | Bloom's Taxonomy, ELI5, Socratic Method, PEE, Hamburger Model |
-| **Product Development** | SCAMPER, HMW, CIDI, RELIC, 3Cs Model |
-| **AI Dialogue / Assistant** | COAST, ROSES, TRACE, RACE, RASCEF |
-| **Writing & Creation** | BLOG, 4S Method, Hamburger Model, Few-shot, RHODES, Chain of Destiny |
-| **Image Generation** | Atomic Prompting |
+| **Marketing Content** | BAB, SPEAR, Challenge-Solution-Benefit, BLOG, PROMPT, RHODES, RICE, CRISPE, SPARK, ROSES-Extended |
+| **Decision Analysis** | Pros-and-Cons, Six-Thinking-Hats, Tree-of-Thought, PAUSE, What-If, ORID, GRADE, FOCUS, RACEF, Socratic-Method |
+| **Education & Training** | Blooms-Taxonomy, ELI5, Socratic-Method, PEE, Hamburger-Model, Elicitation, Help-Me-Understand, RISEN, RELIC |
+| **Product Development** | SCAMPER, HMW, CIDI, RELIC, 3Cs-Model, SMART, FOCUS, RACEF, RODES, Imagine |
+| **AI Dialogue / Assistant** | COAST, ROSES, TRACE, RACE, RASCEF, ROSE, CARE, ROSES-Extended |
+| **Writing & Creation** | BLOG, 4S-Method, Hamburger-Model, Few-Shot, RHODES, Chain-of-Destiny, APE, ERA, PEE, CAR-PAR-STAR, SPARK, RISEN, Critique-Refine |
+| **Image Generation** | Atomic-Prompting |
 | **Quick Simple Tasks** | Zero-shot, ERA, TAG, APE, RTF |
-| **Complex Reasoning** | Chain of Thought, Tree of Thought |
+| **Complex Reasoning** | Chain-of-Thought, Tree-of-Thought, RACEF, CRISPE |
+| **Innovation** | SCAMPER, HMW, Imagine, SPARK, What-If, Role-Play |
+| **Strategy Planning** | SMART, RICE, Six-Thinking-Hats, 3Cs-Model, GOPA, GRADE, FOCUS, RACEF |
+| **Research** | FOCUS, GRADE, Elicitation, Five-Ws-and-One-H, RACEF, RISEN, RODES |
 
 ---
 
@@ -90,6 +94,6 @@
 | 56 | SPARK Framework | Creative problem solving, product or service design innovation, marketing strategy development, scenarios requiring fresh perspectives, creative writing, strategic planning |
 | 57 | RASCEF Framework | Technical documentation, instructional design, creative storytelling, detailed analysis projects, complex task execution, marketing strategy development |
 | 58 | ROSE Framework | Role-play scenarios, content creation with specific style, persona-driven writing, scenario simulations, character development |
-| 59 | ROSES (Complex) Framework | Multi-step role-play scenario design, detailed AI persona configuration, complex dialogue systems requiring scenario + steps |
+| 59 | ROSES-Extended Framework | Multi-step role-play scenario design, detailed AI persona configuration, complex dialogue systems requiring scenario + steps |
 | 60 | Critique-Refine Pattern | High-quality content creation, code review and improvement, complex problem solving, tasks requiring multiple rounds of optimization |
 | 61 | Role-Play Pattern | Analysis from a professional perspective, simulating feedback from a specific group, creative writing, education and training, decision evaluation |

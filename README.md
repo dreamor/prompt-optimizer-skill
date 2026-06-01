@@ -25,7 +25,18 @@
 - **Multiple Installation Methods**: Supports Claude Marketplace, npx, and local installation.
   **多种安装方式**：支持 Claude Marketplace、npx 和本地安装。
 
-### 🆕 New in v2.0 / v2.0 新特性
+### 🆕 New in v2.1 / v2.1 新特性
+
+| Feature / 特性 | Description / 描述 |
+| :--- | :--- |
+| **Structured Framework Index** / **结构化框架索引** | `frameworks/index.json` with id, category, elements, domains, use_cases for all 61 frameworks. <br> 为全部 61 个框架提供 id、类别、元素、领域、用例的结构化元数据。 |
+| **CLARITY Rubric** / **CLARITY 评分标准** | Binary pass/fail checklist with explicit criteria per letter — reproducible scores across runs. <br> 每个字母有明确标准的二值通过/失败检查清单，跨运行可复现评分。 |
+| **CLI `template` Command** / **CLI `template` 命令** | Renamed from `optimize` to make it explicit that CLI prints static scaffolds; `optimize`/`o` remain as aliases. <br> 从 `optimize` 重命名，明确 CLI 输出静态脚手架；`optimize`/`o` 仍为别名。 |
+| **CLI Framework Queries** / **CLI 框架查询** | `frameworks --json`, `--filter <domain>`, `--category <cat>` for structured lookups. <br> 支持 `--json`、`--filter <领域>`、`--category <类别>` 结构化查询框架。 |
+| **Workflow Tracking** / **工作流追踪** | Step 1 now uses `TaskCreate` for the 7 steps instead of plain-text checklists. <br> 步骤 1 现在使用 `TaskCreate` 追踪 7 个步骤，替代纯文本清单。 |
+| **Deduplicated Tests** / **去重测试** | 29 unique test cases (was 34 with duplicates) with bash sanity script. <br> 29 个唯一测试用例（原 34 个含重复），附带 bash 完整性检查脚本。 |
+
+### 📦 v2.0 Features / v2.0 特性
 
 | Feature / 特性 | Description / 描述 |
 | :--- | :--- |
@@ -33,7 +44,7 @@
 | **Quality Validation** / **质量验证** | CLARITY 7-point checklist to ensure output quality. <br> CLARITY 7 点检查清单，确保输出质量。 |
 | **Multi-Version** / **多版本输出** | Different optimization levels based on user needs. <br> 根据用户需求提供不同详细程度的优化结果。 |
 | **Boundary Handling** / **边界处理** | Graceful handling of vague inputs and refusal to clarify. <br> 优雅处理模糊输入和拒绝澄清的用户行为。 |
-| **Test Suite** / **测试套件** | 34 test cases covering various usage scenarios. <br> 34 个测试用例，覆盖各种使用场景。 |
+| **Test Suite** / **测试套件** | 29 test cases covering various usage scenarios. <br> 29 个测试用例，覆盖各种使用场景。 |
 | **Claude Plugin** / **Claude 插件** | Support for installation via Claude Code Marketplace. <br> 支持通过 Claude Code Marketplace 安装。 |
 | **npx Support** / **npx 支持** | Use directly via npx without installation. <br> 无需安装，直接通过 npx 使用。 |
 
@@ -58,11 +69,18 @@ Use directly via npx without local installation:
 无需本地安装，直接通过 npx 使用：
 
 ```bash
-# Optimize a prompt / 优化提示词
-npx prompt-optimizer-skill optimize "Write an email to a customer"
+# Generate a prompt template (static scaffold) / 生成提示词模板（静态脚手架）
+npx prompt-optimizer-skill template "Write an email to a customer"
 
 # List all frameworks / 列出所有框架
 npx prompt-optimizer-skill frameworks
+
+# Query frameworks by domain or category / 按领域或类别查询框架
+npx prompt-optimizer-skill frameworks --filter marketing
+npx prompt-optimizer-skill frameworks --category medium
+
+# Output frameworks as JSON / 以 JSON 格式输出框架
+npx prompt-optimizer-skill frameworks --json
 
 # Run tests / 运行测试
 npx prompt-optimizer-skill test
@@ -73,13 +91,14 @@ npx prompt-optimizer-skill help
 
 **Quick Commands / 快捷命令**:
 ```bash
-# Use short alias / 使用短别名
+# Use short aliases / 使用短别名
 npx pos "Write an email to a customer"
+npx prompt-optimizer-skill optimize "Write code"   # alias for template / template 的别名
 
 # Specify output version / 指定输出版本
-npx prompt-optimizer-skill optimize "Write code" --basic      # Basic version / 基础版
-npx prompt-optimizer-skill optimize "Write code" --enhanced   # Enhanced version (default) / 增强版（默认）
-npx prompt-optimizer-skill optimize "Write code" --expert     # Expert version / 专家版
+npx prompt-optimizer-skill template "Write code" --basic      # Basic version / 基础版
+npx prompt-optimizer-skill template "Write code" --enhanced   # Enhanced version (default) / 增强版（默认）
+npx prompt-optimizer-skill template "Write code" --expert     # Expert version / 专家版
 ```
 
 ### Method 3: Symbolic Link (Development/Customization) / 方法三：符号链接（开发/自定义）

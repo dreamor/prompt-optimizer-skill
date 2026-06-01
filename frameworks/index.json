@@ -1552,9 +1552,9 @@
       ]
     },
     {
-      "id": "roses",
-      "name": "ROSES",
-      "full_name": "Role-Objective-Scenario-Expected Solution-Steps",
+      "id": "roses-extended",
+      "name": "ROSES-Extended",
+      "full_name": "Role-Objective-Scenario-Expected Solution-Steps (Extended)",
       "category": "complex",
       "file": "frameworks/complex/ROSES.md",
       "element_count": 5,
@@ -1570,12 +1570,12 @@
         "dialogue_ai"
       ],
       "use_cases": [
-        "Role-play scenario design",
-        "AI role definition",
-        "Dialogue system configuration",
-        "Customer service script design",
-        "Virtual assistant development",
-        "Game character design"
+        "Multi-step role-play scenario design",
+        "Detailed AI persona configuration",
+        "Complex dialogue system development",
+        "Customer service script design with escalation paths",
+        "Virtual assistant development with branching flows",
+        "Game character design with deep backstories"
       ]
     },
     {

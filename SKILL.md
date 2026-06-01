@@ -21,7 +21,7 @@ This skill primarily uses:
 ## Gotchas
 
 - Don't jump straight to a framework — first determine whether the task actually needs a complex one
-- Don't over-engineer simple prompts just to appear professional
+- **CRITICAL — Don't over-engineer simple prompts**: If the user's input is a single sentence or has ≤ 3 elements (Step 1 complexity = Simple), use a Simple-tier framework (APE, ERA, TAG) and output the Basic version. Adding RACE/CRISPE/Chain-of-Thought to a "rewrite this sentence" request bloats the prompt and makes the AI's output worse, not better. Complexity inflation is the #1 quality risk in prompt optimization.
 - If the user only wants a quick polish on one sentence, don't force a long structured template
 - If goal, audience, or output format are unclear, ask only the minimum necessary questions
 - Explaining why you chose a framework is more valuable than listing many framework names
@@ -61,6 +61,32 @@ Receive the user's request, which may be:
 - A raw prompt that needs optimization
 - A task description or requirement
 - A vague idea that needs to be turned into a prompt
+
+**Complexity Assessment (REQUIRED before Step 2):**
+
+Count the number of distinct task elements present in the user's input. An "element" is any of the following that the user explicitly mentions or clearly implies:
+
+| Element | Examples |
+|---------|----------|
+| Role / persona | "as a lawyer", "act as a senior dev" |
+| Action / task | "write", "summarize", "classify" |
+| Context / background | "for a startup pitch", "the API returns 500 errors" |
+| Audience | "for executives", "for beginners" |
+| Output format | "in JSON", "as a table", "bullet points" |
+| Constraints / limits | "under 200 words", "no jargon", "must include X" |
+| Examples / references | "like this: …", "similar to Notion's" |
+| Reasoning method | "step by step", "compare alternatives" |
+| Quality criteria | "must be accurate", "cite sources" |
+
+Classify complexity by element count:
+
+| Complexity | Element count | Signal words in user input |
+|------------|---------------|---------------------------|
+| **Simple** | ≤ 3 | "just", "quick", "simple", "polish", single-sentence requests |
+| **Medium** | 4–5 | Multi-sentence with some detail, mentions audience or format |
+| **Complex** | 6+ | Detailed specs, multiple constraints, examples + role + format |
+
+Record the complexity classification — it drives framework selection (Step 2), version default (Step 5), and CLARITY threshold (Step 6).
 
 **Boundary Handling:**
 
@@ -129,6 +155,15 @@ Reason: The user needs a role-play dialogue and has provided detailed background
 Confidence: 8/10
 Alternative: COAST (if the user needs to emphasize interaction steps)
 ```
+
+**Anti-patterns (MUST avoid):**
+
+| Anti-pattern | Why it's wrong | What to do instead |
+|--------------|---------------|-------------------|
+| Picking CRISPE for a 1-sentence polish | Forces 6 elements onto a task that only needs 2–3 | Use APE or ERA for simple tasks |
+| Choosing Chain-of-Thought for formatting tasks | CoT adds reasoning overhead to non-reasoning tasks | Use TAG or RTF when the task is about format, not reasoning |
+| Defaulting to the most complex framework "just in case" | Over-engineering produces bloated prompts that confuse the AI | Match framework complexity to task complexity from Step 1 |
+| Selecting a framework before counting elements | Skips the complexity gate, leading to mismatched selections | Always count elements first (Step 1), then pick from the matching tier |
 
 ---
 
@@ -221,7 +256,8 @@ Provide 1–3 versions based on user needs:
 - User says "keep it simple" / "quick": Provide Basic version
 - User says "more detail" / "complete": Provide Enhanced version
 - User says "best possible" / "professional": Provide Expert version
-- No clear preference: Provide Enhanced version + note that upgrade/downgrade is available
+- No clear preference + **Simple** complexity (Step 1): Provide **Basic** version — do not inflate a simple task to Enhanced/Expert
+- No clear preference + **Medium/Complex** complexity: Provide Enhanced version + note that upgrade/downgrade is available
 
 ---
 
@@ -344,6 +380,7 @@ Apply these techniques based on task complexity:
 
 | User Says | Recommended Framework | Version |
 |-----------|----------------------|---------|
+| "Just polish this" / "Make it clearer" | APE, ERA, TAG | Basic |
 | "I need a simple prompt" | APE, ERA, TAG | Basic |
 | "I want to persuade/sell" | BAB | Enhanced |
 | "I need to analyze/decide" | Chain-of-Thought, RACEF | Enhanced / Expert |
@@ -382,7 +419,7 @@ Apply these techniques based on task complexity:
 ## Notes
 
 - Always preserve the user's original intent
-- Don't over-engineer simple prompts
+- **Don't over-engineer simple prompts** — match framework tier to Step 1 complexity; Simple tasks get Simple frameworks + Basic version
 - Explain why each optimization was made
 - Offer multiple versions when appropriate (basic, enhanced, expert)
 - Encourage iterative refinement
@@ -404,6 +441,14 @@ Framework details can be found in:
 ---
 
 ## Changelog
+
+### v2.1.1
+- ✨ Step 1: added complexity assessment (element counting + Simple/Medium/Complex classification)
+- ✨ Step 5: added "Simple tasks default to Basic version" constraint
+- ✨ Step 2: added anti-patterns table (4 common framework-selection mistakes)
+- ✨ Quick Reference: added "Just polish this" / "Make it clearer" row
+- 🔧 Gotchas: upgraded "Don't over-engineer" to CRITICAL with explicit rule and rationale
+- 🔧 Notes: aligned over-engineering note with Gotchas wording
 
 ### v2.1.0
 - ✨ Added `frameworks/index.json` — structured metadata for all 61 frameworks (used by Step 3 lookup)

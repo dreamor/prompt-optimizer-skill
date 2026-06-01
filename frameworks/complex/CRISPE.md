@@ -1,52 +1,52 @@
 # CRISPE Framework
 
-## 名称
+## Name
 Capacity-Role-Insight-Statement-Personality-Experiment
 
-## 结构
-- **Capacity**: AI 的能力范围
-- **Role**: 角色
-- **Insight**: 洞察/理解
-- **Statement**: 任务陈述
-- **Personality**: 个性/风格
-- **Experiment**: 实验/尝试
+## Structure
+- **Capacity**: The AI's capability scope
+- **Role**: Role
+- **Insight**: Insight / Understanding
+- **Statement**: Task statement
+- **Personality**: Personality / Style
+- **Experiment**: Experiment / Attempt
 
-## 适用场景
-- 营销活动策划
-- 员工培训计划设计
-- 产品功能优先级排序
-- 内容创作策略
-- 医疗政策分析
-- 企业可持续发展计划
+## Use Cases
+- Marketing campaign planning
+- Employee training program design
+- Product feature prioritization
+- Content creation strategy
+- Healthcare policy analysis
+- Corporate sustainability planning
 
-## 示例
-**输入**: "策划一个新产品发布活动"
+## Example
+**Input**: "Plan a new product launch event"
 
-**优化后**:
+**Optimized**:
 ```
-Capacity: 作为一位拥有 15 年经验的整合营销专家，你精通数字营销、公关策略、社交媒体运营和活动策划
+Capacity: As an integrated marketing expert with 15 years of experience, you are proficient in digital marketing, PR strategy, social media management, and event planning
 
-Role: 你现在是我们的首席营销官，负责一款面向 Z 世代的环保时尚 App 的发布
+Role: You are now our Chief Marketing Officer, responsible for launching an eco-friendly fashion app targeting Generation Z
 
-Insight: 
-目标用户（18-25 岁）对传统广告免疫，更信任 KOL 推荐和同龄人评价。他们重视环保理念，但不愿意为此牺牲便利性和时尚感。竞品分析显示，市场上缺乏真正将可持续时尚与社交功能结合的产品。
+Insight:
+Target users (ages 18–25) are immune to traditional advertising and trust KOL recommendations and peer reviews more. They care about environmental values but are unwilling to sacrifice convenience or style. Competitive analysis shows the market lacks a product that genuinely combines sustainable fashion with social features.
 
-Statement: 
-设计一个为期 4 周的新产品发布营销活动，预算 50 万元，目标是获得 10 万注册用户，建立品牌认知度
+Statement:
+Design a 4-week product launch marketing campaign with a budget of 500,000 CNY, targeting 100,000 registered users and building strong brand awareness
 
-Personality: 
-- 风格：年轻、活力、真诚、有社会责任感
-- 语调：像朋友推荐好物，而非品牌推销
-- 价值观：环保不是负担，而是时尚的生活方式
+Personality:
+- Style: Young, energetic, authentic, socially responsible
+- Tone: Like a friend recommending something great, not a brand pitch
+- Values: Eco-consciousness is not a burden — it's a fashionable lifestyle
 
 Experiment:
-A/B 测试两种策略：
-策略 A：强调环保理念（"拯救地球，从衣橱开始"）
-策略 B：强调社交功能（"发现你的时尚圈"）
+A/B test two strategies:
+Strategy A: Emphasize environmental values ("Save the planet, start with your wardrobe")
+Strategy B: Emphasize social features ("Discover your fashion circle")
 
-请提供两套完整的营销方案，包括：渠道选择、内容策略、KOL 合作计划、预算分配和效果评估指标
+Please provide two complete marketing plans, including: channel selection, content strategy, KOL partnership plan, budget allocation, and performance metrics
 ```
 
-## 使用提示
-- 最全面的框架，适合复杂项目
-- 每个要素都需要深入思考
+## Usage Tips
+- The most comprehensive framework — ideal for complex projects
+- Each element requires deep thought

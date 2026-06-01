@@ -1,86 +1,86 @@
 # CARE Framework
 
-## 名称
+## Name
 Context-Action-Result-Example
 
-## 结构
-- **Context**: 背景/情境
-- **Action**: 行动
-- **Result**: 结果
-- **Example**: 示例
+## Structure
+- **Context**: Background / situation
+- **Action**: Action steps
+- **Result**: Expected results
+- **Example**: Concrete examples
 
-## 适用场景
-- 客户服务沟通
-- 用户体验设计
-- 内容创作指导
-- 产品设计原则
-- 团队协作标准
-- 服务质量提升
+## Use Cases
+- Customer service communication
+- User experience design
+- Content creation guidance
+- Product design principles
+- Team collaboration standards
+- Service quality improvement
 
-## 示例
-**输入**: "制定客户服务标准"
+## Example
+**Input**: "Establish customer service standards"
 
-**优化后**:
+**Optimized**:
 ```
-Context (背景):
-我们的客户支持团队每天处理 500+ 个咨询，涵盖技术支持、账单问题、功能请求等。客户期望在 2 小时内得到响应，但目前平均响应时间为 4 小时，客户满意度为 3.8/5。
+Context:
+Our customer support team handles 500+ inquiries per day, covering technical support, billing issues, and feature requests. Customers expect a response within 2 hours, but the current average response time is 4 hours and customer satisfaction is 3.8/5.
 
-Action (行动标准):
+Action (standards):
 
-1. 响应时间标准:
-   - 紧急问题（系统故障）: 15 分钟内响应
-   - 高优先级（功能无法使用）: 1 小时内响应
-   - 普通问题: 4 小时内响应
-   - 功能请求: 24 小时内响应
+1. Response time standards:
+   - Critical issues (system outage): Respond within 15 minutes
+   - High priority (feature unavailable): Respond within 1 hour
+   - General issues: Respond within 4 hours
+   - Feature requests: Respond within 24 hours
 
-2. 沟通质量标准:
-   - 使用客户名字
-   - 确认理解问题（复述）
-   - 提供具体解决方案，而非通用回复
-   - 给出预计解决时间
-   - 结束前确认问题已解决
+2. Communication quality standards:
+   - Use the customer's name
+   - Confirm understanding of the issue (paraphrase it back)
+   - Provide specific solutions, not generic replies
+   - Give an estimated resolution time
+   - Confirm the issue is resolved before closing
 
-3. 升级机制:
-   - L1 支持: 常见问题（处理时间 < 30 分钟）
-   - L2 支持: 技术问题（处理时间 < 4 小时）
-   - L3 支持: 复杂问题（处理时间 < 24 小时）
+3. Escalation mechanism:
+   - L1 support: Common questions (resolution time < 30 minutes)
+   - L2 support: Technical issues (resolution time < 4 hours)
+   - L3 support: Complex issues (resolution time < 24 hours)
 
-Result (期望结果):
-- 平均响应时间降至 2 小时以内
-- 客户满意度提升至 4.5/5
-- 首次解决率达到 80%
-- 客户投诉率降低 50%
+Result (expected outcomes):
+- Average response time reduced to within 2 hours
+- Customer satisfaction improved to 4.5/5
+- First-contact resolution rate reaches 80%
+- Customer complaint rate reduced by 50%
 
-Example (示例对话):
+Example (sample conversation):
 
-场景: 客户报告无法登录系统
+Scenario: Customer reports being unable to log in to the system
 
-优秀回复示例:
-"您好 [客户名字]，
+Example of an excellent reply:
+"Hello [Customer Name],
 
-感谢您联系支持团队。我理解您目前无法登录系统，这确实会影响您的工作，非常抱歉。
+Thank you for contacting support. I understand you're currently unable to log in to the system, which I know can disrupt your work — I'm very sorry for the inconvenience.
 
-让我帮您快速排查：
+Let me help you troubleshoot quickly:
 
-1. 首先，请确认您使用的是正确的邮箱地址
-2. 请尝试清除浏览器缓存或使用无痕模式
-3. 如果仍有问题，我可以为您重置密码
+1. First, please confirm you're using the correct email address
+2. Please try clearing your browser cache or using incognito mode
+3. If the issue persists, I can reset your password
 
-根据我们的记录，这可能是由于昨晚的系统更新导致的。我们的技术团队正在修复，预计 2 小时内恢复。
+Based on our records, this may be related to last night's system update. Our technical team is working on a fix, expected to be resolved within 2 hours.
 
-我会持续跟进这个问题，并在解决后第一时间通知您。如果您需要紧急访问，我可以为您开通临时账户。
+I will continue to follow up on this issue and notify you as soon as it's resolved. If you need urgent access, I can set up a temporary account for you.
 
-请问您方便尝试以上步骤吗？
+Would you be able to try the steps above?
 
 Best,
-[客服名字]"
+[Support Agent Name]"
 
-避免的回复:
-"收到，我们会尽快处理。"
+Reply to avoid:
+"Received, we will handle it as soon as possible."
 ```
 
-## 使用提示
-- Context 说明为什么需要这个标准
-- Action 要具体、可操作
-- Result 要可衡量
-- Example 展示最佳实践
+## Usage Tips
+- Context explains why this standard is needed
+- Action must be specific and actionable
+- Result must be measurable
+- Example demonstrates best practices

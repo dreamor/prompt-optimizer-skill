@@ -1,69 +1,69 @@
 # Atomic Prompting Framework
 
-## 名称
-原子提示框架
+## Name
+Atomic Prompting Framework
 
-## 结构
-- **Subject**: 主体
-- **Action**: 动作
-- **Environment**: 环境
-- **Style**: 风格
-- **Lighting**: 光线
-- **Camera**: 相机/视角
-- **Quality**: 质量
+## Structure
+- **Subject**: The main subject
+- **Action**: Action or state
+- **Environment**: Surrounding environment
+- **Style**: Artistic style
+- **Lighting**: Light and shadow
+- **Camera**: Camera angle and lens
+- **Quality**: Output quality
 
-## 适用场景
-- AI 图像生成
-- 数字艺术创作
-- 复杂场景构建
-- Midjourney/DALL-E 3/Adobe Firefly 等工具使用
-- 需要精细控制的视觉项目
+## Use Cases
+- AI image generation
+- Digital art creation
+- Complex scene construction
+- Tools such as Midjourney / DALL-E 3 / Adobe Firefly
+- Visual projects requiring fine-grained control
 
-## 示例
-**输入**: "生成一张产品展示图"
+## Example
+**Input**: "Generate a product showcase image"
 
-**优化后**:
+**Optimized**:
 ```
-Subject (主体):
-- 主体: 极简主义无线耳机
-- 颜色: 哑光白色
-- 材质: 金属和硅胶
-- 细节: 精致的缝线，LED 指示灯
+Subject:
+- Subject: Minimalist wireless earbuds
+- Color: Matte white
+- Material: Metal and silicone
+- Details: Refined stitching, LED indicator
 
-Action (动作/状态):
-- 状态: 悬浮在空中
-- 角度: 45 度展示
-- 状态: 充电盒半开，耳机飘出
+Action (state):
+- State: Floating in mid-air
+- Angle: 45-degree display
+- State: Charging case half-open, earbuds floating out
 
-Environment (环境):
-- 背景: 渐变蓝紫色
-- 氛围: 科技感、未来感
-- 元素: 轻微的光晕和粒子效果
+Environment:
+- Background: Gradient blue-purple
+- Atmosphere: Tech-forward, futuristic
+- Elements: Subtle halo and particle effects
 
-Style (风格):
-- 艺术风格: 产品摄影 + 超现实主义
-- 参考: Apple 产品广告风格
-- 色调: 冷色调为主，暖色点缀
+Style:
+- Artistic style: Product photography + surrealism
+- Reference: Apple product advertising style
+- Tone: Cool tones dominant, warm accents
 
-Lighting (光线):
-- 主光源: 左侧柔光
-- 辅光: 底部反射光
-- 效果: 轮廓光勾勒边缘
-- 氛围: 明亮但柔和
+Lighting:
+- Main light: Soft light from the left
+- Fill light: Bottom reflected light
+- Effect: Rim light outlining the edges
+- Atmosphere: Bright but soft
 
-Camera (相机/视角):
-- 镜头: 微距镜头
-- 焦距: 50mm
-- 景深: 浅景深，背景虚化
-- 角度: 平视略低
+Camera:
+- Lens: Macro lens
+- Focal length: 50mm
+- Depth of field: Shallow, blurred background
+- Angle: Straight-on, slightly low
 
-Quality (质量):
-- 分辨率: 8K
-- 细节: 超精细
-- 渲染: 照片级真实感
-- 后期: 轻微调色增强
+Quality:
+- Resolution: 8K
+- Detail: Ultra-fine
+- Rendering: Photorealistic
+- Post-processing: Light color grading enhancement
 
-完整 Prompt:
+Full Prompt:
 "A minimalist white wireless earbud floating in mid-air, 45-degree angle, 
 charging case half-open, matte finish with metal accents, subtle LED light, 
 gradient blue-purple background, tech atmosphere with light particles, 
@@ -72,8 +72,8 @@ lighting with bottom reflection, rim light on edges, macro lens 50mm,
 shallow depth of field, 8K resolution, photorealistic, highly detailed"
 ```
 
-## 使用提示
-- 每个维度都要考虑，但不必都写
-- 按重要性排序，关键要素在前
-- 使用具体的形容词而非模糊词汇
-- 参考专业摄影和美术术语
+## Usage Tips
+- Consider every dimension, but not all need to be written
+- Sort by importance — key elements come first
+- Use specific adjectives rather than vague terms
+- Reference professional photography and fine-art terminology

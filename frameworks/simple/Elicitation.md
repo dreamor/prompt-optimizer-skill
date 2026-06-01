@@ -1,146 +1,146 @@
 # Elicitation Framework
 
-## 名称
-引导获取框架
+## Name
+Elicitation Framework
 
-## 结构
-- **目标**: 需要获取的信息
-- **方法**: 获取方法
-- **问题**: 引导问题
-- **记录**: 记录方式
-- **验证**: 验证机制
+## Structure
+- **Objective**: Information to be obtained
+- **Methods**: Methods for gathering information
+- **Questions**: Guiding questions
+- **Documentation**: Recording method
+- **Validation**: Validation mechanism
 
-## 适用场景
-- 需求收集和分析
-- 用户研究访谈
-- 产品发现过程
-- 项目范围定义
-- 问题诊断
-- 知识获取
+## Use Cases
+- Requirements gathering and analysis
+- User research interviews
+- Product discovery process
+- Project scope definition
+- Problem diagnosis
+- Knowledge acquisition
 
-## 示例
-**输入**: "进行用户访谈收集需求"
+## Example
+**Input**: "Conduct user interviews to collect requirements"
 
-**优化后**:
+**Optimized**:
 ```
-目标 (Objective):
-- 了解目标用户的工作流程
-- 识别当前解决方案的痛点
-- 发现未被满足的需求
-- 验证产品概念
-- 收集功能优先级
+Objective:
+- Understand the target user's workflow
+- Identify pain points in current solutions
+- Discover unmet needs
+- Validate product concepts
+- Gather feature priorities
 
-方法 (Methods):
+Methods:
 
-1. 访谈:
-   - 形式: 一对一深度访谈
-   - 时长: 45-60 分钟
-   - 人数: 8-10 位目标用户
-   - 方式: 线上视频或线下
+1. Interviews:
+   - Format: One-on-one in-depth interviews
+   - Duration: 45-60 minutes
+   - Number of participants: 8-10 target users
+   - Mode: Online video or in-person
 
-2. 观察:
-   - 实地观察用户工作场景
-   - 记录操作步骤和痛点
-   - 关注非语言行为
+2. Observation:
+   - Observe users in their actual work environment
+   - Record operational steps and pain points
+   - Pay attention to non-verbal behavior
 
-3. 问卷:
-   - 访谈后发送补充问卷
-   - 收集量化数据
-   - 验证访谈发现
+3. Questionnaires:
+   - Send a supplementary questionnaire after interviews
+   - Collect quantitative data
+   - Validate interview findings
 
-问题 (Questions):
+Questions:
 
-开场（建立信任）:
-- "能否介绍一下您的工作职责？"
-- "您一天的工作通常是如何安排的？"
+Opening (build rapport):
+- "Could you describe your job responsibilities?"
+- "How is a typical workday usually structured for you?"
 
-探索现状:
-- "您目前如何处理 [任务 X]？"
-- "能带我走一遍您的流程吗？"
-- "在这个过程中，您使用了哪些工具？"
+Exploring the current state:
+- "How do you currently handle [Task X]?"
+- "Could you walk me through your process?"
+- "What tools do you use in this process?"
 
-识别痛点:
-- "这个流程中最让您沮丧的是什么？"
-- "有没有什么事情让您觉得浪费时间？"
-- "您现在的工作中有哪些 workaround？"
+Identifying pain points:
+- "What is most frustrating about this process?"
+- "Is there anything that feels like a waste of your time?"
+- "What workarounds do you have in your current work?"
 
-发现需求:
-- "如果能改变一件事，您会改变什么？"
-- "您理想中的解决方案是什么样的？"
-- "什么功能会让您的工作更轻松？"
+Discovering needs:
+- "If you could change one thing, what would it be?"
+- "What does your ideal solution look like?"
+- "What features would make your work easier?"
 
-验证假设:
-- "我们假设 [功能 X] 对您有帮助，实际情况如何？"
-- "如果有一个工具能 [解决 Y]，您会愿意付费吗？"
+Validating assumptions:
+- "We assume [Feature X] would be helpful to you — how does that match your reality?"
+- "If there were a tool that could [solve Y], would you be willing to pay for it?"
 
-优先级:
-- "您提到的这些需求，哪些是最紧急的？"
-- "如果只能实现一个功能，您会选择哪个？"
+Prioritization:
+- "Among the needs you've mentioned, which are most urgent?"
+- "If only one feature could be implemented, which would you choose?"
 
-记录 (Documentation):
+Documentation:
 
-记录方式:
-- 录音（征得同意）
-- 详细笔记
-- 截图/录屏（如适用）
-- 用户原话记录
+Recording methods:
+- Audio recording (with consent)
+- Detailed notes
+- Screenshots/screen recordings (if applicable)
+- Direct quotes from users
 
-记录模板:
+Documentation template:
 ```
-访谈对象: [姓名，职位，公司]
-日期: [日期]
-时长: [分钟]
+Interviewee: [Name, Title, Company]
+Date: [Date]
+Duration: [Minutes]
 
-关键发现:
-1. [发现 1]
-2. [发现 2]
+Key findings:
+1. [Finding 1]
+2. [Finding 2]
 
-痛点:
-- [痛点 1]: [详细描述]
-- [痛点 2]: [详细描述]
+Pain points:
+- [Pain point 1]: [Detailed description]
+- [Pain point 2]: [Detailed description]
 
-需求:
-- [需求 1]: [优先级高/中/低]
-- [需求 2]: [优先级高/中/低]
+Needs:
+- [Need 1]: [Priority: High/Medium/Low]
+- [Need 2]: [Priority: High/Medium/Low]
 
-原话引用:
-- "[用户原话]"
+Direct quotes:
+- "[User's exact words]"
 
-下一步:
-- [行动项]
-```
-
-验证 (Validation):
-
-交叉验证:
-- 多个用户是否提到相同痛点？
-- 定量数据是否支持定性发现？
-- 用户说的和做的是否一致？
-
-验证方法:
-- 与团队成员分享发现，获取反馈
-- 创建原型让用户测试
-- A/B 测试验证假设
-- 跟踪指标验证改进效果
-
-质量检查:
-- [ ] 样本是否具有代表性？
-- [ ] 问题是否中立，无引导性？
-- [ ] 是否记录了用户的原话？
-- [ ] 发现是否有数据支持？
-- [ ] 结论是否过度泛化？
-
-注意事项:
-- 多听少说，让用户主导
-- 避免引导性问题
-- 关注"为什么"，不只问"是什么"
-- 观察非语言线索
-- 感谢用户的时间
+Next steps:
+- [Action item]
 ```
 
-## 使用提示
-- 目标要明确
-- 方法要多样
-- 问题要开放
-- 记录要详细
-- 验证要严谨
+Validation:
+
+Cross-validation:
+- Do multiple users mention the same pain points?
+- Does quantitative data support qualitative findings?
+- Is what users say consistent with what they do?
+
+Validation methods:
+- Share findings with team members to get feedback
+- Create prototypes for users to test
+- A/B testing to validate assumptions
+- Track metrics to validate improvements
+
+Quality checks:
+- [ ] Is the sample representative?
+- [ ] Are questions neutral and free of leading language?
+- [ ] Were users' exact words recorded?
+- [ ] Are findings supported by data?
+- [ ] Are conclusions over-generalized?
+
+Notes:
+- Listen more, talk less — let users lead
+- Avoid leading questions
+- Focus on "why," not just "what"
+- Observe non-verbal cues
+- Thank users for their time
+```
+
+## Usage Tips
+- Be clear about the objective
+- Use diverse methods
+- Keep questions open-ended
+- Record in detail
+- Validate rigorously

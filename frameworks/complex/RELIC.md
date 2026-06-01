@@ -1,150 +1,150 @@
 # RELIC Framework
 
-## 名称
+## Name
 Requirements-Effort-Limits-Implementation-Confirmation
 
-## 结构
-- **Requirements**: 需求
-- **Effort**: 投入/努力
-- **Limits**: 限制
-- **Implementation**: 实施
-- **Confirmation**: 确认
+## Structure
+- **Requirements**: Requirements
+- **Effort**: Investment / Effort
+- **Limits**: Limitations
+- **Implementation**: Implementation
+- **Confirmation**: Confirmation
 
-## 适用场景
-- 客户反馈系统优化
-- 教育科技产品开发
-- 员工培训项目设计
-- 政策实施评估
-- 产品迭代改进
-- 服务质量提升
+## Use Cases
+- Customer feedback system optimization
+- EdTech product development
+- Employee training program design
+- Policy implementation evaluation
+- Product iteration improvement
+- Service quality enhancement
 
-## 示例
-**输入**: "设计一个客户反馈改进系统"
+## Example
+**Input**: "Design a customer feedback improvement system"
 
-**优化后**:
+**Optimized**:
 ```
-Requirements (需求):
+Requirements:
 
-业务需求:
-- 收集客户反馈（多渠道）
-- 自动分类和优先级排序
-- 分配给对应团队处理
-- 跟踪处理进度
-- 分析趋势和模式
-- 闭环反馈给客户
+Business requirements:
+- Collect customer feedback (multi-channel)
+- Automatically classify and prioritize
+- Route to the appropriate team for handling
+- Track resolution progress
+- Analyze trends and patterns
+- Close the feedback loop with customers
 
-用户需求:
-- 提交反馈要简单（< 2 分钟）
-- 能看到反馈处理状态
-- 获得处理结果通知
-- 对处理结果评价
+User requirements:
+- Submitting feedback should be easy (< 2 minutes)
+- Be able to view feedback handling status
+- Receive notification of resolution results
+- Evaluate the handling outcome
 
-技术需求:
-- 与现有 CRM 系统集成
-- 支持移动端
-- 实时通知
-- 数据安全和隐私保护
+Technical requirements:
+- Integrate with the existing CRM system
+- Support mobile devices
+- Real-time notifications
+- Data security and privacy protection
 
-Effort (投入):
+Effort:
 
-人力资源:
-- 产品经理: 1 人 × 2 周（需求 + 验收）
-- 设计师: 1 人 × 1 周（UI/UX）
-- 前端开发: 1 人 × 3 周
-- 后端开发: 1 人 × 3 周
-- QA: 1 人 × 1 周
-- 总工作量: 8 人周
+Personnel:
+- Product Manager: 1 person × 2 weeks (requirements + acceptance)
+- Designer: 1 person × 1 week (UI/UX)
+- Frontend Developer: 1 person × 3 weeks
+- Backend Developer: 1 person × 3 weeks
+- QA: 1 person × 1 week
+- Total: 8 person-weeks
 
-资金成本:
-- 人力成本: 约 10 万元
-- 第三方服务（短信、邮件）: 2000 元/月
-- 服务器资源: 1000 元/月
+Financial cost:
+- Personnel: approx. 100,000 CNY
+- Third-party services (SMS, email): 2,000 CNY/month
+- Server resources: 1,000 CNY/month
 
-时间投入:
-- 开发周期: 6 周
-- 测试 + 上线: 2 周
-- 总计: 2 个月
+Time investment:
+- Development cycle: 6 weeks
+- Testing + launch: 2 weeks
+- Total: 2 months
 
-Limits (限制):
+Limits:
 
-技术限制:
-- 必须与现有用户系统单点登录
-- 数据存储必须符合 GDPR
-- 移动端必须支持 iOS 12+ 和 Android 8+
+Technical limitations:
+- Must support SSO with the existing user system
+- Data storage must comply with GDPR
+- Mobile must support iOS 12+ and Android 8+
 
-资源限制:
-- 预算上限 15 万元
-- 不能增加新员工
-- 必须在 Q2 结束前上线
+Resource limitations:
+- Budget cap: 150,000 CNY
+- No new hires allowed
+- Must go live before end of Q2
 
-业务限制:
-- 不能影响现有客户服务流程
-- 反馈处理响应时间不能延长
-- 客户数据不能离开国内
+Business limitations:
+- Must not disrupt existing customer service processes
+- Feedback handling response time must not increase
+- Customer data must remain onshore
 
-Implementation (实施):
+Implementation:
 
-阶段 1: 需求确认（Week 1）
-- 与客服、产品、技术团队确认需求
-- 设计信息架构和流程
-- 输出 PRD 和设计稿
+Phase 1: Requirements Confirmation (Week 1)
+- Confirm requirements with customer service, product, and engineering teams
+- Design information architecture and process flow
+- Deliver PRD and design mockups
 
-阶段 2: 开发（Week 2-5）
-- 后端: API 开发、数据库设计、集成
-- 前端: 反馈提交页面、管理后台
-- 移动端适配
+Phase 2: Development (Weeks 2–5)
+- Backend: API development, database design, integrations
+- Frontend: Feedback submission page, management dashboard
+- Mobile adaptation
 
-阶段 3: 测试（Week 6）
-- 功能测试
-- 用户验收测试（UAT）
-- 性能测试
+Phase 3: Testing (Week 6)
+- Functional testing
+- User acceptance testing (UAT)
+- Performance testing
 
-阶段 4: 上线（Week 7-8）
-- 灰度发布（10% 用户）
-- 监控和修复问题
-- 全量发布
-- 培训客服团队
+Phase 4: Launch (Weeks 7–8)
+- Canary release (10% of users)
+- Monitor and fix issues
+- Full rollout
+- Train customer service team
 
-详细功能清单:
-- [ ] 反馈提交表单（Web + 移动端）
-- [ ] 图片/附件上传
-- [ ] 自动分类（使用 NLP）
-- [ ] 工单分配系统
-- [ ] 进度跟踪仪表板
-- [ ] 客户通知系统
-- [ ] 数据分析报告
-- [ ] 管理后台
+Detailed feature checklist:
+- [ ] Feedback submission form (Web + Mobile)
+- [ ] Image/attachment upload
+- [ ] Auto-classification (using NLP)
+- [ ] Ticket routing system
+- [ ] Progress tracking dashboard
+- [ ] Customer notification system
+- [ ] Data analytics reports
+- [ ] Admin management dashboard
 
-Confirmation (确认):
+Confirmation:
 
-验收标准:
-- 客户提交反馈时间 < 2 分钟
-- 系统自动分类准确率 > 80%
-- 反馈响应时间 < 4 小时
-- 客户满意度 > 4.5/5
-- 系统可用性 > 99.9%
+Acceptance criteria:
+- Customer feedback submission time < 2 minutes
+- System auto-classification accuracy > 80%
+- Feedback response time < 4 hours
+- Customer satisfaction > 4.5/5
+- System availability > 99.9%
 
-成功指标:
-- 反馈收集量提升 50%
-- 处理效率提升 30%
-- 客户满意度提升 0.5 分
-- 重复反馈减少 20%
+Success metrics:
+- Feedback collection volume increases 50%
+- Handling efficiency improves 30%
+- Customer satisfaction score improves by 0.5
+- Repeat feedback reduces 20%
 
-验证方法:
-- A/B 测试（新系统 vs 旧系统）
-- 用户访谈（10 名客户）
-- 数据分析（对比上线前后）
-- 客服团队反馈
+Validation methods:
+- A/B test (new system vs. old system)
+- User interviews (10 customers)
+- Data analysis (compare before and after launch)
+- Customer service team feedback
 
-持续改进:
-- 每月收集改进建议
-- 每季度评估系统效果
-- 根据数据调整流程
+Continuous improvement:
+- Collect improvement suggestions monthly
+- Evaluate system effectiveness quarterly
+- Adjust processes based on data
 ```
 
-## 使用提示
-- 需求要全面，区分不同利益相关者
-- 投入要诚实，包括隐性成本
-- 限制要尽早明确
-- 实施要有详细计划和检查点
-- 确认要有可衡量的标准
+## Usage Tips
+- Requirements should be comprehensive, covering all stakeholders
+- Be honest about effort, including hidden costs
+- Identify limitations as early as possible
+- Implementation should include a detailed plan with checkpoints
+- Confirmation must include measurable criteria

@@ -1,76 +1,76 @@
 # Bloom's Taxonomy Framework
 
-## 名称
-布鲁姆分类法
+## Name
+Bloom's Taxonomy
 
-## 结构
-- **记忆 Remember**: 识别、回忆信息
-- **理解 Understand**: 解释、分类、总结
-- **应用 Apply**: 执行、实施
-- **分析 Analyze**: 区分、组织、归因
-- **评价 Evaluate**: 检查、评判
-- **创造 Create**: 生成、计划、构建
+## Structure
+- **Remember**: Recognize and recall information
+- **Understand**: Explain, classify, summarize
+- **Apply**: Execute and implement
+- **Analyze**: Differentiate, organize, attribute
+- **Evaluate**: Check and judge
+- **Create**: Generate, plan, build
 
-## 适用场景
-- 教育内容设计
-- 培训课程开发
-- 学习目标制定
-- 评估问题设计
-- 批判性思维培养
-- 技能进阶规划
+## Use Cases
+- Educational content design
+- Training course development
+- Learning objective formulation
+- Assessment question design
+- Critical thinking cultivation
+- Skills progression planning
 
-## 示例
-**输入**: "设计一个 Python 编程课程"
+## Example
+**Input**: "Design a Python programming course"
 
-**优化后**:
+**Optimized**:
 ```
-课程: Python 编程基础（面向初学者）
+Course: Python Programming Fundamentals (for Beginners)
 
-Level 1 - 记忆 Remember:
-- 识别 Python 基本数据类型
-- 回忆常用内置函数
-- 记住基本语法规则
-- 评估: 选择题、填空题
+Level 1 - Remember:
+- Identify Python's basic data types
+- Recall commonly used built-in functions
+- Memorize basic syntax rules
+- Assessment: Multiple choice, fill-in-the-blank
 
-Level 2 - 理解 Understand:
-- 解释变量和函数的概念
-- 分类不同类型的数据结构
-- 总结代码执行流程
-- 评估: 概念解释、流程图绘制
+Level 2 - Understand:
+- Explain the concepts of variables and functions
+- Classify different types of data structures
+- Summarize code execution flow
+- Assessment: Concept explanation, flowchart drawing
 
-Level 3 - 应用 Apply:
-- 使用条件语句解决简单问题
-- 实施循环处理数据
-- 执行文件读写操作
-- 评估: 编程练习、小项目
+Level 3 - Apply:
+- Use conditional statements to solve simple problems
+- Implement loops to process data
+- Perform file read/write operations
+- Assessment: Programming exercises, small projects
 
-Level 4 - 分析 Analyze:
-- 区分不同算法的效率
-- 组织复杂项目的代码结构
-- 归因代码错误的原因
-- 评估: 代码审查、Debug 练习
+Level 4 - Analyze:
+- Differentiate the efficiency of different algorithms
+- Organize code structure for complex projects
+- Attribute the causes of code errors
+- Assessment: Code review, debugging exercises
 
-Level 5 - 评价 Evaluate:
-- 检查代码质量和规范性
-- 评判不同解决方案的优劣
-- 评估项目架构设计
-- 评估: 代码评审、方案对比
+Level 5 - Evaluate:
+- Inspect code quality and standards compliance
+- Judge the strengths and weaknesses of different solutions
+- Evaluate project architecture design
+- Assessment: Code reviews, solution comparisons
 
-Level 6 - 创造 Create:
-- 设计并实现完整应用程序
-- 构建可复用的代码库
-- 生成创新的解决方案
-- 评估: 期末项目、开源贡献
+Level 6 - Create:
+- Design and implement a complete application
+- Build reusable code libraries
+- Generate innovative solutions
+- Assessment: Final project, open-source contributions
 
-课程设计原则:
-- 每个课时覆盖 2-3 个层级
-- 从低阶到高阶循序渐进
-- 评估方式与层级匹配
-- 提供进阶路径和挑战任务
+Course design principles:
+- Each lesson covers 2-3 cognitive levels
+- Progress gradually from lower to higher levels
+- Assessment methods match the cognitive level
+- Provide advancement paths and challenge tasks
 ```
 
-## 使用提示
-- 低阶思维（记忆、理解）是基础
-- 高阶思维（分析、评价、创造）是目标
-- 不同课程侧重点不同
-- 评估方式要与认知层级匹配
+## Usage Tips
+- Lower-order thinking (Remember, Understand) is the foundation
+- Higher-order thinking (Analyze, Evaluate, Create) is the goal
+- Different courses have different areas of emphasis
+- Assessment methods must match the cognitive level

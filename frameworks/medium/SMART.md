@@ -1,50 +1,50 @@
 # SMART Framework
 
-## 名称
+## Name
 Specific-Measurable-Achievable-Relevant-Time-bound
 
-## 结构
-- **Specific**: 具体的目标
-- **Measurable**: 可衡量的标准
-- **Achievable**: 可达成性
-- **Relevant**: 相关性
-- **Time-bound**: 时间限制
+## Structure
+- **Specific**: Specific goal
+- **Measurable**: Measurable standards
+- **Achievable**: Achievability
+- **Relevant**: Relevance
+- **Time-bound**: Time constraint
 
-## 适用场景
-- 目标设定
-- 项目规划
-- 绩效管理
-- OKR 制定
-- 个人发展计划
-- 营销目标定义
+## Use Cases
+- Goal setting
+- Project planning
+- Performance management
+- OKR formulation
+- Personal development plans
+- Marketing goal definition
 
-## 示例
-**输入**: "设定一个销售目标"
+## Example
+**Input**: "Set a sales target"
 
-**优化后**:
+**Optimized**:
 ```
-Specific: 提高 SaaS 产品的年度经常性收入（ARR）
+Specific: Increase the annual recurring revenue (ARR) of the SaaS product
 
 Measurable: 
-- 从当前 100 万美元 ARR 增长到 150 万美元
-- 新增 50 个付费客户
-- 客户流失率控制在 5% 以下
+- Grow from the current $1M ARR to $1.5M
+- Acquire 50 new paying customers
+- Keep customer churn rate below 5%
 
 Achievable: 
-- 基于过去两年 30% 的增长率
-- 新产品功能即将发布
-- 销售团队从 3 人扩充到 5 人
+- Based on a 30% growth rate over the past two years
+- New product features are about to be released
+- Sales team expanding from 3 to 5 people
 
 Relevant: 
-- 与公司整体业务增长战略一致
-- 支持下一轮融资的估值目标
-- 巩固在目标市场的地位
+- Aligned with the company's overall business growth strategy
+- Supports the valuation target for the next funding round
+- Solidifies position in the target market
 
-Time-bound: 在 2024 财年结束前（12 月 31 日）达成
+Time-bound: To be achieved before the end of fiscal year 2024 (December 31)
 
-完整目标: 在 2024 年 12 月 31 日前，将 ARR 从 100 万美元增长到 150 万美元，新增 50 个付费客户，保持流失率低于 5%，以支持公司 B 轮融资目标。
+Complete goal: By December 31, 2024, grow ARR from $1M to $1.5M, acquire 50 new paying customers, and maintain churn rate below 5%, in support of the company's Series B funding target.
 ```
 
-## 使用提示
-- 每个要素都需要具体化
-- 避免模糊表述如"提高""改善"
+## Usage Tips
+- Each element needs to be made specific
+- Avoid vague expressions like "improve" or "enhance"

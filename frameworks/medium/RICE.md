@@ -1,74 +1,74 @@
 # RICE Framework
 
-## 名称
+## Name
 Reach-Impact-Confidence-Effort
 
-## 结构
-- **Reach**: 影响范围（多少用户）
-- **Impact**: 影响程度（多重要）
-- **Confidence**: 信心指数（多确定）
-- **Effort**: 投入成本（多少资源）
+## Structure
+- **Reach**: Scope of impact (how many users)
+- **Impact**: Degree of impact (how important)
+- **Confidence**: Confidence level (how certain)
+- **Effort**: Resource investment (how much)
 - **RICE Score**: (Reach × Impact × Confidence) / Effort
 
-## 适用场景
-- SaaS 产品功能优先级排序
-- 营销活动规划
-- 内容创作策略
-- 产品发布规划
-- 客户支持改进
-- 社交媒体策略
-- 预算分配决策
+## Use Cases
+- SaaS product feature prioritization
+- Marketing campaign planning
+- Content creation strategy
+- Product launch planning
+- Customer support improvement
+- Social media strategy
+- Budget allocation decisions
 
-## 示例
-**输入**: "确定下一个迭代的功能优先级"
+## Example
+**Input**: "Determine feature priorities for the next iteration"
 
-**优化后**:
+**Optimized**:
 ```
-候选功能列表:
+Candidate feature list:
 
-功能 A:  dark mode 暗黑模式
-- Reach: 80% 用户（所有用户都可用）
-- Impact: 3（中等，提升体验但不影响核心功能）
-- Confidence: 90%（用户明确需求）
-- Effort: 2 周
+Feature A: Dark Mode
+- Reach: 80% of users (available to all users)
+- Impact: 3 (medium, improves experience but doesn't affect core functionality)
+- Confidence: 90% (users have clearly expressed this need)
+- Effort: 2 weeks
 - RICE Score: (80 × 3 × 0.9) / 2 = 108
 
-功能 B: AI 智能推荐
-- Reach: 100% 用户
-- Impact: 5（高，显著提升转化率）
-- Confidence: 50%（不确定效果）
-- Effort: 8 周
+Feature B: AI Smart Recommendations
+- Reach: 100% of users
+- Impact: 5 (high, significantly improves conversion rate)
+- Confidence: 50% (uncertain effectiveness)
+- Effort: 8 weeks
 - RICE Score: (100 × 5 × 0.5) / 8 = 31.25
 
-功能 C: 批量导出功能
-- Reach: 20% 用户（主要是企业用户）
-- Impact: 4（高，解决痛点）
-- Confidence: 95%（用户强烈要求）
-- Effort: 1 周
+Feature C: Bulk Export
+- Reach: 20% of users (mainly enterprise users)
+- Impact: 4 (high, addresses a pain point)
+- Confidence: 95% (users have strongly requested this)
+- Effort: 1 week
 - RICE Score: (20 × 4 × 0.95) / 1 = 76
 
-功能 D: 性能优化
-- Reach: 100% 用户
-- Impact: 4（高，提升体验）
+Feature D: Performance Optimization
+- Reach: 100% of users
+- Impact: 4 (high, improves experience)
 - Confidence: 80%
-- Effort: 4 周
+- Effort: 4 weeks
 - RICE Score: (100 × 4 × 0.8) / 4 = 80
 
-优先级排序:
-1. 功能 A (108) - 高价值，低投入
-2. 功能 D (80) - 影响大，投入中等
-3. 功能 C (76) - 解决痛点，快速交付
-4. 功能 B (31.25) - 投入大，风险高，暂缓
+Priority ranking:
+1. Feature A (108) - High value, low investment
+2. Feature D (80) - High impact, medium investment
+3. Feature C (76) - Addresses pain points, fast delivery
+4. Feature B (31.25) - High investment, high risk, defer
 
-注意事项:
-- RICE 是参考，不是绝对标准
-- 考虑战略对齐和依赖关系
-- 高风险项目需要额外评估
+Notes:
+- RICE is a reference, not an absolute standard
+- Consider strategic alignment and dependencies
+- High-risk items require additional evaluation
 ```
 
-## 使用提示
-- Reach 用具体数字（用户数、百分比）
-- Impact 用 0.25-3 的倍数
-- Confidence 用百分比
-- Effort 用人月或人周
-- 定期重新评估优先级
+## Usage Tips
+- Use specific numbers for Reach (number of users, percentages)
+- Use multiples of 0.25-3 for Impact
+- Use percentages for Confidence
+- Use person-months or person-weeks for Effort
+- Re-evaluate priorities regularly

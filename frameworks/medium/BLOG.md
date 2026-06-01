@@ -1,146 +1,146 @@
 # BLOG Framework
 
-## 名称
+## Name
 Buyer's Journey-Lead-Opportunity-Growth
 
-## 结构
-- **Buyer's Journey**: 买家旅程
-- **Lead**: 线索获取
-- **Opportunity**: 机会转化
-- **Growth**: 增长策略
+## Structure
+- **Buyer's Journey**: Stage of the buyer's journey
+- **Lead**: Lead acquisition
+- **Opportunity**: Opportunity conversion
+- **Growth**: Growth strategy
 
-## 适用场景
-- 博客文章撰写
-- 内容营销策略
-- 社交媒体内容创作
-- 教育性文章编写
-- 产品介绍文案
-- 思想领袖内容开发
+## Use Cases
+- Blog article writing
+- Content marketing strategy
+- Social media content creation
+- Educational article writing
+- Product introduction copywriting
+- Thought leadership content development
 
-## 示例
-**输入**: "写一篇关于远程办公的博客文章"
+## Example
+**Input**: "Write a blog article about remote work"
 
-**优化后**:
+**Optimized**:
 ```
-Buyer's Journey (买家旅程):
-目标读者处于什么阶段？
-- 认知阶段: 刚听说远程办公，想了解更多
-- 考虑阶段: 正在考虑是否适合团队
-- 决策阶段: 准备实施，需要具体方法
+Buyer's Journey:
+What stage is the target reader at?
+- Awareness stage: Just heard about remote work, wants to learn more
+- Consideration stage: Evaluating whether it suits the team
+- Decision stage: Ready to implement, needs concrete methods
 
-本文目标: 主要面向考虑阶段读者，兼顾决策阶段
+Article goal: Primarily targeting consideration-stage readers, with coverage for decision-stage
 
-Lead (线索获取):
+Lead:
 
-标题选项:
-- "远程办公 2 年，我们总结了 7 个关键经验"
-- "为什么 60% 的远程办公尝试失败了？"
-- "从办公室到远程：完整转型指南"
+Title options:
+- "2 Years of Remote Work: 7 Key Lessons We Learned"
+- "Why 60% of Remote Work Attempts Fail?"
+- "From Office to Remote: A Complete Transition Guide"
 
-Hook (开头吸引):
-"2020 年疫情迫使我们的团队在一周内从办公室转向远程办公。2 年过去了，我们的生产力提升了 30%，员工满意度创历史新高。但这并非一帆风顺——我们犯过错误，也学到了宝贵的经验。"
+Hook (opening):
+"In 2020, the pandemic forced our team to shift from office to remote work in one week. Two years later, our productivity is up 30% and employee satisfaction is at an all-time high. But it wasn't smooth sailing—we made mistakes and learned invaluable lessons."
 
-价值承诺:
-"在这篇文章中，我将分享我们团队远程办公的完整经验，包括：
-- 我们踩过的 5 个坑
-- 7 个让远程办公高效的关键实践
-- 可直接使用的工具清单和流程模板"
+Value promise:
+"In this article, I'll share our team's full remote work experience, including:
+- 5 pitfalls we fell into
+- 7 key practices that make remote work effective
+- Ready-to-use tool lists and process templates"
 
-Opportunity (机会转化):
+Opportunity:
 
-内容主体:
+Main content:
 
-第一部分: 远程办公的现实
-- 数据: 远程办公趋势统计
-- 误区: 常见的错误认知
-- 挑战: 真实面临的困难
+Part 1: The Reality of Remote Work
+- Data: Remote work trend statistics
+- Misconceptions: Common false beliefs
+- Challenges: Real difficulties faced
 
-第二部分: 我们的经验（7 个关键实践）
-1. 异步沟通优先
-   - 为什么重要
-   - 具体做法
-   - 工具推荐
+Part 2: Our Experience (7 Key Practices)
+1. Async-first communication
+   - Why it matters
+   - Concrete approach
+   - Tool recommendations
    
-2. 文档文化
-   - 会议必须有记录
-   - 决策必须有文档
-   - 知识库建设
+2. Documentation culture
+   - Meetings must have notes
+   - Decisions must be documented
+   - Building a knowledge base
 
-3. 定期同步
-   - 每周全员会议
-   - 每日站会（可选）
-   - 1 对 1 沟通
+3. Regular synchronization
+   - Weekly all-hands meeting
+   - Daily standups (optional)
+   - 1-on-1 communication
 
-4. 结果导向管理
-   - 不打卡，看产出
-   - OKR 目标管理
-   - 透明的工作看板
+4. Results-oriented management
+   - No clock-ins, measure output
+   - OKR goal management
+   - Transparent work boards
 
-5. 社交连接
-   - 虚拟茶水间
-   - 线下聚会
-   - 团队建设活动
+5. Social connection
+   - Virtual water cooler
+   - Offline gatherings
+   - Team building activities
 
-6. 工具栈
-   - 沟通: Slack
-   - 协作: Notion
-   - 项目管理: Linear
-   - 视频会议: Zoom
+6. Tool stack
+   - Communication: Slack
+   - Collaboration: Notion
+   - Project management: Linear
+   - Video conferencing: Zoom
 
-7. 边界设定
-   - 工作与生活分离
-   - 响应时间预期
-   - 避免 burnout
+7. Setting boundaries
+   - Separating work and personal life
+   - Response time expectations
+   - Avoiding burnout
 
-第三部分: 常见陷阱
-- 过度会议
-- 缺乏信任
-- 沟通不畅
-- 孤立感
+Part 3: Common Pitfalls
+- Over-meeting
+- Lack of trust
+- Poor communication
+- Isolation
 
-Growth (增长策略):
+Growth:
 
-CTA (行动号召):
-"如果你正在考虑远程办公，我建议：
-1. 先下载我们的《远程办公实施清单》（免费）
-2. 订阅我们的周报，获取更多远程办公最佳实践
-3. 在评论区分享你的远程办公经验或问题"
+CTA (Call to Action):
+"If you're considering remote work, I recommend:
+1. Download our 'Remote Work Implementation Checklist' (free)
+2. Subscribe to our weekly newsletter for more remote work best practices
+3. Share your remote work experiences or questions in the comments"
 
-相关内容推荐:
-- "如何设计高效的远程会议"
-- "远程团队管理的 5 个工具"
-- "从远程办公到混合办公：下一步是什么"
+Related content recommendations:
+- "How to Design Effective Remote Meetings"
+- "5 Tools for Managing Remote Teams"
+- "From Remote to Hybrid: What's Next?"
 
-SEO 优化:
-- 关键词: 远程办公、work from home、分布式团队
-- 元描述: 2 年远程办公经验总结，7 个关键实践，可直接使用的工具清单
-- 内部链接: 链接到相关的 3 篇文章
+SEO optimization:
+- Keywords: remote work, work from home, distributed teams
+- Meta description: 2 years of remote work experience, 7 key practices, ready-to-use tool lists
+- Internal links: Link to 3 related articles
 
-写作指南:
+Writing guide:
 
-结构:
-- 总长度: 2000-2500 字
-- 段落: 每段 2-3 句话
-- 视觉: 每 300 字配一张图或图表
-- 格式: 使用小标题、bullet points、加粗
+Structure:
+- Total length: 2000-2500 words
+- Paragraphs: 2-3 sentences each
+- Visuals: One image or chart per 300 words
+- Format: Use subheadings, bullet points, bold text
 
-语气:
-- 友好、有经验、实用
-- 避免过于学术
-- 用"我们"而非"你们"
+Tone:
+- Friendly, experienced, practical
+- Avoid overly academic language
+- Use "we" rather than "you"
 
-检查清单:
-- [ ] 标题吸引人
-- [ ] 开头有 hook
-- [ ] 内容有实用价值
-- [ ] 有具体例子
-- [ ] 有 CTA
-- [ ] 有内部链接
-- [ ] 有社交分享按钮
+Checklist:
+- [ ] Compelling title
+- [ ] Opening hook
+- [ ] Practically valuable content
+- [ ] Concrete examples
+- [ ] CTA included
+- [ ] Internal links included
+- [ ] Social sharing buttons
 ```
 
-## 使用提示
-- 明确目标读者和他们的阶段
-- 开头要有吸引力
-- 内容要有实用价值
-- 结尾要有明确的 CTA
+## Usage Tips
+- Clearly identify the target audience and their stage
+- The opening must be engaging
+- Content must have practical value
+- The ending must have a clear CTA

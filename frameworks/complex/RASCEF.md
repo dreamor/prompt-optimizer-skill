@@ -1,146 +1,146 @@
 # RASCEF Framework
 
-## 名称
+## Name
 Role-Action-Steps-Context-Examples-Format
 
-## 结构
-- **Role**: 角色
-- **Action**: 行动
-- **Steps**: 步骤
-- **Context**: 背景
-- **Examples**: 示例
-- **Format**: 格式
+## Structure
+- **Role**: Role
+- **Action**: Action
+- **Steps**: Steps
+- **Context**: Background
+- **Examples**: Examples
+- **Format**: Format
 
-## 适用场景
-- 技术文档
-- 教学设计
-- 创意故事讲述
-- 详细分析项目
-- 复杂任务执行
-- 营销策略开发
+## Use Cases
+- Technical documentation
+- Instructional design
+- Creative storytelling
+- Detailed analysis projects
+- Complex task execution
+- Marketing strategy development
 
-## 示例
-**输入**: "创建一个详细的用户手册"
+## Example
+**Input**: "Create a detailed user manual"
 
-**优化后**:
+**Optimized**:
 ```
-Role (角色):
-你是一位资深的技术文档工程师，拥有 10 年 SaaS 产品文档编写经验。你擅长将复杂的技术概念转化为用户友好的指导，熟悉信息架构和用户体验设计。
+Role:
+You are a senior technical documentation engineer with 10 years of experience writing SaaS product documentation. You excel at transforming complex technical concepts into user-friendly guidance and are familiar with information architecture and UX design.
 
-Action (行动):
-为我们的产品创建一份完整的用户入门手册，帮助新用户在 30 分钟内上手核心功能。
+Action:
+Create a complete user onboarding manual for our product to help new users get up and running with core features within 30 minutes.
 
-Steps (步骤):
+Steps:
 
-步骤 1: 规划和结构
-- 分析目标用户群体（角色、技术水平、使用场景）
-- 确定文档范围和深度
-- 设计信息架构（目录结构、导航）
-- 制定写作风格指南
+Step 1: Planning and Structure
+- Analyze the target user group (personas, technical level, usage scenarios)
+- Define the documentation scope and depth
+- Design the information architecture (table of contents, navigation)
+- Establish a writing style guide
 
-步骤 2: 内容创作
-- 编写快速入门指南（5 分钟上手）
-- 编写核心功能详细指南
-- 编写常见问题解答（FAQ）
-- 编写故障排除指南
-- 添加术语表
+Step 2: Content Creation
+- Write a quick start guide (get started in 5 minutes)
+- Write detailed guides for core features
+- Write an FAQ section
+- Write a troubleshooting guide
+- Add a glossary
 
-步骤 3: 视觉设计
-- 设计截图标注规范
-- 创建流程图和示意图
-- 添加视频教程链接
-- 设计可打印的速查卡
+Step 3: Visual Design
+- Design screenshot annotation standards
+- Create flowcharts and diagrams
+- Add video tutorial links
+- Design a printable quick-reference card
 
-步骤 4: 审核和优化
-- 技术准确性审核
-- 用户体验测试（找真实用户试读）
-- 可读性评估（Flesch 分数）
-- SEO 优化（如适用）
+Step 4: Review and Optimization
+- Technical accuracy review
+- User experience testing (have real users read it)
+- Readability assessment (Flesch score)
+- SEO optimization (if applicable)
 
-步骤 5: 发布和维护
-- 选择发布平台（Help Center、PDF、视频）
-- 建立更新机制
-- 收集用户反馈
-- 持续迭代改进
+Step 5: Publishing and Maintenance
+- Choose a publishing platform (Help Center, PDF, video)
+- Establish an update mechanism
+- Collect user feedback
+- Continuously iterate and improve
 
-Context (背景):
+Context:
 
-产品信息:
-- 产品: 团队协作工具
-- 核心功能: 任务管理、文件共享、即时通讯、日历
-- 目标用户: 中小企业团队（10-100人）
-- 用户技术水平: 初级到中级
-- 竞品: Slack、Teams、钉钉
+Product Information:
+- Product: Team collaboration tool
+- Core features: Task management, file sharing, instant messaging, calendar
+- Target users: SME teams (10–100 people)
+- User technical level: Beginner to intermediate
+- Competitors: Slack, Teams, DingTalk
 
-现有资源:
-- 产品截图库
-- 功能演示视频（5个）
-- 客服常见问题列表（50条）
-- 用户反馈报告
+Available Resources:
+- Product screenshot library
+- Feature demo videos (5)
+- Customer service FAQ list (50 entries)
+- User feedback report
 
-约束条件:
-- 文档必须在 2 周内完成
-- 支持中英文双语
-- 需要适配移动端阅读
-- 符合 WCAG 2.0 无障碍标准
+Constraints:
+- Documentation must be completed within 2 weeks
+- Must support bilingual (English and Chinese)
+- Must be adapted for mobile reading
+- Must comply with WCAG 2.0 accessibility standards
 
-Examples (示例):
+Examples:
 
-章节结构示例:
+Chapter structure example:
 ```
-第 3 章: 任务管理
-3.1 创建任务
-    - 快速创建 vs 详细创建
-    - 设置截止日期和优先级
-    - 分配任务给团队成员
-    [截图 + 视频链接]
-    
-3.2 跟踪任务进度
-    - 看板视图使用
-    - 甘特图视图
-    - 设置提醒和通知
-    
-3.3 常见问题
-    Q: 如何批量编辑任务？
+Chapter 3: Task Management
+3.1 Creating Tasks
+    - Quick create vs. detailed create
+    - Setting deadlines and priority
+    - Assigning tasks to team members
+    [Screenshot + Video link]
+
+3.2 Tracking Task Progress
+    - Using the Kanban view
+    - Gantt chart view
+    - Setting reminders and notifications
+
+3.3 FAQs
+    Q: How do I bulk edit tasks?
     A: ...
-    
-    Q: 任务依赖关系如何设置？
+
+    Q: How do I set task dependencies?
     A: ...
 ```
 
-写作风格示例:
-- 使用第二人称（"你可以..."）
-- 每个步骤以动词开头
-- 关键操作使用粗体
-- 警告信息使用黄色背景框
-- 提示信息使用蓝色背景框
+Writing style examples:
+- Use second person ("You can...")
+- Start each step with a verb
+- Bold key actions
+- Use yellow background boxes for warnings
+- Use blue background boxes for tips
 
-Format (格式):
+Format:
 
-文档结构:
-1. 封面（产品名称、版本、日期）
-2. 目录（带页码/链接）
-3. 快速入门（1页）
-4. 核心功能指南（每功能 2-3 页）
-5. 高级功能（可选阅读）
-6. 故障排除
-7. 术语表
-8. 索引
+Document structure:
+1. Cover (product name, version, date)
+2. Table of contents (with page numbers / links)
+3. Quick start (1 page)
+4. Core feature guides (2–3 pages per feature)
+5. Advanced features (optional reading)
+6. Troubleshooting
+7. Glossary
+8. Index
 
-视觉规范:
-- 字体: 正文 14px，标题 18/16/14px 层级
-- 颜色: 主色 #1890ff，警告 #faad14，错误 #f5222d
-- 截图: 1440px 宽，标注使用红色箭头
-- 代码: 使用等宽字体，语法高亮
+Visual standards:
+- Font: Body 14px, headings at 18/16/14px hierarchy
+- Colors: Primary #1890ff, warning #faad14, error #f5222d
+- Screenshots: 1440px wide, annotations use red arrows
+- Code: Monospace font with syntax highlighting
 
-输出格式:
-- 在线版本: Markdown 格式，适配 Help Center
-- PDF 版本: A4 纸张，可打印
-- 移动端: 响应式 HTML
+Output format:
+- Online version: Markdown format, compatible with Help Center
+- PDF version: A4 paper, printable
+- Mobile: Responsive HTML
 ```
 
-## 使用提示
-- 最全面的框架，适合复杂项目
-- 每个要素都要详细定义
-- 示例要具体，可参照执行
-- 格式规范确保一致性
+## Usage Tips
+- The most comprehensive framework — ideal for complex projects
+- Define each element in detail
+- Examples should be specific and directly usable
+- Format standards ensure consistency

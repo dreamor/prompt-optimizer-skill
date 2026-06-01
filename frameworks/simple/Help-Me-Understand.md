@@ -1,104 +1,104 @@
 # Help Me Understand Framework
 
-## 名称
-帮我理解框架
+## Name
+Help Me Understand Framework
 
-## 结构
-- **主题**: 需要理解的概念
-- **已知**: 已知的背景知识
-- **疑问**: 具体疑问
-- **期望**: 期望的解释方式
+## Structure
+- **Topic**: The concept to be understood
+- **Known**: Background knowledge already known
+- **Questions**: Specific questions
+- **Expectation**: Preferred explanation style
 
-## 适用场景
-- 学习新概念
-- 知识探索
-- 问题澄清
-- 复杂主题理解
-- AI 对话引导
-- 自主学习
+## Use Cases
+- Learning new concepts
+- Knowledge exploration
+- Clarifying confusion
+- Understanding complex topics
+- Guiding AI conversations
+- Self-directed learning
 
-## 示例
-**输入**: "帮我理解区块链"
+## Example
+**Input**: "Help me understand blockchain"
 
-**优化后**:
+**Optimized**:
 ```
-主题 (Topic):
-区块链技术的基本原理和应用
+Topic:
+The basic principles and applications of blockchain technology
 
-已知 (Known):
-- 听说过比特币
-- 知道是去中心化的
-- 了解基本的密码学概念
-- 有数据库基础知识
+Known:
+- Have heard of Bitcoin
+- Know it is decentralized
+- Familiar with basic cryptography concepts
+- Have a background in databases
 
-疑问 (Questions):
-1. 区块链和比特币的关系是什么？
-2. 去中心化是如何实现的？
-3. 为什么区块链是不可篡改的？
-4. 智能合约是什么？
-5. 除了加密货币，还有什么应用？
+Questions:
+1. What is the relationship between blockchain and Bitcoin?
+2. How is decentralization achieved?
+3. Why is blockchain tamper-proof?
+4. What are smart contracts?
+5. What applications exist beyond cryptocurrency?
 
-期望 (Expectation):
-- 用类比和例子解释
-- 避免过多技术术语
-- 从简单到复杂逐步深入
-- 提供可视化描述
-- 包含实际应用案例
+Expectation:
+- Explain using analogies and examples
+- Avoid excessive technical jargon
+- Build understanding progressively from simple to complex
+- Provide visual descriptions
+- Include real-world application cases
 
-解释结构:
+Explanation Structure:
 
-第一层: 核心概念（5 分钟理解）
-类比: 区块链就像一本公开的账本
-- 每个人都可以查看
-- 每个人都可以添加记录
-- 一旦写入就不能修改
-- 所有人保存相同的副本
+Layer 1: Core Concept (5-minute understanding)
+Analogy: Blockchain is like a public ledger
+- Anyone can view it
+- Anyone can add records
+- Once written, it cannot be modified
+- Everyone keeps the same copy
 
-第二层: 技术原理（15 分钟理解）
-- 区块: 包含一批交易的容器
-- 链: 每个区块包含前一个区块的指纹
-- 去中心化: 网络中的每个节点都有完整账本
-- 共识机制: 大家如何达成一致
-- 加密: 确保安全和身份验证
+Layer 2: Technical Principles (15-minute understanding)
+- Block: A container holding a batch of transactions
+- Chain: Each block contains the fingerprint (hash) of the previous block
+- Decentralization: Every node in the network holds the full ledger
+- Consensus mechanism: How everyone reaches agreement
+- Cryptography: Ensures security and identity verification
 
-第三层: 深入细节（可选）
-- 工作量证明 vs 权益证明
-- 哈希函数的工作原理
-- 分布式网络的通信协议
-- 智能合约的编程和执行
+Layer 3: In-Depth Details (optional)
+- Proof of Work vs. Proof of Stake
+- How hash functions work
+- Communication protocols in distributed networks
+- Programming and execution of smart contracts
 
-应用案例:
-1. 加密货币: 比特币、以太坊
-2. 供应链: 商品溯源
-3. 身份验证: 数字身份
-4. 智能合约: 自动执行的合同
-5. 投票系统: 透明且不可篡改
+Application Cases:
+1. Cryptocurrency: Bitcoin, Ethereum
+2. Supply chain: Product traceability
+3. Identity verification: Digital identity
+4. Smart contracts: Automatically executed agreements
+5. Voting systems: Transparent and tamper-proof
 
-常见误区澄清:
-- ❌ 区块链就是比特币
-  ✅ 比特币使用区块链，区块链还有很多其他应用
+Common Misconceptions Clarified:
+- ❌ Blockchain is Bitcoin
+  ✅ Bitcoin uses blockchain; blockchain has many other applications
 
-- ❌ 区块链完全匿名
-  ✅ 区块链是伪匿名，交易记录公开可查
+- ❌ Blockchain is completely anonymous
+  ✅ Blockchain is pseudonymous — transaction records are publicly viewable
 
-- ❌ 区块链适合所有场景
-  ✅ 区块链适合特定场景（需要信任、去中心化），不是所有问题都需要区块链
+- ❌ Blockchain is suitable for every scenario
+  ✅ Blockchain suits specific scenarios (requiring trust and decentralization); not every problem needs blockchain
 
-验证理解:
-请用自己的话解释:
-1. 区块链为什么被称为"信任的机器"？
-2. 如果有人想篡改区块链上的记录，会发生什么？
-3. 区块链和传统的数据库有什么区别？
+Check Your Understanding:
+Explain in your own words:
+1. Why is blockchain called a "trust machine"?
+2. What happens if someone tries to tamper with a record on the blockchain?
+3. What is the difference between blockchain and a traditional database?
 
-深入学习资源:
-- 书籍: 《区块链：技术驱动金融》
-- 视频: [推荐视频链接]
-- 实践: 尝试使用以太坊测试网
+Resources for Further Learning:
+- Book: "Blockchain: Blueprint for a New Economy"
+- Video: [Recommended video link]
+- Practice: Try using the Ethereum testnet
 ```
 
-## 使用提示
-- 明确已知的知识水平
-- 提出具体的问题
-- 说明期望的解释方式
-- 要求用类比和例子
-- 验证理解程度
+## Usage Tips
+- Clearly state your current level of knowledge
+- Ask specific questions
+- Specify your preferred explanation style
+- Request analogies and examples
+- Verify your level of understanding

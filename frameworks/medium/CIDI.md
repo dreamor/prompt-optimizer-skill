@@ -1,52 +1,52 @@
 # CIDI Framework
 
-## 名称
+## Name
 Challenge-Ideas-Development-Implementation
 
-## 结构
-- **Challenge**: 挑战/问题
-- **Ideas**: 想法/方案
-- **Development**: 发展/完善
-- **Implementation**: 实施/执行
+## Structure
+- **Challenge**: Challenge / problem
+- **Ideas**: Ideas / solutions
+- **Development**: Development / refinement
+- **Implementation**: Implementation / execution
 
-## 适用场景
-- 问题诊断和解决
-- 项目规划和执行
-- 产品开发流程
-- 服务改进项目
-- 变革管理
-- 创新项目实施
+## Use Cases
+- Problem diagnosis and resolution
+- Project planning and execution
+- Product development process
+- Service improvement projects
+- Change management
+- Innovation project implementation
 
-## 示例
-**输入**: "如何改进我们的客户服务"
+## Example
+**Input**: "How can we improve our customer service"
 
-**优化后**:
+**Optimized**:
 ```
 Challenge: 
-当前客户满意度评分 3.2/5，主要投诉集中在响应时间过长（平均 24 小时）和问题解决率低（60%）
+Current customer satisfaction score is 3.2/5. Main complaints center on long response times (average 24 hours) and a low issue resolution rate (60%).
 
 Ideas:
-1. 引入 AI 客服机器人处理常见问题
-2. 建立客户分层服务体系
-3. 创建知识库让客户自助解决问题
-4. 增加客服人员并优化排班
+1. Introduce an AI chatbot to handle common questions
+2. Establish a tiered customer service system
+3. Create a knowledge base so customers can self-serve
+4. Add customer service staff and optimize scheduling
 
 Development:
-对每个想法进行可行性分析：
-- 成本效益评估
-- 实施难度评级
-- 预期效果预测
-- 风险评估
+Conduct a feasibility analysis for each idea:
+- Cost-benefit assessment
+- Implementation difficulty rating
+- Expected outcome projection
+- Risk assessment
 
 Implementation:
-选择优先级最高的 2 个方案，制定：
-- 详细实施计划（时间表、责任人）
-- 资源需求清单
-- 成功指标（KPI）
-- 监控和反馈机制
+Select the top 2 highest-priority solutions and define:
+- Detailed implementation plan (timeline, owner)
+- Resource requirements list
+- Success metrics (KPIs)
+- Monitoring and feedback mechanism
 ```
 
-## 使用提示
-- 从问题出发，不要急于跳到解决方案
-- 鼓励头脑风暴，再筛选可行方案
-- 实施计划要具体可执行
+## Usage Tips
+- Start from the problem — don't rush to jump to solutions
+- Encourage brainstorming first, then filter for feasible options
+- The implementation plan must be specific and executable

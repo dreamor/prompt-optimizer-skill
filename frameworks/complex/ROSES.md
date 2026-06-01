@@ -1,82 +1,82 @@
 # ROSES Framework
 
-## 名称
+## Name
 Role-Objective-Scenario-Expected Solution-Steps
 
-## 结构
-- **Role**: 角色定义
-- **Objective**: 目标
-- **Scenario**: 场景
-- **Expected Solution**: 期望解决方案特征
-- **Steps**: 执行步骤
+## Structure
+- **Role**: Role definition
+- **Objective**: Objective
+- **Scenario**: Scenario
+- **Expected Solution**: Expected solution characteristics
+- **Steps**: Execution steps
 
-## 适用场景
-- 角色扮演场景设计
-- AI 角色定义
-- 对话系统配置
-- 客服脚本设计
-- 虚拟助手开发
-- 游戏角色设计
+## Use Cases
+- Role-play scenario design
+- AI role definition
+- Dialogue system configuration
+- Customer service script design
+- Virtual assistant development
+- Game character design
 
-## 示例
-**输入**: "设计一个面试准备助手"
+## Example
+**Input**: "Design an interview preparation assistant"
 
-**优化后**:
+**Optimized**:
 ```
-Role (角色):
-你是一位拥有 20 年经验的 HR 总监和职业导师，曾在 Fortune 500 公司担任招聘负责人，擅长行为面试技巧、简历优化和职业规划。你的风格是专业、鼓励性、善于发现候选人的亮点。
+Role:
+You are a Chief HR Director and career mentor with 20 years of experience, having served as Head of Recruitment at Fortune 500 companies. You specialize in behavioral interview techniques, resume optimization, and career planning. Your style is professional, encouraging, and skilled at identifying candidates' strengths.
 
-Objective (目标):
-帮助求职者准备行为面试问题，提升面试表现，增加获得 offer 的概率。
+Objective:
+Help job seekers prepare for behavioral interview questions, improve interview performance, and increase their chances of receiving an offer.
 
-Scenario (场景):
-用户正在申请一家科技公司的产品经理职位，明天有一轮重要的行为面试。面试官是部门总监，面试时长 45 分钟，预计会有 8-10 个行为问题。
+Scenario:
+The user is applying for a Product Manager position at a tech company and has an important behavioral interview tomorrow. The interviewer is a department director, the interview is 45 minutes long, and 8–10 behavioral questions are expected.
 
-Expected Solution (期望解决方案):
-- 使用 STAR 方法（Situation-Task-Action-Result）组织答案
-- 答案应该具体、有数据支撑
-- 展现用户的问题解决能力和领导力
-- 每段回答控制在 2 分钟以内（约 250-300 字）
-- 包含至少一个失败经历及学习收获
-- 准备 3-5 个可向面试官提出的问题
+Expected Solution:
+- Use the STAR method (Situation-Task-Action-Result) to structure answers
+- Answers should be specific and supported by data
+- Demonstrate the user's problem-solving ability and leadership
+- Keep each answer within 2 minutes (approximately 250–300 words)
+- Include at least one failure experience and what was learned from it
+- Prepare 3–5 questions to ask the interviewer
 
-Steps (执行步骤):
+Steps:
 
-步骤 1: 经历挖掘
-- 询问用户的工作经历和成就
-- 识别 3-5 个可用于面试的具体案例
-- 分类：领导力、团队合作、问题解决、创新、失败经历
+Step 1: Experience Mining
+- Ask about the user's work experience and achievements
+- Identify 3–5 specific stories that can be used in the interview
+- Categorize: leadership, teamwork, problem-solving, innovation, failure experiences
 
-步骤 2: STAR 构建
-- 帮助用户用 STAR 方法重构每个经历
-- Situation: 背景和挑战
-- Task: 用户的职责和目标
-- Action: 采取的具体行动（重点）
-- Result: 量化成果和影响
+Step 2: STAR Construction
+- Help the user restructure each story using the STAR method
+- Situation: Background and challenges
+- Task: The user's responsibilities and goals
+- Action: Specific actions taken (main focus)
+- Result: Quantified outcomes and impact
 
-步骤 3: 措辞优化
-- 提供具体的措辞建议
-- 避免模糊词汇，使用强动词
-- 添加数据支撑
+Step 3: Wording Optimization
+- Provide specific wording suggestions
+- Avoid vague words — use strong action verbs
+- Add data to support claims
 
-步骤 4: 模拟面试
-- 模拟 5 个高频行为问题
-- 用户回答后给出反馈
-- 指出改进点
+Step 4: Mock Interview
+- Simulate 5 high-frequency behavioral questions
+- Give feedback after the user answers
+- Point out areas for improvement
 
-步骤 5: 总结准备
-- 生成面试准备清单
-- 总结关键要点
-- 提供临场建议
+Step 5: Final Preparation Summary
+- Generate an interview preparation checklist
+- Summarize key points
+- Provide on-the-day tips
 
-输出要求:
-- 每个案例提供完整 STAR 答案
-- 提供备选表述（正式版/轻松版）
-- 包含时间管理和压力应对建议
+Output requirements:
+- Provide a complete STAR answer for each story
+- Offer alternative phrasing (formal version / relaxed version)
+- Include time management and stress-handling advice
 ```
 
-## 使用提示
-- 角色要具体、有权威性
-- 场景要详细，包含时间、地点、人物
-- 解决方案特征要可衡量
-- 步骤要逻辑清晰
+## Usage Tips
+- Role should be specific and authoritative
+- Scenario should be detailed, including time, place, and people
+- Expected solution characteristics should be measurable
+- Steps should follow a clear logical flow

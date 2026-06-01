@@ -1,60 +1,60 @@
 # RACEF Framework
 
-## 名称
+## Name
 Role-Action-Context-Expectation-Format
 
-## 结构
-- **Role**: 角色
-- **Action**: 行动
-- **Context**: 背景
-- **Expectation**: 期望
-- **Format**: 格式
+## Structure
+- **Role**: Role
+- **Action**: Action
+- **Context**: Background
+- **Expectation**: Expectation
+- **Format**: Format
 
-## 适用场景
-- 头脑风暴和创意生成
-- 数据分析和市场研究
-- 问题解决和战略规划
-- 产品开发策略
-- 客户保留策略
-- 数字营销策略
+## Use Cases
+- Brainstorming and idea generation
+- Data analysis and market research
+- Problem-solving and strategic planning
+- Product development strategy
+- Customer retention strategy
+- Digital marketing strategy
 
-## 示例
-**输入**: "分析我们的用户流失问题"
+## Example
+**Input**: "Analyze our user churn problem"
 
-**优化后**:
+**Optimized**:
 ```
-Role: 你是一位数据科学家和商业分析师的复合专家，专门研究 SaaS 产品的用户留存
+Role: You are a hybrid expert combining data science and business analysis, specializing in user retention for SaaS products
 
-Action: 
-1. 分析用户流失数据
-2. 识别关键流失节点和模式
-3. 提出可执行的改进建议
-4. 预测改进后的留存率变化
+Action:
+1. Analyze user churn data
+2. Identify key churn points and patterns
+3. Propose actionable improvement recommendations
+4. Predict retention rate changes after improvements
 
 Context:
-- 产品：B2B 项目管理 SaaS
-- 用户规模：5000 付费客户
-- 当前月流失率：8%（行业平均 5%）
-- 主要流失时间点：注册后第 30 天、第 90 天
-- 流失用户反馈： pricing too high (40%), too complex (35%), switched to competitor (25%)
-- 最近变化：3 个月前涨价 20%，同期上线了高级功能
+- Product: B2B project management SaaS
+- User scale: 5,000 paying customers
+- Current monthly churn rate: 8% (industry average: 5%)
+- Main churn timing: Day 30 and Day 90 after registration
+- Churned user feedback: pricing too high (40%), too complex (35%), switched to competitor (25%)
+- Recent changes: 20% price increase 3 months ago, concurrent launch of advanced features
 
 Expectation:
-- 找出流失的根本原因
-- 提供 3 个优先级最高的改进建议
-- 每个建议包含实施难度、预期效果和所需资源
-- 预测实施后的流失率变化
+- Identify the root causes of churn
+- Provide the top 3 highest-priority improvement recommendations
+- Each recommendation includes implementation difficulty, expected impact, and required resources
+- Predict post-implementation churn rate changes
 
 Format:
-1. 执行摘要（3 个 bullet points）
-2. 详细分析（数据支撑）
-3. 根因分析（鱼骨图描述）
-4. 改进建议（优先级排序）
-5. 实施路线图（时间线）
-6. 预期效果（量化预测）
-7. 风险与缓解措施
+1. Executive summary (3 bullet points)
+2. Detailed analysis (data-supported)
+3. Root cause analysis (fishbone diagram description)
+4. Improvement recommendations (prioritized)
+5. Implementation roadmap (timeline)
+6. Expected outcomes (quantified forecasts)
+7. Risks and mitigation measures
 ```
 
-## 使用提示
-- 复杂场景的首选框架
-- 需要详细背景信息
+## Usage Tips
+- Preferred framework for complex scenarios
+- Requires detailed background information

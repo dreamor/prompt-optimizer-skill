@@ -1,56 +1,56 @@
 # ORID Framework
 
-## 名称
+## Name
 Objective-Reflective-Interpretive-Decisional
 
-## 结构
-- **Objective**: 客观事实（看到了什么？听到了什么？）
-- **Reflective**: 主观感受（感觉如何？）
-- **Interpretive**: 意义价值（意味着什么？）
-- **Decisional**: 决定行动（接下来怎么做？）
+## Structure
+- **Objective**: Objective facts (What did you see? What did you hear?)
+- **Reflective**: Subjective feelings (How did it feel?)
+- **Interpretive**: Meaning and value (What does it mean?)
+- **Decisional**: Decisions and actions (What will you do next?)
 
-## 适用场景
-- 会议引导和总结
-- 反思和复盘
-- 团队讨论促进
-- 培训和学习总结
-- 决策分析
-- 经验萃取
+## Use Cases
+- Meeting facilitation and summarization
+- Reflection and retrospectives
+- Team discussion facilitation
+- Training and learning summaries
+- Decision analysis
+- Experience extraction
 
-## 示例
-**输入**: "总结这次项目复盘会议"
+## Example
+**Input**: "Summarize this project retrospective meeting"
 
-**优化后**:
+**Optimized**:
 ```
-Objective (客观事实):
-- 项目延期 2 周交付
-- 预算超支 15%
-- 客户满意度评分 4.2/5
-- 团队加班总时长 300+ 小时
+Objective (Facts):
+- Project delivered 2 weeks late
+- Budget overrun by 15%
+- Customer satisfaction score: 4.2/5
+- Total team overtime: 300+ hours
 
-Reflective (主观感受):
-- 团队成员普遍感到疲惫但成就感强
-- 对需求变更频繁感到挫败
-- 对最终交付质量感到自豪
-- 对沟通效率有担忧
+Reflective (Feelings):
+- Team members generally felt exhausted but had a strong sense of achievement
+- Frustration over frequent requirement changes
+- Pride in the final delivery quality
+- Concern about communication efficiency
 
-Interpretive (意义价值):
-- 需求管理流程需要优化
-- 早期技术选型决策影响了后期进度
-- 客户反馈机制发挥了积极作用
-- 团队协作在压力下表现良好
+Interpretive (Meaning):
+- Requirements management process needs to be optimized
+- Early technology selection decisions impacted later timelines
+- Customer feedback mechanisms played a positive role
+- Team collaboration held up well under pressure
 
-Decisional (决定行动):
-1. 建立需求变更评估流程（负责人：产品经理，时间：1周内）
-2. 引入技术选型评审机制（负责人：技术负责人，时间：下次迭代前）
-3. 优化客户沟通频率和方式（负责人：项目经理，时间：立即）
-4. 安排团队建设活动（负责人：HR，时间：本月内）
+Decisional (Actions):
+1. Establish a requirements change evaluation process (Owner: Product Manager, Timeline: within 1 week)
+2. Introduce a technology selection review mechanism (Owner: Tech Lead, Timeline: before next iteration)
+3. Optimize customer communication frequency and approach (Owner: Project Manager, Timeline: immediately)
+4. Arrange team building activities (Owner: HR, Timeline: within this month)
 
-请基于以上 ORID 结构，生成完整的项目复盘报告。
+Please generate a complete project retrospective report based on the ORID structure above.
 ```
 
-## 使用提示
-- 从客观事实出发，不加入主观判断
-- 感受层面要真实，不压抑负面情绪
-- 意义挖掘要深入，不只停留在表面
-- 决定行动要具体可执行
+## Usage Tips
+- Start from objective facts — do not add subjective judgment
+- Be authentic at the feelings layer — do not suppress negative emotions
+- Dig deep at the interpretive layer — do not stay on the surface
+- Decisions and actions should be specific and executable

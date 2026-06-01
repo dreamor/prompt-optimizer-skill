@@ -1,174 +1,174 @@
 # RODES Framework
 
-## 名称
+## Name
 Role-Objective-Details-Examples-Structure
 
-## 结构
-- **Role**: 角色
-- **Objective**: 目标
-- **Details**: 细节要求
-- **Examples**: 示例
-- **Structure**: 结构
+## Structure
+- **Role**: Role
+- **Objective**: Objective
+- **Details**: Detailed requirements
+- **Examples**: Examples
+- **Structure**: Structure
 
-## 适用场景
-- 教育内容开发
-- 客户服务协议
-- 详细研究查询
-- 战略规划
-- 复杂问题解决
-- 培训模块创建
+## Use Cases
+- Educational content development
+- Customer service protocols
+- Detailed research queries
+- Strategic planning
+- Complex problem solving
+- Training module creation
 
-## 示例
-**输入**: "创建一个详细的培训课程"
+## Example
+**Input**: "Create a detailed training course"
 
-**优化后**:
+**Optimized**:
 ```
-Role (角色):
-你是一位资深的企业培训师，专注于领导力发展领域，拥有 15 年培训经验，曾为 100+ 家 Fortune 500 公司提供培训服务。你擅长设计互动性强、实用性高的培训课程。
+Role:
+You are a senior corporate trainer specializing in leadership development with 15 years of experience, having provided training services to 100+ Fortune 500 companies. You excel at designing highly interactive and practical training courses.
 
-Objective (目标):
-为中层管理者设计一门为期 2 天的领导力培训课程，帮助他们：
-1. 掌握有效的团队管理技巧
-2. 提升跨部门沟通能力
-3. 学会激励和发展下属
-4. 建立高效的决策机制
+Objective:
+Design a 2-day leadership training course for mid-level managers to help them:
+1. Master effective team management techniques
+2. Improve cross-departmental communication skills
+3. Learn how to motivate and develop direct reports
+4. Establish an efficient decision-making mechanism
 
-培训结束后，学员能够：
-- 运用至少 3 种团队管理工具
-- 设计适合自己团队的激励机制
-- 处理常见的团队冲突
-- 制定个人领导力发展计划
+By the end of training, participants will be able to:
+- Apply at least 3 team management tools
+- Design a motivation mechanism tailored to their team
+- Handle common team conflicts
+- Create a personal leadership development plan
 
-Details (细节要求):
+Details:
 
-目标学员:
-- 职级: 中层管理者（经理、高级经理）
-- 经验: 管理经验 1-5 年
-- 行业: 科技、金融、制造业混合
-- 人数: 20-25 人/班
-- 背景: 技术或业务出身，缺乏系统管理培训
+Target participants:
+- Level: Mid-level managers (Manager, Senior Manager)
+- Experience: 1–5 years of management experience
+- Industry: Mix of technology, finance, and manufacturing
+- Class size: 20–25 people per cohort
+- Background: Technical or business background with limited formal management training
 
-培训形式:
-- 时长: 2 天（16 小时）
-- 地点: 公司培训室
-- 时间: 9:00-17:00，含午休
-- 方式: 讲授 40% + 案例分析 30% + 角色扮演 20% + 小组讨论 10%
+Training format:
+- Duration: 2 days (16 hours)
+- Venue: Company training room
+- Schedule: 9:00 AM – 5:00 PM, including lunch break
+- Method: Lecture 40% + Case study 30% + Role play 20% + Group discussion 10%
 
-内容要求:
-- 理论结合实践
-- 每个概念配实际案例
-- 提供可落地的工具和模板
-- 包含课后行动计划
+Content requirements:
+- Combine theory with practice
+- Provide real-world examples for each concept
+- Offer actionable tools and templates
+- Include a post-training action plan
 
-资源限制:
-- 预算: 每人 2000 元（含材料、午餐）
-- 设备: 投影仪、白板、便利贴
-- 无在线学习平台支持
+Resource constraints:
+- Budget: 2,000 CNY per person (including materials and lunch)
+- Equipment: Projector, whiteboard, sticky notes
+- No online learning platform support
 
-Examples (示例):
+Examples:
 
-课程大纲示例:
+Course outline example:
 
-Day 1 - 团队管理基础
-09:00-09:30 开场与破冰
-- 自我介绍
-- 期望收集
-- 课程概览
+Day 1 – Team Management Fundamentals
+09:00–09:30 Opening and icebreaker
+- Self-introductions
+- Expectation gathering
+- Course overview
 
-09:30-11:00 模块 1: 管理者的角色转变
-- 从个人贡献到团队领导
-- 管理者的四大角色
-- 案例分析: 张经理的困境
-- 工具: 管理者角色评估表
+09:30–11:00 Module 1: The Manager's Role Transition
+- From individual contributor to team leader
+- The four key roles of a manager
+- Case study: Manager Zhang's dilemma
+- Tool: Manager Role Self-Assessment
 
-11:00-11:15 茶歇
+11:00–11:15 Break
 
-11:15-12:30 模块 2: 高效团队建设
-- 团队发展的五个阶段
-- 识别团队成员的优势
-- 活动: 团队角色测评
-- 工具: 团队能力矩阵
+11:15–12:30 Module 2: Building High-Performance Teams
+- The five stages of team development
+- Recognizing team members' strengths
+- Activity: Team role assessment
+- Tool: Team Competency Matrix
 
-12:30-13:30 午餐
+12:30–13:30 Lunch
 
-...[详细安排]
+...[detailed schedule continues]
 
-教学活动示例:
+Teaching activity example:
 
-案例分析 - 冲突处理:
-"小李和小王都是团队的技术骨干，最近在项目技术选型上产生严重分歧。小李主张用 React，小王坚持用 Vue，两人各执己见，团队氛围紧张。作为经理，你该怎么办？"
+Case study – Conflict resolution:
+"Xiao Li and Xiao Wang are both key technical contributors on the team. They recently had a serious disagreement over technology selection for a project. Xiao Li insists on using React, Xiao Wang insists on Vue. Both hold firm positions and team morale has become tense. As the manager, what would you do?"
 
-讨论问题:
-1. 这个冲突的本质是什么？
-2. 有哪些可能的解决方案？
-3. 每种方案的利弊？
-4. 你会选择哪种方案，为什么？
+Discussion questions:
+1. What is the nature of this conflict?
+2. What are the possible solutions?
+3. What are the pros and cons of each solution?
+4. Which solution would you choose, and why?
 
-角色扮演:
-- 学员分组，分别扮演经理、小李、小王
-- 模拟一次沟通会议
-- 观察员记录并反馈
-- 讲师点评并总结要点
+Role play:
+- Participants are divided into groups, playing the roles of manager, Xiao Li, and Xiao Wang
+- Simulate a communication meeting
+- Observers take notes and provide feedback
+- Trainer reviews and summarizes key points
 
-工具模板示例:
+Tool template examples:
 
-1. 一对一会议模板:
-- 上周进展回顾
-- 本周重点
-- 遇到的阻碍
-- 需要的支持
-- 职业发展讨论
+1. One-on-One Meeting Template:
+- Last week's progress review
+- This week's priorities
+- Obstacles encountered
+- Support needed
+- Career development discussion
 
-2. 绩效反馈表:
-- 成就认可
-- 改进领域
-- 发展计划
-- 资源需求
+2. Performance Feedback Form:
+- Achievement recognition
+- Areas for improvement
+- Development plan
+- Resource needs
 
-3. 团队健康度评估:
-- 信任度
-- 沟通效率
-- 冲突处理
-- 目标一致性
+3. Team Health Assessment:
+- Trust level
+- Communication efficiency
+- Conflict resolution
+- Goal alignment
 
-Structure (结构):
+Structure:
 
-课程整体结构:
-Day 1: 自我管理 → 团队管理
-Day 2: 人际沟通 → 绩效管理
+Overall course structure:
+Day 1: Self-management → Team management
+Day 2: Interpersonal communication → Performance management
 
-每个模块结构:
-1. 学习目标（2 分钟）
-2. 概念讲解（15 分钟）
-3. 案例讨论（20 分钟）
-4. 工具介绍（10 分钟）
-5. 练习/角色扮演（20 分钟）
-6. 总结与反思（5 分钟）
+Structure for each module:
+1. Learning objectives (2 minutes)
+2. Concept explanation (15 minutes)
+3. Case discussion (20 minutes)
+4. Tool introduction (10 minutes)
+5. Practice / Role play (20 minutes)
+6. Summary and reflection (5 minutes)
 
-材料清单:
-- 学员手册（课前发放）
-- 讲师 PPT
-- 案例资料
-- 工具模板（可打印）
-- 课后行动计划表
-- 反馈问卷
+Materials checklist:
+- Participant handbook (distributed before training)
+- Trainer slides
+- Case study materials
+- Tool templates (printable)
+- Post-training action plan form
+- Feedback survey
 
-评估方式:
-- 课前: 领导力自评问卷
-- 课中: 参与度观察
-- 课后: 知识测试 + 行动计划
-- 30 天后: 上级反馈 + 学员自评
+Assessment methods:
+- Pre-training: Leadership self-assessment questionnaire
+- During training: Participation observation
+- Post-training: Knowledge test + action plan
+- 30 days later: Supervisor feedback + learner self-assessment
 
-成功标准:
-- 学员满意度 > 4.5/5
-- 知识测试通过率 > 90%
-- 90% 学员提交行动计划
-- 30 天后，80% 学员反馈有实际应用
+Success criteria:
+- Participant satisfaction > 4.5/5
+- Knowledge test pass rate > 90%
+- 90% of participants submit an action plan
+- After 30 days, 80% of participants report having applied the training
 ```
 
-## 使用提示
-- 角色要专业可信
-- 目标要具体可衡量
-- 细节要全面，考虑实际情况
-- 示例要具体，可直接使用
-- 结构要清晰，便于执行
+## Usage Tips
+- Role should be professional and credible
+- Objectives should be specific and measurable
+- Details should be comprehensive and account for real constraints
+- Examples should be concrete and directly usable
+- Structure should be clear and easy to execute

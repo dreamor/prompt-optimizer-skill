@@ -1,51 +1,51 @@
 # Chain of Thought Framework
 
-## 名称
-思维链框架
+## Name
+Chain of Thought Framework
 
-## 结构
-- **问题**: 需要解决的问题
-- **思考过程**: 逐步展示推理步骤
-- **中间结论**: 每一步的阶段性结果
-- **最终答案**: 基于推理的结论
+## Structure
+- **Problem**: The problem to be solved
+- **Reasoning Process**: Step-by-step display of the reasoning steps
+- **Intermediate Conclusions**: The interim result of each step
+- **Final Answer**: The conclusion based on the reasoning
 
-## 适用场景
-- 数学问题求解
-- 市场分析
-- 科学现象解释
-- 复杂查询处理
-- 深度分析任务
-- 逻辑推理问题
+## Use Cases
+- Mathematical problem solving
+- Market analysis
+- Scientific phenomenon explanation
+- Complex query processing
+- In-depth analysis tasks
+- Logical reasoning problems
 
-## 示例
-**输入**: "计算 15% 的 240 是多少"
+## Example
+**Input**: "Calculate what 15% of 240 is"
 
-**优化后**:
+**Optimized**:
 ```
-问题: 计算 15% 的 240
+Problem: Calculate 15% of 240
 
-思考过程:
-步骤 1: 理解百分比的含义
-- 15% 表示 15/100 = 0.15
+Reasoning Process:
+Step 1: Understand the meaning of percentage
+- 15% means 15/100 = 0.15
 
-步骤 2: 确定计算方法
-- 求一个数的百分比，用这个数乘以百分比的小数形式
-- 公式: 240 × 0.15
+Step 2: Determine the calculation method
+- To find a percentage of a number, multiply that number by the decimal form of the percentage
+- Formula: 240 × 0.15
 
-步骤 3: 分解计算
-- 240 × 0.10 = 24 (这是 10%)
-- 240 × 0.05 = 12 (这是 5%)
+Step 3: Break down the calculation
+- 240 × 0.10 = 24 (this is 10%)
+- 240 × 0.05 = 12 (this is 5%)
 
-步骤 4: 合并结果
+Step 4: Combine the results
 - 10% + 5% = 15%
 - 24 + 12 = 36
 
-中间结论: 10% 是 24，5% 是 12
+Intermediate Conclusion: 10% is 24, and 5% is 12
 
-最终答案: 15% 的 240 是 36
+Final Answer: 15% of 240 is 36
 ```
 
-## 使用提示
-- 强制 AI 展示思考过程，提高复杂问题准确性
-- 适合多步骤推理任务
-- 可用于验证 AI 的推理逻辑是否正确
+## Usage Tips
+- Forces the AI to show its reasoning process, improving accuracy on complex problems
+- Suitable for multi-step reasoning tasks
+- Can be used to verify whether the AI's reasoning logic is correct

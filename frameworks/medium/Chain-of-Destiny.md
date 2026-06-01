@@ -1,128 +1,128 @@
 # Chain of Destiny Framework
 
-## 名称
-命运之链框架
+## Name
+Chain of Destiny Framework
 
-## 结构
-- **现状**: 当前状态
-- **触发**: 触发事件
-- **选择**: 关键选择
-- **结果**: 可能结果
-- **命运**: 最终走向
+## Structure
+- **Current State**: The present situation
+- **Trigger**: Triggering event
+- **Choices**: Key choices
+- **Outcomes**: Possible outcomes
+- **Destiny**: Final direction
 
-## 适用场景
-- 内容创作
-- 编程开发
-- 设计项目
-- 质量要求高的任务
-- 复杂想法的精炼
-- 需要渐进式改进的项目
+## Use Cases
+- Content creation
+- Software development
+- Design projects
+- High-quality tasks
+- Refining complex ideas
+- Projects requiring iterative improvement
 
-## 示例
-**输入**: "设计一个用户增长策略"
+## Example
+**Input**: "Design a user growth strategy"
 
-**优化后**:
+**Optimized**:
 ```
-现状 (Current State):
-- 产品: SaaS 协作工具
-- 用户: 1 万注册用户，日活 2000
-- 增长: 月增长 5%，主要来自自然流量
-- 问题: 留存率低（30 天留存 20%），获客成本高
+Current State:
+- Product: SaaS collaboration tool
+- Users: 10,000 registered users, 2,000 daily active
+- Growth: 5% month-over-month, mainly from organic traffic
+- Problems: Low retention (30-day retention 20%), high customer acquisition cost
 
-触发 (Trigger):
-- 竞品获得大额融资，开始大规模市场投放
-- 我们需要在 6 个月内建立护城河
-- 预算有限，不能正面竞争
+Trigger:
+- A competitor secured a large funding round and is beginning large-scale marketing campaigns
+- We need to build a moat within 6 months
+- Budget is limited — direct competition is not feasible
 
-选择 (Choices):
+Choices:
 
-路径 A - 产品驱动增长 (PLG):
-- 策略: 免费增值 + 病毒式传播
-- 行动:
-  - 推出免费版，限制团队人数
-  - 添加邀请机制，邀请得奖励
-  - 优化新用户引导流程
-  - 增加产品内分享功能
-- 投入: 研发 3 个月，市场 50 万
-- 风险: 免费用户转化不确定
+Path A - Product-Led Growth (PLG):
+- Strategy: Freemium + viral spread
+- Actions:
+  - Launch a free tier with team size limits
+  - Add an invitation mechanism with rewards
+  - Optimize the new user onboarding flow
+  - Add in-product sharing features
+- Investment: 3 months of R&D, 500K marketing budget
+- Risk: Free-to-paid conversion is uncertain
 
-路径 B - 内容营销:
-- 策略: 成为行业思想领袖
-- 行动:
-  - 建立内容团队
-  - SEO 优化，目标关键词排名
-  - 发布行业报告和白皮书
-  - 举办线上研讨会
-- 投入: 6 个月见效，预算 80 万
-- 风险: 见效慢，需要长期坚持
+Path B - Content Marketing:
+- Strategy: Become an industry thought leader
+- Actions:
+  - Build a content team
+  - SEO optimization, targeting keyword rankings
+  - Publish industry reports and whitepapers
+  - Host online webinars
+- Investment: 6 months to see results, 800K budget
+- Risk: Slow to take effect, requires long-term commitment
 
-路径 C - 渠道合作:
-- 策略: 借力生态伙伴
-- 行动:
-  - 与云服务商集成
-  - 加入应用市场
-  - 与互补产品交叉推广
-  - 建立推荐联盟
-- 投入: 商务拓展 2 个月，分成模式
-- 风险: 依赖合作伙伴
+Path C - Channel Partnerships:
+- Strategy: Leverage ecosystem partners
+- Actions:
+  - Integrate with cloud service providers
+  - Join app marketplaces
+  - Cross-promote with complementary products
+  - Build a referral network
+- Investment: 2 months of business development, revenue-sharing model
+- Risk: Dependent on partner engagement
 
-结果 (Outcomes):
+Outcomes:
 
-路径 A 可能结果:
-- 最佳: 用户增长 300%，病毒系数 0.5
-- 中等: 用户增长 100%，转化 5%
-- 最差: 免费用户过多，成本失控
+Path A possible outcomes:
+- Best case: 300% user growth, viral coefficient of 0.5
+- Moderate: 100% user growth, 5% conversion
+- Worst case: Too many free users, costs spiral out of control
 
-路径 B 可能结果:
-- 最佳: 成为行业标杆，自然流量占 70%
-- 中等: 稳定获取线索，获客成本降低 30%
-- 最差: 内容投入无回报，错失时机
+Path B possible outcomes:
+- Best case: Become an industry benchmark, 70% organic traffic share
+- Moderate: Steady lead generation, 30% reduction in acquisition cost
+- Worst case: Content investment yields no return, miss the window
 
-路径 C 可能结果:
-- 最佳: 获得 5 万用户，零获客成本
-- 中等: 获得 1 万用户，分成成本可控
-- 最差: 合作伙伴不积极，投入无产出
+Path C possible outcomes:
+- Best case: Acquire 50,000 users at zero acquisition cost
+- Moderate: Acquire 10,000 users with manageable revenue-share costs
+- Worst case: Partners are unengaged, investment yields no output
 
-命运 (Destiny):
+Destiny:
 
-推荐路径: A + C 组合
+Recommended path: A + C combination
 
-第一阶段 (1-3 个月):
-- 实施 PLG 策略
-- 推出免费版
-- 优化病毒传播机制
-- 目标: 用户增长 150%
+Phase 1 (Months 1–3):
+- Implement PLG strategy
+- Launch free tier
+- Optimize viral spread mechanisms
+- Target: 150% user growth
 
-第二阶段 (4-6 个月):
-- 启动渠道合作
-- 与 3-5 家云服务商集成
-- 建立推荐联盟
-- 目标: 额外增长 100%
+Phase 2 (Months 4–6):
+- Activate channel partnerships
+- Integrate with 3–5 cloud service providers
+- Build a referral network
+- Target: Additional 100% growth
 
-第三阶段 (6 个月后):
-- 启动内容营销
-- 建立长期增长引擎
-- 降低对单一渠道依赖
+Phase 3 (Month 6+):
+- Launch content marketing
+- Build a long-term growth engine
+- Reduce dependency on any single channel
 
-关键决策点:
-- 3 个月后评估 PLG 效果，如果病毒系数 < 0.3，加大渠道合作
-- 6 个月后评估整体增长，如果未达目标，调整策略
+Key decision points:
+- Review PLG effectiveness at month 3; if viral coefficient < 0.3, increase channel partnerships
+- Review overall growth at month 6; if targets are not met, adjust strategy
 
-命运检查点:
-- 每月评估用户增长、留存、获客成本
-- 每季度评估策略有效性
-- 每年评估市场定位和竞争格局
+Destiny checkpoints:
+- Monthly: Evaluate user growth, retention, and acquisition cost
+- Quarterly: Evaluate strategy effectiveness
+- Annually: Evaluate market positioning and competitive landscape
 
-最终目标:
-- 12 个月后: 10 万用户，日活 2 万
-- 留存率: 30 天 40%
-- 获客成本: 降低 50%
-- 建立可持续增长飞轮
+Final targets:
+- Month 12: 100,000 users, 20,000 daily active
+- Retention: 30-day retention at 40%
+- Acquisition cost: Reduced by 50%
+- Build a sustainable growth flywheel
 ```
 
-## 使用提示
-- 现状分析要客观
-- 触发事件要明确
-- 选择要全面，考虑多种可能
-- 结果要分情景（最好/中等/最差）
-- 命运要有决策点和调整机制
+## Usage Tips
+- Current state analysis must be objective
+- The trigger event must be clearly defined
+- Choices must be comprehensive — consider multiple possibilities
+- Outcomes should be scenario-based (best / moderate / worst)
+- Destiny must include decision points and adjustment mechanisms

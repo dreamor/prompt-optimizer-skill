@@ -1,37 +1,37 @@
 # PEE Framework
 
-## 名称
+## Name
 Point-Evidence-Explanation
 
-## 结构
-- **Point**: 观点/论点
-- **Evidence**: 证据/例子
-- **Explanation**: 解释说明
+## Structure
+- **Point**: Viewpoint/argument
+- **Evidence**: Evidence/examples
+- **Explanation**: Explanatory commentary
 
-## 适用场景
-- 学术写作
-- 论文段落撰写
-- 论证文章
-- 考试答题
-- 分析性写作
-- 议论文结构
+## Use Cases
+- Academic writing
+- Essay paragraph writing
+- Argumentative articles
+- Exam answers
+- Analytical writing
+- Argumentative essay structure
 
-## 示例
-**输入**: "论证远程办公的好处"
+## Example
+**Input**: "Argue the benefits of remote work"
 
-**优化后**:
+**Optimized**:
 ```
-Point: 远程办公能显著提高员工的工作效率和满意度
+Point: Remote work can significantly improve employee productivity and job satisfaction
 
 Evidence: 
-- 斯坦福大学研究显示，远程工作者效率提升 13%
-- Buffer 调查表明 99% 远程工作者希望继续远程工作
-- 微软报告发现远程办公减少了 40% 的通勤时间
+- A Stanford University study shows remote workers are 13% more productive
+- A Buffer survey found that 99% of remote workers want to continue working remotely
+- A Microsoft report found that remote work reduces commuting time by 40%
 
 Explanation: 
-远程办公消除了通勤压力，让员工有更多精力投入工作。同时，灵活的工作时间使员工能在最高效的时间段工作，而不是固定的 9-5。此外，舒适的家庭环境减少了办公室干扰，提高了专注度。
+Remote work eliminates commuting stress, allowing employees to bring more energy to their work. At the same time, flexible working hours enable employees to work during their most productive periods, rather than being locked into a fixed 9-to-5 schedule. In addition, the comfort of a home environment reduces office distractions and improves focus.
 ```
 
-## 使用提示
-- 每个观点都需要证据支持
-- 解释要说明"为什么"和"意味着什么"
+## Usage Tips
+- Every point requires supporting evidence
+- Explanation should address "why" and "what it means"

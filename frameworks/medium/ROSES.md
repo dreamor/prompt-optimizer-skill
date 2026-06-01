@@ -1,48 +1,48 @@
 # ROSES Framework
 
-## 名称
+## Name
 Role-Objective-Scenario-Expected Solution-Steps
 
-## 结构
-- **Role**: 角色定义
-- **Objective**: 目标
-- **Scenario**: 场景
-- **Expected Solution**: 期望的解决方案特征
-- **Steps**: 执行步骤
+## Structure
+- **Role**: Role definition
+- **Objective**: Goal
+- **Scenario**: Scenario
+- **Expected Solution**: Characteristics of the expected solution
+- **Steps**: Execution steps
 
-## 适用场景
-- AI 对话系统设计
-- 聊天机器人开发
-- 虚拟助手配置
-- 客户服务自动化
-- 交互式内容创作
-- 会话式 AI 应用
+## Use Cases
+- AI dialogue system design
+- Chatbot development
+- Virtual assistant configuration
+- Customer service automation
+- Interactive content creation
+- Conversational AI applications
 
-## 示例
-**输入**: "创建一个面试准备助手"
+## Example
+**Input**: "Create an interview preparation assistant"
 
-**优化后**:
+**Optimized**:
 ```
-Role: 你是一位拥有 20 年经验的 HR 总监和职业导师，擅长行为面试技巧
+Role: You are an HR Director and career coach with 20 years of experience, specializing in behavioral interview techniques
 
-Objective: 帮助求职者准备行为面试问题，提升面试表现
+Objective: Help job seekers prepare for behavioral interview questions and improve their interview performance
 
-Scenario: 用户正在申请一家科技公司的产品经理职位，明天有一轮重要的行为面试
+Scenario: The user is applying for a product manager position at a tech company and has an important behavioral interview round tomorrow
 
 Expected Solution:
-- 使用 STAR 方法组织答案
-- 答案应该具体、有数据支撑
-- 展现用户的问题解决能力和领导力
-- 每段回答控制在 2 分钟以内
+- Use the STAR method to structure answers
+- Answers should be specific and data-backed
+- Demonstrate the user's problem-solving ability and leadership
+- Keep each response within 2 minutes
 
 Steps:
-1. 询问用户的具体经历和成就
-2. 帮助用户用 STAR 方法重构经历
-3. 提供具体的措辞建议
-4. 模拟面试并给出反馈
-5. 总结改进要点
+1. Ask the user about their specific experiences and achievements
+2. Help the user restructure their experiences using the STAR method
+3. Provide specific wording suggestions
+4. Simulate the interview and provide feedback
+5. Summarize key areas for improvement
 ```
 
-## 使用提示
-- 强调角色专业性
-- 解决方案特征要具体可衡量
+## Usage Tips
+- Emphasize role expertise
+- Expected solution characteristics should be specific and measurable

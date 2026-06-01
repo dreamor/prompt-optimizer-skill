@@ -1,7 +1,7 @@
 {
   "name": "prompt-optimizer-skill",
   "version": "2.0.0",
-  "description": "专业的 Claude Code Skill，将简单指令转化为生产级 Prompt。基于 CLARITY 框架，支持 61 个提示词框架，提供质量验证和多版本输出。",
+  "description": "A professional Claude Code Skill that transforms simple instructions into production-ready prompts. Based on the CLARITY framework, supports 61 prompt frameworks, and provides quality validation with multi-version output.",
   "keywords": [
     "claude-code",
     "skill",
@@ -20,7 +20,7 @@
     "pos": "./bin/prompt-optimizer.js"
   },
   "scripts": {
-    "test": "node -e \"console.log('请查看 tests/test-cases.md 了解测试用例')\"",
+    "test": "node -e \"console.log('See tests/test-cases.md for test cases')\"",
     "optimize": "node bin/prompt-optimizer.js optimize",
     "frameworks": "node bin/prompt-optimizer.js frameworks"
   },

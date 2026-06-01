@@ -1,93 +1,93 @@
 # Tree of Thought Framework
 
-## 名称
-思维树框架
+## Name
+Tree of Thought Framework
 
-## 结构
-- **问题**: 需要解决的复杂问题
-- **分支 1**: 方案 A 及推理
-- **分支 2**: 方案 B 及推理
-- **分支 3**: 方案 C 及推理
-- **评估**: 比较各分支
-- **最佳路径**: 选择最优方案
+## Structure
+- **Problem**: The complex problem to be solved
+- **Branch 1**: Option A and its reasoning
+- **Branch 2**: Option B and its reasoning
+- **Branch 3**: Option C and its reasoning
+- **Evaluation**: Compare each branch
+- **Best Path**: Select the optimal solution
 
-## 适用场景
-- 战略规划和决策
-- 多步骤问题解决
-- 场景分析和预测
-- 创意头脑风暴
-- 复杂项目规划
-- 风险评估
+## Use Cases
+- Strategic planning and decision-making
+- Multi-step problem solving
+- Scenario analysis and forecasting
+- Creative brainstorming
+- Complex project planning
+- Risk assessment
 
-## 示例
-**输入**: "选择我们的技术栈"
+## Example
+**Input**: "Choose our tech stack"
 
-**优化后**:
+**Optimized**:
 ```
-问题: 为新的电商平台选择后端技术栈
+Problem: Choose a backend tech stack for a new e-commerce platform
 
-分支 1 - Node.js + Express:
-优势:
-- 团队熟悉 JavaScript
-- 前后端语言统一
-- 丰富的 npm 生态
-- 适合 I/O 密集型应用
+Branch 1 – Node.js + Express:
+Advantages:
+- Team is familiar with JavaScript
+- Unified language across frontend and backend
+- Rich npm ecosystem
+- Well-suited for I/O-intensive applications
 
-劣势:
-- 单线程，CPU 密集型任务性能差
-- 类型安全需要额外工具（TypeScript）
-- 回调地狱风险（现代已改善）
+Disadvantages:
+- Single-threaded; poor performance for CPU-intensive tasks
+- Type safety requires additional tooling (TypeScript)
+- Risk of callback hell (mitigated by modern approaches)
 
-适用场景: 快速原型、团队 JS 背景强、实时应用多
+Best for: Rapid prototyping, teams with strong JS background, real-time applications
 
-分支 2 - Python + Django/FastAPI:
-优势:
-- 开发效率高
-- 丰富的数据/AI 库
-- 类型提示支持好
-- 适合快速迭代
+Branch 2 – Python + Django/FastAPI:
+Advantages:
+- High development efficiency
+- Rich data/AI libraries
+- Good type hint support
+- Well-suited for rapid iteration
 
-劣势:
-- 性能不如编译型语言
-- GIL 限制多线程
-- 内存占用较高
+Disadvantages:
+- Lower performance compared to compiled languages
+- GIL limits true multi-threading
+- Higher memory usage
 
-适用场景: 数据密集型、AI 集成、快速开发
+Best for: Data-intensive applications, AI integration, fast development cycles
 
-分支 3 - Go + Gin/Echo:
-优势:
-- 高性能、高并发
-- 编译型，类型安全
-- 部署简单（单二进制）
-- 内置并发支持
+Branch 3 – Go + Gin/Echo:
+Advantages:
+- High performance and high concurrency
+- Compiled language with type safety
+- Simple deployment (single binary)
+- Built-in concurrency support
 
-劣势:
-- 开发速度相对慢
-- 生态不如 Node/Python 丰富
-- 团队学习成本
+Disadvantages:
+- Relatively slower development speed
+- Ecosystem not as rich as Node.js or Python
+- Learning curve for the team
 
-适用场景: 高并发、微服务、性能敏感
+Best for: High-concurrency systems, microservices, performance-sensitive applications
 
-评估:
-| 维度 | Node.js | Python | Go |
-|------|---------|--------|-----|
-| 性能 | 中 | 中 | 高 |
-| 开发速度 | 高 | 高 | 中 |
-| 团队熟悉度 | 高 | 中 | 低 |
-| 生态丰富度 | 高 | 高 | 中 |
-| 长期维护 | 中 | 高 | 高 |
+Evaluation:
+| Dimension | Node.js | Python | Go |
+|-----------|---------|--------|----|
+| Performance | Medium | Medium | High |
+| Development speed | High | High | Medium |
+| Team familiarity | High | Medium | Low |
+| Ecosystem richness | High | High | Medium |
+| Long-term maintenance | Medium | High | High |
 
-最佳路径:
-推荐: Python + FastAPI
-理由:
-1. 电商平台需要数据分析和推荐系统（Python 优势）
-2. 团队有 2 名 Python 开发者，可快速上手
-3. 开发速度快，适合 MVP 阶段
-4. 未来可逐步用 Go 重构性能瓶颈部分
+Best Path:
+Recommendation: Python + FastAPI
+Rationale:
+1. The e-commerce platform requires data analytics and a recommendation system (Python's strength)
+2. The team has 2 Python developers who can get up to speed quickly
+3. Fast development speed is suitable for the MVP phase
+4. Performance bottlenecks can gradually be refactored with Go in the future
 ```
 
-## 使用提示
-- 探索至少 3 个不同方向
-- 每个分支都要有推理过程
-- 使用明确的标准评估
-- 考虑混合方案
+## Usage Tips
+- Explore at least 3 different directions
+- Each branch should include a reasoning process
+- Use explicit criteria for evaluation
+- Consider hybrid solutions

@@ -1,55 +1,55 @@
 # Few-Shot Pattern
 
-## 名称
-少样本示例模式
+## Name
+Few-Shot Examples Pattern
 
-## 结构
-- **任务说明**: 需要执行的任务
-- **示例 1**: 输入 + 输出
-- **示例 2**: 输入 + 输出
-- **示例 3**（可选）: 输入 + 输出
-- **实际输入**: 需要处理的内容
+## Structure
+- **Task Description**: The task to be performed
+- **Example 1**: Input + Output
+- **Example 2**: Input + Output
+- **Example 3** (optional): Input + Output
+- **Actual Input**: The content to process
 
-## 适用场景
-- 特定格式输出生成
-- 语言翻译和转换
-- 分类和标注任务
-- 代码生成
-- 创意写作
-- 数据格式转换
+## Use Cases
+- Specific format output generation
+- Language translation and conversion
+- Classification and labeling tasks
+- Code generation
+- Creative writing
+- Data format conversion
 
-## 示例
-**任务**: 将客户反馈分类为正面、负面或中性
+## Example
+**Task**: Classify customer feedback as positive, negative, or neutral
 
 ```
-任务: 分析以下客户反馈，分类为正面、负面或中性，并提取关键主题
+Task: Analyze the following customer feedback, classify it as positive, negative, or neutral, and extract key themes
 
-示例 1:
-输入: "这个软件太棒了！帮我节省了每天 2 小时的工作时间，界面也很直观。"
-输出: 
-- 分类: 正面
-- 关键主题: 节省时间、易用性
-- 情感强度: 高
+Example 1:
+Input: "This software is amazing! It saves me 2 hours of work every day, and the interface is very intuitive."
+Output:
+- Classification: Positive
+- Key themes: Time-saving, usability
+- Sentiment intensity: High
 
-示例 2:
-输入: "产品还行吧，但是有些功能找不到在哪里设置。"
-输出:
-- 分类: 中性
-- 关键主题: 可用性
-- 情感强度: 中
+Example 2:
+Input: "The product is okay, but some features are hard to find in the settings."
+Output:
+- Classification: Neutral
+- Key themes: Usability
+- Sentiment intensity: Medium
 
-示例 3:
-输入: "客服响应太慢了，等了 3 天都没人解决问题，非常失望。"
-输出:
-- 分类: 负面
-- 关键主题: 客服响应
-- 情感强度: 高
+Example 3:
+Input: "Customer support is too slow — waited 3 days and no one resolved the issue. Very disappointed."
+Output:
+- Classification: Negative
+- Key themes: Customer support response
+- Sentiment intensity: High
 
-现在请分析:
-输入: "更新后的版本好用多了，之前那个 bug 终于修复了，感谢开发团队！"
+Now please analyze:
+Input: "The updated version is much better. The previous bug is finally fixed. Thank you to the dev team!"
 ```
 
-## 使用提示
-- 示例要覆盖不同情况
-- 示例质量直接影响输出质量
-- 2-3 个示例通常足够
+## Usage Tips
+- Examples should cover different scenarios
+- Example quality directly affects output quality
+- 2-3 examples are usually sufficient

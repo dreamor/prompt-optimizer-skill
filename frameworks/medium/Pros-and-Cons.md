@@ -1,80 +1,80 @@
 # Pros and Cons Framework
 
-## 名称
-利弊分析框架
+## Name
+Pros and Cons Analysis Framework
 
-## 结构
-- **决策项**: 需要决策的事项
-- **Pros**: 支持的理由（优点、好处）
-- **Cons**: 反对的理由（缺点、风险）
-- **权衡分析**: 综合评估
-- **建议**: 最终决策建议
+## Structure
+- **Decision Item**: The matter requiring a decision
+- **Pros**: Reasons in favor (advantages, benefits)
+- **Cons**: Reasons against (disadvantages, risks)
+- **Trade-off Analysis**: Comprehensive evaluation
+- **Recommendation**: Final decision recommendation
 
-## 适用场景
-- 决策分析
-- 产品评估
-- 策略选择
-- 风险评估
-- 投资决策
-- 项目可行性分析
+## Use Cases
+- Decision analysis
+- Product evaluation
+- Strategy selection
+- Risk assessment
+- Investment decisions
+- Project feasibility analysis
 
-## 示例
-**输入**: "评估是否采用微服务架构"
+## Example
+**Input**: "Evaluate whether to adopt a microservices architecture"
 
-**优化后**:
+**Optimized**:
 ```
-决策项: 是否将现有单体应用迁移到微服务架构
+Decision Item: Whether to migrate the existing monolithic application to a microservices architecture
 
-Pros (优点):
-1. 可扩展性
-   - 独立扩展热点服务
-   - 预期性能提升 40%
+Pros:
+1. Scalability
+   - Independently scale hotspot services
+   - Expected performance improvement of 40%
    
-2. 技术灵活性
-   - 不同服务可使用不同技术栈
-   - 便于引入新技术
+2. Technology flexibility
+   - Different services can use different tech stacks
+   - Easier to adopt new technologies
    
-3. 团队自治
-   - 团队可独立开发和部署
-   - 减少协调成本
+3. Team autonomy
+   - Teams can develop and deploy independently
+   - Reduces coordination overhead
    
-4. 故障隔离
-   - 单个服务故障不影响整体
-   - 提高系统可用性
+4. Fault isolation
+   - A single service failure does not affect the whole system
+   - Improves overall system availability
 
-Cons (缺点):
-1. 复杂性增加
-   - 分布式系统复杂度
-   - 需要 DevOps 能力
+Cons:
+1. Increased complexity
+   - Distributed system complexity
+   - Requires DevOps capabilities
    
-2. 运维成本
-   - 监控、日志、追踪成本增加
-   - 需要额外基础设施投入
+2. Operational costs
+   - Increased costs for monitoring, logging, and tracing
+   - Additional infrastructure investment required
    
-3. 数据一致性
-   - 分布式事务处理复杂
-   - 可能出现数据不一致
+3. Data consistency
+   - Distributed transaction handling is complex
+   - Potential for data inconsistency
    
-4. 迁移成本
-   - 预计需要 6 个月开发时间
-   - 团队需要学习新技术
+4. Migration costs
+   - Estimated 6 months of development time
+   - Team needs to learn new technologies
 
-权衡分析:
-- 短期成本：高（6个月开发 + 基础设施投入）
-- 长期收益：中到高（可扩展性、团队效率）
-- 风险等级：中（技术风险、人员风险）
-- 时机评估：当前团队规模 50 人，业务增长 30%/年，时机合适
+Trade-off Analysis:
+- Short-term cost: high (6 months of development + infrastructure investment)
+- Long-term benefit: medium to high (scalability, team efficiency)
+- Risk level: medium (technical risk, personnel risk)
+- Timing assessment: current team size is 50 people, business growing at 30%/year — timing is appropriate
 
-建议:
-采用"绞杀者模式"渐进式迁移：
-1. 先拆分 1 个非核心服务作为试点（2个月）
-2. 验证基础设施和流程（1个月）
-3. 逐步迁移其他服务（每服务 1 个月）
-4. 保留核心单体，长期维护
+Recommendation:
+Adopt a "strangler fig" pattern for gradual migration:
+1. Extract 1 non-core service as a pilot first (2 months)
+2. Validate infrastructure and processes (1 month)
+3. Gradually migrate other services (1 month per service)
+4. Retain the core monolith for long-term maintenance
 ```
 
-## 使用提示
-- 尽量客观，避免只列一边
-- 给每个点赋予权重或重要性
-- 考虑短期和长期影响
-- 最终建议要具体可执行
+## Usage Tips
+- Strive to be objective — avoid listing only one side
+- Assign weight or importance to each point
+- Consider both short-term and long-term impacts
+- The final recommendation should be specific and actionable

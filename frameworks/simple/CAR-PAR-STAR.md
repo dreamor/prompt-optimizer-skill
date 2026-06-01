@@ -1,85 +1,85 @@
 # CAR-PAR-STAR Framework
 
-## 名称
+## Name
 Context-Action-Result / Problem-Action-Result / Situation-Task-Action-Result
 
-## 结构
+## Structure
 - **CAR**: Context-Action-Result
 - **PAR**: Problem-Action-Result
 - **STAR**: Situation-Task-Action-Result
 
-## 适用场景
-- 面试回答准备
-- 行为面试问题应对
-- 工作经历描述
-- 成就展示
-- 简历撰写
-- 绩效评估总结
+## Use Cases
+- Interview preparation
+- Handling behavioral interview questions
+- Describing work experience
+- Showcasing achievements
+- Resume writing
+- Performance review summaries
 
-## 示例
-**输入**: "准备面试中的项目经验描述"
+## Example
+**Input**: "Prepare a project experience description for an interview"
 
-**优化后**:
+**Optimized**:
 ```
-STAR 格式示例:
+STAR Format Example:
 
-Situation (情境):
-在我担任项目经理期间，公司接到了一个重要客户的电商平台重构项目。原系统使用了 10 年，性能严重下降，客户流失率上升 30%。项目预算 200 万，时间 6 个月，团队 8 人。
+Situation:
+During my tenure as project manager, the company took on an important client's e-commerce platform reconstruction project. The original system had been in use for 10 years, performance had severely degraded, and the client churn rate had risen 30%. The project budget was 2 million CNY, the timeline was 6 months, and the team had 8 people.
 
-Task (任务):
-我的任务是：
-1. 在 6 个月内完成系统重构
-2. 确保新系统性能提升 3 倍以上
-3. 迁移 100 万用户数据零丢失
-4. 保持业务连续性，不能停机超过 4 小时
+Task:
+My tasks were:
+1. Complete the system reconstruction within 6 months
+2. Ensure the new system's performance improved by at least 3x
+3. Migrate 1 million user records with zero data loss
+4. Maintain business continuity with no more than 4 hours of downtime
 
-Action (行动):
-我采取的具体措施：
-1. 技术选型:
-   - 组织技术评审，对比 5 种架构方案
-   - 最终选择微服务 + 容器化方案
+Action:
+Specific measures I took:
+1. Technology selection:
+   - Organized a technical review, comparing 5 architectural options
+   - Ultimately chose a microservices + containerization approach
    
-2. 团队管理:
-   - 将团队分为 3 个小组，并行开发
-   - 建立每日站会和周报机制
-   - 引入代码审查和自动化测试
+2. Team management:
+   - Split the team into 3 sub-groups for parallel development
+   - Established daily standups and weekly reporting
+   - Introduced code reviews and automated testing
    
-3. 风险管控:
-   - 制定详细的数据迁移方案
-   - 准备回滚机制
-   - 进行 3 次全量演练
+3. Risk management:
+   - Developed a detailed data migration plan
+   - Prepared a rollback mechanism
+   - Conducted 3 full-scale migration drills
    
-4. 客户沟通:
-   - 每周向客户汇报进展
-   - 邀请客户参与 UAT 测试
-   - 提前识别并解决需求变更
+4. Client communication:
+   - Reported progress to the client weekly
+   - Invited the client to participate in UAT testing
+   - Proactively identified and resolved scope changes
 
-Result (结果):
-量化成果:
-- 按时交付，提前 2 周上线
-- 系统性能提升 5 倍（超出目标）
-- 用户数据 100% 成功迁移
-- 实际停机时间仅 2 小时
-- 客户满意度从 3.2 提升到 4.6
+Result:
+Quantitative outcomes:
+- Delivered on time, went live 2 weeks ahead of schedule
+- System performance improved 5x (exceeded the target)
+- 100% successful migration of user data
+- Actual downtime was only 2 hours
+- Client satisfaction rose from 3.2 to 4.6
 
-质性成果:
-- 获得客户年度最佳供应商称号
-- 团队技术能力显著提升
-- 建立了可复用的重构方法论
+Qualitative outcomes:
+- Received the client's annual Best Supplier award
+- Team technical capabilities improved significantly
+- Established a reusable reconstruction methodology
 
-CAR 简化版（用于简短回答）:
-Context: 电商平台重构项目，预算 200 万，6 个月期限
-Action: 采用微服务架构，团队分组并行开发，3 次迁移演练
-Result: 提前 2 周交付，性能提升 5 倍，客户满意度大幅提升
+CAR Simplified Version (for brief answers):
+Context: E-commerce platform reconstruction project, budget 2 million CNY, 6-month deadline
+Action: Adopted microservices architecture, parallel team development, 3 migration drills
+Result: Delivered 2 weeks early, performance improved 5x, client satisfaction improved significantly
 
-PAR 问题版（用于解决问题场景）:
-Problem: 系统性能差导致客户流失率上升 30%
-Action: 重构架构，优化数据库，引入缓存机制
-Result: 性能提升 5 倍，客户流失率降低至 5%，满意度提升
+PAR Problem Version (for problem-solving scenarios):
+Problem: Poor system performance caused client churn rate to rise 30%
+Action: Reconstructed architecture, optimized database, introduced caching mechanisms
+Result: Performance improved 5x, churn rate dropped to 5%, satisfaction improved
 ```
 
-## 使用提示
-- STAR 最完整，适合详细描述
-- CAR 更简洁，适合简短回答
-- PAR 强调问题解决，适合挑战场景
-- 始终用数据支撑结果
+## Usage Tips
+- STAR is most complete, suitable for detailed descriptions
+- CAR is more concise, suitable for brief answers
+- PAR emphasizes problem-solving, suitable for challenge scenarios
+- Always support results with data

@@ -1,99 +1,99 @@
 # 3Cs Model Framework
 
-## 名称
+## Name
 Company-Customers-Competitors
 
-## 结构
-- **Company**: 公司自身（优势、劣势、资源）
-- **Customers**: 客户（需求、痛点、行为）
-- **Competitors**: 竞争对手（策略、优势、弱点）
-- **战略定位**: 基于 3C 的差异化定位
+## Structure
+- **Company**: The company itself (strengths, weaknesses, resources)
+- **Customers**: Customers (needs, pain points, behaviors)
+- **Competitors**: Competitors (strategy, strengths, weaknesses)
+- **Strategic Positioning**: Differentiated positioning based on the 3Cs
 
-## 适用场景
-- 市场战略规划
-- 竞争分析
-- 商业模式设计
-- 营销策略制定
-- 新市场进入评估
-- 品牌定位
+## Use Cases
+- Market strategy planning
+- Competitive analysis
+- Business model design
+- Marketing strategy formulation
+- New market entry evaluation
+- Brand positioning
 
-## 示例
-**输入**: "制定我们的市场进入策略"
+## Example
+**Input**: "Develop our market entry strategy"
 
-**优化后**:
+**Optimized**:
 ```
-Company (公司):
-优势:
-- 独特的 AI 算法技术
-- 经验丰富的技术团队
-- 充足的融资资金
-- 灵活的决策机制
+Company:
+Strengths:
+- Unique AI algorithm technology
+- Experienced technical team
+- Sufficient funding
+- Agile decision-making
 
-劣势:
-- 品牌知名度低
-- 销售团队待建设
-- 客户案例少
-- 渠道资源有限
+Weaknesses:
+- Low brand awareness
+- Sales team still being built
+- Few customer references
+- Limited channel resources
 
-资源:
-- 预算: 首年 500 万市场费用
-- 团队: 10 人产品技术团队
-- 时间: 6 个月达到 PMF
+Resources:
+- Budget: 5M CNY for marketing in year one
+- Team: 10-person product and engineering team
+- Timeline: 6 months to reach PMF
 
-Customers (客户):
-目标客户: 中小型企业（50-200 人）
-需求:
-- 降低运营成本
-- 提高工作效率
-- 数据分析能力
-- 无需技术背景即可使用
+Customers:
+Target customers: SMEs (50-200 employees)
+Needs:
+- Reduce operating costs
+- Improve work efficiency
+- Data analysis capabilities
+- Usable without a technical background
 
-痛点:
-- 现有解决方案太贵
-- 功能过于复杂
-- 缺乏本地化支持
-- 数据安全担忧
+Pain points:
+- Existing solutions are too expensive
+- Features are too complex
+- Lack of localized support
+- Data security concerns
 
-行为:
-- 决策周期: 1-3 个月
-- 信息来源: 行业媒体、同行推荐
-- 购买渠道: 官网、代理商
-- 价格敏感度: 高
+Behaviors:
+- Decision cycle: 1-3 months
+- Information sources: Industry media, peer recommendations
+- Purchase channels: Official website, resellers
+- Price sensitivity: High
 
-Competitors (竞争对手):
-竞品 A (行业老大):
-- 优势: 品牌知名度、功能全面
-- 弱点: 价格高、服务响应慢
-- 策略: 高端市场，大客户
+Competitors:
+Competitor A (market leader):
+- Strengths: Brand recognition, comprehensive features
+- Weaknesses: High price, slow customer service response
+- Strategy: High-end market, enterprise clients
 
-竞品 B (新兴玩家):
-- 优势: 价格便宜、界面现代
-- 弱点: 功能简单、稳定性差
-- 策略: 低价抢占市场
+Competitor B (emerging player):
+- Strengths: Low price, modern interface
+- Weaknesses: Limited features, poor stability
+- Strategy: Low-price market capture
 
-竞品 C (垂直领域):
-- 优势: 行业深耕、客户粘性强
-- 弱点: 扩展性差
-- 策略: 垂直市场防守
+Competitor C (vertical specialist):
+- Strengths: Deep domain expertise, strong customer loyalty
+- Weaknesses: Poor extensibility
+- Strategy: Defend vertical market
 
-战略定位:
-"高性价比的 AI 驱动解决方案，专为中小企业设计，提供本地化服务和快速响应支持"
+Strategic Positioning:
+"An AI-driven, high-value solution designed specifically for SMEs, offering localized service and fast-response support"
 
-差异化要素:
-1. 价格是竞品的 60%，功能覆盖 80%
-2. 提供 7×24 中文客服支持
-3. 本地化部署选项
-4. 行业模板快速上手
+Differentiation:
+1. Price is 60% of competitors', covering 80% of their features
+2. 24/7 customer support in local language
+3. On-premise deployment option
+4. Industry templates for rapid onboarding
 
-营销策略:
-1. 内容营销: SEO + 行业白皮书
-2. 渠道合作: 与云服务商合作
-3. 口碑营销: 种子用户推荐计划
-4. 免费试用: 30 天全功能试用
+Marketing Strategy:
+1. Content marketing: SEO + industry whitepapers
+2. Channel partnerships: Collaborate with cloud service providers
+3. Word-of-mouth: Seed user referral program
+4. Free trial: 30-day full-feature trial
 ```
 
-## 使用提示
-- 3C 分析要全面客观
-- 找出 3C 的交集机会
-- 定位要具体，避免泛泛而谈
-- 策略要与定位一致
+## Usage Tips
+- 3C analysis should be comprehensive and objective
+- Find the intersection opportunities among the 3Cs
+- Positioning should be specific — avoid being vague
+- Strategy should align with positioning

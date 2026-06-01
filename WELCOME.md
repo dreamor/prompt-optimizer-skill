@@ -1,45 +1,45 @@
 ╔════════════════════════════════════════════════════════╗
 ║                                                        ║
-║     🎉 Prompt Optimizer v2.0.0 安装成功！ 🎉          ║
+║     🎉 Prompt Optimizer v2.0.0 Successfully Installed! ║
 ║                                                        ║
 ╚════════════════════════════════════════════════════════╝
 
-感谢安装 Prompt Optimizer！
+Thank you for installing Prompt Optimizer!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📖 快速开始
+📖 Quick Start
 
-1️⃣  在 Claude Code 中使用：
-   optimize this prompt: 写一封邮件给客户
+1️⃣  Use in Claude Code:
+   optimize this prompt: Write an email to a customer
 
-2️⃣  使用 npx（无需安装）：
-   npx prompt-optimizer-skill "写一封邮件给客户"
+2️⃣  Use via npx (no installation required):
+   npx prompt-optimizer-skill "Write an email to a customer"
 
-3️⃣  查看所有框架：
+3️⃣  List all frameworks:
    npx prompt-optimizer-skill frameworks
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✨ 主要功能
+✨ Key Features
 
-• 61 个提示词框架，覆盖各种场景
-• CLARITY 质量验证，确保输出质量
-• 多版本输出（基础/进阶/专家）
-• 智能边界处理
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📚 文档链接
-
-• 完整文档: https://github.com/dreamor/prompt-optimizer-skill
-• 框架列表: npx prompt-optimizer-skill frameworks
-• 使用帮助: npx prompt-optimizer-skill help
+• 61 prompt frameworks covering a wide range of scenarios
+• CLARITY quality validation to ensure output quality
+• Multi-version output (Basic / Enhanced / Expert)
+• Intelligent boundary handling
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-💡 提示
+📚 Documentation
 
-使用 "/prompt-optimizer" 或 "optimize this prompt:" 开始优化你的第一个提示词！
+• Full docs: https://github.com/dreamor/prompt-optimizer-skill
+• Framework list: npx prompt-optimizer-skill frameworks
+• Help: npx prompt-optimizer-skill help
 
-祝你使用愉快！
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 Tip
+
+Use "/prompt-optimizer" or "optimize this prompt:" to start optimizing your first prompt!
+
+Happy prompting!

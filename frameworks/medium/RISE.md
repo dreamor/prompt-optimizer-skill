@@ -1,61 +1,61 @@
 # RISE Framework
 
-## 名称
+## Name
 Reflect-Inquire-Suggest-Elevate
 
-## 结构
-- **Reflect**: 反映/总结当前情况
-- **Inquire**: 询问/探索问题
-- **Suggest**: 建议/提供方案
-- **Elevate**: 提升/鼓励改进
+## Structure
+- **Reflect**: Reflect/summarize the current situation
+- **Inquire**: Ask/explore the problem
+- **Suggest**: Suggest/provide solutions
+- **Elevate**: Elevate/encourage improvement
 
-## 适用场景
-- 反馈给予
-- 绩效评估沟通
-- 导师指导
-- 代码审查
-- 作品点评
-- 建设性批评
+## Use Cases
+- Giving feedback
+- Performance review communication
+- Mentoring and coaching
+- Code review
+- Work critique
+- Constructive criticism
 
-## 示例
-**输入**: "给团队成员的代码审查反馈"
+## Example
+**Input**: "Code review feedback for a team member"
 
-**优化后**:
+**Optimized**:
 ```
-Reflect (反映):
-我 reviewing 了你提交的购物车模块代码，整体结构清晰，功能完整，测试覆盖率达到 85%。特别欣赏你对边界情况的处理，比如空购物车、库存不足等场景都有考虑到。
+Reflect:
+I reviewed the shopping cart module code you submitted. The overall structure is clear, the functionality is complete, and test coverage reaches 85%. I especially appreciate your handling of edge cases — scenarios like an empty cart and insufficient inventory are all accounted for.
 
-Inquire (询问):
-我注意到几个地方想和你探讨：
-1. 第 45 行的循环嵌套，是否考虑过性能影响？如果购物车有 1000 个商品会怎样？
-2. 错误处理部分使用了通用的 Exception，是否有更具体的异常类型可以使用？
-3. 变量命名 `tmp` 和 `data` 是否能更具描述性？
+Inquire:
+I noticed a few areas I'd like to discuss with you:
+1. The nested loop on line 45 — have you considered the performance impact? What would happen if the cart had 1,000 items?
+2. The error handling section uses a generic Exception — are there more specific exception types that could be used?
+3. Could the variable names `tmp` and `data` be more descriptive?
 
-Suggest (建议):
-基于以上问题，我有以下建议：
-1. 性能优化:
-   - 考虑使用生成器替代列表
-   - 添加分页处理大批量商品
-   - 添加性能测试用例
+Suggest:
+Based on the above, I have the following suggestions:
+1. Performance optimization:
+   - Consider using generators instead of lists
+   - Add pagination to handle large batches of items
+   - Add performance test cases
 
-2. 错误处理:
-   - 创建自定义异常类（如 InsufficientStockException）
-   - 添加错误码便于前端处理
-   - 记录详细错误日志
+2. Error handling:
+   - Create custom exception classes (e.g., InsufficientStockException)
+   - Add error codes to facilitate frontend handling
+   - Log detailed error information
 
-3. 代码可读性:
+3. Code readability:
    - `tmp` → `cartItem`
    - `data` → `productDetails`
-   - 添加函数文档字符串
+   - Add function docstrings
 
-Elevate (提升):
-你的代码质量一直在稳步提升，这次的设计模式运用很好。修复这些问题后，这将是一个很好的代码范例。建议完成后我们可以组织一次团队分享，让大家学习你的实现思路。
+Elevate:
+Your code quality has been steadily improving, and the design patterns used this time are excellent. Once these issues are fixed, this will be a great code example. I suggest we organize a team sharing session after you complete the revisions so others can learn from your implementation approach.
 
-期待你的修改版本！
+Looking forward to your revised version!
 ```
 
-## 使用提示
-- Reflect 要真诚具体，不空洞
-- Inquire 用问题而非指责
-- Suggest 要 actionable
-- Elevate 要给予信心和动力
+## Usage Tips
+- Reflect should be sincere and specific, not hollow
+- Inquire using questions rather than accusations
+- Suggest should be actionable
+- Elevate should inspire confidence and motivation

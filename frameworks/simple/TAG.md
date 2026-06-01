@@ -1,31 +1,31 @@
 # TAG Framework
 
-## 名称
+## Name
 Task-Action-Goal
 
-## 结构
-- **Task**: 任务描述
-- **Action**: 具体行动
-- **Goal**: 最终目标
+## Structure
+- **Task**: Task description
+- **Action**: Specific actions
+- **Goal**: Ultimate objective
 
-## 适用场景
-- 快速任务定义
-- AI 指令简化
-- 日常提示词构建
-- 简单内容生成
-- 初学者入门
-- 快速原型测试
+## Use Cases
+- Quick task definition
+- Simplifying AI instructions
+- Daily prompt building
+- Simple content generation
+- Beginner onboarding
+- Rapid prototype testing
 
-## 示例
-**输入**: "总结这篇文章"
+## Example
+**Input**: "Summarize this article"
 
-**优化后**:
+**Optimized**:
 ```
-Task: 阅读并分析提供的文章
-Action: 提取关键观点、主要论据和重要结论
-Goal: 生成一份简洁的摘要，包含 3-5 个要点，便于快速理解文章核心内容
+Task: Read and analyze the provided article
+Action: Extract key viewpoints, main arguments, and important conclusions
+Goal: Generate a concise summary containing 3-5 key points, making it easy to quickly grasp the article's core content
 ```
 
-## 使用提示
-- 三个要素缺一不可
-- 适合信息提取和总结类任务
+## Usage Tips
+- All three elements are essential
+- Well-suited for information extraction and summarization tasks

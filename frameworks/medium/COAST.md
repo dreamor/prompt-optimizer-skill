@@ -1,44 +1,44 @@
 # COAST Framework
 
-## 名称
+## Name
 Context-Objective-Actions-Scenario-Task
 
-## 结构
-- **Context**: 背景信息
-- **Objective**: 目标
-- **Actions**: 行动步骤
-- **Scenario**: 应用场景
-- **Task**: 具体任务
+## Structure
+- **Context**: Background information
+- **Objective**: Goal
+- **Actions**: Action steps
+- **Scenario**: Application scenario
+- **Task**: Specific task
 
-## 适用场景
-- AI 对话系统设计
-- 聊天机器人开发
-- 虚拟助手配置
-- 客户服务自动化
-- 交互式内容创作
-- 会话式 AI 应用
+## Use Cases
+- AI conversational system design
+- Chatbot development
+- Virtual assistant configuration
+- Customer service automation
+- Interactive content creation
+- Conversational AI applications
 
-## 示例
-**输入**: "设计一个销售助手"
+## Example
+**Input**: "Design a sales assistant"
 
-**优化后**:
+**Optimized**:
 ```
-Context: 我们是一家 B2B SaaS 公司，销售项目管理软件，目标客户是 50-500 人的中型企业
+Context: We are a B2B SaaS company selling project management software, targeting mid-sized businesses with 50–500 employees.
 
-Objective: 帮助销售代表快速回答潜在客户的产品问题，提高成交率
+Objective: Help sales representatives quickly answer prospects' product questions and improve conversion rates.
 
 Actions:
-1. 问候并了解客户需求
-2. 根据需求介绍相关功能
-3. 回答技术和价格问题
-4. 提供案例和客户评价
-5. 引导预约产品演示
+1. Greet and understand the customer's needs
+2. Introduce relevant features based on those needs
+3. Answer technical and pricing questions
+4. Provide case studies and customer testimonials
+5. Guide the prospect toward scheduling a product demo
 
-Scenario: 潜在客户刚下载了我们的白皮书，正在网站上浏览定价页面
+Scenario: A prospect just downloaded our whitepaper and is browsing the pricing page on our website.
 
-Task: 设计这个销售助手的开场白和 10 个常见问题的回答模板
+Task: Design the opening message for this sales assistant and response templates for the 10 most common questions.
 ```
 
-## 使用提示
-- 适合设计多轮对话系统
-- 明确每个步骤的转换条件
+## Usage Tips
+- Well-suited for designing multi-turn conversation systems
+- Clearly define the transition conditions for each step

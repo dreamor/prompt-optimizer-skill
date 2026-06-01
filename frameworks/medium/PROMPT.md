@@ -1,66 +1,66 @@
 # PROMPT Framework
 
-## 名称
+## Name
 Problem-Research-Outcome-Methodology-Presentation-Testing
 
-## 结构
-- **Problem**: 问题定义
-- **Research**: 研究背景
-- **Outcome**: 期望成果
-- **Methodology**: 方法论
-- **Presentation**: 展示方式
-- **Testing**: 验证测试
+## Structure
+- **Problem**: Problem definition
+- **Research**: Research background
+- **Outcome**: Desired outcome
+- **Methodology**: Methodology
+- **Presentation**: Presentation format
+- **Testing**: Validation and testing
 
-## 适用场景
-- 商业智能分析
-- 内容创作
-- 用户画像创建
-- 复杂数据总结
-- 战略洞察生成
+## Use Cases
+- Business intelligence analysis
+- Content creation
+- User persona creation
+- Complex data summarization
+- Strategic insight generation
 
-## 示例
-**输入**: "分析我们的竞争对手"
+## Example
+**Input**: "Analyze our competitors"
 
-**优化后**:
+**Optimized**:
 ```
-Problem (问题定义):
-主要竞争对手在 Q2 市场份额增长 15%，我们需要理解他们的策略并制定应对措施
+Problem:
+A primary competitor grew market share by 15% in Q2. We need to understand their strategy and develop a response plan.
 
-Research (研究背景):
-- 竞品 A: 主打低价策略，客户群体为中小企业
-- 竞品 B: 专注高端市场，功能强大但价格昂贵
-- 竞品 C: 新兴玩家，采用免费增值模式
-- 我们的位置: 中端市场，功能均衡但缺乏差异化
+Research:
+- Competitor A: pursues a low-price strategy, targets small and medium-sized businesses
+- Competitor B: focused on the high-end market, feature-rich but expensive
+- Competitor C: emerging player using a freemium model
+- Our position: mid-market, balanced features but lacking differentiation
 
-Outcome (期望成果):
-1. 竞争对手 SWOT 分析
-2. 他们的核心竞争优势识别
-3. 我们可借鉴的策略
-4. 差异化定位建议
-5. 3 个月行动计划
+Outcome:
+1. SWOT analysis of competitors
+2. Identification of their core competitive advantages
+3. Strategies we can learn from
+4. Differentiated positioning recommendations
+5. 3-month action plan
 
-Methodology (方法论):
-1. 公开信息收集（财报、新闻、产品更新）
-2. 用户评论分析（G2、Capterra、知乎）
-3. 产品功能对比矩阵
-4. 定价策略分析
-5. 专家访谈（如有资源）
+Methodology:
+1. Public information gathering (financial reports, news, product updates)
+2. User review analysis (G2, Capterra, Zhihu)
+3. Product feature comparison matrix
+4. Pricing strategy analysis
+5. Expert interviews (if resources allow)
 
-Presentation (展示方式):
-1. 执行摘要（1 页）
-2. 竞争对手概览（表格）
-3. 详细分析（每竞品 1-2 页）
-4. 战略建议（优先级排序）
-5. 行动计划（时间线）
+Presentation:
+1. Executive summary (1 page)
+2. Competitor overview (table)
+3. Detailed analysis (1–2 pages per competitor)
+4. Strategic recommendations (prioritized)
+5. Action plan (timeline)
 
-Testing (验证测试):
-- 与内部专家验证分析准确性
-- 小规模用户调研验证假设
-- 1 个月后回顾预测准确性
+Testing:
+- Validate analysis accuracy with internal experts
+- Small-scale user research to validate assumptions
+- Review prediction accuracy after 1 month
 ```
 
-## 使用提示
-- 问题定义要清晰具体
-- 研究方法要可行
-- 成果要可衡量
-- 测试环节确保质量
+## Usage Tips
+- Problem definition should be clear and specific
+- Research methods should be feasible
+- Outcomes should be measurable
+- The testing step ensures quality

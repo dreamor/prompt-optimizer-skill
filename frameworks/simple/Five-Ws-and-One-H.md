@@ -1,69 +1,69 @@
 # Five Ws and One H Framework
 
-## 名称
-5W1H 框架
+## Name
+5W1H Framework
 
-## 结构
-- **Who**: 谁
-- **What**: 什么
-- **When**: 何时
-- **Where**: 何地
-- **Why**: 为什么
-- **How**: 如何
+## Structure
+- **Who**: Who
+- **What**: What
+- **When**: When
+- **Where**: Where
+- **Why**: Why
+- **How**: How
 
-## 适用场景
-- 新闻写作和报道
-- 问题分析和调查
-- 项目规划
-- 内容创作
-- 事件描述
-- 研究设计
+## Use Cases
+- Journalism and news reporting
+- Problem analysis and investigation
+- Project planning
+- Content creation
+- Event description
+- Research design
 
-## 示例
-**输入**: "报道一个产品发布活动"
+## Example
+**Input**: "Report on a product launch event"
 
-**优化后**:
+**Optimized**:
 ```
-Who (谁):
-- 发布方: 科技公司 "创新科技"
-- CEO: 张明
-- 参会者: 200 名行业专家、投资者、媒体记者
-- 特邀嘉宾: 知名投资人李华
+Who:
+- Organizer: Tech company "InnoTech"
+- CEO: Zhang Ming
+- Attendees: 200 industry experts, investors, and media reporters
+- Special guest: Well-known investor Li Hua
 
-What (什么):
-- 发布产品: AI 驱动的智能家居中枢 "SmartHub"
-- 核心功能: 语音控制、场景联动、能耗管理
-- 定价: 基础版 999 元，专业版 1999 元
-- 上市时间: 即日起接受预订，下月发货
+What:
+- Product launched: AI-powered smart home hub "SmartHub"
+- Core features: Voice control, scene automation, energy management
+- Pricing: Basic edition 999 CNY, Professional edition 1,999 CNY
+- Launch timeline: Pre-orders open immediately, shipping next month
 
-When (何时):
-- 发布时间: 2024 年 3 月 15 日
-- 活动时间: 下午 2:00-5:00
-- 预订开放: 发布会结束后立即开始
-- 正式发货: 2024 年 4 月 15 日
+When:
+- Launch date: March 15, 2024
+- Event time: 2:00 PM – 5:00 PM
+- Pre-orders open: Immediately after the launch event
+- Official shipping: April 15, 2024
 
-Where (何地):
-- 地点: 北京国际会议中心
-- 线上直播: 抖音、B站、视频号同步直播
-- 销售渠道: 官网、京东、天猫、线下体验店
+Where:
+- Venue: Beijing International Conference Center
+- Live stream: Synchronized on Douyin, Bilibili, and WeChat Channels
+- Sales channels: Official website, JD.com, Tmall, offline experience stores
 
-Why (为什么):
-- 市场背景: 智能家居市场年增长 25%，但用户抱怨设备间不互通
-- 公司愿景: 打造开放、互联、智能的家居生态
-- 差异化: 支持 500+ 品牌设备，AI 学习用户习惯
+Why:
+- Market backdrop: Smart home market grows 25% annually, but users complain about devices not being interoperable
+- Company vision: Build an open, connected, and intelligent home ecosystem
+- Differentiation: Supports 500+ branded devices, AI learns user habits
 
-How (如何):
-- 技术: 自研 AI 芯片 + 边缘计算
-- 合作: 与小米、华为、海尔等品牌建立生态联盟
-- 营销: KOL 种草 + 线下体验店 + 以旧换新活动
-- 服务: 7 天无理由退货，3 年质保，24 小时客服
+How:
+- Technology: Proprietary AI chip + edge computing
+- Partnerships: Established an ecosystem alliance with Xiaomi, Huawei, Haier, and others
+- Marketing: KOL seeding + offline experience stores + trade-in program
+- Service: 7-day no-questions-asked returns, 3-year warranty, 24-hour customer service
 
-完整报道:
-[基于以上要素撰写完整新闻稿]
+Full report:
+[Write the complete press release based on the elements above]
 ```
 
-## 使用提示
-- 6 个要素缺一不可
-- 按重要性排序，不必须按 W 顺序
-- 适合信息收集和整理
-- 新闻写作的经典框架
+## Usage Tips
+- All 6 elements are essential
+- Order by importance — no need to follow the W order strictly
+- Well-suited for information gathering and organization
+- A classic framework for news writing

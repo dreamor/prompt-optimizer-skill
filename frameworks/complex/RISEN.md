@@ -1,63 +1,63 @@
 # RISEN Framework
 
-## 名称
+## Name
 Role-Input-Steps-Expectation-Narrowing
 
-## 结构
-- **Role**: 角色
-- **Input**: 输入信息
-- **Steps**: 执行步骤
-- **Expectation**: 期望结果
-- **Narrowing**: 约束/限制
+## Structure
+- **Role**: Role
+- **Input**: Input information
+- **Steps**: Execution steps
+- **Expectation**: Expected outcomes
+- **Narrowing**: Constraints / Limitations
 
-## 适用场景
-- 营销活动策划
-- 商业计划撰写
-- 研究论文撰写
-- 产品描述创作
-- 执行摘要编写
-- 演示文稿大纲
-- 培训模块开发
-- 在线课程设计
-- 产品评测撰写
+## Use Cases
+- Marketing campaign planning
+- Business plan writing
+- Research paper writing
+- Product description creation
+- Executive summary writing
+- Presentation outlines
+- Training module development
+- Online course design
+- Product review writing
 
-## 示例
-**输入**: "制定一个内容营销策略"
+## Example
+**Input**: "Develop a content marketing strategy"
 
-**优化后**:
+**Optimized**:
 ```
-Role: 你是一位内容营销总监，曾帮助 3 家初创公司实现 10 倍流量增长
+Role: You are a Content Marketing Director who has helped 3 startups achieve 10x traffic growth
 
 Input:
-- 公司：B2B 数据分析工具
-- 目标客户：数据分析师、产品经理、增长负责人
-- 现有资源：2 人内容团队，月预算 1 万元
-- 竞品：Tableau、PowerBI 等巨头
-- 差异化优势：更易上手，价格更亲民
+- Company: B2B data analytics tool
+- Target customers: Data analysts, product managers, growth leads
+- Available resources: 2-person content team, monthly budget 10,000 CNY
+- Competitors: Giants like Tableau and PowerBI
+- Differentiators: Easier to use, more affordable pricing
 
 Steps:
-1. 目标受众调研和画像细化
-2. 内容支柱主题确定（3-5 个核心主题）
-3. 内容类型和渠道选择
-4. 90 天内容日历规划
-5. SEO 关键词策略
-6. 内容分发和推广计划
-7. 效果衡量指标设定
+1. Target audience research and persona refinement
+2. Define content pillars (3–5 core themes)
+3. Select content types and distribution channels
+4. Plan a 90-day content calendar
+5. Develop an SEO keyword strategy
+6. Create a content distribution and promotion plan
+7. Define success metrics
 
 Expectation:
-- 3 个月内自然流量增长 50%
-- 建立 3 个行业专家的个人品牌
-- 获得 500 个高质量的营销合格线索（MQL）
+- 50% organic traffic growth within 3 months
+- Build personal brands for 3 industry experts
+- Generate 500 high-quality marketing-qualified leads (MQLs)
 
 Narrowing:
-- 不依赖付费广告
-- 内容必须原创，不能外包低质量文章
-- 每篇内容必须有明确的 CTA 和转化路径
-- 考虑团队实际产能，每周最多发布 3 篇内容
+- Do not rely on paid advertising
+- Content must be original — no outsourcing to low-quality writers
+- Every piece of content must have a clear CTA and conversion path
+- Respect team capacity — publish no more than 3 pieces of content per week
 
-输出: 完整的 90 天内容营销策略文档
+Output: A complete 90-day content marketing strategy document
 ```
 
-## 使用提示
-- 强调可执行性
-- Narrowing 帮助聚焦资源
+## Usage Tips
+- Emphasizes actionability
+- Narrowing helps focus resources

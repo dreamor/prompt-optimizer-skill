@@ -1,102 +1,102 @@
 # TQA Framework
 
-## 名称
+## Name
 Topic-Question-Answer
 
-## 结构
-- **Topic**: 主题
-- **Question**: 问题
-- **Answer**: 答案
+## Structure
+- **Topic**: Topic
+- **Question**: Question
+- **Answer**: Answer
 
-## 适用场景
-- 问答系统设计
-- 知识库构建
-- FAQ 开发
-- 考试题目设计
-- 技术文档
-- 客户支持内容
+## Use Cases
+- Q&A system design
+- Knowledge base construction
+- FAQ development
+- Exam question design
+- Technical documentation
+- Customer support content
 
-## 示例
-**输入**: "创建产品 FAQ"
+## Example
+**Input**: "Create a product FAQ"
 
-**优化后**:
+**Optimized**:
 ```
-Topic (主题): 账户和登录
+Topic: Account and Login
 
-Question 1: 如何重置密码？
+Question 1: How do I reset my password?
 Answer:
-1. 在登录页面点击"忘记密码"
-2. 输入注册邮箱
-3. 查收邮件，点击重置链接（链接 24 小时内有效）
-4. 设置新密码（至少 8 位，包含字母和数字）
-5. 使用新密码登录
+1. Click "Forgot Password" on the login page
+2. Enter your registered email address
+3. Check your email and click the reset link (valid for 24 hours)
+4. Set a new password (at least 8 characters, including letters and numbers)
+5. Log in with your new password
 
-如果未收到邮件：
-- 检查垃圾邮件文件夹
-- 确认邮箱地址正确
-- 等待 5 分钟后重试
-- 联系客服 support@example.com
+If you did not receive the email:
+- Check your spam/junk folder
+- Confirm the email address is correct
+- Wait 5 minutes and try again
+- Contact support at support@example.com
 
-Question 2: 支持哪些登录方式？
+Question 2: What login methods are supported?
 Answer:
-- 邮箱 + 密码
-- 手机号 + 验证码
-- 微信扫码
-- 企业微信（企业版用户）
-- SSO 单点登录（企业版用户）
+- Email + password
+- Phone number + verification code
+- WeChat QR code scan
+- Enterprise WeChat (enterprise users)
+- SSO single sign-on (enterprise users)
 
-注意: 一个账户可同时绑定多种登录方式
+Note: One account can be linked to multiple login methods simultaneously.
 
-Topic (主题): 计费与付款
+Topic: Billing and Payment
 
-Question 3: 如何升级套餐？
+Question 3: How do I upgrade my plan?
 Answer:
-1. 登录账户，进入"设置" → "订阅管理"
-2. 选择要升级的套餐
-3. 确认支付（支持支付宝、微信、银行卡）
-4. 升级立即生效
+1. Log in to your account and go to "Settings" → "Subscription Management"
+2. Select the plan you want to upgrade to
+3. Confirm payment (supports Alipay, WeChat Pay, bank card)
+4. The upgrade takes effect immediately
 
-计费规则:
-- 按剩余天数比例计费
-- 例: 月付 100 元，使用 10 天后升级，补差价 = (新套餐价 - 100) × 20/30
+Billing rules:
+- Billed proportionally based on remaining days
+- Example: Monthly plan at ¥100; if you upgrade after 10 days, the additional charge = (new plan price - ¥100) × 20/30
 
-Question 4: 如何申请退款？
+Question 4: How do I request a refund?
 Answer:
-退款政策:
-- 7 天内无理由退款
-- 年付用户 30 天内可退剩余月份
+Refund policy:
+- Unconditional refund within 7 days
+- Annual plan users can refund remaining months within 30 days
 
-申请流程:
-1. 发送邮件至 billing@example.com
-2. 标题: "退款申请 - [账户邮箱]"
-3. 内容: 退款原因 + 注册邮箱 + 付款凭证
-4. 3-5 个工作日内处理
-5. 原路退回，到账时间取决于银行（通常 3-7 天）
+Application process:
+1. Send an email to billing@example.com
+2. Subject: "Refund Request - [Account Email]"
+3. Content: reason for refund + registered email + payment receipt
+4. Processed within 3–5 business days
+5. Refunded to original payment method; arrival time depends on the bank (typically 3–7 days)
 
-写作指南:
+Writing Guidelines:
 
-问题设计原则:
-1. 使用用户真实会问的语言
-2. 覆盖 80% 的常见问题
-3. 问题要具体，避免过于宽泛
-4. 按主题分组，便于查找
+Question Design Principles:
+1. Use the language real users would actually ask
+2. Cover 80% of common questions
+3. Questions should be specific; avoid being too broad
+4. Group by topic for easy navigation
 
-答案编写原则:
-1. 直接回答，不绕弯子
-2. 步骤清晰，编号列出
-3. 异常情况也要覆盖
-4. 提供进一步求助途径
-5. 必要时配图或视频链接
+Answer Writing Principles:
+1. Answer directly; do not beat around the bush
+2. Steps should be clear and numbered
+3. Cover edge cases and exceptions
+4. Provide a path for further assistance
+5. Include screenshots or video links where necessary
 
-维护建议:
-- 每月分析客服记录，更新 FAQ
-- 跟踪 FAQ 页面访问数据
-- 收集用户反馈，持续优化
-- 版本更新时同步更新 FAQ
+Maintenance Recommendations:
+- Analyze customer service records monthly and update the FAQ
+- Track FAQ page traffic data
+- Collect user feedback for continuous optimization
+- Update the FAQ in sync with product version releases
 ```
 
-## 使用提示
-- 问题要真实，基于用户实际提问
-- 答案要完整，覆盖正常和异常情况
-- 结构要清晰，便于快速查找
-- 定期更新，保持准确性
+## Usage Tips
+- Questions should be authentic, based on what users actually ask
+- Answers should be complete, covering normal and exceptional situations
+- Structure should be clear for quick lookup
+- Update regularly to maintain accuracy

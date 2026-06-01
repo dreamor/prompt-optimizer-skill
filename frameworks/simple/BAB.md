@@ -1,36 +1,36 @@
 # BAB Framework
 
-## 名称
+## Name
 Before-After-Bridge
 
-## 结构
-- **Before**: 当前状态/问题
-- **After**: 期望状态/解决方案
-- **Bridge**: 达成目标的步骤/方法
+## Structure
+- **Before**: Current state/problem
+- **After**: Desired state/solution
+- **Bridge**: Steps/methods to achieve the goal
 
-## 适用场景
-- 订阅服务推广
-- 健身应用营销
-- 在线学习平台推广
-- 环保产品宣传
-- 家居服务广告
-- 金融规划工具推广
+## Use Cases
+- Subscription service promotion
+- Fitness app marketing
+- Online learning platform promotion
+- Eco-friendly product campaigns
+- Home service advertising
+- Financial planning tool promotion
 
-## 示例
-**输入**: "推广我们的新产品"
+## Example
+**Input**: "Promote our new product"
 
-**优化后**:
+**Optimized**:
 ```
-Before: 许多小型企业主每天花费 3-4 小时手动处理发票和账单，容易出错且效率低下
-After: 使用我们的智能财务助手，每天只需 15 分钟就能完成所有财务工作，准确率达 99%
+Before: Many small business owners spend 3-4 hours per day manually handling invoices and bills, which is error-prone and inefficient
+After: With our intelligent financial assistant, all financial tasks can be completed in just 15 minutes per day with 99% accuracy
 Bridge: 
-1. 自动扫描和录入发票信息
-2. 智能分类和标记支出
-3. 一键生成财务报表
-4. 实时现金流监控和预警
+1. Automatically scan and enter invoice information
+2. Intelligently categorize and tag expenses
+3. Generate financial reports with one click
+4. Real-time cash flow monitoring and alerts
 ```
 
-## 使用提示
-- Before 要描述痛点，引起共鸣
-- After 要描绘美好愿景
-- Bridge 要具体可行
+## Usage Tips
+- Before should describe pain points and create resonance
+- After should paint an appealing vision
+- Bridge should be specific and actionable

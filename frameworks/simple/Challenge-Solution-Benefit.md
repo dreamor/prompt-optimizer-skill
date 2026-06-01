@@ -1,66 +1,66 @@
 # Challenge-Solution-Benefit Framework
 
-## 名称
-挑战-解决方案-收益框架
+## Name
+Challenge-Solution-Benefit Framework
 
-## 结构
-- **Challenge**: 挑战/痛点
-- **Solution**: 解决方案
-- **Benefit**: 收益/价值
+## Structure
+- **Challenge**: Challenge/pain point
+- **Solution**: Solution
+- **Benefit**: Benefit/value
 
-## 适用场景
-- 产品营销文案
-- 销售演示
-- 提案撰写
-- 案例研究
-- 投资者推介
-- 问题解决报告
+## Use Cases
+- Product marketing copy
+- Sales presentations
+- Proposal writing
+- Case studies
+- Investor pitches
+- Problem-solving reports
 
-## 示例
-**输入**: "介绍我们的新产品"
+## Example
+**Input**: "Introduce our new product"
 
-**优化后**:
+**Optimized**:
 ```
-Challenge (挑战):
-中小企业在数字化转型中面临三大困境：
-1. 软件工具分散，数据孤岛严重，团队每天在不同系统间切换浪费 2+ 小时
-2. 传统 ERP 系统太贵（年费 10 万+），且实施周期长（3-6 个月）
-3. 技术门槛高，需要专门 IT 人员维护，小团队难以承受
+Challenge:
+Small and medium-sized businesses face three major challenges in digital transformation:
+1. Scattered software tools and severe data silos — teams waste 2+ hours per day switching between different systems
+2. Traditional ERP systems are too expensive (annual fees 100,000+ CNY) and have long implementation cycles (3-6 months)
+3. High technical barriers require dedicated IT staff for maintenance, which is difficult for small teams to sustain
 
-Solution (解决方案):
-我们推出「轻联」一体化管理平台：
+Solution:
+We introduce "LightLink," an all-in-one management platform:
 
-1. 一站式整合:
-   - 集成 CRM、项目管理、财务、HR 四大模块
-   - 数据自动同步，告别重复录入
-   - 一个账号，所有功能
+1. One-stop integration:
+   - Integrates CRM, project management, finance, and HR into four modules
+   - Data syncs automatically — no more duplicate data entry
+   - One account, all features
 
-2. 轻量级设计:
-   - 年费仅需 9800 元，为传统 ERP 的 1/10
-   - 即开即用，1 天完成部署
-   - 模块化选择，按需付费
+2. Lightweight design:
+   - Annual fee of only 9,800 CNY — 1/10 the cost of traditional ERP
+   - Ready to use immediately, deployment completed in 1 day
+   - Modular selection, pay only for what you need
 
-3. 零技术门槛:
-   - 拖拽式配置，无需编程
-   - 提供 50+ 行业模板
-   - 7×24 在线客服支持
+3. Zero technical barrier:
+   - Drag-and-drop configuration, no programming required
+   - 50+ industry templates provided
+   - 7×24 online customer support
 
-Benefit (收益):
-量化收益:
-- 时间节省: 平均每周节省 15 小时/人
-- 成本降低: 年度 IT 支出减少 70%
-- 效率提升: 项目交付速度提升 40%
+Benefit:
+Quantitative benefits:
+- Time savings: Average 15 hours saved per person per week
+- Cost reduction: Annual IT spending reduced by 70%
+- Efficiency gains: Project delivery speed improved by 40%
 
-质性收益:
-- 团队协作更顺畅，信息透明
-- 管理者实时掌握业务数据
-- 员工满意度提升，离职率降低
+Qualitative benefits:
+- Smoother team collaboration, transparent information sharing
+- Managers can access business data in real time
+- Higher employee satisfaction, lower turnover rate
 
-客户证言:
-"使用轻联 3 个月，我们的项目交付效率提升了 50%，而且终于不用在 5 个不同系统间切换了。" —— 某设计公司创始人
+Client testimonial:
+"After using LightLink for 3 months, our project delivery efficiency improved by 50%, and we finally don't have to switch between 5 different systems anymore." — Founder of a design company
 ```
 
-## 使用提示
-- Challenge 要具体，引起共鸣
-- Solution 要有针对性，直接回应挑战
-- Benefit 要量化，用数据说话
+## Usage Tips
+- Challenge should be specific and create resonance
+- Solution should be targeted and directly address the challenge
+- Benefit should be quantified and backed by data

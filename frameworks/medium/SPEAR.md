@@ -1,53 +1,53 @@
 # SPEAR Framework
 
-## 名称
+## Name
 Situation-Problem-Effect-Action-Result
 
-## 结构
-- **Situation**: 情境/背景
-- **Problem**: 问题
-- **Effect**: 影响
-- **Action**: 行动
-- **Result**: 结果
+## Structure
+- **Situation**: Situation/Background
+- **Problem**: Problem
+- **Effect**: Impact
+- **Action**: Action
+- **Result**: Result
 
-## 适用场景
-- 说服性写作和演讲
-- 营销文案创作
-- 销售提案设计
-- 政策倡导
-- 投资者推介
-- 产品发布演示
+## Use Cases
+- Persuasive writing and presentations
+- Marketing copywriting
+- Sales proposal design
+- Policy advocacy
+- Investor pitches
+- Product launch presentations
 
-## 示例
-**输入**: "写一份项目延期说明"
+## Example
+**Input**: "Write a project delay explanation"
 
-**优化后**:
+**Optimized**:
 ```
-Situation: 
-我们的 SaaS 平台在 Q2 经历了用户量激增 300%，从 1 万用户增长到 4 万用户
+Situation:
+Our SaaS platform experienced a 300% surge in users during Q2, growing from 10,000 to 40,000 users.
 
 Problem:
-现有服务器架构无法支撑如此快速的增长，导致系统频繁宕机，平均每周 2 次服务中断
+The existing server architecture could not support such rapid growth, causing frequent outages with an average of 2 service interruptions per week.
 
 Effect:
-- 客户满意度从 4.5 降至 3.2
-- 3 个重要客户威胁要终止合同
-- 品牌声誉受损，社交媒体上负面评价增加
+- Customer satisfaction dropped from 4.5 to 3.2
+- 3 key customers threatened to terminate their contracts
+- Brand reputation damaged, with an increase in negative reviews on social media
 
 Action:
-1. 立即启动架构升级项目，迁移到微服务架构
-2. 与 AWS 签订企业支持协议，确保 24/7 技术支持
-3. 增加 3 名资深 DevOps 工程师
-4. 实施自动化监控和告警系统
+1. Immediately launched an architecture upgrade project to migrate to a microservices architecture
+2. Signed an enterprise support agreement with AWS to ensure 24/7 technical support
+3. Added 3 senior DevOps engineers
+4. Implemented automated monitoring and alerting systems
 
 Result:
-- 系统稳定性提升至 99.9%
-- 客户满意度回升至 4.3
-- 成功挽留所有重要客户
-- 为未来增长打下坚实基础
+- System stability improved to 99.9%
+- Customer satisfaction recovered to 4.3
+- Successfully retained all key customers
+- Laid a solid foundation for future growth
 ```
 
-## 使用提示
-- 强调问题的紧迫性
-- 行动要具体可衡量
-- 结果要有数据支撑
+## Usage Tips
+- Emphasize the urgency of the problem
+- Actions should be specific and measurable
+- Results should be backed by data

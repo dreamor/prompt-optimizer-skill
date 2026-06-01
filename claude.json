@@ -1,7 +1,7 @@
 {
   "name": "prompt-optimizer",
   "version": "2.0.0",
-  "description": "专业的 Prompt 优化助手，将简单指令转化为生产级 Prompt",
+  "description": "A professional prompt optimization assistant that transforms simple instructions into production-ready prompts",
   "type": "skill",
   "entry": "SKILL.md",
   "author": "dreamor",
@@ -25,27 +25,27 @@
   ],
   "commands": {
     "optimize": {
-      "description": "优化用户提供的 prompt",
-      "usage": "optimize [你的 prompt]"
+      "description": "Optimize a user-provided prompt",
+      "usage": "optimize [your prompt]"
     },
     "frameworks": {
-      "description": "列出所有可用的提示词框架",
+      "description": "List all available prompt frameworks",
       "usage": "frameworks [--list|--detail]"
     },
     "test": {
-      "description": "运行测试用例验证 skill 功能",
+      "description": "Run test cases to validate skill functionality",
       "usage": "test"
     }
   },
   "hooks": {
     "onInstall": {
-      "description": "安装后显示欢迎信息",
+      "description": "Display welcome message after installation",
       "command": "cat WELCOME.md"
     }
   },
   "config": {
     "defaultVersion": "enhanced",
-    "language": "zh-CN",
+    "language": "en",
     "validation": true
   },
   "compatibility": {

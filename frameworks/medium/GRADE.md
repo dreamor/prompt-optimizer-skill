@@ -1,99 +1,99 @@
 # GRADE Framework
 
-## 名称
+## Name
 Goal-Research-Analysis-Decision-Evaluation
 
-## 结构
-- **Goal**: 目标
-- **Research**: 研究/信息收集
-- **Analysis**: 分析
-- **Decision**: 决策
-- **Evaluation**: 评估
+## Structure
+- **Goal**: Goal
+- **Research**: Research/Information gathering
+- **Analysis**: Analysis
+- **Decision**: Decision
+- **Evaluation**: Evaluation
 
-## 适用场景
-- 数据分析
-- 内容创作
-- 策略开发
-- 教育教程
-- 项目管理
-- 报告生成
+## Use Cases
+- Data analysis
+- Content creation
+- Strategy development
+- Educational tutorials
+- Project management
+- Report generation
 
-## 示例
-**输入**: "分析是否应该进入新市场"
+## Example
+**Input**: "Analyze whether we should enter a new market"
 
-**优化后**:
+**Optimized**:
 ```
-Goal (目标):
-评估进入东南亚电商市场的可行性，决定是否投资 100 万美元开展业务
+Goal:
+Assess the feasibility of entering the Southeast Asian e-commerce market, and decide whether to invest $1 million to launch operations
 
-Research (研究):
-市场数据:
-- 东南亚电商市场规模: 1200 亿美元，年增长率 25%
-- 主要玩家: Shopee (40%)、Lazada (30%)、Tokopedia (15%)
-- 用户行为: 移动端为主，社交电商兴起
-- 支付方式: 货到付款仍占 50%
+Research:
+Market data:
+- Southeast Asian e-commerce market size: $120 billion, annual growth rate of 25%
+- Major players: Shopee (40%), Lazada (30%), Tokopedia (15%)
+- User behavior: mobile-first, social commerce on the rise
+- Payment methods: cash on delivery still accounts for 50%
 
-竞争分析:
-- 现有竞争者已建立强大物流网络
-- 新进入者需要差异化定位
-- 价格战激烈，利润率低
+Competitive analysis:
+- Existing players have established strong logistics networks
+- New entrants need differentiated positioning
+- Intense price competition, low profit margins
 
-内部能力:
-- 我们有成熟的技术平台
-- 供应链资源主要在中国
-- 团队有国际化经验
-- 资金可支持 18 个月运营
+Internal capabilities:
+- We have a mature technology platform
+- Supply chain resources are mainly in China
+- Team has international experience
+- Funding can support 18 months of operations
 
-法规环境:
-- 各国法规不同，合规成本高
-- 数据本地化要求
-- 进口关税和税收政策复杂
+Regulatory environment:
+- Regulations vary by country, high compliance costs
+- Data localization requirements
+- Complex import tariffs and tax policies
 
-Analysis (分析):
+Analysis:
 SWOT:
-优势: 技术、供应链、资金
-劣势: 品牌知名度、本地运营经验
-机会: 市场增长、社交电商趋势
-威胁: 竞争激烈、法规风险
+Strengths: technology, supply chain, capital
+Weaknesses: brand recognition, local operational experience
+Opportunities: market growth, social commerce trend
+Threats: intense competition, regulatory risk
 
-财务预测:
-- 第一年: 投入 100 万，收入 50 万，亏损 50 万
-- 第二年: 收入 150 万，接近盈亏平衡
-- 第三年: 收入 300 万，盈利 50 万
+Financial projections:
+- Year 1: invest $1M, revenue $500K, loss $500K
+- Year 2: revenue $1.5M, approaching breakeven
+- Year 3: revenue $3M, profit $500K
 
-风险评估:
-- 高风险: 竞争失败、法规变化
-- 中风险: 汇率波动、供应链中断
-- 低风险: 技术问题
+Risk assessment:
+- High risk: competitive failure, regulatory changes
+- Medium risk: currency fluctuations, supply chain disruptions
+- Low risk: technology issues
 
-Decision (决策):
-建议: 暂缓全面进入，采用渐进策略
+Decision:
+Recommendation: Delay full market entry, adopt a gradual strategy
 
-理由:
-1. 市场竞争过于激烈，直接对抗成本高
-2. 需要更多本地运营经验
-3. 资金可支持时间有限
+Rationale:
+1. Market competition is too intense, direct competition is costly
+2. Need more local operational experience
+3. Funding runway is limited
 
-替代方案:
-1. 与本地平台合作（入驻模式）
-2. 专注细分市场（如中国商品出口）
-3. 投资或收购本地小型玩家
+Alternatives:
+1. Partner with a local platform (marketplace model)
+2. Focus on a niche segment (e.g., Chinese goods export)
+3. Invest in or acquire a small local player
 
-Evaluation (评估):
-成功指标:
-- 6 个月内确定合作方或收购目标
-- 12 个月内实现首笔收入
-- 24 个月内达到盈亏平衡
+Evaluation:
+Success metrics:
+- Identify a partner or acquisition target within 6 months
+- Generate first revenue within 12 months
+- Reach breakeven within 24 months
 
-监控点:
-- 每月评估市场变化
-- 季度复盘策略有效性
-- 设立退出机制（如果 12 个月无进展）
+Monitoring checkpoints:
+- Monthly market change assessment
+- Quarterly strategy effectiveness review
+- Set an exit mechanism (if no progress after 12 months)
 ```
 
-## 使用提示
-- Goal 要具体可衡量
-- Research 要全面客观
-- Analysis 要有框架（SWOT、财务、风险）
-- Decision 要明确，有替代方案
-- Evaluation 设定检查点
+## Usage Tips
+- Goal should be specific and measurable
+- Research should be comprehensive and objective
+- Analysis should use frameworks (SWOT, financial, risk)
+- Decision should be clear, with alternatives
+- Evaluation should set checkpoints

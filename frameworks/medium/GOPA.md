@@ -1,128 +1,128 @@
 # GOPA Framework
 
-## 名称
+## Name
 Goal-Obstacle-Plan-Action
 
-## 结构
-- **Goal**: 目标
-- **Obstacle**: 障碍
-- **Plan**: 计划
-- **Action**: 行动
+## Structure
+- **Goal**: Goal
+- **Obstacle**: Obstacles
+- **Plan**: Plan
+- **Action**: Action
 
-## 适用场景
-- 目标设定
-- 行动计划制定
-- 项目启动
-- 绩效管理
-- 战略规划
-- 个人发展计划
+## Use Cases
+- Goal setting
+- Action plan creation
+- Project kickoff
+- Performance management
+- Strategic planning
+- Personal development planning
 
-## 示例
-**输入**: "制定季度销售目标"
+## Example
+**Input**: "Create a quarterly sales goal"
 
-**优化后**:
+**Optimized**:
 ```
-Goal (目标):
+Goal:
 
-主要目标:
-- Q2 销售额达到 500 万元（Q1 为 350 万，增长 43%）
-- 新增客户 50 家
-- 客户续约率达到 90%
-- 销售团队人均业绩 100 万元
+Primary goals:
+- Q2 revenue of 5 million CNY (Q1 was 3.5 million, a 43% increase)
+- Acquire 50 new customers
+- Customer renewal rate of 90%
+- Sales team average performance of 1 million CNY per person
 
-目标分解:
-- 4 月: 150 万
-- 5 月: 170 万
-- 6 月: 180 万
+Goal breakdown:
+- April: 1.5 million
+- May: 1.7 million
+- June: 1.8 million
 
-成功标准:
-- 至少 3 个月达成月度目标
-- 新增客户中至少 10 家为大客户（年合同 > 10 万）
-- 团队满意度 > 4/5
+Success criteria:
+- Monthly target achieved in at least 3 months
+- At least 10 of the new customers are enterprise accounts (annual contract > 100K CNY)
+- Team satisfaction > 4/5
 
-Obstacle (障碍):
+Obstacle:
 
-内部障碍:
-1. 人员不足: 目前 4 人，需要承担 100 万/人，压力较大
-2. 新人培训: 计划招聘 2 人，但需要时间上手
-3. 产品知识: 新产品功能复杂，销售需要更多培训
+Internal obstacles:
+1. Understaffing: currently 4 people, each needs to carry 1 million CNY — high pressure
+2. New hire ramp-up: planning to recruit 2 people, but they need time to get up to speed
+3. Product knowledge: new product features are complex, sales team needs more training
 
-外部障碍:
-1. 市场竞争: 竞品降价 20%，价格战压力
-2. 经济环境: 客户预算收紧，决策周期延长
-3. 季节性: Q2 是行业淡季， historically 增长缓慢
+External obstacles:
+1. Market competition: competitors cut prices by 20%, creating pricing pressure
+2. Economic environment: customer budgets are tightening, decision cycles are longer
+3. Seasonality: Q2 is historically a slow season for the industry
 
-潜在风险:
-- 关键客户流失
-- 主要销售人员离职
-- 产品出现质量问题
+Potential risks:
+- Loss of key customers
+- Departure of key salespeople
+- Product quality issues
 
-Plan (计划):
+Plan:
 
-策略 1: 客户拓展
-- 行动计划:
-  - 每周新增潜在客户 20 个
-  - 每月举办 1 场线上研讨会
-  - 与 3 家渠道合作伙伴签约
-- 负责人: 销售经理
-- 资源: 预算 5 万元
-- 时间: 全季度
+Strategy 1: Customer acquisition
+- Action plan:
+  - Add 20 new prospects per week
+  - Host 1 online webinar per month
+  - Sign contracts with 3 channel partners
+- Owner: Sales Manager
+- Resources: Budget 50K CNY
+- Timeline: Full quarter
 
-策略 2: 客户留存
-- 行动计划:
-  - 建立客户成功团队
-  - 每月客户回访
-  - 推出老客户推荐奖励
-- 负责人: 客户成功经理
-- 资源: 新增 1 人
-- 时间: 4 月启动
+Strategy 2: Customer retention
+- Action plan:
+  - Build a customer success team
+  - Monthly customer check-ins
+  - Launch referral reward program for existing customers
+- Owner: Customer Success Manager
+- Resources: Add 1 headcount
+- Timeline: Launch in April
 
-策略 3: 团队建设
-- 行动计划:
-  - 招聘 2 名销售（4 月入职）
-  - 每周销售培训
-  - 优化销售流程和工具
-- 负责人: HR + 销售总监
-- 资源: 招聘预算 3 万
-- 时间: 4-5 月
+Strategy 3: Team building
+- Action plan:
+  - Recruit 2 salespeople (onboard in April)
+  - Weekly sales training
+  - Optimize sales process and tools
+- Owner: HR + Sales Director
+- Resources: Recruiting budget 30K CNY
+- Timeline: April–May
 
-策略 4: 产品差异化
-- 行动计划:
-  - 准备竞品对比资料
-  - 强调服务优势而非价格
-  - 推出增值服务包
-- 负责人: 产品市场经理
-- 资源: 设计 + 内容制作
-- 时间: 4 月完成
+Strategy 4: Product differentiation
+- Action plan:
+  - Prepare competitor comparison materials
+  - Emphasize service advantages over price
+  - Launch value-added service packages
+- Owner: Product Marketing Manager
+- Resources: Design + content production
+- Timeline: Complete by April
 
-Action (行动):
+Action:
 
-本周行动（立即执行）:
-□ 销售总监: 确定招聘 JD，发布职位
-□ 销售经理: 整理目标客户清单（前 50）
-□ 市场经理: 设计 Q2 营销活动方案
-□ 所有销售: 更新 CRM，完善客户信息
+This week's actions (execute immediately):
+□ Sales Director: finalize job description, post the role
+□ Sales Manager: compile target customer list (top 50)
+□ Marketing Manager: design Q2 marketing campaign plan
+□ All salespeople: update CRM, complete customer information
 
-本月行动:
-□ 完成 2 名销售招聘
-□ 举办第一场线上研讨会
-□ 完成竞品分析文档
-□ 与 2 家潜在渠道伙伴初步洽谈
+This month's actions:
+□ Complete recruitment of 2 salespeople
+□ Host the first online webinar
+□ Complete competitive analysis document
+□ Preliminary talks with 2 potential channel partners
 
-监控机制:
-- 每周一: 销售例会，回顾上周业绩
-- 每周五: 更新销售管道报告
-- 每月初: 复盘上月，调整策略
-- 季度中: 中期评估，必要时调整目标
+Monitoring mechanism:
+- Every Monday: sales meeting, review last week's performance
+- Every Friday: update sales pipeline report
+- Beginning of each month: review prior month, adjust strategy
+- Mid-quarter: interim evaluation, adjust targets if necessary
 
-应急预案:
-- 如果 4 月业绩 < 120 万: 加大营销投入，启动促销
-- 如果人员招聘不顺: 使用外包或代理
-- 如果竞品价格战加剧: 强调差异化价值，避免正面竞争
+Contingency plans:
+- If April performance < 1.2 million: increase marketing investment, launch promotions
+- If hiring is slow: use outsourcing or agency
+- If competitor price war intensifies: emphasize differentiated value, avoid head-to-head competition
 ```
 
-## 使用提示
-- 目标要 SMART
-- 障碍要全面，不回避
-- 计划要具体，有负责人和时间
-- 行动要立即，可执行
+## Usage Tips
+- Goals should be SMART
+- Obstacles should be comprehensive — don't avoid them
+- Plans should be specific, with owners and timelines
+- Actions should be immediate and executable

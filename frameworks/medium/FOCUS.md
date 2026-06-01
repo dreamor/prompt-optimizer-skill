@@ -1,55 +1,55 @@
 # FOCUS Framework
 
-## 名称
+## Name
 Features-Objective-Constraints-User-Setup
 
-## 结构
-- **Features**: 功能/特性
-- **Objective**: 目标
-- **Constraints**: 约束条件
-- **User**: 目标用户
-- **Setup**: 设置/环境
+## Structure
+- **Features**: Functionality/Features
+- **Objective**: Goal
+- **Constraints**: Constraints/Limitations
+- **User**: Target User
+- **Setup**: Setup/Environment
 
-## 适用场景
-- 产品分析和比较
-- 竞争对手研究
-- 特性评估
-- 采购决策支持
-- 技术选型分析
-- 投资评估
+## Use Cases
+- Product analysis and comparison
+- Competitor research
+- Feature evaluation
+- Procurement decision support
+- Technology selection analysis
+- Investment evaluation
 
-## 示例
-**输入**: "评估我们的新功能"
+## Example
+**Input**: "Evaluate our new feature"
 
-**优化后**:
+**Optimized**:
 ```
 Features: 
-- AI 驱动的代码自动补全
-- 支持 20+ 编程语言
-- 与 VS Code、IntelliJ 集成
-- 离线模式支持
+- AI-powered code autocompletion
+- Supports 20+ programming languages
+- Integrates with VS Code and IntelliJ
+- Offline mode support
 
 Objective: 
-评估这个功能对开发团队生产力的提升效果，决定是否全面推广
+Evaluate the productivity impact of this feature on the development team, and decide whether to roll it out broadly
 
 Constraints:
-- 预算限制：每开发者每月不超过 20 美元
-- 安全要求：代码不能上传到外部服务器
-- 时间限制：2 周内完成评估
+- Budget limit: no more than $20 per developer per month
+- Security requirement: code must not be uploaded to external servers
+- Time limit: complete evaluation within 2 weeks
 
 User: 
-- 主要用户：10 人后端开发团队
-- 技术栈：Python、Go、JavaScript
-- 经验水平：3-8 年
+- Primary users: 10-person backend development team
+- Tech stack: Python, Go, JavaScript
+- Experience level: 3–8 years
 
 Setup:
-- 现有工具：GitHub Copilot（试用期即将结束）
-- 基础设施：公司内网开发环境
-- 评估指标：编码速度、代码质量、开发者满意度
+- Existing tools: GitHub Copilot (trial period ending soon)
+- Infrastructure: company intranet development environment
+- Evaluation metrics: coding speed, code quality, developer satisfaction
 
-任务: 设计一个 2 周的试点评估计划，包括每日反馈收集和最终对比报告模板
+Task: Design a 2-week pilot evaluation plan, including daily feedback collection and a final comparison report template
 ```
 
-## 使用提示
-- 适合产品评估和对比场景
-- 约束条件要尽早明确
+## Usage Tips
+- Well suited for product evaluation and comparison scenarios
+- Clarify constraints early

@@ -1,81 +1,81 @@
 # Hamburger Model Framework
 
-## 名称
-汉堡包模型
+## Name
+Hamburger Model
 
-## 结构
-- **上层面包**: 引言/正面反馈
-- **蔬菜层**: 建议/改进点
-- **肉饼层**: 核心内容/主要观点
-- **下层面包**: 总结/鼓励
+## Structure
+- **Top bun**: Introduction/positive feedback
+- **Vegetable layer**: Suggestions/areas for improvement
+- **Patty layer**: Core content/main points
+- **Bottom bun**: Summary/encouragement
 
-## 适用场景
-- 段落写作教学
-- 论文结构设计
-- 商务文档撰写
-- 演讲稿准备
-- 内容大纲规划
-- 写作技能培训
+## Use Cases
+- Paragraph writing instruction
+- Essay structure design
+- Business document writing
+- Speech preparation
+- Content outline planning
+- Writing skills training
 
-## 示例
-**输入**: "写一份绩效反馈"
+## Example
+**Input**: "Write a performance review"
 
-**优化后**:
+**Optimized**:
 ```
-上层面包 - 引言和正面反馈:
-"小王，过去这个季度你的表现总体很好，特别是在项目交付方面。我注意到你连续 3 个月都按时完成了所有任务，这在团队里是非常突出的。"
+Top Bun — Introduction and Positive Feedback:
+"Xiao Wang, your overall performance this quarter has been very good, especially in terms of project delivery. I noticed that you completed all your tasks on time for three consecutive months, which is truly outstanding within the team."
 
-蔬菜层 - 建议和需要改进的地方:
-"同时，我观察到几个可以提升的方面：
-1. 在跨部门沟通上，可以更加主动一些
-2. 文档编写可以更详细，方便后续维护
-3. 时间预估可以再精确一些，避免最后赶工"
+Vegetable Layer — Suggestions and Areas for Improvement:
+"At the same time, I've observed a few areas where there's room for growth:
+1. You could be more proactive in cross-departmental communication
+2. Documentation could be more detailed to make future maintenance easier
+3. Time estimates could be more precise to avoid last-minute rushes"
 
-肉饼层 - 核心内容和具体建议:
-"关于跨部门沟通，我建议：
-- 在项目启动时就主动联系相关部门
-- 每周发送进度更新邮件
-- 遇到阻碍时及时升级
+Patty Layer — Core Content and Specific Suggestions:
+"Regarding cross-departmental communication, I suggest:
+- Proactively reaching out to relevant departments at the start of a project
+- Sending weekly progress update emails
+- Escalating blockers promptly when they arise
 
-这样做的好处是：
-- 减少后期返工
-- 建立更好的工作关系
-- 提升你在公司的影响力
+The benefits of doing this are:
+- Reducing rework later
+- Building better working relationships
+- Increasing your influence within the company
 
-具体行动计划：
-1. 下周开始，每个项目创建沟通计划
-2. 参加下个月的沟通技巧培训
-3. 我安排你和老张结对，学习他的沟通方式"
+Specific action plan:
+1. Starting next week, create a communication plan for each project
+2. Attend next month's communication skills training
+3. I'll arrange for you to pair with Lao Zhang to learn from his communication style"
 
-下层面包 - 总结和鼓励:
-"总的来说，你是一位非常有潜力的员工。这些改进点只是让你从优秀变成卓越。我相信通过接下来的努力，你一定能做到。有任何需要支持的地方，随时告诉我。期待看到你下个季度的进步！"
+Bottom Bun — Summary and Encouragement:
+"Overall, you are an employee with tremendous potential. These improvement points are simply about taking you from good to excellent. I believe that with the effort ahead, you will definitely achieve this. Whenever you need support, don't hesitate to let me know. I look forward to seeing your progress next quarter!"
 
-完整反馈:
-[将以上四层组合成完整反馈]
+Complete feedback:
+[Combine the four layers above into a complete review]
 
-写作技巧:
-- 上层面包要真诚，不空洞
-- 蔬菜层要具体，可操作
-- 肉饼层要详细，有深度
-- 下层面包要正面，给信心
+Writing tips:
+- Top bun should be sincere, not hollow
+- Vegetable layer should be specific and actionable
+- Patty layer should be detailed and substantive
+- Bottom bun should be positive and confidence-building
 
-变体应用:
+Variant applications:
 
-论文结构:
-- 上层: 引言和研究背景
-- 蔬菜: 文献综述和研究缺口
-- 肉饼: 研究方法和发现
-- 下层: 结论和未来研究
+Essay structure:
+- Top: Introduction and research background
+- Vegetables: Literature review and research gaps
+- Patty: Research methods and findings
+- Bottom: Conclusion and future research
 
-演讲结构:
-- 上层: 开场和主题介绍
-- 蔬菜: 问题陈述
-- 肉饼: 核心内容和案例
-- 下层: 总结和号召行动
+Speech structure:
+- Top: Opening and topic introduction
+- Vegetables: Problem statement
+- Patty: Core content and case studies
+- Bottom: Summary and call to action
 ```
 
-## 使用提示
-- 比例要适当（面包薄，肉饼厚）
-- 每层之间要过渡自然
-- 负面反馈夹在正面中间
-- 始终以鼓励结束
+## Usage Tips
+- Keep proportions appropriate (thin buns, thick patty)
+- Transitions between layers should flow naturally
+- Negative feedback is sandwiched between positive content
+- Always end with encouragement

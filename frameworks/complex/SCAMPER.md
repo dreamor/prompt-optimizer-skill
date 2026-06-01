@@ -1,65 +1,65 @@
 # SCAMPER Framework
 
-## 名称
+## Name
 Substitute-Combine-Adapt-Modify-Put to other uses-Eliminate-Reverse
 
-## 结构
-- **Substitute**: 替代
-- **Combine**: 组合
-- **Adapt**: 适应
-- **Modify**: 修改
-- **Put to other uses**: 其他用途
-- **Eliminate**: 消除
-- **Reverse**: 逆转/重排
+## Structure
+- **Substitute**: Substitute
+- **Combine**: Combine
+- **Adapt**: Adapt
+- **Modify**: Modify
+- **Put to other uses**: Put to other uses
+- **Eliminate**: Eliminate
+- **Reverse**: Reverse / Rearrange
 
-## 适用场景
-- 产品创新和改进
-- 服务流程优化
-- 营销策略创新
-- 业务模式探索
-- 问题解决方案设计
-- 创意头脑风暴
+## Use Cases
+- Product innovation and improvement
+- Service process optimization
+- Marketing strategy innovation
+- Business model exploration
+- Solution design
+- Creative brainstorming
 
-## 示例
-**输入**: "创新我们的在线教育产品"
+## Example
+**Input**: "Innovate our online education product"
 
-**优化后**:
+**Optimized**:
 ```
-Substitute (替代):
-- 用什么替代视频课程？（互动模拟、VR 体验、游戏化学习）
-- 用什么替代传统的作业评估？（AI 实时反馈、同伴互评）
+Substitute:
+- What could replace video courses? (Interactive simulations, VR experiences, gamified learning)
+- What could replace traditional homework assessment? (AI real-time feedback, peer review)
 
-Combine (组合):
-- 将社交功能与学习结合？（学习小组、排行榜）
-- 将线下活动与线上课程结合？（混合式学习）
+Combine:
+- Combine social features with learning? (Study groups, leaderboards)
+- Combine offline activities with online courses? (Blended learning)
 
-Adapt (适应):
-- 适应不同学习风格（视觉、听觉、动手）
-- 适应不同时间安排（异步学习、碎片化学习）
+Adapt:
+- Adapt to different learning styles (visual, auditory, hands-on)
+- Adapt to different schedules (asynchronous learning, bite-sized learning)
 
-Modify (修改):
-- 修改课程长度（微课程 vs 深度课程）
-- 修改互动方式（实时问答 vs 论坛讨论）
+Modify:
+- Modify course length (micro-courses vs. in-depth courses)
+- Modify interaction methods (live Q&A vs. forum discussions)
 
-Put to other uses (其他用途):
-- 企业培训市场
-- 职业技能认证
-- 兴趣爱好学习
+Put to other uses:
+- Corporate training market
+- Professional skills certification
+- Hobby and personal interest learning
 
-Eliminate (消除):
-- 消除固定上课时间
-- 消除地域限制
-- 消除昂贵的硬件要求
+Eliminate:
+- Eliminate fixed class times
+- Eliminate geographic restrictions
+- Eliminate expensive hardware requirements
 
-Reverse (逆转/重排):
-- 让学生教别人（费曼学习法）
-- 从项目出发反向学习理论
-- 社区驱动而非平台驱动
+Reverse:
+- Let students teach others (Feynman technique)
+- Learn theory in reverse by starting from projects
+- Community-driven rather than platform-driven
 
-请针对每个维度生成 3 个创新想法，并选择最有潜力的 2 个进行深入分析。
+Please generate 3 innovative ideas for each dimension and select the top 2 most promising ones for in-depth analysis.
 ```
 
-## 使用提示
-- 逐个维度思考，不要跳过
-- 鼓励天马行空的想象
-- 最后筛选可行性高的想法
+## Usage Tips
+- Think through each dimension one by one — do not skip any
+- Encourage imaginative and unconventional ideas
+- Filter for the most feasible ideas at the end

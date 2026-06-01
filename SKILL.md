@@ -1,32 +1,32 @@
 ---
 name: prompt-optimizer
 version: 2.0.0
-description: Prompt 优化助手。适用于用户想优化提示词、改进 AI 指令、为特定任务设计更好的 prompt，或需要选择合适提示框架时使用。会根据任务场景匹配合适框架，必要时先追问关键信息，再输出更清晰、更可执行的提示词版本。
+description: Prompt optimization assistant. Use when the user wants to optimize prompts, improve AI instructions, design better prompts for specific tasks, or select an appropriate prompt framework. Matches the right framework to the task context, asks clarifying questions when necessary, and outputs clearer, more actionable prompt versions.
 ---
 
 # Prompt Optimizer v2.0
 
-帮助用户基于具体任务场景，选择合适的提示词框架，并生成更清晰、更可执行的 prompt。
+Helps users select the most suitable prompt framework for a given task context and generates clearer, more actionable prompts.
 
 ---
 
-## 设计模式
+## Design Patterns
 
-本 skill 主要采用：
-- **Reviewer**: 先判断用户现有 prompt 或任务描述的问题
-- **Inversion**: 信息不足时，先追问目标、受众、约束和格式
-- **Generator**: 基于选定框架生成优化后的 prompt
-- **Validator**: 验证优化结果是否符合质量标准
+This skill primarily uses:
+- **Reviewer**: First diagnose problems with the user's existing prompt or task description
+- **Inversion**: When information is insufficient, ask for goals, audience, constraints, and format before proceeding
+- **Generator**: Generate an optimized prompt based on the selected framework
+- **Validator**: Verify that the optimized result meets quality standards
 
 ## Gotchas
 
-- 不要一上来就套框架，先判断任务是否真的需要复杂框架
-- 不要为了显得专业而过度设计简单 prompt
-- 如果用户只想快速润色一句 prompt，不要强行输出一整套长模板
-- 如果目标、受众、输出格式不清楚，先补最小必要问题
-- 说明为什么选这个框架，比堆很多框架名更重要
-- **边界情况处理**: 如果用户输入完全无法理解，提供示例引导
-- **拒绝处理**: 如果用户拒绝回答澄清问题，使用默认值继续
+- Don't jump straight to a framework — first determine whether the task actually needs a complex one
+- Don't over-engineer simple prompts just to appear professional
+- If the user only wants a quick polish on one sentence, don't force a long structured template
+- If goal, audience, or output format are unclear, ask only the minimum necessary questions
+- Explaining why you chose a framework is more valuable than listing many framework names
+- **Boundary handling**: If the user's input is completely unintelligible, guide them with examples
+- **Refusal handling**: If the user refuses to answer clarifying questions, proceed with smart defaults
 
 ---
 
@@ -60,27 +60,27 @@ Receive the user's request, which may be:
 - A task description or requirement
 - A vague idea that needs to be turned into a prompt
 
-**Boundary Handling - 边界处理:**
+**Boundary Handling:**
 
-| 情况 | 判断标准 | 处理方式 |
-|------|----------|----------|
-| **完全模糊** | 少于 5 个词，无明确动作或主题 | 提供 3 个示例引导用户 |
-| **部分清晰** | 有主题但无具体要求 | 进入 Step 4 追问关键信息 |
-| **完全清晰** | 包含任务、目标、场景 | 直接进入 Step 2 |
+| Situation | Criteria | Action |
+|-----------|----------|--------|
+| **Completely vague** | Fewer than 5 words, no clear action or subject | Offer 3 examples to guide the user |
+| **Partially clear** | Has a topic but no specific requirements | Go to Step 4 and ask for key information |
+| **Completely clear** | Includes task, goal, and context | Proceed directly to Step 2 |
 
-**完全模糊输入示例处理:**
+**Example handling for completely vague input:**
 ```
-用户输入: "帮我写点东西"
+User input: "Write something for me"
 
-处理: "我可以帮您写多种类型的内容。请告诉我：
-1. 您需要什么类型的内容？（邮件/报告/代码/文案/其他）
-2. 主题或目标是什么？
-3. 有什么特殊要求吗？
+Response: "I can help you write many types of content. Please tell me:
+1. What type of content do you need? (email / report / code / copy / other)
+2. What is the topic or goal?
+3. Any special requirements?
 
-或者您可以选择一个示例：
-- A: 写一封商务合作邮件
-- B: 写一个 Python 数据处理函数
-- C: 写一份产品需求文档"
+Or choose one of these examples:
+- A: Write a business partnership email
+- B: Write a Python data processing function
+- C: Write a product requirements document"
 ```
 
 ---
@@ -112,36 +112,37 @@ Identify the user's scenario and match the most suitable framework(s) based on:
 | Writing & Creation | APE, ERA, TAG |
 | Complex Reasoning | Chain-of-Thought, RACEF, CRISPE |
 
-**Framework Selection Explanation - 选择解释:**
+**Framework Selection Explanation:**
 
-选择框架后，必须说明：
-1. **为什么选这个框架**: 匹配用户的什么需求
-2. **置信度评分**: 1-10 分，表示匹配确定程度
-3. **备选方案**: 如果置信度 < 7，提供 1-2 个备选框架
+After selecting a framework, you must explain:
+1. **Why this framework**: Which of the user's needs does it match?
+2. **Confidence score**: 1–10, indicating how certain the match is
+3. **Alternatives**: If confidence < 7, provide 1–2 alternative frameworks
 
-示例：
+Example:
 ```
-选择框架: RACE (Role-Action-Context-Expectation)
-理由: 用户需要角色扮演对话，且提供了较详细的背景信息，RACE 的 Context 和 Expectation 要素能很好地组织这些信息
-置信度: 8/10
-备选: COAST（如果用户需要更强调交互步骤）
+Selected framework: RACE (Role-Action-Context-Expectation)
+Reason: The user needs a role-play dialogue and has provided detailed background.
+        RACE's Context and Expectation elements organize this information well.
+Confidence: 8/10
+Alternative: COAST (if the user needs to emphasize interaction steps)
 ```
 
 ---
 
 ### Step 3: Load Framework Details
 
-从 `frameworks/` 目录加载选定框架的详细定义：
-- 简单框架: `frameworks/simple/{framework}.md`
-- 中等框架: `frameworks/medium/{framework}.md`
-- 复杂框架: `frameworks/complex/{framework}.md`
-- 模式: `frameworks/patterns/{pattern}.md`
+Load the detailed definition of the selected framework from the `frameworks/` directory:
+- Simple frameworks: `frameworks/simple/{framework}.md`
+- Medium frameworks: `frameworks/medium/{framework}.md`
+- Complex frameworks: `frameworks/complex/{framework}.md`
+- Patterns: `frameworks/patterns/{pattern}.md`
 
-框架文件包含：
-1. 完整结构说明
-2. 适用场景
-3. 使用示例
-4. 最佳实践
+Framework files contain:
+1. Full structure description
+2. Applicable scenarios
+3. Usage examples
+4. Best practices
 
 ---
 
@@ -157,38 +158,38 @@ Before generating the final prompt, verify with the user:
 
 **Clarifying Questions Template:**
 ```
-为了生成最适合您的 prompt，我需要了解以下信息：
+To generate the best prompt for you, I need to know:
 
-1. **目标**: 您希望达成什么具体结果？
-   例如："获得一份可直接发布的文案" vs "获得创意灵感"
+1. **Goal**: What specific outcome do you want to achieve?
+   e.g., "Get copy ready to publish" vs. "Get creative inspiration"
 
-2. **受众**: 谁将阅读 AI 的输出？
-   例如："技术专家" vs "普通消费者"
+2. **Audience**: Who will read the AI's output?
+   e.g., "Technical experts" vs. "General consumers"
 
-3. **格式**: 需要什么输出格式？
-   例如：" bullet points" vs "完整段落" vs "表格"
+3. **Format**: What output format do you need?
+   e.g., "Bullet points" vs. "Full paragraphs" vs. "Table"
 
-4. **约束**: 有什么限制条件？
-   例如：字数限制、风格要求、必须包含/排除的内容
+4. **Constraints**: Any limitations?
+   e.g., word count limit, style requirements, content to include or exclude
 
-请回答以上问题，或直接说"默认"使用常规设置。
+Please answer the questions above, or say "default" to use standard settings.
 ```
 
-**Refusal Handling - 拒绝处理:**
+**Refusal Handling:**
 
-如果用户拒绝回答澄清问题：
+If the user refuses to answer clarifying questions:
 
-| 用户回应 | 处理方式 |
-|----------|----------|
-| "直接生成" / "默认" | 使用智能默认值继续 |
-| "别问了" / "就按我说的做" | 礼貌说明默认值，继续生成 |
-| 完全无回应 | 等待 1 轮后使用默认值 |
+| User Response | Action |
+|---------------|--------|
+| "Just generate it" / "Default" | Continue with smart defaults |
+| "Stop asking" / "Do it as I said" | Politely state the defaults, then proceed |
+| No response at all | Wait one round, then use defaults |
 
-**智能默认值:**
-- 目标: "提供高质量、可直接使用的内容"
-- 受众: "一般专业人士"
-- 格式: "结构化文本，包含标题和 bullet points"
-- 约束: "无特殊限制"
+**Smart Defaults:**
+- Goal: "Provide high-quality, ready-to-use content"
+- Audience: "General professionals"
+- Format: "Structured text with headings and bullet points"
+- Constraints: "No special restrictions"
 
 ---
 
@@ -202,59 +203,59 @@ Apply the selected framework to create the final prompt:
 4. Include relevant examples if the framework requires
 5. Add any necessary constraints or guidelines
 
-**Multi-Version Output - 多版本输出:**
+**Multi-Version Output:**
 
-根据用户需求，提供 1-3 个版本：
+Provide 1–3 versions based on user needs:
 
-| 版本 | 适用场景 | 特征 |
-|------|----------|------|
-| **基础版** | 快速使用、简单任务 | 核心要素，简洁明了 |
-| **进阶版** | 常规工作、团队协作 | 完整结构，包含示例 |
-| **专家版** | 复杂项目、高质量要求 | 全要素 + 约束 + 验证标准 |
+| Version | Use Case | Characteristics |
+|---------|----------|-----------------|
+| **Basic** | Quick use, simple tasks | Core elements, concise and clear |
+| **Enhanced** | Regular work, team collaboration | Complete structure with examples |
+| **Expert** | Complex projects, high-quality requirements | Full elements + constraints + validation criteria |
 
-**版本选择指南:**
-- 用户说"简单点"/"快速": 提供基础版
-- 用户说"详细点"/"完整": 提供进阶版
-- 用户说"最好的"/"专业": 提供专家版
-- 无明确偏好: 提供进阶版 + 说明可升级/降级
+**Version Selection Guide:**
+- User says "keep it simple" / "quick": Provide Basic version
+- User says "more detail" / "complete": Provide Enhanced version
+- User says "best possible" / "professional": Provide Expert version
+- No clear preference: Provide Enhanced version + note that upgrade/downgrade is available
 
 ---
 
 ### Step 6: Quality Validation
 
-**CRITICAL STEP - 关键步骤**
+**CRITICAL STEP**
 
-使用 **CLARITY Checklist** 验证优化后的 prompt：
+Validate the optimized prompt using the **CLARITY Checklist**:
 
-| 检查项 | 标准 | 状态 |
-|--------|------|------|
-| **C**ontext | 包含足够的背景信息 | ☐ |
-| **L**ogic | 推理方法清晰 | ☐ |
-| **A**ction | 具体行动明确 | ☐ |
-| **R**ole | 角色定义清晰 | ☐ |
-| **I**nput/Output | 输入输出格式定义 | ☐ |
-| **T**one | 语气风格明确 | ☐ |
-| **Y**ardstick | 质量标准或约束 | ☐ |
+| Check Item | Criteria | Status |
+|------------|----------|--------|
+| **C**ontext | Contains sufficient background information | ☐ |
+| **L**ogic | Reasoning approach is clear | ☐ |
+| **A**ction | Specific actions are defined | ☐ |
+| **R**ole | Role is clearly defined | ☐ |
+| **I**nput/Output | Input and output formats are defined | ☐ |
+| **T**one | Tone and style are specified | ☐ |
+| **Y**ardstick | Quality criteria or constraints are set | ☐ |
 
 **Validation Rules:**
-- 简单任务: 至少满足 4/7 项
-- 中等任务: 至少满足 5/7 项
-- 复杂任务: 必须满足 6/7 项以上
+- Simple task: At least 4/7 items must pass
+- Medium task: At least 5/7 items must pass
+- Complex task: At least 6/7 items must pass
 
 **If Validation Fails:**
-1. 列出未通过的检查项
-2. 针对性补充缺失要素
-3. 重新验证直到通过
+1. List the failing check items
+2. Supplement the missing elements
+3. Re-validate until it passes
 
 **Additional Quality Checks:**
 
-| 检查项 | 通过标准 |
-|--------|----------|
-| 清晰度 | 无模糊词汇（如"改进""优化"） |
-| 具体性 | 包含可衡量的指标或标准 |
-| 完整性 | 覆盖用户需求的所有方面 |
-| 可行性 | AI 能够实际执行 |
-| 安全性 | 无有害或不当内容 |
+| Check Item | Pass Criteria |
+|------------|---------------|
+| Clarity | No vague words (e.g., "improve", "optimize") |
+| Specificity | Includes measurable metrics or criteria |
+| Completeness | Covers all aspects of the user's needs |
+| Feasibility | AI can actually execute the task |
+| Safety | No harmful or inappropriate content |
 
 ---
 
@@ -262,39 +263,39 @@ Apply the selected framework to create the final prompt:
 
 Present the optimized prompt to the user with:
 
-1. **Framework Selection Summary**: 选择的框架及理由
-2. **Quality Validation Result**: CLARITY 检查通过情况
-3. **The Optimized Prompt**: 完整的优化后 prompt
-4. **Version Options**: 基础/进阶/专家版（如适用）
-5. **Usage Tips**: 如何根据实际效果调整
+1. **Framework Selection Summary**: The chosen framework and the reason for selecting it
+2. **Quality Validation Result**: CLARITY checklist pass status
+3. **The Optimized Prompt**: The complete optimized prompt
+4. **Version Options**: Basic / Enhanced / Expert (as applicable)
+5. **Usage Tips**: How to adjust based on actual results
 
 **Presentation Template:**
 ```
-## 优化结果
+## Optimization Result
 
-### 框架选择
-- 使用框架: {framework}
-- 选择理由: {reasoning}
-- 置信度: {score}/10
+### Framework Selection
+- Framework used: {framework}
+- Reason: {reasoning}
+- Confidence: {score}/10
 
-### 质量验证
-- CLARITY 检查: {X}/7 项通过
-- 质量等级: {优秀/良好/需改进}
+### Quality Validation
+- CLARITY check: {X}/7 items passed
+- Quality grade: {Excellent / Good / Needs improvement}
 
-### 优化后的 Prompt
+### Optimized Prompt
 ```
 {optimized_prompt}
 ```
 
-### 版本选择
-- [ ] 基础版（当前显示）
-- [ ] 进阶版（包含更多示例）
-- [ ] 专家版（包含完整约束和验证标准）
+### Version Options
+- [ ] Basic (currently shown)
+- [ ] Enhanced (includes more examples)
+- [ ] Expert (includes full constraints and validation criteria)
 
-### 使用建议
-- 如果结果太泛，添加更多约束条件
-- 如果结果太窄，放宽某些限制
-- 如需迭代优化，请告诉我具体调整方向
+### Usage Tips
+- If results are too broad, add more constraints
+- If results are too narrow, relax certain restrictions
+- For iterative refinement, tell me the specific direction to adjust
 ```
 
 ---
@@ -334,25 +335,25 @@ Apply these techniques based on task complexity:
 
 | User Says | Recommended Framework | Version |
 |-----------|----------------------|---------|
-| "I need a simple prompt" | APE, ERA, TAG | 基础版 |
-| "I want to persuade/sell" | BAB | 进阶版 |
-| "I need to analyze/decide" | Chain-of-Thought, RACEF | 进阶/专家版 |
-| "I want to teach/explain" | ELI5, PEE | 基础/进阶版 |
-| "I need creative ideas" | COAST, ROSES | 进阶版 |
-| "I want structured writing" | APE, RACE | 进阶版 |
-| "I need step-by-step reasoning" | Chain-of-Thought | 进阶版 |
-| "I'm generating images" | Few-Shot | 基础版 |
-| "I need a detailed plan" | RISEN, RACEF | 专家版 |
+| "I need a simple prompt" | APE, ERA, TAG | Basic |
+| "I want to persuade/sell" | BAB | Enhanced |
+| "I need to analyze/decide" | Chain-of-Thought, RACEF | Enhanced / Expert |
+| "I want to teach/explain" | ELI5, PEE | Basic / Enhanced |
+| "I need creative ideas" | COAST, ROSES | Enhanced |
+| "I want structured writing" | APE, RACE | Enhanced |
+| "I need step-by-step reasoning" | Chain-of-Thought | Enhanced |
+| "I'm generating images" | Few-Shot | Basic |
+| "I need a detailed plan" | RISEN, RACEF | Expert |
 
 ---
 
 ## Best Practices
 
 1. **Be Specific**: Replace vague verbs with specific actions
-   - "Improve this" -> "Refactor to reduce cyclomatic complexity below 10"
+   - "Improve this" → "Refactor to reduce cyclomatic complexity below 10"
 
 2. **Provide Context**: Include relevant background for better responses
-   - "Write an email" -> "Write a follow-up email to a client who hasn't responded to a proposal sent 2 weeks ago"
+   - "Write an email" → "Write a follow-up email to a client who hasn't responded to a proposal sent 2 weeks ago"
 
 3. **Set Constraints**: Define boundaries to focus the response
    - Word limits, format requirements, what to exclude
@@ -371,40 +372,40 @@ Apply these techniques based on task complexity:
 
 ## Notes
 
-- Always preserve the user's original intent / 始终保留用户的原始意图
-- Don't over-engineer simple prompts / 不要过度设计简单提示词
-- Explain why each optimization was made / 解释每个优化的原因
-- Offer multiple versions when appropriate (basic, enhanced, expert) / 适当时提供多个版本
-- Encourage iterative refinement / 鼓励迭代优化
-- Handle edge cases gracefully / 优雅处理边界情况
-- Validate output quality before presenting / 展示前验证输出质量
+- Always preserve the user's original intent
+- Don't over-engineer simple prompts
+- Explain why each optimization was made
+- Offer multiple versions when appropriate (basic, enhanced, expert)
+- Encourage iterative refinement
+- Handle edge cases gracefully
+- Validate output quality before presenting
 
 ---
 
 ## References
 
 Framework details can be found in:
-- `frameworks/simple/` - 简单框架（3 要素以内）
-- `frameworks/medium/` - 中等框架（4-5 要素）
-- `frameworks/complex/` - 复杂框架（6+ 要素）
-- `frameworks/patterns/` - 可复用模式
-- [Frameworks Summary](references/Frameworks_Summary.md) - 57 个框架的完整列表
+- `frameworks/simple/` - Simple frameworks (≤3 elements)
+- `frameworks/medium/` - Medium frameworks (4-5 elements)
+- `frameworks/complex/` - Complex frameworks (6+ elements)
+- `frameworks/patterns/` - Reusable patterns
+- [Frameworks Summary](references/Frameworks_Summary.md) - Complete list of all frameworks
 
 ---
 
 ## Changelog
 
 ### v2.0.0 (2024-04-20)
-- ✨ 新增框架详细定义文件（57 个框架）
-- ✨ 新增 Step 6: 质量验证环节
-- ✨ 新增多版本输出（基础/进阶/专家版）
-- ✨ 新增边界情况处理策略
-- ✨ 新增用户拒绝澄清时的默认处理
-- ✨ 新增框架选择解释和置信度评分
-- 🔧 重构 SKILL.md 结构，更清晰的工作流
-- 📝 添加完整的使用示例和模板
+- ✨ Added detailed framework definition files for all frameworks
+- ✨ Added Step 6: Quality Validation phase
+- ✨ Added multi-version output (Basic / Enhanced / Expert)
+- ✨ Added boundary case handling strategy
+- ✨ Added default handling when user refuses to clarify
+- ✨ Added framework selection explanation and confidence scoring
+- 🔧 Refactored SKILL.md structure for a clearer workflow
+- 📝 Added complete usage examples and templates
 
 ### v1.0.0
-- 🎉 初始版本
-- 基础 CLARITY 框架
-- 57 个框架列表
+- 🎉 Initial release
+- Basic CLARITY framework
+- Framework list

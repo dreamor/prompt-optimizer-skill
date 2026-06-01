@@ -1,65 +1,65 @@
 # HMW Framework
 
-## 名称
-How Might We（我们如何能够）
+## Name
+How Might We
 
-## 结构
-- **问题定义**: 当前面临的挑战
-- **HMW 问题**: 重构为"我们如何能够..."
-- **想法生成**: 针对每个 HMW 问题头脑风暴
-- **方案筛选**: 评估和选择最佳方案
+## Structure
+- **Problem Definition**: The current challenge being faced
+- **HMW Questions**: Reframe as "How might we..."
+- **Idea Generation**: Brainstorm for each HMW question
+- **Solution Selection**: Evaluate and select the best options
 
-## 适用场景
-- 设计思维工作坊
-- 创新头脑风暴
-- 问题重构
-- 产品设计
-- 服务改进
-- 团队创意会议
+## Use Cases
+- Design thinking workshops
+- Innovation brainstorming
+- Problem reframing
+- Product design
+- Service improvement
+- Team ideation meetings
 
-## 示例
-**输入**: "用户反馈我们的产品太难用"
+## Example
+**Input**: "Users say our product is too hard to use"
 
-**优化后**:
+**Optimized**:
 ```
-问题定义: 新用户在使用产品前 3 分钟流失率高达 60%，反馈界面复杂、找不到核心功能
+Problem Definition: 60% of new users drop off within the first 3 minutes, citing a complex interface and difficulty finding core features
 
-HMW 问题重构:
+HMW Question Reframes:
 
-HMW 1: 我们如何能够让新用户在 30 秒内理解产品价值？
-- 想法 A: 设计交互式产品导览
-- 想法 B: 制作 30 秒视频介绍
-- 想法 C: 简化首屏，只展示核心功能
-- 想法 D: 提供个性化入门路径
+HMW 1: How might we help new users understand the product's value within 30 seconds?
+- Idea A: Design an interactive product tour
+- Idea B: Create a 30-second video introduction
+- Idea C: Simplify the home screen to show only core features
+- Idea D: Provide a personalized onboarding path
 
-HMW 2: 我们如何能够让核心功能更容易被发现？
-- 想法 A: 重新设计导航结构
-- 想法 B: 添加快捷操作按钮
-- 想法 C: 使用智能推荐显示常用功能
-- 想法 D: 提供搜索功能
+HMW 2: How might we make core features easier to discover?
+- Idea A: Redesign the navigation structure
+- Idea B: Add quick-action buttons
+- Idea C: Use smart recommendations to surface frequently used features
+- Idea D: Add a search function
 
-HMW 3: 我们如何能够降低用户的学习成本？
-- 想法 A: 提供模板快速开始
-- 想法 B: 添加工具提示和帮助文档
-- 想法 C: 设计渐进式功能展示
-- 想法 D: 提供一对一入门指导
+HMW 3: How might we reduce the user's learning curve?
+- Idea A: Provide templates for a quick start
+- Idea B: Add tooltips and help documentation
+- Idea C: Design progressive feature disclosure
+- Idea D: Offer one-on-one onboarding guidance
 
-方案筛选标准:
-- 实施难度（1-10）
-- 预期效果（1-10）
-- 资源需求
-- 时间成本
+Solution selection criteria:
+- Implementation difficulty (1–10)
+- Expected impact (1–10)
+- Resource requirements
+- Time cost
 
-推荐方案组合:
-1. 简化首屏 + 快捷操作（快速见效）
-2. 交互式导览（中长期效果）
-3. 模板快速开始（降低门槛）
+Recommended solution combination:
+1. Simplified home screen + quick actions (fast results)
+2. Interactive tour (medium to long-term impact)
+3. Templates for quick start (lower barrier to entry)
 
-请为每个推荐方案提供详细的实施计划。
+Please provide a detailed implementation plan for each recommended solution.
 ```
 
-## 使用提示
-- HMW 问题要开放，不要预设解决方案
-- 鼓励天马行空的想象
-- 先数量后质量，再筛选
-- 组合多个想法往往比单个想法更好
+## Usage Tips
+- HMW questions should be open-ended — don't presuppose a solution
+- Encourage wild and imaginative thinking
+- Prioritize quantity over quality first, then filter
+- Combining multiple ideas is often better than any single idea

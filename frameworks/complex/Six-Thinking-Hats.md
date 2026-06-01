@@ -1,85 +1,85 @@
 # Six Thinking Hats Framework
 
-## 名称
-六顶思考帽
+## Name
+Six Thinking Hats
 
-## 结构
-- **White Hat**: 白色 - 客观事实和数据
-- **Red Hat**: 红色 - 情感和直觉
-- **Black Hat**: 黑色 - 风险和问题
-- **Yellow Hat**: 黄色 - 价值和收益
-- **Green Hat**: 绿色 - 创意和新想法
-- **Blue Hat**: 蓝色 - 过程和控制
+## Structure
+- **White Hat**: White — objective facts and data
+- **Red Hat**: Red — emotions and intuition
+- **Black Hat**: Black — risks and problems
+- **Yellow Hat**: Yellow — value and benefits
+- **Green Hat**: Green — creativity and new ideas
+- **Blue Hat**: Blue — process and control
 
-## 适用场景
-- 团队决策会议
-- 项目规划和评估
-- 问题分析和解决
-- 创意头脑风暴
-- 风险评估
-- 战略规划
+## Use Cases
+- Team decision meetings
+- Project planning and evaluation
+- Problem analysis and solving
+- Creative brainstorming
+- Risk assessment
+- Strategic planning
 
-## 示例
-**输入**: "评估推出新功能的决策"
+## Example
+**Input**: "Evaluate a decision to launch a new feature"
 
-**优化后**:
+**Optimized**:
 ```
-议题: 是否在产品中集成 AI 助手功能
+Topic: Whether to integrate an AI assistant feature into the product
 
-White Hat (白色 - 事实):
-- 开发成本: 估计 3 个月，2 名工程师
-- 竞品情况: 3 个主要竞品已有类似功能
-- 用户调研: 60% 用户表示有兴趣使用
-- 技术可行性: 可使用现有 API，无需自研模型
-- 预算: 需要额外 10 万元 API 费用/年
+White Hat (Facts):
+- Development cost: Estimated 3 months, 2 engineers
+- Competitive landscape: 3 major competitors already have similar features
+- User research: 60% of users expressed interest in using it
+- Technical feasibility: Can use existing APIs, no need to build custom models
+- Budget: Requires an additional 100,000 CNY in API costs per year
 
-Red Hat (红色 - 情感):
-- 团队对此功能感到兴奋，认为是创新机会
-- 担心开发过程中可能遇到技术难题导致延期
-- 销售团队担心功能不够惊艳，难以作为卖点
-- 直觉告诉我们用户会喜欢，但不确定付费意愿
+Red Hat (Emotions):
+- The team is excited about this feature and sees it as an innovation opportunity
+- Concerns that technical challenges during development may cause delays
+- The sales team worries the feature won't be impressive enough to serve as a selling point
+- Intuition says users will like it, but uncertainty about willingness to pay
 
-Black Hat (黑色 - 风险):
-- 技术风险: AI 响应质量不稳定，可能给出错误建议
-- 成本风险: API 费用可能随使用量激增
-- 竞争风险: 竞品可能更快推出更好的版本
-- 用户风险: 如果体验不好，可能损害品牌
-- 合规风险: AI 生成内容需要审核机制
+Black Hat (Risks):
+- Technical risk: AI response quality is unstable and may give incorrect advice
+- Cost risk: API fees could skyrocket with usage volume
+- Competitive risk: A competitor might launch a better version sooner
+- User risk: A poor experience could damage the brand
+- Compliance risk: AI-generated content requires a review mechanism
 
-Yellow Hat (黄色 - 价值):
-- 差异化优势: 成为行业内首批提供此功能的公司
-- 用户价值: 显著提升用户体验，降低学习成本
-- 商业价值: 可作为高级功能收费，增加 ARPU
-- 营销价值: 强有力的 PR 话题和演示亮点
-- 长期价值: 积累 AI 应用经验，为未来打下基础
+Yellow Hat (Value):
+- Differentiation advantage: Become one of the first companies to offer this feature in the industry
+- User value: Significantly improves user experience and reduces the learning curve
+- Business value: Can be offered as a premium feature, increasing ARPU
+- Marketing value: A strong PR talking point and live demo highlight
+- Long-term value: Builds AI application experience and lays the groundwork for the future
 
-Green Hat (绿色 - 创意):
-- 创意 1: 不仅回答问题，还能主动提供操作建议
-- 创意 2: 结合用户行为数据，提供个性化建议
-- 创意 3: 允许用户训练自己的 AI 助手
-- 创意 4: 与社区知识库结合，提供最佳实践
-- 创意 5: 多模态交互，支持语音和截图提问
+Green Hat (Ideas):
+- Idea 1: Not just answer questions — proactively suggest next actions
+- Idea 2: Combine with user behavior data to provide personalized recommendations
+- Idea 3: Allow users to train their own AI assistant
+- Idea 4: Integrate with community knowledge base to surface best practices
+- Idea 5: Multi-modal interaction supporting voice and screenshot-based questions
 
-Blue Hat (蓝色 - 总结和控制):
-决策过程:
-1. 先推出 MVP 版本验证需求（降低风险）
-2. 设置使用限额控制成本
-3. 建立人工审核机制确保质量
-4. 3 个月后评估数据，决定是否加大投入
+Blue Hat (Summary and Control):
+Decision process:
+1. Launch an MVP first to validate demand (reduce risk)
+2. Set usage quotas to control costs
+3. Establish a manual review mechanism to ensure quality
+4. Evaluate data after 3 months and decide whether to scale up investment
 
-最终决定: 有条件推进
-- 条件 1: 先做技术验证，确保响应质量达标
-- 条件 2: 设置成本上限，超支则暂停
-- 条件 3: 准备回滚方案，如果用户反馈不佳
+Final decision: Proceed conditionally
+- Condition 1: Conduct a technical feasibility assessment first to ensure response quality meets the bar
+- Condition 2: Set a cost ceiling — pause if it's exceeded
+- Condition 3: Prepare a rollback plan in case user feedback is negative
 
-下一步行动:
-- 本周: 技术团队评估可行性
-- 下周: 产品团队设计 MVP 功能范围
-- 月底前: 向管理层汇报详细方案
+Next steps:
+- This week: Engineering team evaluates feasibility
+- Next week: Product team designs MVP feature scope
+- By end of month: Report the detailed plan to management
 ```
 
-## 使用提示
-- 每顶帽子代表一种思维模式，不要混用
-- 可以按顺序使用，也可以针对性使用
-- 鼓励团队成员切换思维模式
-- Blue Hat 用于控制过程和总结
+## Usage Tips
+- Each hat represents a different thinking mode — do not mix them
+- Can be used sequentially or selectively based on need
+- Encourage team members to switch thinking modes
+- Blue Hat is used to control the process and summarize

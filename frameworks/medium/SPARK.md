@@ -1,113 +1,113 @@
 # SPARK Framework
 
-## 名称
+## Name
 Situation-Problem-Approach-Results-Knowledge
 
-## 结构
-- **Situation**: 情境
-- **Problem**: 问题
-- **Approach**: 方法
-- **Results**: 结果
-- **Knowledge**: 知识/洞察
+## Structure
+- **Situation**: Situation
+- **Problem**: Problem
+- **Approach**: Approach
+- **Results**: Results
+- **Knowledge**: Knowledge/Insights
 
-## 适用场景
-- 创意问题解决
-- 产品或服务设计创新
-- 营销策略开发
-- 需要新鲜视角的场景
-- 创意写作
-- 战略规划
+## Use Cases
+- Creative problem solving
+- Product or service design innovation
+- Marketing strategy development
+- Scenarios requiring fresh perspectives
+- Creative writing
+- Strategic planning
 
-## 示例
-**输入**: "创新我们的客户服务"
+## Example
+**Input**: "Innovate our customer service"
 
-**优化后**:
+**Optimized**:
 ```
-Situation (情境):
-我们的客服团队每天处理 1000+ 个咨询，但客户满意度只有 3.8/5。主要问题：
-- 响应时间长（平均 4 小时）
-- 重复问题多（60% 是常见问题）
-- 客服人员流动率高（年流失 40%）
-- 客户抱怨解决方案不够个性化
+Situation:
+Our customer service team handles 1,000+ inquiries per day, but customer satisfaction is only 3.8/5. Key issues:
+- Long response times (average 4 hours)
+- High volume of repetitive questions (60% are common issues)
+- High staff turnover (40% annual attrition)
+- Customers complain that solutions are not personalized enough
 
-Problem (问题):
-核心问题: 如何在控制成本的前提下，显著提升客户服务体验？
+Problem:
+Core question: How can we significantly improve the customer service experience while keeping costs under control?
 
-子问题:
-1. 如何减少重复性工作，让客服专注复杂问题？
-2. 如何提供个性化服务，而不增加人力？
-3. 如何提高客服人员的工作满意度？
+Sub-questions:
+1. How can we reduce repetitive work so agents can focus on complex issues?
+2. How can we provide personalized service without adding headcount?
+3. How can we improve customer service staff job satisfaction?
 
-Approach (方法):
+Approach:
 
-创新方案 A - AI 客服助手 + 人工升级:
-- 第一层: AI 聊天机器人处理 80% 常见问题
-- 第二层: AI 辅助人工，实时推荐答案
-- 第三层: 复杂问题转人工专家
+Innovation Option A – AI Customer Service Assistant + Human Escalation:
+- Tier 1: AI chatbot handles 80% of common questions
+- Tier 2: AI assists human agents with real-time answer recommendations
+- Tier 3: Complex issues escalated to human specialists
 
-创新方案 B - 社区化客服:
-- 建立用户社区，鼓励用户互助
-- 超级用户奖励计划
-- 官方客服专注于验证和补充
+Innovation Option B – Community-Based Support:
+- Build a user community and encourage peer-to-peer help
+- Super-user rewards program
+- Official customer service focuses on validation and supplementation
 
-创新方案 C - 预测式服务:
-- 分析用户行为，预测可能的问题
-- 主动推送解决方案
-- 在问题发生前联系用户
+Innovation Option C – Predictive Service:
+- Analyze user behavior to anticipate potential issues
+- Proactively push solutions
+- Contact users before problems occur
 
-创新方案 D - 视频客服:
-- 复杂问题提供视频通话选项
-- 屏幕共享快速解决问题
-- 建立更人性化的连接
+Innovation Option D – Video Customer Service:
+- Offer video call option for complex issues
+- Screen sharing for fast resolution
+- Build a more human connection
 
-综合方案（推荐）:
-阶段 1: 实施 AI 助手（立即见效）
-阶段 2: 建立用户社区（中期）
-阶段 3: 开发预测能力（长期）
+Integrated Approach (Recommended):
+Phase 1: Implement AI assistant (immediate impact)
+Phase 2: Build user community (medium-term)
+Phase 3: Develop predictive capabilities (long-term)
 
-Results (结果):
+Results:
 
-预期成果:
-- 响应时间: 从 4 小时降至 15 分钟
-- 客户满意度: 从 3.8 提升到 4.5
-- 客服工作量: 减少 50% 重复工作
-- 人员流动率: 从 40% 降至 20%
+Expected Outcomes:
+- Response time: reduced from 4 hours to 15 minutes
+- Customer satisfaction: improved from 3.8 to 4.5
+- Agent workload: 50% reduction in repetitive work
+- Staff turnover: reduced from 40% to 20%
 
-量化收益:
-- 年度人力成本节省: 60 万元
-- 客户留存率提升: 5%（价值 100 万元）
-- NPS 评分提升: 从 30 到 50
+Quantified Benefits:
+- Annual labor cost savings: ¥600,000
+- Customer retention improvement: 5% (valued at ¥1,000,000)
+- NPS score increase: from 30 to 50
 
-质性收益:
-- 客服团队工作满意度提升
-- 品牌形象改善
-- 客户忠诚度提高
+Qualitative Benefits:
+- Improved customer service team job satisfaction
+- Enhanced brand image
+- Higher customer loyalty
 
-Knowledge (知识/洞察):
+Knowledge/Insights:
 
-关键洞察:
-1. 客户不介意和 AI 交互，只要解决问题快
-2. 复杂问题的人工服务更有价值
-3. 预测式服务超出客户期望，创造惊喜
+Key Insights:
+1. Customers don't mind interacting with AI as long as it resolves their issues quickly
+2. Human service for complex problems is more valuable
+3. Predictive service exceeds customer expectations and creates delight
 
-可复制经验:
-- 技术 + 人工的混合模式是最佳平衡点
-- 客户教育很重要，要引导使用新渠道
-- 持续优化 AI 需要客服专家的反馈
+Replicable Lessons:
+- A hybrid of technology and human agents is the optimal balance
+- Customer education is important — guide users toward new channels
+- Continuously optimizing AI requires feedback from customer service experts
 
-避免的坑:
-- 不要完全取消人工，保留升级路径
-- 不要一次性推出所有功能，逐步迭代
-- 不要忽视客服人员的培训和适应
+Pitfalls to Avoid:
+- Do not eliminate human agents entirely; preserve an escalation path
+- Do not launch all features at once; iterate gradually
+- Do not neglect agent training and adaptation
 
-未来方向:
-- 探索 VR/AR 客服体验
-- 开发情绪识别，主动安抚愤怒客户
-- 建立客户服务的数据资产
+Future Directions:
+- Explore VR/AR customer service experiences
+- Develop emotion recognition to proactively de-escalate frustrated customers
+- Build a data asset from customer service interactions
 ```
 
-## 使用提示
-- 问题定义要精准
-- 方法要创新，不拘泥于常规
-- 结果要量化
-- 知识要提炼，可复用
+## Usage Tips
+- Define the problem precisely
+- Approaches should be innovative, not confined to conventional solutions
+- Quantify results
+- Distill knowledge into reusable insights

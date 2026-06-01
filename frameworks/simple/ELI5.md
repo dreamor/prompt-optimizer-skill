@@ -1,43 +1,43 @@
 # ELI5 Framework
 
-## 名称
+## Name
 Explain Like I'm 5
 
-## 结构
-- **概念**: 需要解释的主题
-- **类比**: 使用日常生活类比
-- **关键要点**: 3-5 个核心理解点
-- **示例**: 具体例子说明
+## Structure
+- **Concept**: The topic to be explained
+- **Analogy**: Use everyday life analogies
+- **Key Points**: 3-5 core understanding points
+- **Example**: Concrete examples for illustration
 
-## 适用场景
-- 复杂概念解释
-- 技术知识普及
-- 教育内容简化
-- 用户指南编写
-- 科普写作
-- 新员工培训
+## Use Cases
+- Explaining complex concepts
+- Popularizing technical knowledge
+- Simplifying educational content
+- Writing user guides
+- Science communication writing
+- New employee onboarding
 
-## 示例
-**输入**: "解释什么是区块链"
+## Example
+**Input**: "Explain what blockchain is"
 
-**优化后**:
+**Optimized**:
 ```
-概念: 区块链是一种记录信息的方式，让信息无法被篡改
+Concept: Blockchain is a way of recording information that makes it impossible to tamper with
 
-类比: 想象一个班级里的"传话本"。每个同学都有一本，每次有人写新内容，所有人都要在自己的本子上抄一份。如果有人想偷偷改自己本子上的旧内容，大家一对照就会发现不对。
+Analogy: Imagine a "shared notebook" in a classroom. Every student has a copy. Whenever someone writes something new, everyone copies it into their own notebook. If someone tries to secretly change old content in their own notebook, everyone else compares theirs and immediately notices the discrepancy.
 
-关键要点:
-1. 所有人都有完整副本，不是只有一个人保管
-2. 新内容必须大家确认后才能添加
-3. 旧记录无法被修改，只能添加新记录
-4. 不需要老师（中心机构）来监督
-5. 大家互相监督，确保记录真实
+Key Points:
+1. Everyone has a complete copy — it's not held by just one person
+2. New content can only be added after everyone confirms it
+3. Old records cannot be changed, only new records can be added
+4. No teacher (central authority) is needed to oversee things
+5. Everyone monitors each other, ensuring records are authentic
 
-示例: 
-小明借给小红 10 块钱。这件事被记录在传话本上，全班同学都抄了一份。后来小红想赖账，说没借过，但大家拿出自己的本子一对，都写着"小明借给小红 10 块"，小红就无法抵赖了。
+Example: 
+Xiao Ming lent Xiao Hong 10 yuan. This was recorded in the shared notebook, and every student in the class copied it. Later, Xiao Hong wanted to deny it, claiming she never borrowed anything. But when everyone pulled out their notebooks, they all said "Xiao Ming lent Xiao Hong 10 yuan," so Xiao Hong couldn't deny it.
 ```
 
-## 使用提示
-- 避免专业术语
-- 使用孩子能理解的日常场景
-- 多用比喻和类比
+## Usage Tips
+- Avoid technical jargon
+- Use everyday scenarios that a child can understand
+- Make ample use of metaphors and analogies

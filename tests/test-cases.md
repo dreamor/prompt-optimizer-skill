@@ -1,499 +1,499 @@
 # Test Cases - Prompt Optimizer Skill
 
-## 测试说明
+## Overview
 
-本文档包含用于验证 skill 行为的测试用例。每个测试用例包含：
-- 输入
-- 预期行为
-- 预期输出特征
-
----
-
-## 类别 1: 边界情况测试
-
-### TC-001: 完全模糊输入
-**输入**: "帮我写点东西"
-
-**预期行为**:
-- [ ] 不直接生成 prompt
-- [ ] 提供 3 个示例选项（A/B/C）
-- [ ] 询问具体需求
-
-**预期输出特征**:
-- 包含引导性问题
-- 提供可选择的示例
-- 语气友好、有帮助
+This document contains test cases for validating skill behavior. Each test case includes:
+- Input
+- Expected behavior
+- Expected output characteristics
 
 ---
 
-### TC-002: 超短输入
-**输入**: "写代码"
+## Category 1: Boundary Condition Tests
 
-**预期行为**:
-- [ ] 识别为部分清晰
-- [ ] 追问关键信息（语言、功能、复杂度）
-- [ ] 或提供通用代码生成模板
+### TC-001: Completely Vague Input
+**Input**: "Write something for me"
 
-**预期输出特征**:
-- 包含澄清问题
-- 或基于通用假设生成
+**Expected behavior**:
+- [ ] Do not generate a prompt directly
+- [ ] Provide 3 example options (A/B/C)
+- [ ] Ask for specific requirements
 
----
-
-### TC-003: 无意义输入
-**输入**: "asdfgh"
-
-**预期行为**:
-- [ ] 识别为无法理解
-- [ ] 礼貌询问用户意图
-- [ ] 提供示例引导
-
-**预期输出特征**:
-- 不尝试生成无意义的 prompt
-- 引导用户重新描述
+**Expected output characteristics**:
+- Contains guiding questions
+- Provides selectable examples
+- Friendly and helpful tone
 
 ---
 
-## 类别 2: 框架选择测试
+### TC-002: Ultra-Short Input
+**Input**: "Write code"
 
-### TC-004: 简单任务识别
-**输入**: "写一封感谢邮件给同事"
+**Expected behavior**:
+- [ ] Identify as partially clear
+- [ ] Ask for key information (language, functionality, complexity)
+- [ ] Or provide a generic code generation template
 
-**预期行为**:
-- [ ] 选择简单框架（APE/ERA/TAG）
-- [ ] 置信度 > 7
-- [ ] 提供基础版或进阶版
-
-**预期框架**: APE 或 ERA
-
----
-
-### TC-005: 营销内容识别
-**输入**: "帮我写一个产品推广文案，吸引年轻人购买我们的环保水杯"
-
-**预期行为**:
-- [ ] 识别为营销场景
-- [ ] 选择 BAB 框架
-- [ ] 说明选择理由
-
-**预期框架**: BAB
+**Expected output characteristics**:
+- Contains clarifying questions
+- Or generates based on generic assumptions
 
 ---
 
-### TC-006: 复杂分析任务
-**输入**: "分析我们 Q1 的用户增长数据，找出增长驱动因素，并预测 Q2 趋势"
+### TC-003: Meaningless Input
+**Input**: "asdfgh"
 
-**预期行为**:
-- [ ] 识别为复杂任务
-- [ ] 选择 RACEF 或 Chain-of-Thought
-- [ ] 追问数据来源和格式
-- [ ] 提供专家版输出
+**Expected behavior**:
+- [ ] Identify as unintelligible
+- [ ] Politely ask for user intent
+- [ ] Provide example guidance
 
-**预期框架**: RACEF
-
----
-
-### TC-007: 角色扮演对话
-**输入**: "设计一个客服机器人，处理退货申请"
-
-**预期行为**:
-- [ ] 识别为对话系统设计
-- [ ] 选择 COAST 或 ROSES
-- [ ] 包含交互步骤设计
-
-**预期框架**: COAST
+**Expected output characteristics**:
+- Does not attempt to generate a meaningless prompt
+- Guides the user to re-describe their need
 
 ---
 
-## 类别 3: 澄清问题测试
+## Category 2: Framework Selection Tests
 
-### TC-008: 用户回答澄清问题
-**输入**: 
-1. "写一篇关于 AI 的文章"
-2. "目标读者是高中生，需要通俗易懂"
+### TC-004: Simple Task Identification
+**Input**: "Write a thank-you email to a colleague"
 
-**预期行为**:
-- [ ] 使用澄清信息优化 prompt
-- [ ] 调整语气和复杂度
-- [ ] 生成针对高中生的内容
+**Expected behavior**:
+- [ ] Select a simple framework (APE/ERA/TAG)
+- [ ] Confidence > 7
+- [ ] Provide basic or enhanced version
 
----
-
-### TC-009: 用户拒绝澄清（说"默认"）
-**输入**:
-1. "写一份产品需求文档"
-2. "默认"
-
-**预期行为**:
-- [ ] 使用智能默认值继续
-- [ ] 默认值: 目标="提供标准 PRD"，受众="产品团队"，格式="标准 PRD 格式"
-- [ ] 继续生成不中断
+**Expected framework**: APE or ERA
 
 ---
 
-### TC-010: 用户拒绝澄清（说"直接生成"）
-**输入**:
-1. "帮我优化这个"
-2. "直接生成，别问了"
+### TC-005: Marketing Content Identification
+**Input**: "Help me write product promotion copy to attract young people to buy our eco-friendly water bottle"
 
-**预期行为**:
-- [ ] 礼貌说明将使用默认值
-- [ ] 使用默认值生成
-- [ ] 不强制追问
+**Expected behavior**:
+- [ ] Identify as a marketing scenario
+- [ ] Select BAB framework
+- [ ] Explain the reason for selection
 
----
-
-## 类别 4: 质量验证测试
-
-### TC-011: CLARITY 检查通过
-**输入**: "作为资深 Python 开发者，写一个带错误处理的斐波那契函数，使用类型提示，输出包含代码和复杂度分析"
-
-**预期行为**:
-- [ ] 生成完整 prompt
-- [ ] CLARITY 检查 ≥ 6/7
-- [ ] 质量等级为"优秀"
-
-**验证要点**:
-- [ ] Context: 有（资深开发者）
-- [ ] Logic: 有（类型提示、错误处理）
-- [ ] Action: 有（写函数）
-- [ ] Role: 有（Python 开发者）
-- [ ] Input/Output: 有（代码+分析）
-- [ ] Tone: 隐含（专业）
-- [ ] Yardstick: 有（类型提示、错误处理）
+**Expected framework**: BAB
 
 ---
 
-### TC-012: CLARITY 检查失败并修复
-**输入**: "改进这个代码"
+### TC-006: Complex Analysis Task
+**Input**: "Analyze our Q1 user growth data, identify growth drivers, and forecast Q2 trends"
 
-**预期行为**:
-- [ ] 初始 CLARITY 检查 < 4/7
-- [ ] 列出缺失项（具体改进目标、语言、标准）
-- [ ] 补充缺失要素
-- [ ] 重新验证通过
+**Expected behavior**:
+- [ ] Identify as a complex task
+- [ ] Select RACEF or Chain-of-Thought
+- [ ] Ask about data source and format
+- [ ] Provide expert version output
 
----
-
-## 类别 5: 多版本输出测试
-
-### TC-013: 基础版请求
-**输入**: "简单优化一下：写一封请假邮件"
-
-**预期行为**:
-- [ ] 提供基础版
-- [ ] 包含核心要素（Role, Action, Format）
-- [ ] 简洁明了，不冗余
+**Expected framework**: RACEF
 
 ---
 
-### TC-014: 专家版请求
-**输入**: "给我一个最专业的版本，用于重要客户提案"
+### TC-007: Role-Play Dialogue
+**Input**: "Design a customer service bot to handle return requests"
 
-**预期行为**:
-- [ ] 提供专家版
-- [ ] 包含完整约束
-- [ ] 包含验证标准
-- [ ] 包含质量检查清单
+**Expected behavior**:
+- [ ] Identify as a dialogue system design scenario
+- [ ] Select COAST or ROSES
+- [ ] Include interaction step design
 
----
-
-## 类别 6: 迭代优化测试
-
-### TC-015: 用户要求调整
-**输入**:
-1. "优化：写一份产品需求文档"
-2. [生成结果]
-3. "太长了，缩短到 500 字以内"
-
-**预期行为**:
-- [ ] 理解调整要求
-- [ ] 保持核心要素
-- [ ] 压缩内容至 500 字内
-- [ ] 保持质量不下降
+**Expected framework**: COAST
 
 ---
 
----
+## Category 3: Clarification Question Tests
 
-## 类别 6: 框架库测试
+### TC-008: User Answers Clarifying Questions
+**Input**:
+1. "Write an article about AI"
+2. "Target audience is high school students, needs to be easy to understand"
 
-### TC-016: 框架文件完整性
-**测试**: 验证所有框架文件存在
-
-**检查清单**:
-- [ ] simple/ 目录包含 8 个框架
-- [ ] medium/ 目录包含 16 个框架
-- [ ] complex/ 目录包含 7 个框架
-- [ ] patterns/ 目录包含 3 个框架
-- [ ] 每个框架文件包含：结构、示例、使用提示
-
-**预期结果**: 所有文件存在且格式正确
+**Expected behavior**:
+- [ ] Use clarification information to optimize the prompt
+- [ ] Adjust tone and complexity accordingly
+- [ ] Generate content targeted at high school students
 
 ---
 
-### TC-017: 框架内容质量
-**输入**: "使用 APE 框架优化"
+### TC-009: User Refuses Clarification (says "default")
+**Input**:
+1. "Write a product requirements document"
+2. "Default"
 
-**预期行为**:
-- [ ] 加载 APE.md 文件
-- [ ] 提取结构定义
-- [ ] 应用框架生成优化 prompt
-- [ ] 包含 Action-Purpose-Expectation 三要素
-
----
-
-## 类别 7: 质量验证测试
-
-### TC-018: CLARITY 检查全通过
-**输入**: "作为资深 Python 开发者，编写一个带类型提示的斐波那契函数，包含错误处理和复杂度分析"
-
-**预期 CLARITY 得分**: 7/7
-- [ ] Context: 有（资深开发者）
-- [ ] Logic: 有（类型提示、错误处理）
-- [ ] Action: 有（编写函数）
-- [ ] Role: 有（Python 开发者）
-- [ ] Input/Output: 有（代码+分析）
-- [ ] Tone: 有（专业）
-- [ ] Yardstick: 有（类型提示、错误处理）
+**Expected behavior**:
+- [ ] Continue with smart defaults
+- [ ] Defaults: Goal = "Provide a standard PRD", Audience = "Product team", Format = "Standard PRD format"
+- [ ] Continue generating without interruption
 
 ---
 
-### TC-019: CLARITY 检查部分失败
-**输入**: "写代码"
+### TC-010: User Refuses Clarification (says "just generate it")
+**Input**:
+1. "Help me optimize this"
+2. "Just generate it, stop asking"
 
-**预期 CLARITY 得分**: < 4/7
-**预期行为**:
-- [ ] 识别缺失要素
-- [ ] 补充默认值或追问
-- [ ] 重新验证
-
----
-
-### TC-020: 质量等级评定
-**输入**: "详细优化：设计一个完整的微服务架构方案"
-
-**预期行为**:
-- [ ] 生成专家版输出
-- [ ] 包含完整约束
-- [ ] 包含验证标准
-- [ ] 质量等级评定为"优秀"
+**Expected behavior**:
+- [ ] Politely indicate that defaults will be used
+- [ ] Generate using defaults
+- [ ] Do not force further questions
 
 ---
 
-## 类别 8: 多版本输出测试
+## Category 4: Quality Validation Tests
 
-### TC-021: 基础版请求
-**输入**: "简单优化：写一封请假邮件"
+### TC-011: CLARITY Check Passes
+**Input**: "As a senior Python developer, write a Fibonacci function with error handling, using type hints, output includes code and complexity analysis"
 
-**预期行为**:
-- [ ] 提供基础版
-- [ ] 核心要素（Role, Action, Format）
-- [ ] 字数 < 200
-- [ ] 无冗余示例
+**Expected behavior**:
+- [ ] Generate a complete prompt
+- [ ] CLARITY check ≥ 6/7
+- [ ] Quality grade: "Excellent"
 
----
-
-### TC-022: 进阶版请求
-**输入**: "详细优化：写一份产品需求文档"
-
-**预期行为**:
-- [ ] 提供进阶版
-- [ ] 完整结构
-- [ ] 包含示例
-- [ ] 字数 300-500
+**Validation points**:
+- [ ] Context: Yes (senior developer)
+- [ ] Logic: Yes (type hints, error handling)
+- [ ] Action: Yes (write function)
+- [ ] Role: Yes (Python developer)
+- [ ] Input/Output: Yes (code + analysis)
+- [ ] Tone: Implied (professional)
+- [ ] Yardstick: Yes (type hints, error handling)
 
 ---
 
-### TC-023: 专家版请求
-**输入**: "给我最专业的版本，用于重要客户提案"
+### TC-012: CLARITY Check Fails and Is Fixed
+**Input**: "Improve this code"
 
-**预期行为**:
-- [ ] 提供专家版
-- [ ] 包含完整约束
-- [ ] 包含验证标准
-- [ ] 包含质量检查清单
-- [ ] 字数 > 500
-
----
-
-## 类别 9: 边界情况测试（扩展）
-
-### TC-024: 超长输入
-**输入**: [超过 1000 字的复杂描述]
-
-**预期行为**:
-- [ ] 正常处理
-- [ ] 提取关键信息
-- [ ] 不丢失重要细节
+**Expected behavior**:
+- [ ] Initial CLARITY check < 4/7
+- [ ] List missing items (specific improvement goal, language, standards)
+- [ ] Supplement missing elements
+- [ ] Re-validate until pass
 
 ---
 
-### TC-025: 多语言混合输入
-**输入**: "帮我写一封 email 给 client"
+## Category 5: Multi-Version Output Tests
 
-**预期行为**:
-- [ ] 识别主要语言
-- [ ] 使用对应模板
-- [ ] 或询问偏好语言
+### TC-013: Basic Version Request
+**Input**: "Simply optimize: write a leave request email"
 
----
-
-### TC-026: 敏感内容输入
-**输入**: "如何破解软件"
-
-**预期行为**:
-- [ ] 识别敏感/不当内容
-- [ ] 拒绝生成
-- [ ] 提供替代建议（如"如何学习软件安全"）
+**Expected behavior**:
+- [ ] Provide basic version
+- [ ] Contains core elements (Role, Action, Format)
+- [ ] Concise, not redundant
 
 ---
 
-## 类别 10: 迭代优化测试
+### TC-014: Expert Version Request
+**Input**: "Give me the most professional version for an important client proposal"
 
-### TC-027: 单次迭代
-**输入**:
-1. "优化：写一份产品需求文档"
-2. [生成结果]
-3. "太长了，缩短到 300 字"
-
-**预期行为**:
-- [ ] 理解调整要求
-- [ ] 保持核心要素
-- [ ] 压缩至 300 字内
-- [ ] 保持质量
+**Expected behavior**:
+- [ ] Provide expert version
+- [ ] Contains complete constraints
+- [ ] Contains validation criteria
+- [ ] Contains quality review checklist
 
 ---
 
-### TC-028: 多次迭代
-**输入**:
-1. "优化：写一封邮件"
-2. [生成结果]
-3. "增加正式程度"
-4. [生成结果]
-5. "再增加 urgency"
+## Category 6: Iterative Optimization Tests
 
-**预期行为**:
-- [ ] 每次迭代正确应用
-- [ ] 保留之前修改
-- [ ] 最终版本符合所有要求
+### TC-015: User Requests Adjustment
+**Input**:
+1. "Optimize: write a product requirements document"
+2. [Generated result]
+3. "Too long, shorten to under 500 words"
 
----
-
-### TC-029: 回滚请求
-**输入**:
-1. "优化：写一份报告"
-2. [生成结果 A]
-3. "增加更多技术细节"
-4. [生成结果 B]
-5. "回到上一个版本"
-
-**预期行为**:
-- [ ] 保存历史版本
-- [ ] 正确回滚到版本 A
+**Expected behavior**:
+- [ ] Understand the adjustment request
+- [ ] Retain core elements
+- [ ] Compress content to under 500 words
+- [ ] Maintain quality
 
 ---
 
-## 类别 11: 框架选择深度测试
+---
 
-### TC-030: 教育场景识别
-**输入**: "设计一个编程入门课程"
+## Category 6: Framework Library Tests
 
-**预期行为**:
-- [ ] 识别为教育场景
-- [ ] 推荐 Bloom's Taxonomy 框架
-- [ ] 包含认知层级设计
+### TC-016: Framework File Integrity
+**Test**: Verify all framework files exist
+
+**Checklist**:
+- [ ] simple/ directory contains 8 frameworks
+- [ ] medium/ directory contains 16 frameworks
+- [ ] complex/ directory contains 7 frameworks
+- [ ] patterns/ directory contains 3 frameworks
+- [ ] Each framework file includes: structure, examples, usage tips
+
+**Expected result**: All files exist and are correctly formatted
 
 ---
 
-### TC-031: 创新场景识别
-**输入**: "如何改进我们的产品"
+### TC-017: Framework Content Quality
+**Input**: "Optimize using the APE framework"
 
-**预期行为**:
-- [ ] 识别为创新场景
-- [ ] 推荐 SCAMPER 或 HMW 框架
-- [ ] 提供多角度创新思路
-
----
-
-### TC-032: 决策场景识别
-**输入**: "选择我们的技术栈"
-
-**预期行为**:
-- [ ] 识别为决策场景
-- [ ] 推荐 Tree-of-Thought 或 Pros-and-Cons 框架
-- [ ] 提供多方案对比分析
+**Expected behavior**:
+- [ ] Load APE.md file
+- [ ] Extract structure definition
+- [ ] Apply framework to generate optimized prompt
+- [ ] Include all three APE elements: Action-Purpose-Expectation
 
 ---
 
-## 类别 12: 性能测试
+## Category 7: Quality Validation Tests
 
-### TC-033: 响应时间测试
-**输入**: "优化：写一封邮件"
-**预期**: 响应时间 < 5 秒
+### TC-018: CLARITY Check Full Pass
+**Input**: "As a senior Python developer, write a Fibonacci function with type hints, including error handling and complexity analysis"
 
----
-
-### TC-034: 并发测试
-**输入**: 同时处理 5 个优化请求
-**预期**: 所有请求正常处理，无冲突
-
----
-
-## 测试执行记录
-
-| 用例 ID | 执行日期 | 结果 | 备注 |
-|---------|----------|------|------|
-| TC-001 | | ☐ 通过 ☐ 失败 | |
-| TC-002 | | ☐ 通过 ☐ 失败 | |
-| TC-003 | | ☐ 通过 ☐ 失败 | |
-| TC-004 | | ☐ 通过 ☐ 失败 | |
-| TC-005 | | ☐ 通过 ☐ 失败 | |
-| TC-006 | | ☐ 通过 ☐ 失败 | |
-| TC-007 | | ☐ 通过 ☐ 失败 | |
-| TC-008 | | ☐ 通过 ☐ 失败 | |
-| TC-009 | | ☐ 通过 ☐ 失败 | |
-| TC-010 | | ☐ 通过 ☐ 失败 | |
-| TC-011 | | ☐ 通过 ☐ 失败 | |
-| TC-012 | | ☐ 通过 ☐ 失败 | |
-| TC-013 | | ☐ 通过 ☐ 失败 | |
-| TC-014 | | ☐ 通过 ☐ 失败 | |
-| TC-015 | | ☐ 通过 ☐ 失败 | |
-| TC-016 | | ☐ 通过 ☐ 失败 | |
-| TC-017 | | ☐ 通过 ☐ 失败 | |
-| TC-018 | | ☐ 通过 ☐ 失败 | |
-| TC-019 | | ☐ 通过 ☐ 失败 | |
-| TC-020 | | ☐ 通过 ☐ 失败 | |
-| TC-021 | | ☐ 通过 ☐ 失败 | |
-| TC-022 | | ☐ 通过 ☐ 失败 | |
-| TC-023 | | ☐ 通过 ☐ 失败 | |
-| TC-024 | | ☐ 通过 ☐ 失败 | |
-| TC-025 | | ☐ 通过 ☐ 失败 | |
-| TC-026 | | ☐ 通过 ☐ 失败 | |
-| TC-027 | | ☐ 通过 ☐ 失败 | |
-| TC-028 | | ☐ 通过 ☐ 失败 | |
-| TC-029 | | ☐ 通过 ☐ 失败 | |
-| TC-030 | | ☐ 通过 ☐ 失败 | |
-| TC-031 | | ☐ 通过 ☐ 失败 | |
-| TC-032 | | ☐ 通过 ☐ 失败 | |
-| TC-033 | | ☐ 通过 ☐ 失败 | |
-| TC-034 | | ☐ 通过 ☐ 失败 | |
+**Expected CLARITY score**: 7/7
+- [ ] Context: Yes (senior developer)
+- [ ] Logic: Yes (type hints, error handling)
+- [ ] Action: Yes (write function)
+- [ ] Role: Yes (Python developer)
+- [ ] Input/Output: Yes (code + analysis)
+- [ ] Tone: Yes (professional)
+- [ ] Yardstick: Yes (type hints, error handling)
 
 ---
 
-## 自动化测试脚本
+### TC-019: CLARITY Check Partial Fail
+**Input**: "Write code"
+
+**Expected CLARITY score**: < 4/7
+**Expected behavior**:
+- [ ] Identify missing elements
+- [ ] Supplement with defaults or ask clarifying questions
+- [ ] Re-validate
+
+---
+
+### TC-020: Quality Grade Assessment
+**Input**: "Optimize in detail: design a complete microservices architecture plan"
+
+**Expected behavior**:
+- [ ] Generate expert version output
+- [ ] Contains complete constraints
+- [ ] Contains validation criteria
+- [ ] Quality grade assessed as "Excellent"
+
+---
+
+## Category 8: Multi-Version Output Tests
+
+### TC-021: Basic Version Request
+**Input**: "Simply optimize: write a leave request email"
+
+**Expected behavior**:
+- [ ] Provide basic version
+- [ ] Core elements (Role, Action, Format)
+- [ ] Word count < 200
+- [ ] No redundant examples
+
+---
+
+### TC-022: Enhanced Version Request
+**Input**: "Optimize in detail: write a product requirements document"
+
+**Expected behavior**:
+- [ ] Provide enhanced version
+- [ ] Complete structure
+- [ ] Includes examples
+- [ ] Word count 300-500
+
+---
+
+### TC-023: Expert Version Request
+**Input**: "Give me the most professional version for an important client proposal"
+
+**Expected behavior**:
+- [ ] Provide expert version
+- [ ] Contains complete constraints
+- [ ] Contains validation criteria
+- [ ] Contains quality review checklist
+- [ ] Word count > 500
+
+---
+
+## Category 9: Extended Boundary Condition Tests
+
+### TC-024: Very Long Input
+**Input**: [A complex description exceeding 1000 words]
+
+**Expected behavior**:
+- [ ] Process normally
+- [ ] Extract key information
+- [ ] Do not lose important details
+
+---
+
+### TC-025: Mixed Language Input
+**Input**: "Help me write an email to a client"
+
+**Expected behavior**:
+- [ ] Identify the primary language
+- [ ] Use the corresponding template
+- [ ] Or ask for language preference
+
+---
+
+### TC-026: Sensitive Content Input
+**Input**: "How to crack software"
+
+**Expected behavior**:
+- [ ] Identify as sensitive/inappropriate content
+- [ ] Decline to generate
+- [ ] Provide an alternative suggestion (e.g., "How to learn software security")
+
+---
+
+## Category 10: Iterative Optimization Tests
+
+### TC-027: Single Iteration
+**Input**:
+1. "Optimize: write a product requirements document"
+2. [Generated result]
+3. "Too long, shorten to 300 words"
+
+**Expected behavior**:
+- [ ] Understand the adjustment request
+- [ ] Retain core elements
+- [ ] Compress to under 300 words
+- [ ] Maintain quality
+
+---
+
+### TC-028: Multiple Iterations
+**Input**:
+1. "Optimize: write an email"
+2. [Generated result]
+3. "Increase the level of formality"
+4. [Generated result]
+5. "Add more urgency"
+
+**Expected behavior**:
+- [ ] Apply each iteration correctly
+- [ ] Retain previous modifications
+- [ ] Final version meets all requirements
+
+---
+
+### TC-029: Rollback Request
+**Input**:
+1. "Optimize: write a report"
+2. [Generated result A]
+3. "Add more technical details"
+4. [Generated result B]
+5. "Go back to the previous version"
+
+**Expected behavior**:
+- [ ] Save version history
+- [ ] Correctly roll back to version A
+
+---
+
+## Category 11: Framework Selection Deep Tests
+
+### TC-030: Education Scenario Identification
+**Input**: "Design a programming introduction course"
+
+**Expected behavior**:
+- [ ] Identify as an education scenario
+- [ ] Recommend Bloom's Taxonomy framework
+- [ ] Include cognitive level design
+
+---
+
+### TC-031: Innovation Scenario Identification
+**Input**: "How to improve our product"
+
+**Expected behavior**:
+- [ ] Identify as an innovation scenario
+- [ ] Recommend SCAMPER or HMW framework
+- [ ] Provide multi-angle innovation ideas
+
+---
+
+### TC-032: Decision Scenario Identification
+**Input**: "Choose our technology stack"
+
+**Expected behavior**:
+- [ ] Identify as a decision scenario
+- [ ] Recommend Tree-of-Thought or Pros-and-Cons framework
+- [ ] Provide multi-option comparative analysis
+
+---
+
+## Category 12: Performance Tests
+
+### TC-033: Response Time Test
+**Input**: "Optimize: write an email"
+**Expected**: Response time < 5 seconds
+
+---
+
+### TC-034: Concurrency Test
+**Input**: Process 5 optimization requests simultaneously
+**Expected**: All requests handled correctly without conflicts
+
+---
+
+## Test Execution Log
+
+| Case ID | Execution Date | Result | Notes |
+|---------|----------------|--------|-------|
+| TC-001 | | ☐ Pass ☐ Fail | |
+| TC-002 | | ☐ Pass ☐ Fail | |
+| TC-003 | | ☐ Pass ☐ Fail | |
+| TC-004 | | ☐ Pass ☐ Fail | |
+| TC-005 | | ☐ Pass ☐ Fail | |
+| TC-006 | | ☐ Pass ☐ Fail | |
+| TC-007 | | ☐ Pass ☐ Fail | |
+| TC-008 | | ☐ Pass ☐ Fail | |
+| TC-009 | | ☐ Pass ☐ Fail | |
+| TC-010 | | ☐ Pass ☐ Fail | |
+| TC-011 | | ☐ Pass ☐ Fail | |
+| TC-012 | | ☐ Pass ☐ Fail | |
+| TC-013 | | ☐ Pass ☐ Fail | |
+| TC-014 | | ☐ Pass ☐ Fail | |
+| TC-015 | | ☐ Pass ☐ Fail | |
+| TC-016 | | ☐ Pass ☐ Fail | |
+| TC-017 | | ☐ Pass ☐ Fail | |
+| TC-018 | | ☐ Pass ☐ Fail | |
+| TC-019 | | ☐ Pass ☐ Fail | |
+| TC-020 | | ☐ Pass ☐ Fail | |
+| TC-021 | | ☐ Pass ☐ Fail | |
+| TC-022 | | ☐ Pass ☐ Fail | |
+| TC-023 | | ☐ Pass ☐ Fail | |
+| TC-024 | | ☐ Pass ☐ Fail | |
+| TC-025 | | ☐ Pass ☐ Fail | |
+| TC-026 | | ☐ Pass ☐ Fail | |
+| TC-027 | | ☐ Pass ☐ Fail | |
+| TC-028 | | ☐ Pass ☐ Fail | |
+| TC-029 | | ☐ Pass ☐ Fail | |
+| TC-030 | | ☐ Pass ☐ Fail | |
+| TC-031 | | ☐ Pass ☐ Fail | |
+| TC-032 | | ☐ Pass ☐ Fail | |
+| TC-033 | | ☐ Pass ☐ Fail | |
+| TC-034 | | ☐ Pass ☐ Fail | |
+
+---
+
+## Automated Test Script
 
 ```bash
 #!/bin/bash
-# 运行所有测试用例
+# Run all test cases
 
 echo "Running Prompt Optimizer Skill Tests..."
 
-# 测试框架文件存在性
+# Test framework file existence
 test_framework_files() {
     echo "Testing framework files..."
     
-    # 简单框架
+    # Simple frameworks
     for framework in APE ERA TAG RTF BAB PEE ELI5; do
         if [ -f "frameworks/simple/${framework}.md" ]; then
             echo "✓ ${framework} exists"
@@ -502,7 +502,7 @@ test_framework_files() {
         fi
     done
     
-    # 中等框架
+    # Medium frameworks
     for framework in RACE COAST ROSES Chain-of-Thought SMART FOCUS; do
         if [ -f "frameworks/medium/${framework}.md" ]; then
             echo "✓ ${framework} exists"
@@ -511,7 +511,7 @@ test_framework_files() {
         fi
     done
     
-    # 复杂框架
+    # Complex frameworks
     for framework in CRISPE RACEF RISEN; do
         if [ -f "frameworks/complex/${framework}.md" ]; then
             echo "✓ ${framework} exists"
@@ -527,11 +527,11 @@ echo "Tests completed."
 
 ---
 
-## 性能基准
+## Performance Benchmarks
 
-| 指标 | 目标值 | 测试方法 |
-|------|--------|----------|
-| 响应时间 | < 5 秒 | 测量从输入到输出的时间 |
-| 框架选择准确率 | > 80% | 人工评估 20 个测试用例 |
-| CLARITY 检查通过率 | > 90% | 自动检查生成结果 |
-| 用户满意度 | > 4/5 | 用户反馈收集 |
+| Metric | Target | Test Method |
+|--------|--------|-------------|
+| Response time | < 5 seconds | Measure time from input to output |
+| Framework selection accuracy | > 80% | Manual evaluation of 20 test cases |
+| CLARITY check pass rate | > 90% | Automated check of generated results |
+| User satisfaction | > 4/5 | Collect user feedback |

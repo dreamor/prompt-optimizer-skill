@@ -1,100 +1,100 @@
 # Socratic Method Framework
 
-## 名称
-苏格拉底式提问法
+## Name
+Socratic Questioning Method
 
-## 结构
-- **主题**: 讨论的主题
-- **澄清问题**: 澄清概念的问题
-- **假设挑战**: 挑战假设的问题
-- **证据探究**: 探究证据的问题
-- **视角转换**: 转换视角的问题
-- **影响推演**: 推演影响的问题
-- **元反思**: 关于问题的问题
+## Structure
+- **Topic**: The topic under discussion
+- **Clarifying Questions**: Questions to clarify concepts
+- **Assumption Challenges**: Questions that challenge assumptions
+- **Evidence Inquiry**: Questions that probe for evidence
+- **Perspective Shifts**: Questions that shift viewpoints
+- **Impact Inference**: Questions that infer consequences
+- **Meta-Reflection**: Questions about the questions themselves
 
-## 适用场景
-- 教育和培训
-- 批判性思维培养
-- 深度讨论引导
-- 问题诊断
-- 决策分析
-- 自我反思
+## Use Cases
+- Education and training
+- Developing critical thinking
+- Facilitating deep discussion
+- Problem diagnosis
+- Decision analysis
+- Self-reflection
 
-## 示例
-**输入**: "引导团队思考产品方向"
+## Example
+**Input**: "Guide the team in thinking about product direction"
 
-**优化后**:
+**Optimized**:
 ```
-主题: 我们是否应该全力投入 AI 功能开发？
+Topic: Should we go all-in on AI feature development?
 
-澄清问题:
-- "当我们说'全力投入'时，具体是指什么？多少资源？多长时间？"
-- "AI 功能的定义是什么？是指生成式 AI，还是传统机器学习？"
-- "我们的目标用户是谁？他们对 AI 的需求是什么？"
+Clarifying Questions:
+- "When we say 'go all-in,' what exactly do we mean? How many resources? Over what time period?"
+- "What is the definition of 'AI features'? Does it refer to generative AI, or traditional machine learning?"
+- "Who are our target users? What are their needs regarding AI?"
 
-假设挑战:
-- "我们假设 AI 功能会提升用户体验，这个假设的依据是什么？"
-- "如果我们不做 AI，而是优化现有功能，结果会怎样？"
-- "竞争对手都做了 AI，这是一个我们必须跟进的充分理由吗？"
-- "我们假设用户愿意为 AI 功能付费，有什么证据支持？"
+Assumption Challenges:
+- "We assume that AI features will improve user experience — what is the basis for this assumption?"
+- "What would happen if, instead of building AI, we optimized existing features?"
+- "The fact that competitors are all doing AI — is that sufficient reason for us to follow suit?"
+- "We assume users are willing to pay for AI features — what evidence supports this?"
 
-证据探究:
-- "我们有什么数据支持用户对 AI 功能的需求？"
-- "其他公司做 AI 功能的成功案例是什么？失败案例呢？"
-- "我们的技术团队有能力做好 AI 功能吗？"
-- "市场调研显示多少比例的用户需要这个功能？"
+Evidence Inquiry:
+- "What data do we have to support user demand for AI features?"
+- "What are the success stories of other companies implementing AI features? And the failure stories?"
+- "Does our technical team have the capability to build AI features well?"
+- "What percentage of users, according to market research, need this feature?"
 
-视角转换:
-- "从用户的角度看，他们最希望 AI 解决什么问题？"
-- "从投资者的角度看，他们会如何评估这个决策？"
-- "从技术团队的角度看，他们最担心什么？"
-- "一年后回头看，我们可能会后悔什么？"
+Perspective Shifts:
+- "From the user's perspective, what problem do they most want AI to solve?"
+- "From the investor's perspective, how would they evaluate this decision?"
+- "From the technical team's perspective, what are they most concerned about?"
+- "Looking back a year from now, what might we regret?"
 
-影响推演:
-- "如果 AI 功能成功了，会对我们的业务产生什么连锁反应？"
-- "如果失败了，我们会失去什么？机会成本是什么？"
-- "这个功能会如何影响我们的品牌形象？"
-- "对团队文化会有什么影响？"
+Impact Inference:
+- "If the AI features succeed, what chain reactions would that have on our business?"
+- "If they fail, what would we lose? What is the opportunity cost?"
+- "How would this feature affect our brand image?"
+- "What impact would it have on team culture?"
 
-元反思:
-- "我们为什么会讨论这个问题？是什么触发了这个思考？"
-- "我们的讨论方式是否有助于找到最佳答案？"
-- "还有什么重要的问题我们没有问到？"
-- "我们如何知道最终的决策是正确的？"
+Meta-Reflection:
+- "Why are we discussing this topic? What triggered this line of thinking?"
+- "Is our discussion approach helping us find the best answer?"
+- "What important questions have we not yet asked?"
+- "How will we know whether our final decision is correct?"
 
-引导策略:
+Facilitation Strategy:
 
-阶段 1: 发散（10 分钟）
-- 快速提出以上各类问题
-- 鼓励团队自由回答
-- 不评判，只记录
+Phase 1: Diverge (10 minutes)
+- Quickly raise the various types of questions above
+- Encourage the team to answer freely
+- No judgment — only record
 
-阶段 2: 聚焦（15 分钟）
-- 识别关键假设
-- 找出证据最薄弱的地方
-- 确定需要验证的点
+Phase 2: Focus (15 minutes)
+- Identify key assumptions
+- Find where the evidence is weakest
+- Determine what needs to be validated
 
-阶段 3: 收敛（10 分钟）
-- 基于讨论形成共识
-- 明确下一步行动
-- 分配验证任务
+Phase 3: Converge (10 minutes)
+- Build consensus based on the discussion
+- Clarify next steps
+- Assign validation tasks
 
-注意事项:
-- 保持中立，不预设立场
-- 鼓励每个人发言
-- 追问"为什么"和"你怎么知道"
-- 接受"我不知道"作为答案
-- 记录所有关键洞察
+Notes:
+- Stay neutral; do not presuppose a position
+- Encourage everyone to speak
+- Follow up with "why" and "how do you know"
+- Accept "I don't know" as a valid answer
+- Record all key insights
 
-预期产出:
-- 明确的核心假设清单
-- 需要验证的关键问题
-- 决策标准和时间表
-- 责任分配
+Expected Outputs:
+- A clear list of core assumptions
+- Key questions that need to be validated
+- Decision criteria and timeline
+- Assignment of responsibilities
 ```
 
-## 使用提示
-- 提问比告诉更有效
-- 深入追问，不满足于表面答案
-- 保持开放和尊重的态度
-- 目的是共同探索，而非证明谁对谁错
+## Usage Tips
+- Asking questions is more effective than telling
+- Probe deeply; do not settle for surface-level answers
+- Maintain an open and respectful attitude
+- The goal is to explore together, not to prove who is right or wrong

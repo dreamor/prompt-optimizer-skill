@@ -1,34 +1,34 @@
 # RTF Framework
 
-## 名称
+## Name
 Role-Task-Format
 
-## 结构
-- **Role**: AI 扮演的角色
-- **Task**: 具体任务
-- **Format**: 输出格式要求
+## Structure
+- **Role**: Role the AI plays
+- **Task**: Specific task
+- **Format**: Output format requirements
 
-## 适用场景
-- 数据检索和查询
-- 教程和操作指南
-- 需要特定响应格式的场景
-- 简单到复杂任务的处理
-- 与 AI 的日常交互
+## Use Cases
+- Data retrieval and queries
+- Tutorials and how-to guides
+- Scenarios requiring a specific response format
+- Handling tasks from simple to complex
+- Daily interactions with AI
 
-## 示例
-**输入**: "介绍机器学习"
+## Example
+**Input**: "Introduce machine learning"
 
-**优化后**:
+**Optimized**:
 ```
-Role: 你是一位机器学习专家教授
-Task: 向非技术背景的商务人士介绍机器学习的基本概念
+Role: You are a machine learning expert professor
+Task: Introduce the basic concepts of machine learning to a non-technical business audience
 Format: 
-1. 用一句话定义（不超过 30 字）
-2. 三个实际应用案例（每例 50 字以内）
-3. 一个类比解释原理
-4. 总结要点（3 条 bullet points）
+1. A one-sentence definition (no more than 30 words)
+2. Three real-world application examples (each no more than 50 words)
+3. One analogy to explain the underlying principle
+4. Summary of key points (3 bullet points)
 ```
 
-## 使用提示
-- 明确指定输出格式可以显著提高结果质量
-- 适合需要结构化输出的场景
+## Usage Tips
+- Explicitly specifying the output format can significantly improve result quality
+- Well-suited for scenarios requiring structured output

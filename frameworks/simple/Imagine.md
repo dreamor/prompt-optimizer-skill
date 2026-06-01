@@ -1,78 +1,78 @@
 # Imagine Framework
 
-## 名称
-想象框架
+## Name
+Imagine Framework
 
-## 结构
-- **场景设定**: 设定想象的基础场景
-- **可能性探索**: 探索各种可能性
-- **细节描绘**: 描绘具体细节
-- **价值发现**: 发现潜在价值
+## Structure
+- **Scenario Setting**: Establish the foundational imagined scenario
+- **Possibility Exploration**: Explore various possibilities
+- **Detail Painting**: Describe concrete details
+- **Value Discovery**: Discover potential value
 
-## 适用场景
-- 创意写作
-- 愿景规划
-- 产品概念设计
-- 场景模拟
-- 未来展望
-- 用户体验设计
+## Use Cases
+- Creative writing
+- Vision planning
+- Product concept design
+- Scenario simulation
+- Future outlook
+- User experience design
 
-## 示例
-**输入**: "想象未来的办公场景"
+## Example
+**Input**: "Imagine the office environment of the future"
 
-**优化后**:
+**Optimized**:
 ```
-场景设定:
-时间: 2030 年
-地点: 某科技公司总部
-背景: AI 和 VR 技术已成熟，全面融入工作场景
+Scenario Setting:
+Time: 2030
+Location: Headquarters of a tech company
+Background: AI and VR technologies have matured and are fully integrated into work scenarios
 
-可能性探索:
+Possibility Exploration:
 
-场景 A - 沉浸式远程办公:
-- 不再需要物理办公室
-- 员工通过 VR 头盔进入虚拟办公空间
-- 全息投影实现"面对面"交流
-- AI 助手自动记录会议、分配任务
+Scenario A — Immersive Remote Work:
+- No physical office required
+- Employees enter a virtual office space via VR headsets
+- Holographic projection enables "face-to-face" communication
+- AI assistants automatically record meetings and assign tasks
 
-场景 B - 智能协作空间:
-- 办公室墙壁是可交互屏幕
-- 语音控制一切设备
-- AI 根据工作内容自动调整环境（光线、温度、音乐）
-- 机器人处理所有行政事务
+Scenario B — Intelligent Collaboration Space:
+- Office walls are interactive screens
+- Voice control for all devices
+- AI automatically adjusts the environment (lighting, temperature, music) based on work content
+- Robots handle all administrative tasks
 
-场景 C - 弹性游牧办公:
-- 城市遍布共享办公舱
-- 员工根据心情选择工作环境（咖啡馆式、图书馆式、自然式）
-- 所有个人设置随身份自动同步
-- 通勤时间归零
+Scenario C — Flexible Nomadic Work:
+- Shared work pods distributed throughout the city
+- Employees choose their work environment based on mood (café-style, library-style, nature-style)
+- All personal settings auto-sync to the user's identity
+- Commute time reduced to zero
 
-细节描绘:
+Detail Painting:
 
-以场景 A 为例:
-早晨 8:55，你戴上轻便的 AR 眼镜，瞬间"传送"到虚拟办公室。你的虚拟形象穿着得体，坐在靠窗的位置（窗外是虚拟的海景）。
+Taking Scenario A as an example:
+At 8:55 AM, you put on lightweight AR glasses and instantly "teleport" to the virtual office. Your avatar is dressed appropriately, seated by the window (with a virtual ocean view outside).
 
-同事陆续"到来"，有人选择坐在你旁边闲聊，有人在专注区安静工作。9:00 整，AI 助手提醒会议开始，你们转移到虚拟会议室，PPT 悬浮在空中，可以手势操作。
+Colleagues "arrive" one by one — some choose to sit next to you for a chat, others work quietly in the focus zone. At 9:00 sharp, the AI assistant notifies everyone the meeting is starting, and you all move to the virtual meeting room, where the presentation floats in the air and can be controlled with gestures.
 
-午休时，你切换到"自然模式"，周围变成森林，鸟鸣声帮助你放松。下午的工作由 AI 助手筛选优先级，你只需要专注创造性工作。
+During the lunch break, you switch to "nature mode" — the surroundings transform into a forest, with birdsong helping you relax. In the afternoon, the AI assistant filters your task priorities and you can focus entirely on creative work.
 
-价值发现:
-- 时间价值: 每天节省 2 小时通勤时间
-- 空间价值: 公司节省 90% 办公场地成本
-- 体验价值: 工作生活平衡大幅提升
-- 环境价值: 碳排放大幅降低
-- 人才价值: 可以招聘全球人才，不受地域限制
+Value Discovery:
+- Time value: Save 2 hours of commuting time per day
+- Space value: Companies save 90% on office space costs
+- Experience value: Work-life balance significantly improved
+- Environmental value: Carbon emissions dramatically reduced
+- Talent value: Hire global talent without geographic limitations
 
-创意启发:
-基于以上想象，我们现在可以:
-1. 开发轻量级 AR 办公设备
-2. 设计虚拟办公空间协作软件
-3. 创建"数字游民"服务平台
-4. 研究远程办公的心理健康支持
+Creative Inspiration:
+Based on the above imagination, we can now:
+1. Develop lightweight AR office devices
+2. Design virtual office space collaboration software
+3. Create a "digital nomad" service platform
+4. Research mental health support for remote workers
 ```
 
-## 使用提示
-- 不受现实约束，大胆想象
-- 从多个角度探索可能性
-- 细节让想象更真实
-- 最终要落地到可执行的想法
+## Usage Tips
+- Free yourself from real-world constraints — imagine boldly
+- Explore possibilities from multiple angles
+- Details make the imagination feel more real
+- Ultimately ground ideas in actionable concepts

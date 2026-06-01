@@ -1,32 +1,32 @@
 # APE Framework
 
-## 名称
+## Name
 Action-Purpose-Expectation
 
-## 结构
-- **Action**: 具体行动指令
-- **Purpose**: 行动目的/原因
-- **Expectation**: 期望结果
+## Structure
+- **Action**: Specific action instruction
+- **Purpose**: Purpose/reason for the action
+- **Expectation**: Expected result
 
-## 适用场景
-- 快速提示词构建
-- 简单任务指令
-- 日常 AI 交互
-- 轻量级内容生成
-- 初学者入门
-- 快速原型测试
+## Use Cases
+- Quick prompt building
+- Simple task instructions
+- Daily AI interactions
+- Lightweight content generation
+- Beginner onboarding
+- Rapid prototype testing
 
-## 示例
-**输入**: "写一封邮件"
+## Example
+**Input**: "Write an email"
 
-**优化后**:
+**Optimized**:
 ```
-Action: 写一封正式的商务邮件
-Purpose: 向客户说明项目延期的原因并请求理解
-Expectation: 邮件应该专业、诚恳，维护客户关系，并获得客户的谅解回复
+Action: Write a formal business email
+Purpose: To explain the reasons for a project delay to the client and request their understanding
+Expectation: The email should be professional and sincere, maintain the client relationship, and receive a reply expressing understanding
 ```
 
-## 使用提示
-- 保持每个部分简洁明了
-- Action 使用动词开头
-- Expectation 应该可衡量或具体
+## Usage Tips
+- Keep each section concise and clear
+- Start Action with a verb
+- Expectation should be measurable or specific

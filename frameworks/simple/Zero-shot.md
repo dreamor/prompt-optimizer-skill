@@ -1,44 +1,44 @@
 # Zero-Shot Prompting Framework
 
-## 名称
-零样本提示框架
+## Name
+Zero-Shot Prompting Framework
 
-## 结构
-- **任务**: 直接描述任务
-- **指令**: 清晰的执行指令
-- **格式**: 输出格式要求（可选）
+## Structure
+- **Task**: Directly describe the task
+- **Instructions**: Clear execution instructions
+- **Format**: Output format requirements (optional)
 
-## 适用场景
-- 快速原型和测试
-- 通用知识查询
-- 简单任务执行
-- 创意生成
-- 文本摘要
-- 基本分类任务
+## Use Cases
+- Rapid prototyping and testing
+- General knowledge queries
+- Simple task execution
+- Creative generation
+- Text summarization
+- Basic classification tasks
 
-## 示例
-**输入**: "总结这篇新闻"
+## Example
+**Input**: "Summarize this news article"
 
-**优化后**:
+**Optimized**:
 ```
-任务: 总结以下新闻文章的主要观点
+Task: Summarize the main points of the following news article
 
-指令:
-1. 提取文章的核心事件
-2. 识别关键人物和地点
-3. 总结事件的影响和意义
-4. 保持客观，不添加个人观点
+Instructions:
+1. Extract the core event of the article
+2. Identify key people and locations
+3. Summarize the impact and significance of the event
+4. Remain objective — do not add personal opinions
 
-格式:
-- 标题: [一句话概括]
-- 要点: 3-5 个 bullet points
-- 影响: [事件的潜在影响]
+Format:
+- Headline: [One-sentence summary]
+- Key points: 3-5 bullet points
+- Impact: [Potential impact of the event]
 
-新闻内容:
-[粘贴新闻内容]
+News content:
+[Paste news content here]
 ```
 
-## 使用提示
-- 不需要提供示例
-- 适合 LLM 已经具备能力的任务
-- 保持指令清晰具体
+## Usage Tips
+- No examples need to be provided
+- Best suited for tasks the LLM already has the capability to handle
+- Keep instructions clear and specific

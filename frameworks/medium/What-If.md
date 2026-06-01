@@ -1,100 +1,100 @@
 # What If Framework
 
-## 名称
-假设分析框架
+## Name
+Hypothetical Analysis Framework
 
-## 结构
-- **假设**: 提出假设
-- **情景推演**: 推演可能的情景
-- **影响分析**: 分析各种影响
-- **应对策略**: 制定应对策略
+## Structure
+- **Hypothesis**: Propose a hypothesis
+- **Scenario Projection**: Project possible scenarios
+- **Impact Analysis**: Analyze various impacts
+- **Response Strategies**: Develop response strategies
 
-## 适用场景
-- 场景规划
-- 风险评估
-- 创新思维
-- 战略分析
-- 产品设计
-- 问题解决
+## Use Cases
+- Scenario planning
+- Risk assessment
+- Innovative thinking
+- Strategic analysis
+- Product design
+- Problem solving
 
-## 示例
-**输入**: "分析如果主要竞争对手降价 50% 会怎样"
+## Example
+**Input**: "Analyze what would happen if the main competitor cuts prices by 50%"
 
-**优化后**:
+**Optimized**:
 ```
-假设: 主要竞争对手（占据 40% 市场份额）宣布全线产品降价 50%，持续 6 个月
+Hypothesis: The main competitor (holding 40% market share) announces a 50% price cut across all products, sustained for 6 months.
 
-情景推演:
+Scenario Projection:
 
-情景 A - 激进应对（我们也降价）:
-- 我们降价 50% 匹配
-- 结果: 价格战，双方利润大幅下降
-- 3 个月后: 行业平均利润率从 20% 降至 5%
-- 6 个月后: 小公司倒闭，市场集中度提高
-- 长期: 品牌贬值，难以恢复原价
+Scenario A – Aggressive Response (we also cut prices):
+- We match with a 50% price cut
+- Outcome: Price war; both sides see significant profit decline
+- After 3 months: Industry average profit margin drops from 20% to 5%
+- After 6 months: Smaller companies fold; market consolidation increases
+- Long-term: Brand devaluation; difficult to restore original pricing
 
-情景 B - 保守应对（维持价格）:
-- 我们不降价，强调价值
-- 结果: 短期失去 30% 价格敏感客户
-- 3 个月后: 核心客户（质量敏感）留存率 90%
-- 6 个月后: 竞争对手因亏损恢复价格
-- 长期: 品牌定位稳固，但市场份额下降
+Scenario B – Conservative Response (maintain pricing):
+- We hold our prices and emphasize value
+- Outcome: Short-term loss of 30% of price-sensitive customers
+- After 3 months: Core customers (quality-sensitive) retention rate at 90%
+- After 6 months: Competitor restores prices due to losses
+- Long-term: Brand positioning remains solid, but market share declines
 
-情景 C - 差异化应对（推出新品类）:
-- 推出高端产品线，原产品小幅降价 20%
-- 结果: 转移竞争焦点
-- 3 个月后: 高端产品获得 15% 市场
-- 6 个月后: 形成高低端双品牌
-- 长期: 扩大市场覆盖，总份额提升
+Scenario C – Differentiated Response (launch a new product category):
+- Introduce a premium product line; original product sees a modest 20% price reduction
+- Outcome: Shifts the competitive focus
+- After 3 months: Premium product captures 15% of the market
+- After 6 months: Dual-brand presence across high and low ends established
+- Long-term: Expanded market coverage; total share increases
 
-影响分析:
+Impact Analysis:
 
-对客户的影响:
-- 短期受益（价格降低）
-- 长期可能选择减少（小公司退出）
-- 服务质量可能下降（成本压力）
+Impact on customers:
+- Short-term benefit (lower prices)
+- Long-term: fewer choices (smaller companies exit)
+- Service quality may decline (cost pressure)
 
-对我们的影响:
-| 维度 | 情景 A | 情景 B | 情景 C |
-|------|--------|--------|--------|
-| 短期收入 | -40% | -20% | -10% |
-| 利润率 | -70% | -5% | +5% |
-| 市场份额 | 维持 | -15% | +10% |
-| 品牌价值 | -30% | +10% | +20% |
-| 执行难度 | 低 | 中 | 高 |
+Impact on us:
+| Dimension | Scenario A | Scenario B | Scenario C |
+|-----------|------------|------------|------------|
+| Short-term revenue | -40% | -20% | -10% |
+| Profit margin | -70% | -5% | +5% |
+| Market share | Maintained | -15% | +10% |
+| Brand value | -30% | +10% | +20% |
+| Execution difficulty | Low | Medium | High |
 
-对行业的影响:
-- 加速行业整合
-- 提高进入壁垒
-- 推动技术创新（差异化）
-- 可能引发监管关注（反垄断）
+Impact on the industry:
+- Accelerates industry consolidation
+- Raises barriers to entry
+- Drives technological innovation (differentiation)
+- May attract regulatory attention (antitrust)
 
-应对策略:
+Response Strategies:
 
-首选策略（情景 C 变体）:
-1. 立即行动:
-   - 推出"价值保障计划"（价格保护 + 服务升级）
-   - 强调总拥有成本（TCO）优势
-   - 针对核心客户推出忠诚度奖励
+Preferred strategy (Scenario C variant):
+1. Immediate actions:
+   - Launch a "Value Guarantee Program" (price protection + service upgrade)
+   - Emphasize total cost of ownership (TCO) advantage
+   - Introduce loyalty rewards for core customers
 
-2. 中期布局（1-3 个月）:
-   - 加速高端产品研发
-   - 与互补产品厂商建立联盟
-   - 提升客户服务质量（差异化）
+2. Medium-term positioning (1–3 months):
+   - Accelerate premium product development
+   - Build alliances with complementary product vendors
+   - Improve customer service quality (differentiation)
 
-3. 长期准备（3-6 个月）:
-   - 监控竞争对手财务状况
-   - 准备收购机会（如果对手因亏损出售）
-   - 开发新市场（地理或垂直领域）
+3. Long-term preparation (3–6 months):
+   - Monitor competitor financial health
+   - Prepare for acquisition opportunities (if competitor sells due to losses)
+   - Develop new markets (geographic or vertical)
 
-触发条件:
-- 如果我们在 1 个月内流失超过 20% 客户 → 启动情景 A（有限降价）
-- 如果竞争对手 3 个月内恢复价格 → 坚持情景 B
-- 如果高端产品接受度超预期 → 全面转向情景 C
+Trigger Conditions:
+- If we lose more than 20% of customers within 1 month → activate Scenario A (limited price reduction)
+- If competitor restores prices within 3 months → hold with Scenario B
+- If premium product acceptance exceeds expectations → fully shift to Scenario C
 ```
 
-## 使用提示
-- 提出极端但合理的假设
-- 探索多种情景，不只一种
-- 分析要全面（短期/长期，直接/间接）
-- 策略要有触发条件和调整机制
+## Usage Tips
+- Propose extreme but plausible hypotheses
+- Explore multiple scenarios, not just one
+- Analysis should be comprehensive (short-term/long-term, direct/indirect)
+- Strategies should have trigger conditions and adjustment mechanisms

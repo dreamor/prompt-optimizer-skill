@@ -2,7 +2,7 @@
 
 /**
  * Prompt Optimizer CLI
- * 命令行工具，用于优化提示词
+ * Command-line tool for optimizing prompts
  */
 
 const fs = require('fs');
@@ -10,73 +10,68 @@ const path = require('path');
 
 const VERSION = require('../package.json').version;
 
-// 帮助信息
 function showHelp() {
   console.log(`
 ╔════════════════════════════════════════════════════════╗
-║     Prompt Optimizer v${VERSION} - 提示词优化工具        ║
+║     Prompt Optimizer v${VERSION} - Prompt Optimization Tool  ║
 ╚════════════════════════════════════════════════════════╝
 
-用法:
-  npx prompt-optimizer-skill [选项] [命令] [输入]
+Usage:
+  npx prompt-optimizer-skill [options] [command] [input]
 
-命令:
-  optimize <text>     优化提示词
-  frameworks          列出所有可用框架
-  test               运行测试
-  version            显示版本号
-  help               显示帮助信息
+Commands:
+  optimize <text>     Optimize a prompt
+  frameworks          List all available frameworks
+  test                Run tests
+  version             Show version number
+  help                Show help
 
-选项:
-  -v, --version      显示版本号
-  -h, --help         显示帮助信息
-  -b, --basic        输出基础版本
-  -e, --enhanced     输出进阶版本（默认）
-  -x, --expert       输出专家版本
+Options:
+  -v, --version       Show version number
+  -h, --help          Show help
+  -b, --basic         Output basic version
+  -e, --enhanced      Output enhanced version (default)
+  -x, --expert        Output expert version
 
-示例:
-  npx prompt-optimizer-skill optimize "写一封邮件给客户"
+Examples:
+  npx prompt-optimizer-skill optimize "Write an email to a customer"
   npx prompt-optimizer-skill frameworks
   npx prompt-optimizer-skill test
 
-更多信息: https://github.com/dreamor/prompt-optimizer-skill
+More info: https://github.com/dreamor/prompt-optimizer-skill
 `);
 }
 
-// 显示版本号
 function showVersion() {
   console.log(`Prompt Optimizer v${VERSION}`);
 }
 
-// 优化提示词
 function optimizePrompt(input, version = 'enhanced') {
   if (!input || input.trim() === '') {
-    console.error('❌ 错误: 请提供需要优化的提示词');
-    console.log('用法: npx prompt-optimizer-skill optimize "你的提示词"');
+    console.error('❌ Error: Please provide a prompt to optimize');
+    console.log('Usage: npx prompt-optimizer-skill optimize "your prompt"');
     process.exit(1);
   }
 
   console.log(`
 ╔════════════════════════════════════════════════════════╗
-║              Prompt Optimizer - 优化结果               ║
+║              Prompt Optimizer - Optimization Result    ║
 ╚════════════════════════════════════════════════════════╝
 `);
 
-  console.log(`📥 原始输入: ${input}`);
-  console.log(`📊 输出版本: ${version}`);
+  console.log(`📥 Original input: ${input}`);
+  console.log(`📊 Output version: ${version}`);
   console.log('\n' + '─'.repeat(56) + '\n');
 
-  // 读取 SKILL.md 的内容框架
   const skillPath = path.join(__dirname, '..', 'SKILL.md');
   let skillContent = '';
 
   try {
     skillContent = fs.readFileSync(skillPath, 'utf-8');
   } catch (err) {
-    // 如果读取失败，使用默认模板
+    // Fall back to default templates if read fails
   }
 
-  // 根据版本生成不同详细程度的优化结果
   const templates = {
     basic: generateBasicTemplate(input),
     enhanced: generateEnhancedTemplate(input),
@@ -86,163 +81,159 @@ function optimizePrompt(input, version = 'enhanced') {
   console.log(templates[version] || templates.enhanced);
 
   console.log('\n' + '─'.repeat(56));
-  console.log('\n💡 提示: 使用 -e 参数获取进阶版本，-x 获取专家版本');
-  console.log('📖 文档: https://github.com/dreamor/prompt-optimizer-skill');
+  console.log('\n💡 Tip: Use -e for enhanced version, -x for expert version');
+  console.log('📖 Docs: https://github.com/dreamor/prompt-optimizer-skill');
 }
 
-// 基础版本模板
 function generateBasicTemplate(input) {
-  return `# 优化后的 Prompt
+  return `# Optimized Prompt
 
 ## Role
-你是一位专业的助手
+You are a professional assistant
 
 ## Task
 ${input}
 
 ## Output Format
-- 清晰的结构
-- 简洁的表达
+- Clear structure
+- Concise expression
 
 ## Constraints
-- 直接回答核心问题
-- 避免冗余信息
+- Answer the core question directly
+- Avoid redundant information
 `;
 }
 
-// 进阶版本模板
 function generateEnhancedTemplate(input) {
-  return `# 优化后的 Prompt
+  return `# Optimized Prompt
 
 ## Role
-你是一位经验丰富的专业人士，擅长相关领域的工作。
+You are an experienced professional with expertise in the relevant domain.
 
 ## Context
-用户需要完成以下任务，要求结果专业且可执行。
+The user needs to complete the following task with professional, actionable results.
 
 ## Task
 ${input}
 
 ## Instructions
-1. 分析任务的核心需求
-2. 提供结构化的解决方案
-3. 给出具体可执行的步骤
-4. 提供质量检查标准
+1. Analyze the core requirements of the task
+2. Provide a structured solution
+3. Give concrete, executable steps
+4. Provide quality check criteria
 
 ## Output Format
-1. 执行摘要
-2. 详细方案
-3. 步骤清单
-4. 成功标准
+1. Executive summary
+2. Detailed plan
+3. Step-by-step checklist
+4. Success criteria
 
 ## Constraints
-- 内容专业且实用
-- 步骤清晰可执行
-- 考虑常见边界情况
+- Content must be professional and practical
+- Steps must be clear and executable
+- Consider common edge cases
 
 ## Examples
-输入: ${input}
-输出: [根据上述要求生成的专业输出]
+Input: ${input}
+Output: [Professional output generated based on the above requirements]
 `;
 }
 
-// 专家版本模板
 function generateExpertTemplate(input) {
-  return `# 优化后的 Prompt（专家版）
+  return `# Optimized Prompt (Expert Version)
 
 ## Role
-你是一位在相关领域拥有 15 年以上经验的资深专家，曾服务过众多知名企业，深谙行业最佳实践。
+You are a senior expert with 15+ years of experience in the relevant field, having served numerous leading organizations and deeply versed in industry best practices.
 
 ## Context
-### 背景信息
-- 任务类型: 专业级内容生成
-- 目标受众: 行业专业人士
-- 质量要求: 最高标准
+### Background
+- Task type: Professional-grade content generation
+- Target audience: Industry professionals
+- Quality requirement: Highest standard
 
-### 参考框架
-本任务适用 RACEF/CRISPE 复杂框架
+### Reference Framework
+This task applies the RACEF/CRISPE complex framework
 
 ## Task
 ${input}
 
 ## Instructions
-### Phase 1: 分析与规划
-1. 深度理解任务需求和约束条件
-2. 识别关键成功因素
-3. 制定执行策略
+### Phase 1: Analysis and Planning
+1. Deeply understand the task requirements and constraints
+2. Identify critical success factors
+3. Formulate an execution strategy
 
-### Phase 2: 执行与生成
-1. 按照专业标准生成内容
-2. 确保每个部分都有充分论证
-3. 使用行业术语和最佳实践
+### Phase 2: Execution and Generation
+1. Generate content according to professional standards
+2. Ensure every section is well-substantiated
+3. Use industry terminology and best practices
 
-### Phase 3: 验证与优化
-1. 自我审查生成内容
-2. 检查是否符合所有约束
-3. 优化表达和结构
+### Phase 3: Validation and Refinement
+1. Self-review the generated content
+2. Check compliance with all constraints
+3. Optimize wording and structure
 
 ## Output Format
-1. **执行摘要** (Executive Summary)
-   - 核心观点
-   - 关键数据
-   - 主要建议
+1. **Executive Summary**
+   - Core insights
+   - Key data
+   - Primary recommendations
 
-2. **详细分析** (Detailed Analysis)
-   - 背景分析
-   - 问题诊断
-   - 解决方案
+2. **Detailed Analysis**
+   - Background analysis
+   - Problem diagnosis
+   - Solution
 
-3. **实施计划** (Implementation Plan)
-   - 步骤清单
-   - 时间表
-   - 资源需求
-   - 风险管控
+3. **Implementation Plan**
+   - Step-by-step checklist
+   - Timeline
+   - Resource requirements
+   - Risk management
 
-4. **质量标准** (Quality Criteria)
-   - 验收标准
-   - 评估指标
-   - 检查清单
+4. **Quality Criteria**
+   - Acceptance criteria
+   - Evaluation metrics
+   - Review checklist
 
 ## Constraints
-### 硬性约束
-- 内容必须原创且专业
-- 所有建议必须可执行
-- 必须考虑边界情况
+### Hard Constraints
+- Content must be original and professional
+- All recommendations must be actionable
+- Edge cases must be considered
 
-### 软性约束
-- 语气专业但不失亲和力
-- 结构清晰便于阅读
-- 适当使用视觉元素（表格、列表）
+### Soft Constraints
+- Tone: professional yet approachable
+- Structure: clear and readable
+- Use visual elements appropriately (tables, lists)
 
 ## Validation Checklist
-- [ ] 内容符合专业标准
-- [ ] 逻辑严密无漏洞
-- [ ] 可执行性强
-- [ ] 考虑了风险和边界情况
-- [ ] 输出格式符合要求
+- [ ] Content meets professional standards
+- [ ] Logic is rigorous and complete
+- [ ] High actionability
+- [ ] Risks and edge cases considered
+- [ ] Output format requirements met
 
 ## Meta
-- 优化框架: CLARITY + RACEF
-- 质量等级: 专家级
-- 适用场景: 重要项目、客户交付、公开发布
+- Optimization framework: CLARITY + RACEF
+- Quality grade: Expert
+- Use case: Important projects, client deliverables, public releases
 `;
 }
 
-// 列出所有框架
 function listFrameworks() {
   const frameworksDir = path.join(__dirname, '..', 'frameworks');
 
   console.log(`
 ╔════════════════════════════════════════════════════════╗
-║           Prompt Optimizer - 可用框架列表              ║
+║           Prompt Optimizer - Available Frameworks      ║
 ╚════════════════════════════════════════════════════════╝
 `);
 
   const categories = {
-    simple: '简单框架 (≤3 要素)',
-    medium: '中等框架 (4-5 要素)',
-    complex: '复杂框架 (6+ 要素)',
-    patterns: '可复用模式'
+    simple: 'Simple frameworks (≤3 elements)',
+    medium: 'Medium frameworks (4-5 elements)',
+    complex: 'Complex frameworks (6+ elements)',
+    patterns: 'Reusable patterns'
   };
 
   for (const [dir, title] of Object.entries(categories)) {
@@ -259,27 +250,26 @@ function listFrameworks() {
         console.log(`  • ${name}`);
       });
 
-      console.log(`  共 ${files.length} 个框架`);
+      console.log(`  Total: ${files.length} frameworks`);
     } catch (err) {
       console.log(`\n📁 ${title}`);
-      console.log('  (暂无框架文件)');
+      console.log('  (No framework files found)');
     }
   }
 
   console.log(`
 ${'─'.repeat(56)}
-使用说明:
-  1. 查看框架详情: cat frameworks/simple/APE.md
-  2. 在优化时指定框架: 使用对应框架的结构
-  3. 更多信息: https://github.com/dreamor/prompt-optimizer-skill
+Usage:
+  1. View framework details: cat frameworks/simple/APE.md
+  2. Reference the framework structure when optimizing prompts
+  3. More info: https://github.com/dreamor/prompt-optimizer-skill
 `);
 }
 
-// 运行测试
 function runTests() {
   console.log(`
 ╔════════════════════════════════════════════════════════╗
-║            Prompt Optimizer - 测试套件               ║
+║            Prompt Optimizer - Test Suite               ║
 ╚════════════════════════════════════════════════════════╝
 `);
 
@@ -289,22 +279,21 @@ function runTests() {
     const testFile = path.join(testsDir, 'test-cases.md');
     const content = fs.readFileSync(testFile, 'utf-8');
 
-    // 统计测试用例数量
     const testCount = (content.match(/### TC-/g) || []).length;
 
-    console.log(`✅ 找到 ${testCount} 个测试用例`);
-    console.log(`📄 测试文件: tests/test-cases.md`);
-    console.log('\n测试类别:');
+    console.log(`✅ Found ${testCount} test cases`);
+    console.log(`📄 Test file: tests/test-cases.md`);
+    console.log('\nTest categories:');
 
     const categories = [
-      '边界情况测试',
-      '框架选择测试',
-      '澄清问题测试',
-      '质量验证测试',
-      '多版本输出测试',
-      '迭代优化测试',
-      '框架库测试',
-      '性能测试'
+      'Boundary condition tests',
+      'Framework selection tests',
+      'Clarification question tests',
+      'Quality validation tests',
+      'Multi-version output tests',
+      'Iterative optimization tests',
+      'Framework library tests',
+      'Performance tests'
     ];
 
     categories.forEach((cat, index) => {
@@ -313,15 +302,14 @@ function runTests() {
 
     console.log(`
 ${'─'.repeat(56)}
-💡 提示: 详细的测试用例请查看 tests/test-cases.md
+💡 Tip: See tests/test-cases.md for detailed test cases
 `);
 
   } catch (err) {
-    console.error('❌ 未找到测试文件');
+    console.error('❌ Test file not found');
   }
 }
 
-// 主函数
 function main() {
   const args = process.argv.slice(2);
 
@@ -333,7 +321,6 @@ function main() {
   const command = args[0];
   const options = args.slice(1);
 
-  // 解析选项
   let version = 'enhanced';
   let input = '';
 
@@ -362,19 +349,16 @@ function main() {
         version = 'expert';
         break;
       default:
-        // 如果不是选项，则视为输入
         if (!opt.startsWith('-')) {
           input = options.slice(i).join(' ');
         }
     }
   }
 
-  // 如果没有显式输入，尝试从剩余参数获取
   if (!input && options.length > 0 && !options[0].startsWith('-')) {
     input = options.join(' ');
   }
 
-  // 执行命令
   switch (command) {
     case 'optimize':
     case 'o':
@@ -397,16 +381,14 @@ function main() {
       showHelp();
       break;
     default:
-      // 如果命令不是以上任何一个，尝试将其作为输入优化
       if (command && !command.startsWith('-')) {
         optimizePrompt([command, ...options].join(' '), version);
       } else {
-        console.error(`❌ 未知命令: ${command}`);
-        console.log('使用 "npx prompt-optimizer-skill help" 查看帮助');
+        console.error(`❌ Unknown command: ${command}`);
+        console.log('Use "npx prompt-optimizer-skill help" to see available commands');
         process.exit(1);
       }
   }
 }
 
-// 运行主函数
 main();

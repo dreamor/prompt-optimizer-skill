@@ -1,97 +1,97 @@
 # PAUSE Framework
 
-## 名称
+## Name
 Problem-Analysis-Understanding-Solution-Evaluation
 
-## 结构
-- **Problem**: 问题
-- **Analysis**: 分析
-- **Understanding**: 理解/洞察
-- **Solution**: 解决方案
-- **Evaluation**: 评估
+## Structure
+- **Problem**: Problem
+- **Analysis**: Analysis
+- **Understanding**: Understanding/Insight
+- **Solution**: Solution
+- **Evaluation**: Evaluation
 
-## 适用场景
-- 决策前的反思
-- 冲动控制
-- 复杂问题分析
-- 冲突处理
-- 重要沟通前准备
-- 情绪管理
+## Use Cases
+- Reflection before making decisions
+- Impulse control
+- Complex problem analysis
+- Conflict resolution
+- Preparation before important conversations
+- Emotional management
 
-## 示例
-**输入**: "处理团队冲突"
+## Example
+**Input**: "Handle a team conflict"
 
-**优化后**:
+**Optimized**:
 ```
-Problem (问题):
-开发团队和设计团队就新功能实现方式产生严重分歧：
-- 开发认为设计方案技术实现成本太高（需 2 个月）
-- 设计认为简化方案会严重影响用户体验
-- 双方各执己见，会议陷入僵局
-- 项目进度已延误 1 周
+Problem:
+The development team and design team have a serious disagreement over how to implement a new feature:
+- Development believes the design proposal is too costly to implement technically (requires 2 months)
+- Design believes the simplified proposal will severely impact user experience
+- Both sides are entrenched, and the meeting has reached a deadlock
+- The project is already 1 week behind schedule
 
-Analysis (分析):
+Analysis:
 
-技术角度:
-- 完整方案: 需要重构核心架构，2 个月，风险高
-- 简化方案: 1 周可完成，但确实牺牲了核心交互
-- 中间方案: 保留核心交互，简化次要功能，3 周
+Technical perspective:
+- Full proposal: requires refactoring core architecture, 2 months, high risk
+- Simplified proposal: can be completed in 1 week, but genuinely sacrifices core interaction
+- Middle-ground proposal: preserves core interaction, simplifies secondary features, 3 weeks
 
-用户角度:
-- 用户调研显示该功能是高频使用场景
-- 但用户也反馈现有版本已能满足基本需求
-- 竞品该功能体验一般，不是差异化点
+User perspective:
+- User research shows this feature is a high-frequency use case
+- But users also report the existing version already meets basic needs
+- Competitors' implementation of this feature is average — it's not a key differentiator
 
-业务角度:
-- 该功能关联下季度重要客户签约
-- 延期 2 个月可能影响季度目标
-- 但质量差的功能上线可能损害品牌
+Business perspective:
+- This feature is tied to an important customer signing next quarter
+- A 2-month delay could impact quarterly targets
+- But launching a poor-quality feature could damage the brand
 
-Understanding (洞察):
-核心矛盾不是技术和设计的对立，而是:
-1. 短期交付压力 vs 长期产品质量
-2. 局部功能完美 vs 整体产品节奏
-3. 团队间缺乏共同目标和信任
+Understanding:
+The core conflict is not a technology vs. design standoff, but rather:
+1. Short-term delivery pressure vs. long-term product quality
+2. Local feature perfection vs. overall product cadence
+3. Lack of shared goals and trust between teams
 
-深层需求:
-- 开发团队担心技术债务和加班
-- 设计团队担心用户体验被牺牲
-- 双方都希望产品成功，但视角不同
+Underlying needs:
+- The development team is worried about technical debt and overtime
+- The design team is worried about user experience being sacrificed
+- Both sides want the product to succeed, but have different perspectives
 
-Solution (解决方案):
+Solution:
 
-立即行动:
-1. 采用中间方案（3 周版本）
-2. 明确划分 MVP 和 V2 功能范围
-3. 开发团队承诺技术债务在 Q3 偿还
-4. 设计团队参与开发过程，及时调整
+Immediate actions:
+1. Adopt the middle-ground proposal (3-week version)
+2. Clearly define what is in-scope for MVP vs. V2
+3. Development team commits to repaying technical debt in Q3
+4. Design team participates in the development process and adjusts in real time
 
-长期改进:
-1. 建立跨功能团队，早期介入
-2. 设立技术-设计联络人角色
-3. 创建共享的设计系统和技术规范
-4. 定期举办团队建设活动
+Long-term improvements:
+1. Establish cross-functional teams with early involvement
+2. Create a tech-design liaison role
+3. Build a shared design system and technical specifications
+4. Hold regular team-building activities
 
-Evaluation (评估):
+Evaluation:
 
-短期效果（1 个月内）:
-- 项目按时交付 ✓
-- 团队成员情绪平复 ✓
-- 功能质量达到可接受水平 ✓
+Short-term outcomes (within 1 month):
+- Project delivered on time ✓
+- Team morale restored ✓
+- Feature quality reaches an acceptable level ✓
 
-中期效果（3 个月内）:
-- 跨团队协作流程建立
-- 类似冲突减少
-- 产品发布节奏稳定
+Medium-term outcomes (within 3 months):
+- Cross-team collaboration process established
+- Similar conflicts reduced
+- Product release cadence stabilized
 
-长期效果（6 个月内）:
-- 团队信任度提升
-- 创新效率提高
-- 员工满意度改善
+Long-term outcomes (within 6 months):
+- Team trust improved
+- Innovation efficiency increased
+- Employee satisfaction improved
 ```
 
-## 使用提示
-- PAUSE 强调先暂停再行动
-- 分析要全面，考虑多方角度
-- 理解要深入，找到根本原因
-- 评估要设定检查点
+## Usage Tips
+- PAUSE emphasizes pausing before acting
+- Analysis should be comprehensive, considering multiple perspectives
+- Understanding should go deep — find the root cause
+- Evaluation should set checkpoints

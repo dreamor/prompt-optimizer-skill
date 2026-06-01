@@ -1,83 +1,83 @@
 # SPAR Framework
 
-## 名称
+## Name
 Situation-Problem-Analysis-Response
 
-## 结构
-- **Situation**: 情境/背景
-- **Problem**: 问题/挑战
-- **Analysis**: 分析/推理
-- **Response**: 回应/解决方案
+## Structure
+- **Situation**: Situation/background
+- **Problem**: Problem/challenge
+- **Analysis**: Analysis/reasoning
+- **Response**: Response/solution
 
-## 适用场景
-- 辩论准备
-- 议论文写作
-- 政策分析
-- 决策论证
-- 批判性思维训练
-- 观点表达
+## Use Cases
+- Debate preparation
+- Argumentative essay writing
+- Policy analysis
+- Decision justification
+- Critical thinking training
+- Expressing a viewpoint
 
-## 示例
-**输入**: "论证为什么应该远程办公"
+## Example
+**Input**: "Argue why remote work should be allowed"
 
-**优化后**:
+**Optimized**:
 ```
-Situation (情境):
-后疫情时代，全球 70% 的知识工作者已经体验过远程办公，企业面临是否继续远程办公政策的决策。
+Situation:
+In the post-pandemic era, 70% of knowledge workers globally have experienced remote work, and companies face decisions on whether to continue remote work policies.
 
-Problem (问题):
-企业领导者担心远程办公会导致：
-- 生产力下降
-- 团队协作困难
-- 员工归属感降低
-- 管理难度增加
+Problem:
+Business leaders are concerned that remote work will lead to:
+- Decreased productivity
+- Difficulty in team collaboration
+- Reduced employee sense of belonging
+- Increased management difficulty
 
-Analysis (分析):
+Analysis:
 
-反方观点分析:
-1. 生产力下降担忧:
-   - 斯坦福研究显示远程工作者效率提升 13%
-   - 但确实需要适应期（约 1-2 个月）
+Analysis of opposing viewpoints:
+1. Concern about decreased productivity:
+   - Stanford research shows remote workers are 13% more productive
+   - However, an adjustment period is indeed needed (approximately 1-2 months)
    
-2. 协作困难:
-   - 异步沟通确实增加延迟
-   - 但工具（Slack、Zoom、Notion）已大幅改善
-   - 需要建立新的协作规范
+2. Collaboration difficulties:
+   - Asynchronous communication does increase delays
+   - But tools (Slack, Zoom, Notion) have greatly improved the situation
+   - New collaboration norms need to be established
 
-3. 归属感:
-   - 确实可能降低
-   - 需要额外的团队建设投入
-   - 定期线下聚会可以弥补
+3. Sense of belonging:
+   - It may indeed decrease
+   - Requires additional investment in team-building
+   - Regular in-person gatherings can compensate
 
-4. 管理难度:
-   - 从"看管"转向"结果导向"
-   - 需要更好的目标设定和评估体系
+4. Management difficulty:
+   - Shifts from "supervision" to "results-oriented" management
+   - Requires better goal-setting and evaluation systems
 
-正方论证:
-1. 成本节约: 办公室租金、水电、通勤补贴
-2. 人才获取: 不受地域限制，可招聘全球人才
-3. 员工满意度: 工作生活平衡，离职率降低
-4. 环境效益: 减少通勤碳排放
+Arguments in favor:
+1. Cost savings: office rent, utilities, commuting subsidies
+2. Talent acquisition: not limited by geography, can hire global talent
+3. Employee satisfaction: work-life balance, lower turnover rates
+4. Environmental benefits: reduced commuting carbon emissions
 
-Response (回应/解决方案):
-混合办公模式（Hybrid）:
-- 每周 2-3 天远程，2-3 天办公室
-- 核心协作日集中办公
-- 个人专注日远程工作
+Response:
+Hybrid work model:
+- 2-3 days remote per week, 2-3 days in the office
+- Core collaboration days concentrated in the office
+- Personal focus days worked remotely
 
-实施建议:
-1. 投资协作工具和技术基础设施
-2. 建立清晰的远程工作政策
-3. 培训管理者结果导向管理
-4. 定期团队建设活动
-5. 设立远程工作津贴（网络、设备）
+Implementation suggestions:
+1. Invest in collaboration tools and technical infrastructure
+2. Establish clear remote work policies
+3. Train managers in results-oriented management
+4. Regular team-building activities
+5. Set up remote work allowances (internet, equipment)
 
-结论:
-完全远程和完全办公室都不是最优解，混合模式结合两者优势，是未来工作的趋势。
+Conclusion:
+Neither fully remote nor fully in-office is the optimal solution. The hybrid model combines the advantages of both and represents the trend of future work.
 ```
 
-## 使用提示
-- Situation 提供足够背景
-- Problem 明确争议点
-- Analysis 要平衡正反方
-- Response 要具体可行
+## Usage Tips
+- Situation should provide sufficient background
+- Problem should clearly identify the point of contention
+- Analysis should balance both sides
+- Response should be specific and actionable

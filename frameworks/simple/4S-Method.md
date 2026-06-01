@@ -1,72 +1,72 @@
 # 4S Method Framework
 
-## 名称
+## Name
 State-Support-Summarize-Suggest
 
-## 结构
-- **State**: 陈述观点
-- **Support**: 提供支持证据
-- **Summarize**: 总结要点
-- **Suggest**: 提出建议
+## Structure
+- **State**: State the viewpoint
+- **Support**: Provide supporting evidence
+- **Summarize**: Summarize key points
+- **Suggest**: Offer suggestions
 
-## 适用场景
-- 内容写作结构化
-- 演讲和演示设计
-- 报告撰写
-- 提案制作
-- 教育材料开发
-- 营销文案创作
+## Use Cases
+- Structured content writing
+- Speech and presentation design
+- Report writing
+- Proposal creation
+- Educational material development
+- Marketing copywriting
 
-## 示例
-**输入**: "写一份项目延期说明"
+## Example
+**Input**: "Write a project delay notice"
 
-**优化后**:
+**Optimized**:
 ```
-State (陈述):
-我们需要将产品发布时间从原定的 6 月 30 日推迟到 8 月 15 日，延期 6 周。
+State:
+We need to postpone the product launch from the originally scheduled June 30 to August 15, a delay of 6 weeks.
 
-Support (支持):
-延期原因:
-1. 技术因素:
-   - 第三方 API 集成复杂度超预期，多花费 3 周
-   - 安全审计发现 2 个关键漏洞需要修复
+Support:
+Reasons for delay:
+1. Technical factors:
+   - Third-party API integration complexity exceeded expectations, taking an extra 3 weeks
+   - Security audit uncovered 2 critical vulnerabilities that need to be fixed
    
-2. 资源因素:
-   - 2 名核心开发因病休假 2 周
-   - 新招聘人员入职培训需要时间
+2. Resource factors:
+   - 2 core developers were on sick leave for 2 weeks
+   - New hires required onboarding time
 
-3. 需求变更:
-   - 客户反馈要求增加数据导出功能
-   - 合规要求新增用户隐私保护模块
+3. Scope changes:
+   - Client feedback requested adding a data export feature
+   - Compliance requirements added a user privacy protection module
 
-影响评估:
-- 额外成本: 约 50 万元
-- 但可避免上线后重大问题的风险
-- 客户沟通: 已提前通知主要客户，获得理解
+Impact assessment:
+- Additional cost: approximately 500,000 CNY
+- Avoids the risk of major post-launch issues
+- Client communication: Key clients were notified in advance and expressed understanding
 
-Summarize (总结):
-虽然项目延期令人遗憾，但这是为了确保产品质量和用户体验做出的必要决定。额外的 6 周将用于完成关键功能、修复安全漏洞和进行全面测试。
+Summarize:
+Although the project delay is regrettable, it is a necessary decision to ensure product quality and user experience. The additional 6 weeks will be used to complete critical features, fix security vulnerabilities, and conduct comprehensive testing.
 
-Suggest (建议):
-1. 立即行动:
-   - 向所有利益相关方发送正式通知
-   - 更新项目计划和里程碑
+Suggest:
+1. Immediate actions:
+   - Send formal notifications to all stakeholders
+   - Update the project plan and milestones
    
-2. 风险控制:
-   - 每周向管理层汇报进展
-   - 建立每日站会跟踪关键任务
+2. Risk control:
+   - Report progress to management weekly
+   - Establish daily standups to track critical tasks
    
-3. 客户管理:
-   - 为受影响的客户提供补偿方案
-   - 安排产品预览会维持期待
+3. Client management:
+   - Provide compensation plans for affected clients
+   - Schedule product preview sessions to maintain anticipation
    
-4. 预防措施:
-   - 复盘延期原因，优化未来估算
-   - 建立更完善的变更管理流程
+4. Preventive measures:
+   - Review the causes of the delay to improve future estimates
+   - Establish a more robust change management process
 ```
 
-## 使用提示
-- State 要开门见山
-- Support 要有数据和事实
-- Summarize 要简洁有力
-- Suggest 要具体可执行
+## Usage Tips
+- State should get straight to the point
+- Support should include data and facts
+- Summarize should be concise and impactful
+- Suggest should be specific and actionable

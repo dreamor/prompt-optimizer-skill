@@ -1,45 +1,45 @@
 # RACE Framework
 
-## 名称
+## Name
 Role-Action-Context-Expectation
 
-## 结构
-- **Role**: AI 扮演的角色
-- **Action**: 需要执行的行动
-- **Context**: 背景信息
-- **Expectation**: 期望结果
+## Structure
+- **Role**: The role the AI plays
+- **Action**: The action to be performed
+- **Context**: Background information
+- **Expectation**: Expected outcome
 
-## 适用场景
-- 角色扮演对话设计
-- 客户服务脚本开发
-- 培训场景模拟
-- 创意写作
-- 营销内容创作
-- 教育材料开发
+## Use Cases
+- Role-play dialogue design
+- Customer service script development
+- Training scenario simulation
+- Creative writing
+- Marketing content creation
+- Educational material development
 
-## 示例
-**输入**: "帮我回复客户投诉"
+## Example
+**Input**: "Help me reply to a customer complaint"
 
-**优化后**:
+**Optimized**:
 ```
-Role: 你是某电商平台的资深客服主管，拥有 10 年客户沟通经验
+Role: You are a senior customer service manager at an e-commerce platform with 10 years of customer communication experience
 
-Action: 撰写一封回复邮件，处理客户对配送延迟的投诉
+Action: Write a reply email addressing a customer's complaint about a delivery delay
 
 Context: 
-- 客户订单已延迟 5 天，超出承诺时间
-- 延迟原因是仓库突发火灾导致库存转移
-- 客户是平台 3 年老用户，累计消费超过 5 万元
-- 客户邮件语气愤怒，威胁要退货并投诉到消协
+- The customer's order has been delayed by 5 days, exceeding the promised timeframe
+- The delay was caused by a warehouse fire that required inventory relocation
+- The customer has been on the platform for 3 years with cumulative spending exceeding 50,000 yuan
+- The customer's email tone is angry, threatening to return the goods and file a complaint with the consumer association
 
 Expectation:
-- 邮件应该在 200 字以内
-- 真诚道歉并解释原因（不找借口）
-- 提供具体补偿方案（免单 + 50 元优惠券）
-- 语气专业但有人情味，挽回客户信任
-- 客户阅读后应该感到被重视，愿意继续合作
+- The email should be within 200 characters
+- Offer a sincere apology and explain the reason (without making excuses)
+- Provide a specific compensation plan (full refund + 50 yuan coupon)
+- Tone should be professional yet warm, to win back the customer's trust
+- After reading, the customer should feel valued and willing to continue the relationship
 ```
 
-## 使用提示
-- Context 越详细，结果越精准
-- Expectation 要包含可衡量的标准
+## Usage Tips
+- The more detailed the Context, the more precise the result
+- Expectation should include measurable standards

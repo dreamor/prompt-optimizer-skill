@@ -1,48 +1,48 @@
 # Critique-Refine Pattern
 
-## 名称
-批判-改进模式
+## Name
+Critique and Refine Pattern
 
-## 结构
-- **初始生成**: 首先生成回答
-- **自我审查**: 检查问题和不足
-- **改进**: 基于审查改进
-- **解释**: 说明改进了什么
+## Structure
+- **Initial Generation**: First generate a response
+- **Self-Review**: Check for problems and shortcomings
+- **Refine**: Improve based on the review
+- **Explain**: Describe what was improved
 
-## 适用场景
-- 高质量内容创作
-- 代码审查和改进
-- 复杂问题求解
-- 需要多轮优化的任务
+## Use Cases
+- High-quality content creation
+- Code review and improvement
+- Complex problem solving
+- Tasks requiring multiple rounds of optimization
 
-## 示例
+## Example
 ```
-任务: 写一封求职邮件
+Task: Write a job application email
 
-请按以下步骤执行:
+Please follow these steps:
 
-步骤 1 - 初始生成:
-根据以下信息写一封求职邮件：
-- 应聘职位：产品经理
-- 公司：字节跳动
-- 个人背景：3 年产品经验，主导过 2 个从 0 到 1 的项目
+Step 1 - Initial Generation:
+Write a job application email based on the following information:
+- Position: Product Manager
+- Company: ByteDance
+- Background: 3 years of product experience, led 2 products from 0 to 1
 
-步骤 2 - 自我审查:
-审查你刚才写的邮件，检查：
-- 是否突出了与职位相关的核心优势？
-- 是否有具体的成果数据支撑？
-- 语气是否专业且真诚？
-- 是否有语法或表达问题？
-- 是否足够简洁（不超过 300 字）？
+Step 2 - Self-Review:
+Review the email you just wrote, checking:
+- Does it highlight core strengths relevant to the position?
+- Is it supported by specific outcome data?
+- Is the tone professional and sincere?
+- Are there any grammar or expression issues?
+- Is it concise enough (under 300 words)?
 
-步骤 3 - 改进:
-基于审查结果，重写邮件，解决发现的所有问题
+Step 3 - Refine:
+Based on the review, rewrite the email to address all identified issues
 
-步骤 4 - 解释:
-列出你做了哪些具体改进，以及为什么
+Step 4 - Explain:
+List the specific improvements you made and why
 ```
 
-## 使用提示
-- 显著提高输出质量
-- 适合对质量要求高的场景
-- 会消耗更多 token
+## Usage Tips
+- Significantly improves output quality
+- Best for high-quality requirements
+- Consumes more tokens

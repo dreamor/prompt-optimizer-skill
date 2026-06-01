@@ -1,116 +1,116 @@
 # TRACI Framework
 
-## 名称
+## Name
 Task-Recipient-Action-Context-Impact
 
-## 结构
-- **Task**: 任务
-- **Recipient**: 接收者
-- **Action**: 行动
-- **Context**: 背景
-- **Impact**: 影响
+## Structure
+- **Task**: Task
+- **Recipient**: Recipient
+- **Action**: Action
+- **Context**: Context
+- **Impact**: Impact
 
-## 适用场景
-- 营销传播
-- 教育内容创作
-- 客户服务
-- 用户体验设计
-- 个性化解决方案开发
-- 目标受众定向
+## Use Cases
+- Marketing communications
+- Educational content creation
+- Customer service
+- User experience design
+- Personalized solution development
+- Target audience targeting
 
-## 示例
-**输入**: "设计一封营销邮件"
+## Example
+**Input**: "Design a marketing email"
 
-**优化后**:
+**Optimized**:
 ```
-Task (任务):
-设计一封邮件，推广我们的新产品功能，提高免费用户到付费用户的转化率。
+Task:
+Design an email to promote our new product features and increase the conversion rate from free users to paid users.
 
-Recipient (接收者):
-- 用户画像: 产品经理，28-35 岁，工作 3-5 年
-- 使用状态: 免费版用户，使用产品 2 个月
-- 行为特征: 每周登录 3-4 次，主要使用基础功能
-- 痛点: 团队协作时遇到权限限制
-- 决策因素: 价格敏感，需要证明 ROI
+Recipient:
+- User profile: Product manager, 28–35 years old, 3–5 years of work experience
+- Usage status: Free plan user, has been using the product for 2 months
+- Behavioral characteristics: Logs in 3–4 times per week, primarily uses basic features
+- Pain point: Encounters permission restrictions during team collaboration
+- Decision factors: Price-sensitive, needs proof of ROI
 
-Action (行动):
-希望用户采取的行动:
-1. 点击邮件中的"了解更多"按钮
-2. 观看新功能演示视频（3 分钟）
-3. 点击"开始试用"按钮
-4. 完成付费订阅
+Action:
+Desired actions from the user:
+1. Click the "Learn More" button in the email
+2. Watch the new feature demo video (3 minutes)
+3. Click the "Start Trial" button
+4. Complete the paid subscription
 
-邮件结构:
-- 主题行: 吸引打开
-- 开头: 建立共鸣
-- 主体: 展示价值
-- CTA: 明确行动
-- PS: 降低风险
+Email structure:
+- Subject line: Compelling enough to open
+- Opening: Build rapport
+- Body: Showcase value
+- CTA: Clear call to action
+- PS: Reduce perceived risk
 
-Context (背景):
+Context:
 
-产品信息:
-- 新功能: 高级权限管理、数据分析仪表板、API 接入
-- 价值: 提升团队协作效率 30%
-- 价格: 从免费升级到 99 元/月
+Product information:
+- New features: Advanced permission management, data analytics dashboard, API access
+- Value: Improves team collaboration efficiency by 30%
+- Price: Upgrade from free to ¥99/month
 
-市场环境:
-- 竞品类似功能定价 150-200 元/月
-- 用户反馈中权限管理是高频需求
-- 当前免费到付费转化率 3%，目标是 5%
+Market environment:
+- Competitors offer similar features priced at ¥150–200/month
+- User feedback consistently identifies permission management as a top need
+- Current free-to-paid conversion rate is 3%; target is 5%
 
-发送时机:
-- 用户刚完成一个重要项目（使用数据中识别）
-- 工作日上午 10:00（打开率最高）
-- 避开月初月末（预算紧张期）
+Sending timing:
+- When a user has just completed a significant project (identified from usage data)
+- Weekday at 10:00 AM (highest open rate)
+- Avoid early and end of month (tight budget periods)
 
-Impact (影响):
+Impact:
 
-对用户的影响:
-- 解决权限管理痛点
-- 提升工作效率，减少加班
-- 获得数据洞察，更好做决策
-- 职业发展加分（掌握高级工具）
+Impact on the user:
+- Resolves the permission management pain point
+- Improves work efficiency, reducing overtime
+- Provides data insights for better decision-making
+- Career advancement boost (mastering advanced tools)
 
-对业务的影响:
-- 预计转化率提升 2%
-- 预计新增月收入 5 万元
-- 提升用户生命周期价值（LTV）
-- 减少用户流失率
+Impact on the business:
+- Projected conversion rate increase of 2%
+- Projected additional monthly revenue of ¥50,000
+- Increases customer lifetime value (LTV)
+- Reduces customer churn rate
 
-完整邮件:
+Full Email:
 ```
-主题: [用户名]，你刚刚完成了一个重要项目，这个功能会让你的下一个项目更轻松
+Subject: [User Name], you just completed a major project — this feature will make your next one even easier
 
-Hi [用户名]，
+Hi [User Name],
 
-恭喜！我看到你刚刚完成了"[项目名称]"，从数据中看这个项目很成功！
+Congratulations! I can see you just wrapped up "[Project Name]," and the data shows it was a great success!
 
-作为产品经理，我知道你经常需要协调多个团队协作。过去 2 个月，你在权限管理上花费了大约 20 小时——这些时间本可以用来做更有价值的产品规划。
+As a product manager, I know you often need to coordinate collaboration across multiple teams. Over the past 2 months, you've spent approximately 20 hours on permission management — time that could have gone toward higher-value product planning.
 
-我们的新功能可以帮你：
-✓ 一键设置团队权限（节省 80% 时间）
-✓ 实时查看项目数据仪表板
-✓ 自动导出周报给老板
+Our new features can help you:
+✓ Set team permissions with one click (save 80% of the time)
+✓ View a real-time project data dashboard
+✓ Automatically export weekly reports for your manager
 
-[观看 3 分钟演示]
+[Watch 3-Minute Demo]
 
-特别优惠: 因为你已经是我们的活跃用户，升级可享受首月 5 折（仅 49 元）。
+Special offer: As one of our active users, you can upgrade at 50% off your first month (only ¥49).
 
-PS: 不满意 7 天内全额退款，零风险尝试。
+PS: Not satisfied? Full refund within 7 days — zero risk to try.
 
 Best,
-[产品经理名字]
+[Product Manager Name]
 ```
 
-效果衡量:
-- 打开率目标: 25%
-- 点击率目标: 8%
-- 转化率目标: 2%
+Performance Targets:
+- Open rate target: 25%
+- Click-through rate target: 8%
+- Conversion rate target: 2%
 ```
 
-## 使用提示
-- 深入了解接收者
-- 行动要具体可衡量
-- 背景信息要全面
-- 影响要量化
+## Usage Tips
+- Deeply understand the recipient
+- Actions should be specific and measurable
+- Context information should be comprehensive
+- Quantify the impact

@@ -266,7 +266,8 @@ function listFrameworks({ json = false, filterDomain = null, filterCategory = nu
     }
 
     const byCat = entries.reduce((acc, fw) => {
-      (acc[fw.category] ||= []).push(fw);
+      if (!acc[fw.category]) acc[fw.category] = [];
+      acc[fw.category].push(fw);
       return acc;
     }, {});
 

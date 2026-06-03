@@ -38,6 +38,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
+    "index.js",
     "SKILL.md",
     "README.md",
     "CHANGELOG.md",

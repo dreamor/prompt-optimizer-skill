@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://github.com/dreamor/prompt-optimizer-skill#readme
+    about: Check the README before opening an issue
+  - name: 💬 Discussions
+    url: https://github.com/dreamor/prompt-optimizer-skill/discussions
+    about: Ask questions and share ideas in Discussions

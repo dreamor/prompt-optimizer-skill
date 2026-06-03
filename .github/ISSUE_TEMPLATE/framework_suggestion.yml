@@ -1,0 +1,79 @@
+name: Framework Suggestion
+description: Suggest a new prompt engineering framework to add
+labels: ["framework", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new framework! Please provide as much detail as possible.
+
+  - type: input
+    id: name
+    attributes:
+      label: Framework Name / Acronym
+      description: The short name or acronym (e.g., RACE, COAST, CRISPE)
+      placeholder: "e.g., STAR"
+    validations:
+      required: true
+
+  - type: input
+    id: full-name
+    attributes:
+      label: Full Name
+      description: What does the acronym stand for?
+      placeholder: "e.g., Situation-Task-Action-Result"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which complexity category?
+      options:
+        - simple (≤3 elements)
+        - medium (4-5 elements)
+        - complex (6+ elements)
+        - patterns (reusable pattern)
+    validations:
+      required: true
+
+  - type: textarea
+    id: elements
+    attributes:
+      label: Elements
+      description: List the framework's structural elements
+      placeholder: |
+        1. Situation
+        2. Task
+        3. Action
+        4. Result
+    validations:
+      required: true
+
+  - type: textarea
+    id: domains
+    attributes:
+      label: Applicable Domains
+      description: Which domains is this framework useful for? Choose from existing: complex_reasoning, decision_analysis, dialogue_ai, education, general, image_generation, innovation, marketing, product_development, research, strategy_planning, writing_creation
+      placeholder: "e.g., education, writing_creation, general"
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: List 3-6 specific use cases
+      placeholder: |
+        - Behavioral interview responses
+        - Performance reviews
+        - Project retrospectives
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example Prompt
+      description: Provide an example prompt using this framework
+      placeholder: |
+        Role: You are an interview coach.
+        Task: Help the user craft a STAR response for a behavioral interview question.
+        ...

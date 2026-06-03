@@ -20,9 +20,22 @@
     "pos": "./bin/prompt-optimizer.js"
   },
   "scripts": {
-    "test": "node -e \"console.log('See tests/test-cases.md for test cases')\"",
+    "test": "node tests/run-tests.js",
+    "test:frameworks": "node tests/run-tests.js --frameworks",
+    "test:cli": "node tests/run-tests.js --cli",
+    "test:json": "node tests/run-tests.js --json",
+    "test:integrity": "node tests/framework-integrity.test.js",
     "optimize": "node bin/prompt-optimizer.js optimize",
-    "frameworks": "node bin/prompt-optimizer.js frameworks"
+    "frameworks": "node bin/prompt-optimizer.js frameworks",
+    "prepublishOnly": "npm test",
+    "postversion": "node -e \"require('fs').writeFileSync('VERSION', require('./package.json').version + '\\n')\" && git add VERSION",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "SKILL.md",
@@ -48,5 +61,8 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "preferGlobal": false
+  "preferGlobal": false,
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
 }

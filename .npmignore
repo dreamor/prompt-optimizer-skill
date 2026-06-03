@@ -1,0 +1,8 @@
+.github/
+.git/
+.claude-plugin/
+.claude/
+node_modules/
+promo/
+*.tgz
+.DS_Store

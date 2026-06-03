@@ -1,0 +1,61 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 16, 18, 20]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Run framework integrity tests
+        run: node tests/run-tests.js --frameworks
+
+      - name: Run CLI smoke tests
+        run: node tests/run-tests.js --cli
+
+      - name: Run JSON validation
+        run: node tests/run-tests.js --json
+
+      - name: Verify package tarball
+        run: npm pack --dry-run
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check JSON validity
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('package.json','utf8'))" && \
+          node -e "JSON.parse(require('fs').readFileSync('frameworks/index.json','utf8'))" && \
+          node -e "JSON.parse(require('fs').readFileSync('claude.json','utf8'))" && \
+          node -e "JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json','utf8'))"
+
+      - name: Check VERSION consistency
+        run: |
+          VERSION_FILE=$(cat VERSION)
+          PKG_VERSION=$(node -e "console.log(require('./package.json').version)")
+          if [ "$VERSION_FILE" != "$PKG_VERSION" ]; then
+            echo "❌ VERSION file ($VERSION_FILE) != package.json version ($PKG_VERSION)"
+            exit 1
+          fi
+          echo "✅ VERSION consistent: $VERSION_FILE"

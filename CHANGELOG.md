@@ -1,9 +1,25 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### [2.1.1](https://github.com/dreamor/prompt-optimizer-skill/compare/v2.1.0...v2.1.1) (2026-06-04)
+
+
+### Features
+
+* add automated testing, CI/CD, npm publishing, and community docs ([c04d8d3](https://github.com/dreamor/prompt-optimizer-skill/commit/c04d8d337e04b8c986580e6ad56cd60d0d235132))
+* add missing index.js module entry point for npm publish ([d5e5371](https://github.com/dreamor/prompt-optimizer-skill/commit/d5e5371705e21509992ee25f3da813fcf2f68039))
+
+
+### Bug Fixes
+
+* replace ||= with compatible syntax, drop Node 14 from CI ([dc56c56](https://github.com/dreamor/prompt-optimizer-skill/commit/dc56c5601da5dd85d04a6b14bb6da246dec0fbdd))
+
+
+### Documentation
+
+* add npm install method to both README versions ([5c58fe5](https://github.com/dreamor/prompt-optimizer-skill/commit/5c58fe51c2ca14167e5eab028809ce8eca8ffd2c))
+* split bilingual README into separate English and Chinese versions ([ff0f926](https://github.com/dreamor/prompt-optimizer-skill/commit/ff0f9269536cef03f438a94655522121eb11504f))
 
 ## [2.1.0] - 2026-06-01
 

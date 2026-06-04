@@ -57,7 +57,27 @@
 /reload-plugins
 ```
 
-### 方法二：npx 使用（无需安装）
+### 方法二：npm 安装
+
+通过 npm 全局或本地安装：
+
+```bash
+# 全局安装
+npm install -g prompt-optimizer-skill
+
+# 或作为项目依赖安装
+npm install prompt-optimizer-skill
+```
+
+全局安装后，可直接使用 CLI 命令：
+
+```bash
+prompt-optimizer-skill template "Write an email to a customer"
+prompt-optimizer-skill frameworks
+prompt-optimizer-skill version
+```
+
+### 方法三：npx 使用（无需安装）
 
 无需本地安装，直接通过 npx 使用：
 
@@ -94,7 +114,7 @@ npx prompt-optimizer-skill template "Write code" --enhanced   # 增强版（默�
 npx prompt-optimizer-skill template "Write code" --expert     # 专家版
 ```
 
-### 方法三：符号链接（开发/自定义）
+### 方法四：符号链接（开发/自定义）
 
 适用于需要修改或自定义的用户：
 
@@ -113,10 +133,13 @@ ln -s /path/to/prompt-optimizer-skill prompt-optimizer
 # Claude 插件方式
 claude plugin list | grep prompt-optimizer
 
+# npm 全局安装方式
+prompt-optimizer-skill version
+
 # npx 方式
 npx prompt-optimizer-skill version
 
-# 本地安装方式
+# 符号链接方式
 ls -la ~/.claude/skills/prompt-optimizer/
 # 应看到：SKILL.md, frameworks/, tests/, CHANGELOG.md 等
 ```

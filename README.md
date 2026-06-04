@@ -57,7 +57,27 @@ Install directly from GitHub using the marketplace command:
 /reload-plugins
 ```
 
-### Method 2: npx Usage (No Installation Required)
+### Method 2: npm Install
+
+Install globally or locally via npm:
+
+```bash
+# Install globally
+npm install -g prompt-optimizer-skill
+
+# Or install as a project dependency
+npm install prompt-optimizer-skill
+```
+
+After global installation, use the CLI directly:
+
+```bash
+prompt-optimizer-skill template "Write an email to a customer"
+prompt-optimizer-skill frameworks
+prompt-optimizer-skill version
+```
+
+### Method 3: npx Usage (No Installation Required)
 
 Use directly via npx without local installation:
 
@@ -94,7 +114,7 @@ npx prompt-optimizer-skill template "Write code" --enhanced   # Enhanced version
 npx prompt-optimizer-skill template "Write code" --expert     # Expert version
 ```
 
-### Method 3: Symbolic Link (Development/Customization)
+### Method 4: Symbolic Link (Development/Customization)
 
 Suitable for users who need to modify or customize:
 
@@ -113,10 +133,13 @@ ln -s /path/to/prompt-optimizer-skill prompt-optimizer
 # Claude Plugin method
 claude plugin list | grep prompt-optimizer
 
+# npm global install method
+prompt-optimizer-skill version
+
 # npx method
 npx prompt-optimizer-skill version
 
-# Local installation method
+# Symbolic link method
 ls -la ~/.claude/skills/prompt-optimizer/
 # Should see: SKILL.md, frameworks/, tests/, CHANGELOG.md, etc.
 ```

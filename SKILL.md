@@ -1,6 +1,6 @@
 ---
 name: prompt-optimizer
-version: 2.1.0
+version: 2.1.2
 description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt.
 ---
 
@@ -441,6 +441,9 @@ Framework details can be found in:
 ---
 
 ## Changelog
+
+### v2.1.2
+- 🔧 CI: stable OIDC publishing — Node 24 + `setup-node@v5` + `environment: release` to reliably authenticate with npm Trusted Publisher
 
 ### v2.1.1
 - ✨ Step 1: added complexity assessment (element counting + Simple/Medium/Complex classification)

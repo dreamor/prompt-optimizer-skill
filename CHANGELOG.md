@@ -1,25 +1,28 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file.
 
-### [2.1.1](https://github.com/dreamor/prompt-optimizer-skill/compare/v2.1.0...v2.1.1) (2026-06-04)
+## [2.1.2] - 2026-06-05
 
+### Changed
 
-### Features
+- **CI: stable OIDC publishing** — Switched publish job to Node 24 (npm 11.x) and cleared `NODE_AUTH_TOKEN` to prevent `setup-node` from injecting `GITHUB_TOKEN` and blocking the npm OIDC Trusted Publisher flow.
 
-* add automated testing, CI/CD, npm publishing, and community docs ([c04d8d3](https://github.com/dreamor/prompt-optimizer-skill/commit/c04d8d337e04b8c986580e6ad56cd60d0d235132))
-* add missing index.js module entry point for npm publish ([d5e5371](https://github.com/dreamor/prompt-optimizer-skill/commit/d5e5371705e21509992ee25f3da813fcf2f68039))
+## [2.1.1] - 2026-06-04
 
+### Added
 
-### Bug Fixes
+- **Automated CI/CD** — GitHub Actions workflows for testing (Node 16–22 matrix) and automated npm publishing via OIDC Trusted Publisher (no long-lived tokens).
+- **`index.js` entry point** — Added missing module entry so the package works correctly when required as a library.
 
-* replace ||= with compatible syntax, drop Node 14 from CI ([dc56c56](https://github.com/dreamor/prompt-optimizer-skill/commit/dc56c5601da5dd85d04a6b14bb6da246dec0fbdd))
+### Fixed
 
+- **Compatibility** — Replaced `||=` logical assignment with equivalent compatible syntax; dropped Node 14 from the test matrix (EOL).
 
 ### Documentation
 
-* add npm install method to both README versions ([5c58fe5](https://github.com/dreamor/prompt-optimizer-skill/commit/5c58fe51c2ca14167e5eab028809ce8eca8ffd2c))
-* split bilingual README into separate English and Chinese versions ([ff0f926](https://github.com/dreamor/prompt-optimizer-skill/commit/ff0f9269536cef03f438a94655522121eb11504f))
+- Split README into separate English (`README.md`) and Chinese (`README_zh.md`) versions.
+- Added `npm install -g` as an explicit installation method.
 
 ## [2.1.0] - 2026-06-01
 
@@ -137,6 +140,9 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 2.1.2 | 2026-06-05 | Stable OIDC CI publishing |
+| 2.1.1 | 2026-06-04 | Automated CI/CD, npm publishing, compatibility fixes |
+| 2.1.0 | 2026-06-01 | Structured framework index, CLARITY rubric, CLI relabel |
 | 2.0.0 | 2024-04-20 | Major refactor with framework library, validation, multi-version support |
 | 1.0.0 | 2024-01-15 | Initial release |
 

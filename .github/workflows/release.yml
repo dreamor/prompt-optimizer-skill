@@ -56,13 +56,11 @@ jobs:
 
       - name: Extract changelog
         id: changelog
-        run: node -e "
-          const f = require('fs').readFileSync('CHANGELOG.md','utf-8');
-          const v = '${{ steps.version.outputs.VERSION }}';
-          const m = f.match(new RegExp('## \\\\['+v+'\\\\][^#]+'));
-          const body = m ? m[0].replace(/^##[^\\n]*\\n*/,'').trim() : '';
-          require('fs').writeFileSync(process.env.GITHUB_OUTPUT, 'CHANGELOG<<EOF\n'+body+'\nEOF\n', {flag:'a'});
-        "
+        run: |
+          CHANGELOG_BODY=$(node scripts/extract-changelog.js "${{ steps.version.outputs.VERSION }}")
+          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG_BODY" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

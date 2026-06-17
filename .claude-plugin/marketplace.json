@@ -7,7 +7,7 @@
   },
   "metadata": {
     "description": "A professional Claude Code Skill that transforms simple instructions into production-ready prompts based on CLARITY framework with 61 prompt frameworks",
-    "version": "2.1.8",
+    "version": "2.1.9",
     "category": "productivity"
   },
   "plugins": [
@@ -15,7 +15,7 @@
       "name": "prompt-optimizer",
       "source": "./",
       "description": "Transform simple instructions into production-ready prompts. Features: CLARITY Framework, 61 Prompt Frameworks, Quality Validation, Multi-Version Output",
-      "version": "2.1.8",
+      "version": "2.1.9",
       "author": {
         "name": "dreamor",
         "url": "https://github.com/dreamor"

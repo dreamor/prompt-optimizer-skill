@@ -6,7 +6,27 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- **npm publish** — Bumped version to 2.1.5 (2.1.4 already existed on npm); previous release fix was not actually published.
+- **CI: restore OIDC Trusted Publisher** — `NODE_AUTH_TOKEN` was accidentally reverted to `${{ secrets.NPM_TOKEN }}` during a patch, breaking the npm OIDC flow. Restored to empty string to let OIDC credentials pass through unchallenged.
+- **Release compare URL** — Fixed `sed`-based changelog extraction (incompatible across macOS/Linux), replaced with Node script. Compare URL now correctly links `vPREV...vCURRENT` instead of `vCURRENT...HEAD`.
+- **CI test matrix** — Added Node 24 to test matrix to match the Node version used in the publish job.
+- **YAML parsing conflict** — Moved inline Node changelog extraction to separate `scripts/extract-changelog.js` to avoid quote escaping conflicts.
+
+### Changed
+
+- **index.js API** — `loadFrameworkIndex()` and `getFramework()` now have try/catch protection against corrupted or missing index.json. Added async API variants (`loadFrameworkIndexAsync`, `getFrameworkAsync`).
+- **CLI argument parsing** — `--filter` and `--category` no longer consume subsequent flags as their value. Standalone `--version`/`--help` now work correctly without degenerating into `optimizePrompt`.
+- **`optimizePrompt` input validation** — Added `typeof input !== 'string'` guard.
+- **Expert template** — Removed hardcoded "RACEF/CRISPE" and "CLARITY + RACEF" references in static template; replaced with generic framework descriptions.
+- **`postversion` script** — Replaced unmaintainable minified inline Node script with a readable, documented `scripts/postversion.js` file.
+- **`claude.json`** — `test` command description now accurately describes the test suite. Removed unused `language` and `validation` config fields.
+- **Updated version references** — Synced all metadata files to 2.1.5.
+
+### Documentation
+
+- **README** — Updated version badge to 2.1.5. Fixed broken `bash tests/test-cases.md` command to `node tests/run-tests.js` in both English and Chinese docs.
+- **WELCOME.md** — Updated hardcoded version to 2.1.5.
+- **SECURITY.md** — Corrected "makes no network requests" claim to accurately describe the project's network activity scope.
+- **CHANGELOG** — Added 2.1.5 entry to version history table.
 
 ## [2.1.4] - 2026-06-17
 
@@ -171,8 +191,8 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
-| 2.1.5 | 2026-06-17 | Code quality fixes, CLI bugfixes, CI hardening |
-| 2.1.4 | 2026-06-17 | OIDC fix, index.js API repair, test hardening |
+| 2.1.5 | 2026-06-17 | Code quality fixes, CLI bugfixes, CI hardening, docs fixes |
+| 2.1.4 | 2026-06-17 | OIDC fix, index.js API repair, test hardening (unpublished) |
 | 2.1.2 | 2026-06-05 | Stable OIDC CI publishing |
 | 2.1.1 | 2026-06-04 | Automated CI/CD, npm publishing, compatibility fixes |
 | 2.1.0 | 2026-06-01 | Structured framework index, CLARITY rubric, CLI relabel |

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.10] - 2026-06-17
+
+### Fixed
+
+- **CI**: v2.1.9 was already published to npm despite CI job failure (GitHub Release step errored on "Provenance" auth but npm publish succeeded). Bumped to v2.1.10 to enable publishing.
+
 ## [2.1.9] - 2026-06-17
 
 ### Refactor
@@ -215,6 +221,7 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 2.1.10 | 2026-06-17 | Bump to unpublishable 2.1.9 (already on npm despite CI failure) |
 | 2.1.9 | 2026-06-17 | Migrated 7 reference tables to Decision_Tables.md, added allowed-tools, documented index.json schema |
 | 2.1.8 | 2026-06-17 | CI fix (postversion git stage), SKILL.md description/tone/why improvements |
 | 2.1.7 | 2026-06-17 | Attempted publish — invalidated, fixed in v2.1.8 |

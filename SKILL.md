@@ -1,6 +1,7 @@
 ---
 name: prompt-optimizer
 version: 2.1.8
+allowed-tools: "Read TodoWrite"
 compatibility: skill runtime requires Claude Code >= 1.0.0; CLI / test commands require Node.js 16+
 description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. 当用户输入模糊的指令、需要优化提示词、或对 AI 输出质量不满意时，务必使用本技能。
 ---
@@ -58,19 +59,7 @@ Classify the input using the Boundary Handling table below before proceeding.
 
 Must be performed before framework selection — matching a Simple task to a Complex framework produces a bloated prompt that makes AI output worse, not better (see Gotchas). See [references/Quick_Reference.md](references/Quick_Reference.md) for real-world examples.
 
-Count the number of distinct task elements present in the user's input. An "element" is any of the following that the user explicitly mentions or clearly implies:
-
-| Element | Examples |
-|---------|----------|
-| Role / persona | "as a lawyer", "act as a senior dev" |
-| Action / task | "write", "summarize", "classify" |
-| Context / background | "for a startup pitch", "the API returns 500 errors" |
-| Audience | "for executives", "for beginners" |
-| Output format | "in JSON", "as a table", "bullet points" |
-| Constraints / limits | "under 200 words", "no jargon", "must include X" |
-| Examples / references | "like this: …", "similar to Notion's" |
-| Reasoning method | "step by step", "compare alternatives" |
-| Quality criteria | "must be accurate", "cite sources" |
+Count the number of distinct task elements present in the user's input. See [`references/Decision_Tables.md`](references/Decision_Tables.md#element-definitions) for the full element list with examples. |
 
 Classify complexity by element count:
 
@@ -121,15 +110,7 @@ Identify the user's scenario and match the most suitable framework(s) by evaluat
 
 **Framework Selection Guide by Domain:**
 
-| Domain | Recommended Frameworks |
-|--------|----------------------|
-| Marketing Content | BAB, SMART, FOCUS |
-| Decision Analysis | Chain-of-Thought, SMART, RACEF |
-| Education & Training | ELI5, PEE |
-| Product Development | SMART, FOCUS, RACEF |
-| AI Dialogue/Assistant | COAST, ROSES, RACE |
-| Writing & Creation | APE, ERA, TAG |
-| Complex Reasoning | Chain-of-Thought, RACEF, CRISPE |
+For the full domain-to-framework mapping, see [`references/Decision_Tables.md#framework-selection-guide-by-domain`](references/Decision_Tables.md#framework-selection-guide-by-domain).
 
 **Framework Selection Explanation:**
 
@@ -149,12 +130,7 @@ Alternative: COAST (if the user needs to emphasize interaction steps)
 
 **Anti-patterns (MUST avoid):**
 
-| Anti-pattern | Why it's wrong | What to do instead |
-|--------------|---------------|-------------------|
-| Picking CRISPE for a 1-sentence polish | Forces 6 elements onto a task that only needs 2–3 | Use APE or ERA for simple tasks |
-| Choosing Chain-of-Thought for formatting tasks | CoT adds reasoning overhead to non-reasoning tasks | Use TAG or RTF when the task is about format, not reasoning |
-| Defaulting to the most complex framework "just in case" | Over-engineering produces bloated prompts that confuse the AI | Match framework complexity to task complexity from Step 1 |
-| Selecting a framework before counting elements | Skips the complexity gate, leading to mismatched selections | Always count elements first (Step 1), then pick from the matching tier |
+For a detailed anti-patterns reference, see [`references/Decision_Tables.md#anti-patterns`](references/Decision_Tables.md#anti-patterns).
 
 ---
 
@@ -229,13 +205,9 @@ Apply the selected framework to build the final prompt:
 
 **Multi-Version Output:**
 
-Provide 1–3 versions based on user needs:
+Provide 1–3 versions based on user needs. See [`references/Decision_Tables.md#version-characteristics`](references/Decision_Tables.md#version-characteristics) for a summary of each version.
 
-| Version | Use Case | Characteristics |
-|---------|----------|-----------------|
-| **Basic** | Quick use, simple tasks | Core elements, concise and clear |
-| **Enhanced** | Regular work, team collaboration | Complete structure with examples |
-| **Expert** | Complex projects, high-quality requirements | Full elements + constraints + validation criteria |
+**Version Selection Guide:**
 
 **Version Selection Guide:**
 - User says "keep it simple" / "quick": Provide Basic version
@@ -279,15 +251,9 @@ Simple task prompts are evaluated linearly by 3+ judges who check at most 7 ques
 2. Generate a one-line patch for each (the exact sentence to add)
 3. Re-apply and re-score
 
-**Additional quality checks** (each is also pass/fail):
+**Additional quality checks:**
 
-| Check | Pass criterion |
-|-------|----------------|
-| Clarity | No vague verbs ("improve", "optimize", "handle") used as the primary action |
-| Specificity | At least one measurable metric, threshold, or named entity |
-| Completeness | Every user-stated requirement appears in the output |
-| Feasibility | A reasonable AI could execute the task without external tools beyond what's named |
-| Safety | No harmful, illegal, or privacy-violating instructions |
+For the full checklist with pass criteria, see [`references/Decision_Tables.md#additional-quality-checks`](references/Decision_Tables.md#additional-quality-checks).
 
 ---
 
@@ -336,30 +302,11 @@ Present the optimized prompt to the user with:
 
 ### 1. CLARITY Framework
 
-When optimizing prompts, apply the **CLARITY** framework:
-
-| Element | Description |
-|---------|-------------|
-| **C**ontext | Provide relevant background and situation |
-| **L**ogic | Define the reasoning approach (step-by-step, first principles, etc.) |
-| **A**ction | Specify the exact task or action to perform |
-| **R**ole | Assign a specific expert role to the AI |
-| **I**nput/Output | Define input format and expected output structure |
-| **T**one | Specify writing style, tone, and voice |
-| **Y**ardstick | Set constraints, requirements, and quality criteria |
+When optimizing prompts, apply the **CLARITY** framework. See [`references/Decision_Tables.md#clarity-framework`](references/Decision_Tables.md#clarity-framework) for the full element descriptions. |
 
 ### 2. Advanced Techniques
 
-Apply these techniques based on task complexity:
-
-| Technique | When to Use | Example |
-|-----------|-------------|---------|
-| **Role Assignment** | Always apply | "You are a senior software architect..." |
-| **Chain-of-Thought** | Complex reasoning tasks | "Think step by step and show your reasoning" |
-| **Few-Shot Examples** | Pattern-based tasks | Provide 2-3 input/output examples |
-| **Structured Output** | Data extraction, analysis | "Output in JSON format with keys: ..." |
-| **Constraint Specification** | All prompts | Word limits, format requirements, exclusions |
-| **Meta-Prompting** | Self-improvement tasks | "Review and improve your answer before finalizing" |
+For a detailed reference of advanced prompting techniques, see [`references/Decision_Tables.md#advanced-techniques`](references/Decision_Tables.md#advanced-techniques). |
 
 ---
 
@@ -412,6 +359,7 @@ Framework details can be found in:
 - `frameworks/patterns/` — Reusable patterns
 - [Frameworks Summary](references/Frameworks_Summary.md) — Human-readable overview of all 61 frameworks
 - [Quick Reference](references/Quick_Reference.md) — Intent-to-framework lookup table
+- [Decision Tables](references/Decision_Tables.md) — Domain mapping, version characteristics, CLARITY framework, and advanced techniques reference
 
 ---
 

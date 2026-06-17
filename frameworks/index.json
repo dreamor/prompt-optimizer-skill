@@ -1,4 +1,9 @@
 {
+  "_intro": "Structured metadata index for all 61 prompt frameworks. Used by SKILL.md Step 3 for lookup-first resolution. Agents MUST read this file instead of guessing file paths.",
+  "_schema": {
+    "_comment_top": "version — package version; total — sum of all frameworks; by_category — count per tier; domains — all domain tags used across frameworks",
+    "_comment_framework": "id — kebab-case unique key; name — display name; full_name — expanded name; category — simple|medium|complex|patterns; file — path to definition markdown; element_count — number of framework elements; elements — framework-specific component names; domains — domain tags for matching; use_cases — human-readable scenario descriptions"
+  },
   "version": "2.1.8",
   "total": 61,
   "by_category": {

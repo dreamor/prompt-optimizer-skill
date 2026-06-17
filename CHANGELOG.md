@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.9] - 2026-06-17
+
+### Refactor
+
+- **SKILL.md**: Migrated 7 reference tables (Elements, Framework by Domain, Advanced Techniques, CLARITY, Version, Anti-patterns, Quality checks) to `references/Decision_Tables.md` — reduced inline table rows from ~58 to 45
+- **claude.json & SKILL.md frontmatter**: Added `allowed-tools: "Read TodoWrite"` field
+- **frameworks/index.json**: Added `_intro` and `_schema` documentation fields for maintainability
+
+## [2.1.8] - 2026-06-17
+
+### Fixed
+
+- **CI**: Added `package.json` and `package-lock.json` to `postversion.js` git stage list to prevent VERSION consistency check failures during lint
+
+### Changed
+
+- **SKILL.md**: Enhanced description with even-if/whenever trigger language, Chinese keywords, and compatibility field
+
+## [2.1.7] - 2026-06-17
+
+### Changed
+
+- **postversion.js**: Invalidated — published to npm but CI lint failed due to missing package.json in stage list. Fixed in v2.1.8.
+
 ## [2.1.6] - 2026-06-17
 
 ### Fixed
@@ -191,6 +215,9 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 2.1.9 | 2026-06-17 | Migrated 7 reference tables to Decision_Tables.md, added allowed-tools, documented index.json schema |
+| 2.1.8 | 2026-06-17 | CI fix (postversion git stage), SKILL.md description/tone/why improvements |
+| 2.1.7 | 2026-06-17 | Attempted publish — invalidated, fixed in v2.1.8 |
 | 2.1.6 | 2026-06-17 | Code quality fixes, CLI bugfixes, CI hardening, docs fixes |
 | 2.1.5 | 2026-06-17 | Changelog reorganization (unpublished) |
 | 2.1.4 | 2026-06-17 | OIDC fix, index.js API repair, test hardening (unpublished) |

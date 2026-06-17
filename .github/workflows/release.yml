@@ -36,7 +36,7 @@ jobs:
           package-manager-cache: false
       - run: npm publish --access public --provenance
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ''
 
   github-release:
     needs: test

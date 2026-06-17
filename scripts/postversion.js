@@ -70,7 +70,7 @@ function main() {
 
   // Stage all updated files
   const { execSync } = require('child_process');
-  const files = ['VERSION', 'claude.json', '.claude-plugin/marketplace.json', 'frameworks/index.json', 'SKILL.md'];
+  const files = ['package.json', 'package-lock.json', 'VERSION', 'claude.json', '.claude-plugin/marketplace.json', 'frameworks/index.json', 'SKILL.md'];
   try {
     execSync(`git add ${files.join(' ')}`, { cwd: ROOT, stdio: 'ignore' });
     console.log('✅ git staged version files');

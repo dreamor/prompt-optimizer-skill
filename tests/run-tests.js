@@ -230,6 +230,51 @@ function runJsonTests() {
   });
 }
 
+// ─── Library API Tests (index.js) ────────────────────────────────────
+
+function runLibraryTests() {
+  console.log('\n📦 Library API Tests (index.js)\n');
+
+  const lib = require(path.join(ROOT, 'index.js'));
+
+  test('loadFrameworkIndex returns object with frameworks array', () => {
+    const index = lib.loadFrameworkIndex();
+    assert(typeof index === 'object', 'Should return an object');
+    assert(Array.isArray(index.frameworks), 'Should have frameworks array');
+    assert(index.frameworks.length === 61, `Expected 61 frameworks, got ${index.frameworks.length}`);
+  });
+
+  test('listFrameworks returns all 61 ids', () => {
+    const ids = lib.listFrameworks();
+    assert(Array.isArray(ids), 'Should return an array');
+    assert(ids.length === 61, `Expected 61 ids, got ${ids.length}`);
+    assert(ids.includes('ape'), 'Should include "ape"');
+    assert(ids.includes('crispe'), 'Should include "crispe"');
+  });
+
+  test('getFramework returns content for known id', () => {
+    const content = lib.getFramework('ape');
+    assert(content !== null, 'APE framework should not be null');
+    assert(content.includes('Action-Purpose-Expectation'), 'Should contain framework full name');
+  });
+
+  test('getFramework returns null for unknown id', () => {
+    const content = lib.getFramework('nonexistent-framework-xyz');
+    assert(content === null, 'Should return null for unknown framework');
+  });
+
+  test('VERSION matches package.json', () => {
+    const pkg = require(path.join(ROOT, 'package.json'));
+    assert(lib.VERSION === pkg.version, `VERSION "${lib.VERSION}" != package.json "${pkg.version}"`);
+  });
+
+  test('every id from listFrameworks is loadable via getFramework', () => {
+    const ids = lib.listFrameworks();
+    const failures = ids.filter((id) => lib.getFramework(id) === null);
+    assert(failures.length === 0, `These ids returned null: ${failures.join(', ')}`);
+  });
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────
 
 function main() {
@@ -238,6 +283,7 @@ function main() {
   const runFrameworks = runAll || args.includes('--frameworks');
   const runCli = runAll || args.includes('--cli');
   const runJson = runAll || args.includes('--json');
+  const runLib = runAll || args.includes('--lib');
 
   console.log('\n╔════════════════════════════════════════════════════════╗');
   console.log('║        Prompt Optimizer — Automated Test Suite        ║');
@@ -246,6 +292,7 @@ function main() {
   if (runFrameworks) runFrameworkTests();
   if (runCli) runCliTests();
   if (runJson) runJsonTests();
+  if (runLib) runLibraryTests();
 
   console.log('\n' + '─'.repeat(56));
   console.log(`\n📊 Results: ${passed.length} passed, ${failed.length} failed\n`);

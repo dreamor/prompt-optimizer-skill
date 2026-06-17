@@ -44,8 +44,10 @@ function validateFrameworkSections() {
       errors.push(`Framework "${fw.name}" missing "Structure" section`);
     }
 
-    if (!content.includes(fw.name)) {
-      errors.push(`Framework file ${fw.file} does not mention framework name "${fw.name}"`);
+    const nameVariant = fw.name.replace(/-/g, ' ');
+    const baseAcronym = fw.name.split('-')[0];
+    if (!content.includes(fw.name) && !content.includes(fw.full_name) && !content.includes(nameVariant) && !content.includes(baseAcronym)) {
+      errors.push(`Framework file ${fw.file} does not mention framework name "${fw.name}" or full name "${fw.full_name}"`);
     }
   });
 

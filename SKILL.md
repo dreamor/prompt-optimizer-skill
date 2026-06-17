@@ -4,7 +4,7 @@ version: 2.1.2
 description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt.
 ---
 
-# Prompt Optimizer v2.0
+# Prompt Optimizer v2.1
 
 Helps users select the most suitable prompt framework for a given task context and generates clearer, more actionable prompts.
 
@@ -44,7 +44,7 @@ Trigger this skill when:
 
 ## Workflow
 
-**Track progress with `TaskCreate`** — at Step 1, create one task per workflow step below, then mark each `in_progress` → `completed` as you go. Do not rely on a plain-text checklist; the harness only enforces what's in the task list.
+**Track progress with `TodoWrite`** — at Step 1, create one task per workflow step below, then mark each `in_progress` → `completed` as you go. Do not rely on a plain-text checklist; the harness only enforces what's in the task list.
 
 The seven steps:
 1. Analyze User Input
@@ -283,7 +283,7 @@ Compute the score: count items that pass.
 
 | Task complexity | Required score | Action on fail |
 |-----------------|----------------|----------------|
-| Simple          | ≥ 4 / 7        | Add the lowest-cost missing element |
+| Simple          | ≥ 3 / 7        | Add the lowest-cost missing element (skip Role if task is format-only) |
 | Medium          | ≥ 5 / 7        | Add the 1–2 missing elements with the highest impact |
 | Complex         | ≥ 6 / 7        | Iterate until threshold met; never present below threshold |
 

@@ -1,6 +1,6 @@
 {
   "name": "prompt-optimizer-skill",
-  "version": "2.1.6",
+  "version": "2.1.8",
   "description": "A professional Claude Code Skill that transforms simple instructions into production-ready prompts. Based on the CLARITY framework, supports 61 prompt frameworks, and provides quality validation with multi-version output.",
   "keywords": [
     "claude-code",

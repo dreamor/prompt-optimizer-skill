@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.4] - 2026-06-17
+
+### Fixed
+
+- **CI: restore OIDC Trusted Publisher** — `NODE_AUTH_TOKEN` was accidentally reverted to `${{ secrets.NPM_TOKEN }}` during a patch, breaking the npm OIDC flow. Restored to empty string to let OIDC credentials pass through unchallenged.
+
+### Changed
+
+- **index.js API** — Repaired broken exports, synced internal paths, and hardened test coverage.
+- **Updated version references** — Synced VERSION, package.json, claude.json, SKILL.md, marketplace.json, and frameworks/index.json to 2.1.4.
+
 ## [2.1.2] - 2026-06-05
 
 ### Changed

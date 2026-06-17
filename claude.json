@@ -1,6 +1,6 @@
 {
   "name": "prompt-optimizer",
-  "version": "2.1.2",
+  "version": "2.1.4",
   "description": "A professional prompt optimization assistant that transforms simple instructions into production-ready prompts",
   "type": "skill",
   "entry": "SKILL.md",

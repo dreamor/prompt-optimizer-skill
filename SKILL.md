@@ -1,7 +1,8 @@
 ---
 name: prompt-optimizer
 version: 2.1.6
-description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt.
+compatibility: skill runtime requires Claude Code >= 1.0.0; CLI / test commands require Node.js 16+
+description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. 当用户输入模糊的指令、需要优化提示词、或对 AI 输出质量不满意时，务必使用本技能。
 ---
 
 # Prompt Optimizer v2.1
@@ -30,18 +31,6 @@ This skill primarily uses:
 
 ---
 
-## Trigger Scenarios
-
-Trigger this skill when:
-
-- User asks to optimize, improve, or enhance a prompt
-- User inputs a vague or simple prompt
-- User expresses dissatisfaction with AI outputs
-- User asks for help writing prompts
-- User wants to learn prompt engineering techniques
-
----
-
 ## Workflow
 
 **Track progress with `TodoWrite`** — at Step 1, create one task per workflow step below, then mark each `in_progress` → `completed` as you go. Do not rely on a plain-text checklist; the harness only enforces what's in the task list.
@@ -57,12 +46,17 @@ The seven steps:
 
 ### Step 1: Analyze User Input
 
-Receive the user's request, which may be:
+Receive the user's request. It will be one of:
+
 - A raw prompt that needs optimization
-- A task description or requirement
+- A task description or requirement  
 - A vague idea that needs to be turned into a prompt
 
+Classify the input using the Boundary Handling table below before proceeding.
+
 **Complexity Assessment (REQUIRED before Step 2):**
+
+Must be performed before framework selection — matching a Simple task to a Complex framework produces a bloated prompt that makes AI output worse, not better (see Gotchas). See [references/Quick_Reference.md](references/Quick_Reference.md) for real-world examples.
 
 Count the number of distinct task elements present in the user's input. An "element" is any of the following that the user explicitly mentions or clearly implies:
 
@@ -115,10 +109,7 @@ Or choose one of these examples:
 
 ### Step 2: Match Scenario and Select Framework
 
-Identify the user's scenario and match the most suitable framework(s) based on:
-- Application scenario alignment
-- Task complexity (simple/medium/complex)
-- Domain category (marketing, decision analysis, education, etc.)
+Identify the user's scenario and match the most suitable framework(s) by evaluating all three dimensions:
 
 **Framework Selection Guide by Complexity:**
 
@@ -169,9 +160,9 @@ Alternative: COAST (if the user needs to emphasize interaction steps)
 
 ### Step 3: Load Framework Details
 
-**Lookup-first**: read `frameworks/index.json` to resolve the framework's `file`, `elements`, `domains`, and `use_cases`. The index is the source of truth — do not guess paths.
+**Lookup-first — always read `frameworks/index.json` to resolve the framework's `file`, `elements`, `domains`, and `use_cases`. The index is the source of truth; do not guess paths.**
 
-If you need the full structure / example / usage tips, load the resolved file:
+Load the resolved file only when you need the full structure, example, or usage tips:
 - Simple frameworks: `frameworks/simple/{framework}.md`
 - Medium frameworks: `frameworks/medium/{framework}.md`
 - Complex frameworks: `frameworks/complex/{framework}.md`
@@ -234,13 +225,7 @@ If the user refuses to answer clarifying questions:
 
 ### Step 5: Generate Optimized Prompt
 
-Apply the selected framework to create the final prompt:
-
-1. Structure the prompt according to framework components
-2. Incorporate all clarified information
-3. Ensure clarity and specificity
-4. Include relevant examples if the framework requires
-5. Add any necessary constraints or guidelines
+Apply the selected framework to build the final prompt:
 
 **Multi-Version Output:**
 
@@ -280,6 +265,8 @@ Validate the optimized prompt using the **CLARITY Checklist**. Each item is a bi
 Compute the score: count items that pass.
 
 **Validation thresholds (by task complexity):**
+
+Simple task prompts are evaluated linearly by 3+ judges who check at most 7 questions — 3/7 ensures the prompt has the minimum viable scaffold to guide an AI without overloading it. Medium tasks need ≥5 to cover both structure and context. Complex tasks require ≥6 because one missing element (e.g., no Output spec) can cascade into an unusable result requiring multiple re-writes.
 
 | Task complexity | Required score | Action on fail |
 |-----------------|----------------|----------------|
@@ -376,20 +363,7 @@ Apply these techniques based on task complexity:
 
 ---
 
-## Quick Reference: Framework Selection
-
-| User Says | Recommended Framework | Version |
-|-----------|----------------------|---------|
-| "Just polish this" / "Make it clearer" | APE, ERA, TAG | Basic |
-| "I need a simple prompt" | APE, ERA, TAG | Basic |
-| "I want to persuade/sell" | BAB | Enhanced |
-| "I need to analyze/decide" | Chain-of-Thought, RACEF | Enhanced / Expert |
-| "I want to teach/explain" | ELI5, PEE | Basic / Enhanced |
-| "I need creative ideas" | COAST, ROSES | Enhanced |
-| "I want structured writing" | APE, RACE | Enhanced |
-| "I need step-by-step reasoning" | Chain-of-Thought | Enhanced |
-| "I'm generating images" | Few-Shot | Basic |
-| "I need a detailed plan" | RISEN, RACEF | Expert |
+> For a quick framework selection reference, see [`references/Quick_Reference.md`](references/Quick_Reference.md).
 
 ---
 
@@ -437,41 +411,43 @@ Framework details can be found in:
 - `frameworks/complex/` — Complex frameworks (6+ elements)
 - `frameworks/patterns/` — Reusable patterns
 - [Frameworks Summary](references/Frameworks_Summary.md) — Human-readable overview of all 61 frameworks
+- [Quick Reference](references/Quick_Reference.md) — Intent-to-framework lookup table
+
+---
+
+## Development & Release
+
+Build and release scripts used during `npm version`:
+
+| Script | Trigger | Purpose |
+|--------|---------|---------|
+| `scripts/postversion.js` | `npm version` → `postversion` hook | Sync version string across `VERSION`, `claude.json`, `marketplace.json`, `frameworks/index.json`, and SKILL.md frontmatter |
+| `scripts/extract-changelog.js` | CI release workflow | Extract the CHANGELOG.md entry for a given version for the GitHub Release body |
+
+These scripts are not invoked during skill runtime — they are tooling for the maintainer.
+
+---
+
+## Compatibility
+
+| Requirement | Minimum |
+|-------------|---------|
+| Claude Code | `>= 1.0.0` |
+| Runtime | Node.js 16+ (needed only for CLI / test commands; skill runtime in Claude Code requires no Node.js) |
+
+### Progressive Disclosure
+
+This skill is designed for **progressive disclosure** — the agent only loads what it needs for the current step:
+
+- **Step 1–2**: No external files needed (framework selection is in-memory from frontmatter + index)
+- **Step 3**: Reads individual framework files from `frameworks/` on demand (lazy load per framework)
+- **Step 6**: References the CLARITY rubric inline (no external read needed)
+- **References**: Pointers to `references/` are available but only consulted when the agent needs deeper detail
+
+This means the skill adds minimal context overhead for simple tasks (polish a one-liner → only 2-3 KB of SKILL.md is meaningfully active) and scales up naturally for complex multi-framework sessions.
 
 ---
 
 ## Changelog
 
-### v2.1.2
-- 🔧 CI: stable OIDC publishing — Node 24 + `setup-node@v5` + `environment: release` to reliably authenticate with npm Trusted Publisher
-
-### v2.1.1
-- ✨ Step 1: added complexity assessment (element counting + Simple/Medium/Complex classification)
-- ✨ Step 5: added "Simple tasks default to Basic version" constraint
-- ✨ Step 2: added anti-patterns table (4 common framework-selection mistakes)
-- ✨ Quick Reference: added "Just polish this" / "Make it clearer" row
-- 🔧 Gotchas: upgraded "Don't over-engineer" to CRITICAL with explicit rule and rationale
-- 🔧 Notes: aligned over-engineering note with Gotchas wording
-
-### v2.1.0
-- ✨ Added `frameworks/index.json` — structured metadata for all 61 frameworks (used by Step 3 lookup)
-- ✨ Step 6 CLARITY rubric is now binary pass/fail with explicit criteria per letter
-- ✨ Workflow now uses `TaskCreate` for progress tracking instead of a text checklist
-- 🔧 Trimmed SKILL frontmatter description and added explicit trigger keywords
-- 🔧 Deduplicated and renumbered `tests/test-cases.md` (29 unique cases, 8 categories)
-- 📦 Added top-level `LICENSE` file (MIT)
-
-### v2.0.0 (2024-04-20)
-- ✨ Added detailed framework definition files for all frameworks
-- ✨ Added Step 6: Quality Validation phase
-- ✨ Added multi-version output (Basic / Enhanced / Expert)
-- ✨ Added boundary case handling strategy
-- ✨ Added default handling when user refuses to clarify
-- ✨ Added framework selection explanation and confidence scoring
-- 🔧 Refactored SKILL.md structure for a clearer workflow
-- 📝 Added complete usage examples and templates
-
-### v1.0.0
-- 🎉 Initial release
-- Basic CLARITY framework
-- Framework list
+For the full changelog, see [`CHANGELOG.md`](CHANGELOG.md).

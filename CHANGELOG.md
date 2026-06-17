@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.5] - 2026-06-17
+
+### Fixed
+
+- **npm publish** — Bumped version to 2.1.5 (2.1.4 already existed on npm); previous release fix was not actually published.
+
 ## [2.1.4] - 2026-06-17
 
 ### Fixed
@@ -165,6 +171,7 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 2.1.5 | 2026-06-17 | Code quality fixes, CLI bugfixes, CI hardening |
 | 2.1.4 | 2026-06-17 | OIDC fix, index.js API repair, test hardening |
 | 2.1.2 | 2026-06-05 | Stable OIDC CI publishing |
 | 2.1.1 | 2026-06-04 | Automated CI/CD, npm publishing, compatibility fixes |

@@ -1,6 +1,6 @@
 ---
 name: prompt-optimizer
-version: 2.1.4
+version: 2.1.5
 description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt.
 ---
 

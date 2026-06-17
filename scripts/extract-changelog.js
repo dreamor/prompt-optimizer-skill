@@ -22,7 +22,7 @@ function main() {
   }
 
   const changelog = fs.readFileSync(path.join(ROOT, 'CHANGELOG.md'), 'utf-8');
-  const pattern = new RegExp(`## \\[${escapeRegex(version)}\\][^#]+`);
+  const pattern = new RegExp(`## \\[${escapeRegex(version)}\\][\\s\\S]*?(?=\\n## \\[|$)`);
   const match = changelog.match(pattern);
 
   if (!match) {

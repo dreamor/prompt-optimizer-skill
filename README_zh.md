@@ -323,8 +323,8 @@ Write an informative blog post about practical AI tools for developers.
 ### 运行测试
 
 ```bash
-# 检查框架文件完整性
-bash tests/test-cases.md
+# 运行完整测试套件
+node tests/run-tests.js
 
 # 或手动检查
 ls frameworks/simple/   # 应看到 16 个框架

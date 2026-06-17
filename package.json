@@ -28,7 +28,7 @@
     "optimize": "node bin/prompt-optimizer.js optimize",
     "frameworks": "node bin/prompt-optimizer.js frameworks",
     "prepublishOnly": "npm test",
-    "postversion": "node -e \"var v=require('./package.json').version,f=require('fs'),u=(p,r)=>{var c=f.readFileSync(p,'utf-8');f.writeFileSync(p,c.replace(r,v))};f.writeFileSync('VERSION',v+'\\n');u('claude.json',/(?<=\\\"version\\\":\\s*\\\")[^\\\"]+/);u('.claude-plugin/marketplace.json',/(?<=\\\"version\\\":\\s*\\\")[^\\\"]+/g);u('frameworks/index.json',/(?<=\\\"version\\\":\\s*\\\")[^\\\"]+/)\" && git add VERSION claude.json .claude-plugin/marketplace.json frameworks/index.json",
+    "postversion": "node scripts/postversion.js",
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",
     "release:major": "standard-version --release-as major"

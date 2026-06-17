@@ -46,17 +46,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get version from tag
+      - name: Get version and previous tag
         id: version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+          # Get previous tag for compare URL
+          PREV=$(git tag --sort=-version:refname | grep '^v' | sed -n '2p')
+          echo "PREV_TAG=${PREV}" >> $GITHUB_OUTPUT
 
       - name: Extract changelog
         id: changelog
-        run: |
-          CHANGELOG=$(sed -n "/## \[${{ steps.version.outputs.VERSION }}\]/,/## \[/p" CHANGELOG.md | head -n -1 | tail -n +2)
-          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
-          echo "$CHANGELOG" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+        run: node -e "
+          const f = require('fs').readFileSync('CHANGELOG.md','utf-8');
+          const v = '${{ steps.version.outputs.VERSION }}';
+          const m = f.match(new RegExp('## \\\\['+v+'\\\\][^#]+'));
+          const body = m ? m[0].replace(/^##[^\\n]*\\n*/,'').trim() : '';
+          require('fs').writeFileSync(process.env.GITHUB_OUTPUT, 'CHANGELOG<<EOF\n'+body+'\nEOF\n', {flag:'a'});
+        "
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -70,5 +76,5 @@ jobs:
 
             **Install**: `npx prompt-optimizer-skill@${{ steps.version.outputs.VERSION }} "your prompt"`
             **Claude Code**: `/plugin install prompt-optimizer@${{ steps.version.outputs.VERSION }}`
-            **Full Changelog**: https://github.com/dreamor/prompt-optimizer-skill/compare/v${{ steps.version.outputs.VERSION }}...HEAD
+            **Full Changelog**: https://github.com/dreamor/prompt-optimizer-skill/compare/v${{ steps.version.outputs.PREV_TAG }}...v${{ steps.version.outputs.VERSION }}
           generate_release_notes: true

@@ -35,8 +35,9 @@ Instead, please report security issues by:
 
 This project is a CLI tool and Claude Code Skill that runs locally. It does not:
 
-- Make network requests
-- Collect or transmit user data
-- Execute arbitrary code beyond the CLI commands documented in the README
+- The skill code (SKILL.md) does not make network requests
+- The CLI tool does not collect or transmit user data
+- The `npm publish` workflow and `npx` installation make network requests to npmjs.org as expected for package distribution
+- It does not execute arbitrary code beyond the CLI commands documented in the README
 
 Vulnerabilities in dependencies should be reported the same way and will be addressed promptly.

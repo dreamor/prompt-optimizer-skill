@@ -1,6 +1,6 @@
 ╔════════════════════════════════════════════════════════╗
 ║                                                        ║
-║     🎉 Prompt Optimizer v2.1.0 Successfully Installed! ║
+║     🎉 Prompt Optimizer v2.1.4 Successfully Installed! ║
 ║                                                        ║
 ╚════════════════════════════════════════════════════════╝
 

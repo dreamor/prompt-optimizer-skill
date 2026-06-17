@@ -54,7 +54,7 @@ function showVersion() {
 }
 
 function optimizePrompt(input, version = 'enhanced') {
-  if (!input || input.trim() === '') {
+  if (typeof input !== 'string' || !input.trim()) {
     console.error('❌ Error: Please provide a prompt');
     console.log('Usage: npx prompt-optimizer-skill template "your prompt"');
     process.exit(1);
@@ -154,7 +154,7 @@ You are a senior expert with 15+ years of experience in the relevant field, havi
 - Quality requirement: Highest standard
 
 ### Reference Framework
-This task applies the RACEF/CRISPE complex framework
+This template applies a structured prompt engineering framework for high-quality generation
 
 ## Task
 ${input}
@@ -216,7 +216,7 @@ ${input}
 - [ ] Output format requirements met
 
 ## Meta
-- Optimization framework: CLARITY + RACEF
+- Optimization framework: CLARITY-based prompt engineering
 - Quality grade: Expert
 - Use case: Important projects, client deliverables, public releases
 `;
@@ -371,6 +371,16 @@ function main() {
   const command = args[0];
   const options = args.slice(1);
 
+  // Standalone flags that should not fall through to optimizePrompt
+  if (command === '--version' || command === '-v') {
+    showVersion();
+    return;
+  }
+  if (command === '--help' || command === '-h') {
+    showHelp();
+    return;
+  }
+
   let version = 'enhanced';
   let input = '';
   let frameworksOpts = { json: false, filterDomain: null, filterCategory: null };
@@ -402,12 +412,24 @@ function main() {
       case '--json':
         frameworksOpts.json = true;
         break;
-      case '--filter':
-        frameworksOpts.filterDomain = options[++i];
+      case '--filter': {
+        const next = options[++i];
+        if (next !== undefined && !next.startsWith('-')) {
+          frameworksOpts.filterDomain = next;
+        } else {
+          i--; // put back — no valid value
+        }
         break;
-      case '--category':
-        frameworksOpts.filterCategory = options[++i];
+      }
+      case '--category': {
+        const next = options[++i];
+        if (next !== undefined && !next.startsWith('-')) {
+          frameworksOpts.filterCategory = next;
+        } else {
+          i--; // put back — no valid value
+        }
         break;
+      }
       default:
         if (!opt.startsWith('-')) {
           input = options.slice(i).join(' ');

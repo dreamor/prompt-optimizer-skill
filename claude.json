@@ -33,7 +33,7 @@
       "usage": "frameworks [--list|--detail]"
     },
     "test": {
-      "description": "Run test cases to validate skill functionality",
+      "description": "Run the automated test suite (framework integrity + CLI smoke tests + JSON validation)",
       "usage": "test"
     }
   },
@@ -44,9 +44,7 @@
     }
   },
   "config": {
-    "defaultVersion": "enhanced",
-    "language": "en",
-    "validation": true
+    "defaultVersion": "enhanced"
   },
   "compatibility": {
     "claude-code": ">=1.0.0"

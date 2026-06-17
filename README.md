@@ -4,7 +4,7 @@ English | [简体中文](./README_zh.md)
 
 > A professional Claude Code Skill that transforms simple instructions into production-ready prompts.
 
-[![Version](https://img.shields.io/badge/version-2.1.2-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.4-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---
@@ -323,8 +323,8 @@ Detailed definitions can be found in the `frameworks/` directory.
 ### Run Tests
 
 ```bash
-# Check framework file integrity
-bash tests/test-cases.md
+# Run full test suite
+node tests/run-tests.js
 
 # Or manually check
 ls frameworks/simple/   # Should see 16 frameworks

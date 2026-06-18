@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.11] - 2026-06-18
+
+### Fixed
+
+- **SKILL.md frontmatter**: Replaced remaining Chinese trigger description ("当用户输入模糊的指令、需要优化提示词、或对 AI 输出质量不满意时，务必使用本技能") with English ("Always use this skill when the user inputs vague instructions, needs prompt optimization, or is dissatisfied with AI output quality") for consistency.
+
 ## [2.1.10] - 2026-06-17
 
 ### Fixed

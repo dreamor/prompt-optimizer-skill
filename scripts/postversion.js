@@ -68,9 +68,21 @@ function main() {
     console.warn('⚠️  Could not find "version:" in SKILL.md frontmatter — skipping');
   }
 
+  // 6. README.md & README_zh.md — version badge
+  for (const readme of ['README.md', 'README_zh.md']) {
+    const content = read(readme);
+    const updated = content.replace(/(version-)[\d.]+(-blue\.svg)/, `$1${version}$2`);
+    if (updated !== content) {
+      write(readme, updated);
+      console.log(`✅ ${readme} badge → ${version}`);
+    } else {
+      console.warn(`⚠️  Could not find version badge in ${readme} — skipping`);
+    }
+  }
+
   // Stage all updated files
   const { execSync } = require('child_process');
-  const files = ['package.json', 'package-lock.json', 'VERSION', 'claude.json', '.claude-plugin/marketplace.json', 'frameworks/index.json', 'SKILL.md'];
+  const files = ['package.json', 'package-lock.json', 'VERSION', 'claude.json', '.claude-plugin/marketplace.json', 'frameworks/index.json', 'SKILL.md', 'README.md', 'README_zh.md'];
   try {
     execSync(`git add ${files.join(' ')}`, { cwd: ROOT, stdio: 'ignore' });
     console.log('✅ git staged version files');

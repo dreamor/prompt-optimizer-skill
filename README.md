@@ -4,7 +4,7 @@ English | [简体中文](./README_zh.md)
 
 > A professional Claude Code Skill that transforms simple instructions into production-ready prompts.
 
-[![Version](https://img.shields.io/badge/version-2.1.6-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.12-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---
@@ -354,6 +354,7 @@ prompt-optimizer-skill/
 ├── CHANGELOG.md             # Changelog
 ├── LICENSE                  # MIT License
 ├── VERSION                  # Current version
+├── index.js                 # Module entry point
 ├── claude.json              # Claude Plugin configuration
 ├── package.json             # npm package manifest
 ├── bin/                     # CLI tools
@@ -366,8 +367,15 @@ prompt-optimizer-skill/
 │   └── patterns/            # Reusable patterns (3)
 ├── tests/                   # Test cases
 │   └── test-cases.md
-└── references/              # Reference materials
-    └── Frameworks_Summary.md
+├── references/              # Reference materials
+│   ├── Frameworks_Summary.md
+│   ├── Quick_Reference.md
+│   └── Decision_Tables.md
+├── scripts/                 # Build & release scripts
+│   ├── postversion.js
+│   └── extract-changelog.js
+└── .claude-plugin/          # Claude Plugin marketplace metadata
+    └── marketplace.json
 ```
 
 ---

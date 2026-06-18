@@ -4,7 +4,7 @@
 
 > 专业的 Claude Code Skill，将简单的指令转化为生产级的高质量提示词。
 
-[![Version](https://img.shields.io/badge/version-2.1.6-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.12-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---
@@ -354,6 +354,7 @@ prompt-optimizer-skill/
 ├── CHANGELOG.md             # 更新日志
 ├── LICENSE                  # MIT 许可证
 ├── VERSION                  # 当前版本
+├── index.js                 # 模块入口
 ├── claude.json              # Claude 插件配置
 ├── package.json             # npm 包清单
 ├── bin/                     # CLI 工具
@@ -366,8 +367,15 @@ prompt-optimizer-skill/
 │   └── patterns/            # 可复用模式（3 个）
 ├── tests/                   # 测试用例
 │   └── test-cases.md
-└── references/              # 参考资料
-    └── Frameworks_Summary.md
+├── references/              # 参考资料
+│   ├── Frameworks_Summary.md
+│   ├── Quick_Reference.md
+│   └── Decision_Tables.md
+├── scripts/                 # 构建与发布脚本
+│   ├── postversion.js
+│   └── extract-changelog.js
+└── .claude-plugin/          # Claude Plugin 市场元数据
+    └── marketplace.json
 ```
 
 ---

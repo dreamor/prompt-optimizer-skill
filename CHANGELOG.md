@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.12] - 2026-06-18
+
+### Fixed
+
+- **README.md & README_zh.md**: Updated version badge from 2.1.6 to 2.1.11 (was stale since v2.1.7).
+- **README.md & README_zh.md**: Updated project structure tree to match current repo — added `index.js`, `references/Quick_Reference.md`, `references/Decision_Tables.md`, `scripts/`, `.claude-plugin/`.
+
 ## [2.1.11] - 2026-06-18
 
 ### Fixed

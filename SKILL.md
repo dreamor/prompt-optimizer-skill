@@ -3,7 +3,7 @@ name: prompt-optimizer
 version: 2.1.10
 allowed-tools: "Read TodoWrite"
 compatibility: skill runtime requires Claude Code >= 1.0.0; CLI / test commands require Node.js 16+
-description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. 当用户输入模糊的指令、需要优化提示词、或对 AI 输出质量不满意时，务必使用本技能。
+description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. Always use this skill when the user inputs vague instructions, needs prompt optimization, or is dissatisfied with AI output quality.
 ---
 
 # Prompt Optimizer v2.1

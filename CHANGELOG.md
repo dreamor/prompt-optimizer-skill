@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.13] - 2026-06-24
+
+### Changed
+
+- **SKILL.md**: Progressive disclosure refactor — moved CLARITY scoring rubric (9-row pass-criterion table) and refusal-handling table from inline to `references/Decision_Tables.md`; replaced inline rubric with compact 7-row one-line trigger table + reference links. Reduced inline table rows from 42 to 37.
+- **SKILL.md**: Added filled example to Step 7 Presentation Template (APE framework, Simple task, Basic version) — `{framework}`, `{reasoning}`, `{score}`, `{X}`, `{optimized_prompt}` placeholders now have a concrete end-to-end demonstration.
+- **SKILL.md**: Cleaned 4 trailing `|` characters left from earlier table extractions.
+- **references/Decision_Tables.md**: Added `## Refusal Handling` section (smart defaults + user-response matrix) and `## CLARITY Scoring Rubric` section (full pass criteria + validation thresholds + fail-patch procedure) migrated from SKILL.md.
+
 ## [2.1.12] - 2026-06-18
 
 ### Fixed

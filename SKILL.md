@@ -1,6 +1,6 @@
 ---
 name: prompt-optimizer
-version: 2.1.12
+version: 2.1.13
 allowed-tools: "Read TodoWrite"
 compatibility: skill runtime requires Claude Code >= 1.0.0; CLI / test commands require Node.js 16+
 description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. Always use this skill when the user inputs vague instructions, needs prompt optimization, or is dissatisfied with AI output quality.
@@ -59,7 +59,7 @@ Classify the input using the Boundary Handling table below before proceeding.
 
 Must be performed before framework selection — matching a Simple task to a Complex framework produces a bloated prompt that makes AI output worse, not better (see Gotchas). See [references/Quick_Reference.md](references/Quick_Reference.md) for real-world examples.
 
-Count the number of distinct task elements present in the user's input. See [`references/Decision_Tables.md`](references/Decision_Tables.md#element-definitions) for the full element list with examples. |
+Count the number of distinct task elements present in the user's input. See [`references/Decision_Tables.md`](references/Decision_Tables.md#element-definitions) for the full element list with examples.
 
 Classify complexity by element count:
 
@@ -183,19 +183,7 @@ Please answer the questions above, or say "default" to use standard settings.
 
 **Refusal Handling:**
 
-If the user refuses to answer clarifying questions:
-
-| User Response | Action |
-|---------------|--------|
-| "Just generate it" / "Default" | Continue with smart defaults |
-| "Stop asking" / "Do it as I said" | Politely state the defaults, then proceed |
-| No response at all | Wait one round, then use defaults |
-
-**Smart Defaults:**
-- Goal: "Provide high-quality, ready-to-use content"
-- Audience: "General professionals"
-- Format: "Structured text with headings and bullet points"
-- Constraints: "No special restrictions"
+If the user declines to answer, continue with smart defaults (Goal: "high-quality content", Audience: "general professionals", Format: "structured text", Constraints: "none"). For the full refusal-response matrix, see [`references/Decision_Tables.md#refusal-handling`](references/Decision_Tables.md#refusal-handling).
 
 ---
 
@@ -222,27 +210,26 @@ Provide 1–3 versions based on user needs. See [`references/Decision_Tables.md#
 
 **CRITICAL STEP**
 
-Validate the optimized prompt using the **CLARITY Checklist**. Each item is a binary pass/fail — apply the rubric below verbatim instead of judging by feel.
+Validate the optimized prompt using the **CLARITY Checklist**. Each item is a binary pass/fail. For the full pass-criteria rubric, see [`references/Decision_Tables.md#clarity-scoring-rubric`](references/Decision_Tables.md#clarity-scoring-rubric). Quick summary:
 
-| Letter | Pass criterion (must satisfy ALL) |
-|--------|-----------------------------------|
-| **C**ontext | The prompt names the relevant background: domain, situation, prior state, or constraints that frame why the task exists. Generic phrases like "in a business setting" do NOT pass. |
-| **L**ogic | The prompt either (a) prescribes a reasoning method ("think step by step", "first principles", "compare alternatives"), or (b) breaks the task into ordered sub-steps. |
-| **A**ction | The prompt contains at least one specific imperative verb describing what to produce (write, summarize, classify, refactor, design). Vague verbs (improve, optimize, handle) do NOT pass on their own. |
-| **R**ole | The prompt assigns a specific expert identity, including domain and seniority/experience. "You are an assistant" does NOT pass. |
-| **I**nput/Output | The prompt names BOTH the input shape (or assumes raw user text) AND the desired output structure (headings, JSON keys, table columns, length range). |
-| **T**one | The prompt names a style, register, or audience that constrains voice (formal, casual, technical, for executives, for 5-year-olds). |
-| **Y**ardstick | The prompt states at least one measurable acceptance criterion or hard constraint (word count, must include X, must avoid Y, must validate Z). |
+| Letter | Element | One-line trigger |
+|--------|---------|-----------------|
+| **C** | Context | Names specific background (not just "business setting") |
+| **L** | Logic | Prescribes reasoning method or ordered sub-steps |
+| **A** | Action | Contains a specific imperative verb (write, classify, refactor…) |
+| **R** | Role | Assigns expert identity with domain + seniority |
+| **I** | Input/Output | Names both input shape and output structure |
+| **T** | Tone | Constrains voice to a named style or audience |
+| **Y** | Yardstick | States ≥1 measurable acceptance criterion |
 
 Compute the score: count items that pass.
 
 **Validation thresholds (by task complexity):**
-
-Simple task prompts are evaluated linearly by 3+ judges who check at most 7 questions — 3/7 ensures the prompt has the minimum viable scaffold to guide an AI without overloading it. Medium tasks need ≥5 to cover both structure and context. Complex tasks require ≥6 because one missing element (e.g., no Output spec) can cascade into an unusable result requiring multiple re-writes.
+For rationale, see [`references/Decision_Tables.md#clarity-scoring-rubric`](references/Decision_Tables.md#clarity-scoring-rubric).
 
 | Task complexity | Required score | Action on fail |
 |-----------------|----------------|----------------|
-| Simple          | ≥ 3 / 7        | Add the lowest-cost missing element (skip Role if task is format-only) |
+| Simple          | ≥ 3 / 7        | Add the lowest-cost missing element (skip Role if format-only) |
 | Medium          | ≥ 5 / 7        | Add the 1–2 missing elements with the highest impact |
 | Complex         | ≥ 6 / 7        | Iterate until threshold met; never present below threshold |
 
@@ -296,17 +283,48 @@ Present the optimized prompt to the user with:
 - For iterative refinement, tell me the specific direction to adjust
 ```
 
+**Filled Example:**
+```
+## Optimization Result
+
+### Framework Selection
+- Framework used: APE (Action-Purpose-Expectation)
+- Reason: The user wants a single-sentence polish (Simple, 2 elements),
+          so a Simple-tier framework with Basic version avoids over-engineering.
+- Confidence: 9/10
+
+### Quality Validation
+- CLARITY check: 4/7 items passed
+- Quality grade: Good (sufficient for Simple task; threshold ≥ 3)
+
+### Optimized Prompt
+
+Write a concise follow-up email to a client who has not responded
+to a software demo proposal sent 10 days ago. Purpose: re-engage
+their interest and schedule a 15-minute call. Tone: professional
+but warm; avoid pressure tactics. Length: under 120 words.
+
+### Version Options
+- [x] Basic (currently shown)
+- [ ] Enhanced (add: subject line alternatives, A/B variants)
+- [ ] Expert (add: CRM integration notes, follow-up cadence)
+
+### Usage Tips
+- If the tone feels too formal, replace "professional" with "friendly-casual"
+- For a different engagement hook, swap "15-minute call" for a short video link
+```
+
 ---
 
 ## Core Principles
 
 ### 1. CLARITY Framework
 
-When optimizing prompts, apply the **CLARITY** framework. See [`references/Decision_Tables.md#clarity-framework`](references/Decision_Tables.md#clarity-framework) for the full element descriptions. |
+When optimizing prompts, apply the **CLARITY** framework. See [`references/Decision_Tables.md#clarity-framework`](references/Decision_Tables.md#clarity-framework) for the full element descriptions.
 
 ### 2. Advanced Techniques
 
-For a detailed reference of advanced prompting techniques, see [`references/Decision_Tables.md#advanced-techniques`](references/Decision_Tables.md#advanced-techniques). |
+For a detailed reference of advanced prompting techniques, see [`references/Decision_Tables.md#advanced-techniques`](references/Decision_Tables.md#advanced-techniques).
 
 ---
 

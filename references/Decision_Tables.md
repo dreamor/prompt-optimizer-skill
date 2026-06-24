@@ -91,6 +91,55 @@ Each is pass/fail.
 
 ---
 
+## Refusal Handling
+
+When the user declines to answer clarifying questions (Step 4):
+
+| User Response | Action |
+|---------------|--------|
+| "Just generate it" / "Default" | Continue with smart defaults |
+| "Stop asking" / "Do it as I said" | Politely state the defaults, then proceed |
+| No response at all | Wait one round, then use defaults |
+
+**Smart Defaults:**
+- Goal: "Provide high-quality, ready-to-use content"
+- Audience: "General professionals"
+- Format: "Structured text with headings and bullet points"
+- Constraints: "No special restrictions"
+
+---
+
+## CLARITY Scoring Rubric
+
+Full pass criteria for the CLARITY checklist used in Step 6 — Quality Validation.
+
+| Letter | Pass criterion (must satisfy ALL) |
+|--------|-----------------------------------|
+| **C**ontext | The prompt names the relevant background: domain, situation, prior state, or constraints that frame why the task exists. Generic phrases like "in a business setting" do NOT pass. |
+| **L**ogic | The prompt either (a) prescribes a reasoning method ("think step by step", "first principles", "compare alternatives"), or (b) breaks the task into ordered sub-steps. |
+| **A**ction | The prompt contains at least one specific imperative verb describing what to produce (write, summarize, classify, refactor, design). Vague verbs (improve, optimize, handle) do NOT pass on their own. |
+| **R**ole | The prompt assigns a specific expert identity, including domain and seniority/experience. "You are an assistant" does NOT pass. |
+| **I**nput/Output | The prompt names BOTH the input shape (or assumes raw user text) AND the desired output structure (headings, JSON keys, table columns, length range). |
+| **T**one | The prompt names a style, register, or audience that constrains voice (formal, casual, technical, for executives, for 5-year-olds). |
+| **Y**ardstick | The prompt states at least one measurable acceptance criterion or hard constraint (word count, must include X, must avoid Y, must validate Z). |
+
+**Validation thresholds (by task complexity):**
+
+Simple task prompts are evaluated linearly — 3/7 ensures the minimum viable scaffold. Medium tasks need ≥5 to cover both structure and context. Complex tasks require ≥6 because one missing element can cascade into an unusable result.
+
+| Task complexity | Required score | Action on fail |
+|-----------------|----------------|----------------|
+| Simple          | ≥ 3 / 7        | Add the lowest-cost missing element (skip Role if task is format-only) |
+| Medium          | ≥ 5 / 7        | Add the 1–2 missing elements with the highest impact |
+| Complex         | ≥ 6 / 7        | Iterate until threshold met; never present below threshold |
+
+**If validation fails:**
+1. List the failing items by name
+2. Generate a one-line patch for each (the exact sentence to add)
+3. Re-apply and re-score
+
+---
+
 ## Anti-Patterns
 
 | Anti-pattern | Why it's wrong | What to do instead |

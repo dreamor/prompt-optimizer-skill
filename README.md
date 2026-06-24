@@ -4,7 +4,7 @@ English | [简体中文](./README_zh.md)
 
 > A professional Claude Code Skill that transforms simple instructions into production-ready prompts.
 
-[![Version](https://img.shields.io/badge/version-2.1.12-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.13-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---

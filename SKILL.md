@@ -1,9 +1,9 @@
 ---
 name: prompt-optimizer
-version: 2.1.13
+version: 2.1.14
 allowed-tools: "Read TodoWrite"
 compatibility: skill runtime requires Claude Code >= 1.0.0; CLI / test commands require Node.js 16+
-description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. Always use this skill when the user inputs vague instructions, needs prompt optimization, or is dissatisfied with AI output quality.
+description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", "优化提示词", "改写 prompt", "优化指令", "让提示词更好", "帮我把这个写成 prompt" or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. Always use this skill when the user inputs vague instructions, needs prompt optimization, or is dissatisfied with AI output quality.
 ---
 
 # Prompt Optimizer v2.1
@@ -53,7 +53,7 @@ Receive the user's request. It will be one of:
 - A task description or requirement  
 - A vague idea that needs to be turned into a prompt
 
-Classify the input using the Boundary Handling table below before proceeding.
+Classify the input clarity first: completely vague → offer 3 examples; partially clear → ask key questions (Step 4); completely clear → proceed. For the full boundary-handling table and vague-input example, see [`references/Decision_Tables.md#boundary-handling`](references/Decision_Tables.md#boundary-handling).
 
 **Complexity Assessment (REQUIRED before Step 2):**
 
@@ -70,29 +70,6 @@ Classify complexity by element count:
 | **Complex** | 6+ | Detailed specs, multiple constraints, examples + role + format |
 
 Record the complexity classification — it drives framework selection (Step 2), version default (Step 5), and CLARITY threshold (Step 6).
-
-**Boundary Handling:**
-
-| Situation | Criteria | Action |
-|-----------|----------|--------|
-| **Completely vague** | Fewer than 5 words, no clear action or subject | Offer 3 examples to guide the user |
-| **Partially clear** | Has a topic but no specific requirements | Go to Step 4 and ask for key information |
-| **Completely clear** | Includes task, goal, and context | Proceed directly to Step 2 |
-
-**Example handling for completely vague input:**
-```
-User input: "Write something for me"
-
-Response: "I can help you write many types of content. Please tell me:
-1. What type of content do you need? (email / report / code / copy / other)
-2. What is the topic or goal?
-3. Any special requirements?
-
-Or choose one of these examples:
-- A: Write a business partnership email
-- B: Write a Python data processing function
-- C: Write a product requirements document"
-```
 
 ---
 
@@ -154,13 +131,13 @@ Framework files contain:
 
 ### Step 4: Clarify Ambiguities
 
-Before generating the final prompt, verify with the user:
+Before generating the final prompt, verify with the user. These four dimensions are chosen because each independently changes the prompt's shape — omitting any one leaves a blind spot the AI must guess at, and guesses produce inconsistent output.
 
-1. **Goal Clarity**: Is the intended outcome clear?
-2. **Target Audience**: Who will receive the AI's response?
-3. **Context Completeness**: Is sufficient background information provided?
-4. **Format Requirements**: Are there specific output format needs?
-5. **Constraints**: Are there any limitations or restrictions?
+1. **Goal Clarity**: Is the intended outcome clear? → *Without a concrete goal, the AI optimizes for the wrong metric (e.g., creativity vs. accuracy).*
+2. **Target Audience**: Who will receive the AI's response? → *Audience determines vocabulary, depth, and assumptions the AI can make.*
+3. **Context Completeness**: Is sufficient background information provided? → *Missing context forces the AI to hallucinate or hedge, reducing usefulness.*
+4. **Format Requirements**: Are there specific output format needs? → *Format mismatches (prose vs. JSON vs. table) make the result unusable even if content is correct.*
+5. **Constraints**: Are there any limitations or restrictions? → *Unstated constraints (length, tone, exclusions) cause the AI to over- or under-deliver.*
 
 **Clarifying Questions Template:**
 ```

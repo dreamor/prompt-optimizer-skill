@@ -4,7 +4,7 @@
 
 > 专业的 Claude Code Skill，将简单的指令转化为生产级的高质量提示词。
 
-[![Version](https://img.shields.io/badge/version-2.1.13-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.14-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---

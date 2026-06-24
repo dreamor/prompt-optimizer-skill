@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.14] - 2026-06-24
+
+### Changed
+
+- **SKILL.md**: Migrated Boundary Handling table and vague-input example (12 lines) to `references/Decision_Tables.md#boundary-handling`; replaced with one-line classification rule + reference link. Reduced main-body line count by ~15.
+- **SKILL.md Step 4**: Added *why* explanations for each of the 5 clarifying dimensions (Goal, Audience, Context, Format, Constraints) — each now ends with an italic rationale explaining what breaks if that dimension is missing.
+- **SKILL.md frontmatter description**: Added 5 Chinese trigger keywords (优化提示词, 改写 prompt, 优化指令, 让提示词更好, 帮我把这个写成 prompt) for multilingual user coverage.
+- **references/Decision_Tables.md**: Added `## Boundary Handling` section (3-row classification table + vague-input example) migrated from SKILL.md.
+
 ## [2.1.13] - 2026-06-24
 
 ### Changed

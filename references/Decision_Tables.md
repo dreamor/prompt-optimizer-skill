@@ -91,6 +91,33 @@ Each is pass/fail.
 
 ---
 
+## Boundary Handling
+
+Used during Step 1 — classify input clarity before proceeding.
+
+| Situation | Criteria | Action |
+|-----------|----------|--------|
+| **Completely vague** | Fewer than 5 words, no clear action or subject | Offer 3 examples to guide the user |
+| **Partially clear** | Has a topic but no specific requirements | Go to Step 4 and ask for key information |
+| **Completely clear** | Includes task, goal, and context | Proceed directly to Step 2 |
+
+**Example handling for completely vague input:**
+```
+User input: "Write something for me"
+
+Response: "I can help you write many types of content. Please tell me:
+1. What type of content do you need? (email / report / code / copy / other)
+2. What is the topic or goal?
+3. Any special requirements?
+
+Or choose one of these examples:
+- A: Write a business partnership email
+- B: Write a Python data processing function
+- C: Write a product requirements document"
+```
+
+---
+
 ## Refusal Handling
 
 When the user declines to answer clarifying questions (Step 4):

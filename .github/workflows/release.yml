@@ -34,7 +34,19 @@ jobs:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
-      - run: npm publish --access public --provenance
+      - name: Check if version already published
+        id: check-version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "prompt-optimizer-skill@${VERSION}" version 2>/dev/null; then
+            echo "already_published=true" >> $GITHUB_OUTPUT
+            echo "⚠️  Version ${VERSION} already exists on npm — skipping publish"
+          else
+            echo "already_published=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Publish to npm
+        if: steps.check-version.outputs.already_published != 'true'
+        run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ''
 
@@ -46,7 +58,21 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check if release already exists
+        id: check-release
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          if gh release view "v${VERSION}" 2>/dev/null; then
+            echo "already_exists=true" >> $GITHUB_OUTPUT
+            echo "⚠️  Release v${VERSION} already exists — skipping"
+          else
+            echo "already_exists=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Get version and previous tag
+        if: steps.check-release.outputs.already_exists != 'true'
         id: version
         run: |
           echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
@@ -55,6 +81,7 @@ jobs:
           echo "PREV_TAG=${PREV}" >> $GITHUB_OUTPUT
 
       - name: Extract changelog
+        if: steps.check-release.outputs.already_exists != 'true'
         id: changelog
         run: |
           CHANGELOG_BODY=$(node scripts/extract-changelog.js "${{ steps.version.outputs.VERSION }}")
@@ -63,6 +90,7 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
+        if: steps.check-release.outputs.already_exists != 'true'
         uses: softprops/action-gh-release@v2
         with:
           body: |

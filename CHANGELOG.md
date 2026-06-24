@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] - 2026-06-24
+
+### Changed
+
+- **SKILL.md**: Progressive disclosure refactor — migrated Boundary Handling table + vague-input example, CLARITY scoring rubric, and refusal-handling table to `references/Decision_Tables.md`; replaced with one-line rules + reference links. Reduced inline table rows from 58 to 34.
+- **SKILL.md Step 4**: Added *why* rationale for each of the 5 clarifying dimensions (Goal, Audience, Context, Format, Constraints) — explains what breaks when omitted.
+- **SKILL.md Step 7**: Added filled presentation example (APE, Simple task, Basic) — placeholders now have a concrete end-to-end demonstration.
+- **SKILL.md frontmatter**: Added 5 Chinese trigger keywords (优化提示词, 改写 prompt, 优化指令, 让提示词更好, 帮我把这个写成 prompt) for multilingual coverage.
+- **CI (release.yml)**: Added pre-publish `npm view` check and pre-release `gh release view` check — skips publish/release if version already exists, preventing ghost tag failures.
+- **references/Decision_Tables.md**: Added Boundary Handling, Refusal Handling, and CLARITY Scoring Rubric sections migrated from SKILL.md.
+
+### Fixed
+
+- Cleaned 4 trailing pipe characters in SKILL.md left from earlier table extractions.
+
 ## [2.1.14] - 2026-06-24
 
 ### Changed
@@ -252,6 +267,7 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 2.2.0 | 2026-06-24 | Progressive disclosure refactor, Step 4 why rationale, Chinese triggers, CI duplicate-guard |
 | 2.1.10 | 2026-06-17 | Bump to unpublishable 2.1.9 (already on npm despite CI failure) |
 | 2.1.9 | 2026-06-17 | Migrated 7 reference tables to Decision_Tables.md, added allowed-tools, documented index.json schema |
 | 2.1.8 | 2026-06-17 | CI fix (postversion git stage), SKILL.md description/tone/why improvements |

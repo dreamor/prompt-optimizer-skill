@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.1] - 2026-08-03
+
+### Security
+
+- **index.js**: Added path traversal protection (`guardPath`/`safeRead`) — all file reads now enforce that resolved paths stay within the skill directory.
+- **scripts/postversion.js**: Replaced `execSync` with `execFileSync` to prevent command injection.
+
+### Changed
+
+- **index.js**: `loadFrameworkIndexAsync` is now a true async implementation using `fs.promises.readFile` instead of wrapping the sync version.
+- **package.json**: Added `references/` to `files` list — reference docs are now included in the npm package.
+- **.claude-plugin/marketplace.json**: Simplified to flat structure with `compatibility` field.
+- **bin/prompt-optimizer.js**: Destructured `fs` imports for clarity.
+
+### Fixed
+
+- **references/Quick_Reference.md**: Changed image generation recommendation from Few-Shot to Atomic-Prompting (more appropriate framework).
+- **SKILL.md**: Added `license: MIT` to frontmatter.
+
 ## [2.2.0] - 2026-06-24
 
 ### Changed

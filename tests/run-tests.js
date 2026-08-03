@@ -10,7 +10,7 @@
  *   node tests/run-tests.js --json       # JSON validation only
  */
 
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -135,12 +135,12 @@ function runFrameworkTests() {
 function runCliTests() {
   console.log('\n🖥️  CLI Smoke Tests\n');
 
-  const cli = `node "${path.join(ROOT, 'bin', 'prompt-optimizer.js')}"`;
+  const cli = path.join(ROOT, 'bin', 'prompt-optimizer.js');
 
-  function cliTest(name, command, expectExit0 = true) {
+  function cliTest(name, args, expectExit0 = true) {
     test(name, () => {
       try {
-        const output = execSync(command, { encoding: 'utf-8', timeout: 10000 });
+        const output = execFileSync('node', [cli, ...args], { encoding: 'utf-8', timeout: 10000 });
         if (expectExit0) assert(true, '');
       } catch (err) {
         if (expectExit0) {
@@ -150,33 +150,33 @@ function runCliTests() {
     });
   }
 
-  cliTest('version command exits 0', `${cli} version`);
-  cliTest('help command exits 0', `${cli} help`);
-  cliTest('frameworks command exits 0', `${cli} frameworks`);
-  cliTest('frameworks --json outputs valid JSON', `${cli} frameworks --json`);
-  cliTest('frameworks --filter marketing exits 0', `${cli} frameworks --filter marketing`);
-  cliTest('frameworks --category simple exits 0', `${cli} frameworks --category simple`);
-  cliTest('template command exits 0', `${cli} template "test prompt"`);
-  cliTest('template --basic exits 0', `${cli} template "test prompt" --basic`);
-  cliTest('template --expert exits 0', `${cli} template "test prompt" --expert`);
-  cliTest('no-args shows help (exit 0)', `${cli}`);
-  cliTest('test command exits 0', `${cli} test`);
+  cliTest('version command exits 0', ['version']);
+  cliTest('help command exits 0', ['help']);
+  cliTest('frameworks command exits 0', ['frameworks']);
+  cliTest('frameworks --json outputs valid JSON', ['frameworks', '--json']);
+  cliTest('frameworks --filter marketing exits 0', ['frameworks', '--filter', 'marketing']);
+  cliTest('frameworks --category simple exits 0', ['frameworks', '--category', 'simple']);
+  cliTest('template command exits 0', ['template', 'test prompt']);
+  cliTest('template --basic exits 0', ['template', 'test prompt', '--basic']);
+  cliTest('template --expert exits 0', ['template', 'test prompt', '--expert']);
+  cliTest('no-args shows help (exit 0)', []);
+  cliTest('test command exits 0', ['test']);
 
   test('version output matches package.json', () => {
-    const output = execSync(`${cli} version`, { encoding: 'utf-8' }).trim();
+    const output = execFileSync('node', [cli, 'version'], { encoding: 'utf-8' }).trim();
     const pkg = require(path.join(ROOT, 'package.json'));
     assert(output.includes(pkg.version), `Version output "${output}" does not contain ${pkg.version}`);
   });
 
   test('frameworks --json output is valid JSON with frameworks array', () => {
-    const output = execSync(`${cli} frameworks --json`, { encoding: 'utf-8' });
+    const output = execFileSync('node', [cli, 'frameworks', '--json'], { encoding: 'utf-8' });
     const data = JSON.parse(output);
     assert(Array.isArray(data.frameworks), 'frameworks should be an array');
     assert(data.frameworks.length > 0, 'frameworks array should not be empty');
   });
 
   test('template output contains input prompt', () => {
-    const output = execSync(`${cli} template "MyUniqueTestPrompt"`, { encoding: 'utf-8' });
+    const output = execFileSync('node', [cli, 'template', 'MyUniqueTestPrompt'], { encoding: 'utf-8' });
     assert(output.includes('MyUniqueTestPrompt'), 'Template output should contain the input prompt');
   });
 }

@@ -5,8 +5,8 @@
  * Command-line tool for optimizing prompts
  */
 
-const fs = require('fs');
 const path = require('path');
+const { readFileSync, readdirSync, existsSync } = require('fs');
 
 const VERSION = require('../package.json').version;
 
@@ -225,7 +225,7 @@ ${input}
 function loadIndex() {
   const indexPath = path.join(__dirname, '..', 'frameworks', 'index.json');
   try {
-    return JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+    return JSON.parse(readFileSync(indexPath, 'utf-8'));
   } catch (err) {
     return null;
   }
@@ -298,7 +298,7 @@ function listFrameworks({ json = false, filterDomain = null, filterCategory = nu
     };
     for (const [dir, title] of Object.entries(categories)) {
       try {
-        const files = fs.readdirSync(path.join(frameworksDir, dir)).filter(f => f.endsWith('.md'));
+        const files = readdirSync(path.join(frameworksDir, dir)).filter(f => f.endsWith('.md'));
         console.log(`\n📁 ${title}`);
         console.log('─'.repeat(56));
         files.forEach(file => console.log(`  • ${file.replace('.md', '')}`));
@@ -327,7 +327,7 @@ function runTests() {
 
   try {
     const testFile = path.join(testsDir, 'test-cases.md');
-    const content = fs.readFileSync(testFile, 'utf-8');
+    const content = readFileSync(testFile, 'utf-8');
 
     const testCount = (content.match(/### TC-/g) || []).length;
 

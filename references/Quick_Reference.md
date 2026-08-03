@@ -12,5 +12,5 @@
 | "I need creative ideas" | COAST, ROSES | Enhanced |
 | "I want structured writing" | APE, RACE | Enhanced |
 | "I need step-by-step reasoning" | Chain-of-Thought | Enhanced |
-| "I'm generating images" | Few-Shot | Basic |
+| "I'm generating images" | Atomic-Prompting | Enhanced |
 | "I need a detailed plan" | RISEN, RACEF | Expert |

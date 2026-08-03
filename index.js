@@ -1,10 +1,34 @@
 const path = require('path');
-const fs = require('fs');
+const { readFileSync } = require('fs');
+const { readFile } = require('fs').promises;
 
 const VERSION = require('./package.json').version;
 
 const FRAMEWORKS_DIR = path.join(__dirname, 'frameworks');
 const INDEX_PATH = path.join(FRAMEWORKS_DIR, 'index.json');
+const BASE_DIR = path.resolve(__dirname);
+
+/**
+ * Ensure a resolved path stays within the skill's own directory.
+ * @param {string} resolved
+ * @returns {string} the same path if valid
+ */
+function guardPath(resolved) {
+  if (!resolved.startsWith(BASE_DIR + path.sep) && resolved !== BASE_DIR) {
+    throw new Error('Access denied: path outside skill directory');
+  }
+  return resolved;
+}
+
+/**
+ * Safe version of readFileSync with path-boundary enforcement.
+ * @param {string} filePath
+ * @param {string} encoding
+ * @returns {string}
+ */
+function safeRead(filePath, encoding) {
+  return readFileSync(guardPath(path.resolve(filePath)), encoding);
+}
 
 let _cachedIndex = null;
 
@@ -15,7 +39,7 @@ let _cachedIndex = null;
 function loadFrameworkIndex() {
   if (_cachedIndex) return _cachedIndex;
   try {
-    _cachedIndex = JSON.parse(fs.readFileSync(INDEX_PATH, 'utf-8'));
+    _cachedIndex = JSON.parse(safeRead(INDEX_PATH, 'utf-8'));
     return _cachedIndex;
   } catch (err) {
     return null;
@@ -23,11 +47,18 @@ function loadFrameworkIndex() {
 }
 
 /**
- * Load the framework index from disk (async, cached via loadFrameworkIndex).
+ * Load the framework index from disk (async, bypasses sync cache).
  * @returns {Promise<object|null>}
  */
 async function loadFrameworkIndexAsync() {
-  return loadFrameworkIndex();
+  try {
+    const content = await readFile(INDEX_PATH, 'utf-8');
+    const index = JSON.parse(content);
+    _cachedIndex = index;
+    return index;
+  } catch (err) {
+    return null;
+  }
 }
 
 /** @returns {string[]} */
@@ -52,7 +83,7 @@ function getFramework(frameworkId) {
     if (fw.id === frameworkId && fw.file) {
       const filePath = path.join(__dirname, fw.file);
       try {
-        return fs.readFileSync(filePath, 'utf-8');
+        return safeRead(filePath, 'utf-8');
       } catch (_) {
         return null;
       }
@@ -67,7 +98,24 @@ function getFramework(frameworkId) {
  * @returns {Promise<string|null>}
  */
 async function getFrameworkAsync(frameworkId) {
-  return getFramework(frameworkId);
+  const index = await loadFrameworkIndexAsync();
+  if (!index) return null;
+
+  for (const fw of index.frameworks) {
+    if (fw.id === frameworkId && fw.file) {
+      const filePath = path.join(__dirname, fw.file);
+      const resolved = path.resolve(filePath);
+      if (!resolved.startsWith(BASE_DIR + path.sep) && resolved !== BASE_DIR) {
+        return null;
+      }
+      try {
+        return await readFile(resolved, 'utf-8');
+      } catch (_) {
+        return null;
+      }
+    }
+  }
+  return null;
 }
 
 module.exports = {

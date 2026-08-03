@@ -45,7 +45,8 @@
     "VERSION",
     "claude.json",
     "bin/",
-    "frameworks/"
+    "frameworks/",
+    "references/"
   ],
   "author": "dreamor",
   "license": "MIT",

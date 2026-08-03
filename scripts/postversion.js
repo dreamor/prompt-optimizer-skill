@@ -81,10 +81,10 @@ function main() {
   }
 
   // Stage all updated files
-  const { execSync } = require('child_process');
+  const { execFileSync } = require('child_process');
   const files = ['package.json', 'package-lock.json', 'VERSION', 'claude.json', '.claude-plugin/marketplace.json', 'frameworks/index.json', 'SKILL.md', 'README.md', 'README_zh.md'];
   try {
-    execSync(`git add ${files.join(' ')}`, { cwd: ROOT, stdio: 'ignore' });
+    execFileSync('git', ['add', ...files], { cwd: ROOT, stdio: 'ignore' });
     console.log('✅ git staged version files');
   } catch (_) {
     console.warn('⚠️  Could not git stage files (not a git repo or git not available)');

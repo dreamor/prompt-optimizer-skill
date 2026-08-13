@@ -101,6 +101,5 @@ jobs:
             ---
 
             **Install**: `npx prompt-optimizer-skill@${{ steps.version.outputs.VERSION }} "your prompt"`
-            **Claude Code**: `/plugin install prompt-optimizer@${{ steps.version.outputs.VERSION }}`
             **Full Changelog**: https://github.com/dreamor/prompt-optimizer-skill/compare/v${{ steps.version.outputs.PREV_TAG }}...v${{ steps.version.outputs.VERSION }}
           generate_release_notes: true

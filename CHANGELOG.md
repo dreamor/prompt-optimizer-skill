@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.0] - 2026-08-13
+
+### Changed
+
+- **Agent-agnostic skill**: Removed Claude Code plugin-specific infrastructure (`claude.json`, `.claude-plugin/marketplace.json`) and the Claude Marketplace installation method. This is now a plain `SKILL.md` + `frameworks/` skill package intended to work with any agent that supports the `SKILL.md` skill format.
+- **SKILL.md**: Removed the Claude-specific `allowed-tools` frontmatter field and the "Claude Code >= 1.0.0" compatibility requirement. Step 1's progress-tracking instruction no longer names `TodoWrite` specifically — it now says to use your agent's task/todo tool if it has one, otherwise a text checklist.
+- **README.md / README_zh.md**: Reworded installation and usage sections to be agent-agnostic (generic "your AI agent" / manual skills-directory install instead of Claude Marketplace-only instructions).
+- **bin/prompt-optimizer.js, SECURITY.md, WELCOME.md**: Replaced remaining "Claude Code" wording with agent-agnostic phrasing.
+- **scripts/postversion.js, tests/run-tests.js, package.json**: Dropped references to the removed `claude.json` / `.claude-plugin/marketplace.json` files.
+
 ## [2.2.1] - 2026-08-03
 
 ### Security
@@ -286,6 +296,7 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 2.3.0 | 2026-08-13 | Agent-agnostic skill — removed Claude Code plugin infra (claude.json, marketplace.json), generalized SKILL.md/README/CLI wording |
 | 2.2.0 | 2026-06-24 | Progressive disclosure refactor, Step 4 why rationale, Chinese triggers, CI duplicate-guard |
 | 2.1.10 | 2026-06-17 | Bump to unpublishable 2.1.9 (already on npm despite CI failure) |
 | 2.1.9 | 2026-06-17 | Migrated 7 reference tables to Decision_Tables.md, added allowed-tools, documented index.json schema |

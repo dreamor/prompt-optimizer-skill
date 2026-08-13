@@ -1,8 +1,7 @@
 ---
 name: prompt-optimizer
 version: 2.2.1
-allowed-tools: "Read TodoWrite"
-compatibility: skill runtime requires Claude Code >= 1.0.0; CLI / test commands require Node.js 16+
+compatibility: CLI / test commands require Node.js 16+
 description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", "优化提示词", "改写 prompt", "优化指令", "让提示词更好", "帮我把这个写成 prompt" or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. Always use this skill when the user inputs vague instructions, needs prompt optimization, or is dissatisfied with AI output quality.
 license: MIT
 ---
@@ -35,7 +34,7 @@ This skill primarily uses:
 
 ## Workflow
 
-**Track progress with `TodoWrite`** — at Step 1, create one task per workflow step below, then mark each `in_progress` → `completed` as you go. Do not rely on a plain-text checklist; the harness only enforces what's in the task list.
+**Track progress with your agent's task/todo tool if it has one** — at Step 1, create one task per workflow step below, then mark each `in_progress` → `completed` as you go. If your agent has no such tool, maintain an explicit text checklist in your response instead and update it at every step.
 
 The seven steps:
 1. Analyze User Input
@@ -365,7 +364,7 @@ Build and release scripts used during `npm version`:
 
 | Script | Trigger | Purpose |
 |--------|---------|---------|
-| `scripts/postversion.js` | `npm version` → `postversion` hook | Sync version string across `VERSION`, `claude.json`, `marketplace.json`, `frameworks/index.json`, and SKILL.md frontmatter |
+| `scripts/postversion.js` | `npm version` → `postversion` hook | Sync version string across `VERSION`, `frameworks/index.json`, and SKILL.md frontmatter |
 | `scripts/extract-changelog.js` | CI release workflow | Extract the CHANGELOG.md entry for a given version for the GitHub Release body |
 
 These scripts are not invoked during skill runtime — they are tooling for the maintainer.
@@ -374,10 +373,7 @@ These scripts are not invoked during skill runtime — they are tooling for the 
 
 ## Compatibility
 
-| Requirement | Minimum |
-|-------------|---------|
-| Claude Code | `>= 1.0.0` |
-| Runtime | Node.js 16+ (needed only for CLI / test commands; skill runtime in Claude Code requires no Node.js) |
+This skill follows the `SKILL.md` skill format and works with any agent that supports it. No runtime dependency is required to use the skill itself — Node.js 16+ is only needed if you also want to run the optional CLI (`bin/prompt-optimizer.js`) or test suite.
 
 ### Progressive Disclosure
 

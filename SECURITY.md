@@ -33,7 +33,7 @@ Instead, please report security issues by:
 
 ### Scope
 
-This project is a CLI tool and Claude Code Skill that runs locally. It does not:
+This project is a CLI tool and agent skill (SKILL.md-based) that runs locally. It does not:
 
 - The skill code (SKILL.md) does not make network requests
 - The CLI tool does not collect or transmit user data

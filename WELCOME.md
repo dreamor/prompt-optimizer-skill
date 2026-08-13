@@ -10,7 +10,7 @@ Thank you for installing Prompt Optimizer!
 
 📖 Quick Start
 
-1️⃣  Use in Claude Code:
+1️⃣  Use within your AI agent (if it supports SKILL.md skills):
    optimize this prompt: Write an email to a customer
 
 2️⃣  Use via npx (no installation required):

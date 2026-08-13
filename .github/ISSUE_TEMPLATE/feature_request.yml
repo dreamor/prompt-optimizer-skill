@@ -37,7 +37,7 @@ body:
       description: Which part of the project does this affect?
       options:
         - CLI
-        - Claude Code Skill (SKILL.md)
+        - Agent Skill (SKILL.md)
         - Framework Library
         - Quality Validation (CLARITY)
         - Documentation

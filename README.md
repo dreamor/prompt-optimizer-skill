@@ -2,7 +2,7 @@ English | [简体中文](./README_zh.md)
 
 # Prompt Optimizer v2.1
 
-> A professional Claude Code Skill that transforms simple instructions into production-ready prompts.
+> A professional agent skill that transforms simple instructions into production-ready prompts. Works with any AI agent that supports the `SKILL.md` skill format (Claude Code and others).
 
 [![Version](https://img.shields.io/badge/version-2.2.1-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -18,7 +18,7 @@ English | [简体中文](./README_zh.md)
 - **Quality Validation**: Automatic validation using a 7-point checklist after generation to ensure high-quality output.
 - **Multi-Version Output**: Provides Basic, Enhanced, and Expert versions for different scenarios.
 - **Boundary Handling**: Intelligently handles vague inputs and situations where users refuse to clarify.
-- **Multiple Installation Methods**: Supports Claude Marketplace, npx, and local installation.
+- **Multiple Installation Methods**: Supports npm, npx, and manual/local installation.
 
 ### 🆕 New in v2.1
 
@@ -40,24 +40,13 @@ English | [简体中文](./README_zh.md)
 | **Multi-Version** | Different optimization levels based on user needs. |
 | **Boundary Handling** | Graceful handling of vague inputs and refusal to clarify. |
 | **Test Suite** | 29 test cases covering various usage scenarios. |
-| **Claude Plugin** | Support for installation via Claude Code Marketplace. |
 | **npx Support** | Use directly via npx without installation. |
 
 ---
 
 ## 📦 Installation
 
-### Method 1: Claude Code Marketplace (Recommended)
-
-Install directly from GitHub using the marketplace command:
-
-```bash
-/plugin marketplace add dreamor/prompt-optimizer-skill
-/plugin install prompt-optimizer@prompt-optimizer-skill
-/reload-plugins
-```
-
-### Method 2: npm Install
+### Method 1: npm Install (Recommended)
 
 Install globally or locally via npm:
 
@@ -77,7 +66,7 @@ prompt-optimizer-skill frameworks
 prompt-optimizer-skill version
 ```
 
-### Method 3: npx Usage (No Installation Required)
+### Method 2: npx Usage (No Installation Required)
 
 Use directly via npx without local installation:
 
@@ -114,33 +103,29 @@ npx prompt-optimizer-skill template "Write code" --enhanced   # Enhanced version
 npx prompt-optimizer-skill template "Write code" --expert     # Expert version
 ```
 
-### Method 4: Symbolic Link (Development/Customization)
+### Method 3: Manual Install / Symbolic Link (Development/Customization)
 
-Suitable for users who need to modify or customize:
+If your agent supports the `SKILL.md` skill format, it will look for skills in its own skills directory. Copy or symlink this repo into that directory (check your agent's docs for the exact path):
 
 ```bash
 # Clone the repository
 git clone https://github.com/dreamor/prompt-optimizer-skill.git
 
-# Create symbolic link
-cd ~/.claude/skills/
-ln -s /path/to/prompt-optimizer-skill prompt-optimizer
+# Copy or symlink into your agent's skills directory
+ln -s /path/to/prompt-optimizer-skill /path/to/your-agent/skills/prompt-optimizer
 ```
 
 ### Verify Installation
 
 ```bash
-# Claude Plugin method
-claude plugin list | grep prompt-optimizer
-
 # npm global install method
 prompt-optimizer-skill version
 
 # npx method
 npx prompt-optimizer-skill version
 
-# Symbolic link method
-ls -la ~/.claude/skills/prompt-optimizer/
+# Manual / symbolic link method
+ls -la /path/to/your-agent/skills/prompt-optimizer/
 # Should see: SKILL.md, frameworks/, tests/, CHANGELOG.md, etc.
 ```
 
@@ -148,15 +133,15 @@ ls -la ~/.claude/skills/prompt-optimizer/
 
 ## 🚀 Usage
 
-### Method A: Use in Claude Code
+### Method A: Use within your AI agent
 
-In Claude Code conversation:
+If your agent supports the `SKILL.md` skill format, just describe what you want in conversation:
 
 ```
 optimize this prompt: Write an email to a customer
 ```
 
-Or:
+Or, if your agent supports slash-style skill invocation:
 
 ```
 /prompt-optimizer help me optimize this prompt
@@ -355,7 +340,6 @@ prompt-optimizer-skill/
 ├── LICENSE                  # MIT License
 ├── VERSION                  # Current version
 ├── index.js                 # Module entry point
-├── claude.json              # Claude Plugin configuration
 ├── package.json             # npm package manifest
 ├── bin/                     # CLI tools
 │   └── prompt-optimizer.js  # CLI (template scaffolds + framework lookup)
@@ -371,11 +355,9 @@ prompt-optimizer-skill/
 │   ├── Frameworks_Summary.md
 │   ├── Quick_Reference.md
 │   └── Decision_Tables.md
-├── scripts/                 # Build & release scripts
-│   ├── postversion.js
-│   └── extract-changelog.js
-└── .claude-plugin/          # Claude Plugin marketplace metadata
-    └── marketplace.json
+└── scripts/                 # Build & release scripts
+    ├── postversion.js
+    └── extract-changelog.js
 ```
 
 ---

@@ -6,8 +6,6 @@
  * Called automatically by `npm version` via package.json `postversion` hook.
  * Reads the new version from package.json and writes it to:
  *   - VERSION
- *   - claude.json
- *   - .claude-plugin/marketplace.json
  *   - frameworks/index.json
  *   - SKILL.md  (frontmatter `version:` field)
  */
@@ -38,28 +36,14 @@ function main() {
   write('VERSION', version + '\n');
   console.log(`✅ VERSION → ${version}`);
 
-  // 2. claude.json — replace "version": "..." (first occurrence)
-  write(
-    'claude.json',
-    read('claude.json').replace(/(?<="version":\s*")[^"]+/, version)
-  );
-  console.log(`✅ claude.json → ${version}`);
-
-  // 3. .claude-plugin/marketplace.json — all occurrences (metadata + plugin)
-  write(
-    '.claude-plugin/marketplace.json',
-    read('.claude-plugin/marketplace.json').replace(/(?<="version":\s*")[^"]+/g, version)
-  );
-  console.log(`✅ marketplace.json → ${version}`);
-
-  // 4. frameworks/index.json — "version" key only
+  // 2. frameworks/index.json — "version" key only
   write(
     'frameworks/index.json',
     read('frameworks/index.json').replace(/(?<="version":\s*")[^"]+/, version)
   );
   console.log(`✅ frameworks/index.json → ${version}`);
 
-  // 5. SKILL.md — frontmatter version: line
+  // 3. SKILL.md — frontmatter version: line
   const skill = read('SKILL.md');
   if (/^version:\s*.+/m.test(skill)) {
     write('SKILL.md', skill.replace(/^(version:\s*).+/m, `$1${version}`));
@@ -68,7 +52,7 @@ function main() {
     console.warn('⚠️  Could not find "version:" in SKILL.md frontmatter — skipping');
   }
 
-  // 6. README.md & README_zh.md — version badge
+  // 4. README.md & README_zh.md — version badge
   for (const readme of ['README.md', 'README_zh.md']) {
     const content = read(readme);
     const updated = content.replace(/(version-)[\d.]+(-blue\.svg)/, `$1${version}$2`);
@@ -82,7 +66,7 @@ function main() {
 
   // Stage all updated files
   const { execFileSync } = require('child_process');
-  const files = ['package.json', 'package-lock.json', 'VERSION', 'claude.json', '.claude-plugin/marketplace.json', 'frameworks/index.json', 'SKILL.md', 'README.md', 'README_zh.md'];
+  const files = ['package.json', 'package-lock.json', 'VERSION', 'frameworks/index.json', 'SKILL.md', 'README.md', 'README_zh.md'];
   try {
     execFileSync('git', ['add', ...files], { cwd: ROOT, stdio: 'ignore' });
     console.log('✅ git staged version files');

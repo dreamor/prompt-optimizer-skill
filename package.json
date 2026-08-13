@@ -1,16 +1,15 @@
 {
   "name": "prompt-optimizer-skill",
   "version": "2.2.1",
-  "description": "A professional Claude Code Skill that transforms simple instructions into production-ready prompts. Based on the CLARITY framework, supports 61 prompt frameworks, and provides quality validation with multi-version output.",
+  "description": "A professional agent skill that transforms simple instructions into production-ready prompts. Based on the CLARITY framework, supports 61 prompt frameworks, and provides quality validation with multi-version output.",
   "keywords": [
-    "claude-code",
+    "agent-skill",
     "skill",
     "prompt",
     "prompt-engineering",
     "ai",
     "prompt-optimizer",
     "clarity-framework",
-    "claude-plugin",
     "npx"
   ],
   "main": "index.js",
@@ -43,7 +42,6 @@
     "README.md",
     "CHANGELOG.md",
     "VERSION",
-    "claude.json",
     "bin/",
     "frameworks/",
     "references/"

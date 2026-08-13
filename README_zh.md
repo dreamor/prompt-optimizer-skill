@@ -2,7 +2,7 @@
 
 # Prompt Optimizer v2.1
 
-> 专业的 Claude Code Skill，将简单的指令转化为生产级的高质量提示词。
+> 专业的 Agent Skill，将简单的指令转化为生产级的高质量提示词。兼容任何支持 `SKILL.md` 技能格式的 AI Agent（包括 Claude Code 及其他）。
 
 [![Version](https://img.shields.io/badge/version-2.2.1-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -18,7 +18,7 @@
 - **质量验证**：生成后自动使用 7 点清单进行质量校验，确保高质量输出。
 - **多版本输出**：针对简单、常规、复杂场景提供基础、增强、专家三个版本。
 - **边界处理**：智能处理模糊输入和用户拒绝澄清的情况。
-- **多种安装方式**：支持 Claude Marketplace、npx 和本地安装。
+- **多种安装方式**：支持 npm、npx 和本地安装。
 
 ### 🆕 v2.1 新特性
 
@@ -40,24 +40,13 @@
 | **多版本输出** | 根据用户需求提供不同详细程度的优化结果。 |
 | **边界处理** | 优雅处理模糊输入和拒绝澄清的用户行为。 |
 | **测试套件** | 29 个测试用例，覆盖各种使用场景。 |
-| **Claude 插件** | 支持通过 Claude Code Marketplace 安装。 |
 | **npx 支持** | 无需安装，直接通过 npx 使用。 |
 
 ---
 
 ## 📦 安装
 
-### 方法一：Claude Code Marketplace（推荐）
-
-使用 marketplace 命令直接从 GitHub 安装：
-
-```bash
-/plugin marketplace add dreamor/prompt-optimizer-skill
-/plugin install prompt-optimizer@prompt-optimizer-skill
-/reload-plugins
-```
-
-### 方法二：npm 安装
+### 方法一：npm 安装（推荐）
 
 通过 npm 全局或本地安装：
 
@@ -77,7 +66,7 @@ prompt-optimizer-skill frameworks
 prompt-optimizer-skill version
 ```
 
-### 方法三：npx 使用（无需安装）
+### 方法二：npx 使用（无需安装）
 
 无需本地安装，直接通过 npx 使用：
 
@@ -114,33 +103,29 @@ npx prompt-optimizer-skill template "Write code" --enhanced   # 增强版（默�
 npx prompt-optimizer-skill template "Write code" --expert     # 专家版
 ```
 
-### 方法四：符号链接（开发/自定义）
+### 方法三：手动安装 / 符号链接（开发/自定义）
 
-适用于需要修改或自定义的用户：
+如果你的 agent 支持 `SKILL.md` 技能格式，它会有自己的技能目录。把本仓库复制或软链接到该目录即可（具体路径请查阅你的 agent 文档）：
 
 ```bash
 # 克隆仓库
 git clone https://github.com/dreamor/prompt-optimizer-skill.git
 
-# 创建符号链接
-cd ~/.claude/skills/
-ln -s /path/to/prompt-optimizer-skill prompt-optimizer
+# 复制或软链接到你的 agent 的技能目录
+ln -s /path/to/prompt-optimizer-skill /path/to/your-agent/skills/prompt-optimizer
 ```
 
 ### 验证安装
 
 ```bash
-# Claude 插件方式
-claude plugin list | grep prompt-optimizer
-
 # npm 全局安装方式
 prompt-optimizer-skill version
 
 # npx 方式
 npx prompt-optimizer-skill version
 
-# 符号链接方式
-ls -la ~/.claude/skills/prompt-optimizer/
+# 手动 / 符号链接方式
+ls -la /path/to/your-agent/skills/prompt-optimizer/
 # 应看到：SKILL.md, frameworks/, tests/, CHANGELOG.md 等
 ```
 
@@ -148,15 +133,15 @@ ls -la ~/.claude/skills/prompt-optimizer/
 
 ## 🚀 使用
 
-### 方法 A：在 Claude Code 中使用
+### 方法 A：在你的 AI Agent 中使用
 
-在 Claude Code 对话中：
+如果你的 agent 支持 `SKILL.md` 技能格式，直接在对话中描述你的需求即可：
 
 ```
 optimize this prompt: Write an email to a customer
 ```
 
-或者：
+或者，如果你的 agent 支持斜杠命令式技能调用：
 
 ```
 /prompt-optimizer help me optimize this prompt
@@ -355,7 +340,6 @@ prompt-optimizer-skill/
 ├── LICENSE                  # MIT 许可证
 ├── VERSION                  # 当前版本
 ├── index.js                 # 模块入口
-├── claude.json              # Claude 插件配置
 ├── package.json             # npm 包清单
 ├── bin/                     # CLI 工具
 │   └── prompt-optimizer.js  # CLI（模板脚手架 + 框架查找）
@@ -371,11 +355,9 @@ prompt-optimizer-skill/
 │   ├── Frameworks_Summary.md
 │   ├── Quick_Reference.md
 │   └── Decision_Tables.md
-├── scripts/                 # 构建与发布脚本
-│   ├── postversion.js
-│   └── extract-changelog.js
-└── .claude-plugin/          # Claude Plugin 市场元数据
-    └── marketplace.json
+└── scripts/                 # 构建与发布脚本
+    ├── postversion.js
+    └── extract-changelog.js
 ```
 
 ---

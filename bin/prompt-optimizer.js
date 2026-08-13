@@ -17,7 +17,8 @@ function showHelp() {
 ╚════════════════════════════════════════════════════════╝
 
 NOTE: The CLI ships STATIC templates only. Real, framework-aware
-optimization happens inside Claude Code (the SKILL.md workflow).
+optimization happens inside your AI agent, via the SKILL.md workflow
+(any agent that supports the SKILL.md skill format).
 Use the CLI for: quick template scaffolding, listing frameworks,
 querying frameworks/index.json.
 
@@ -67,7 +68,7 @@ function optimizePrompt(input, version = 'enhanced') {
 
 NOTE: This is a STATIC template — it does not call any model
 and does not perform real CLARITY scoring or framework selection.
-For real optimization, invoke the skill from Claude Code.
+For real optimization, invoke this skill from your AI agent.
 `);
 
   console.log(`📥 Input: ${input}`);

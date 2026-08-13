@@ -188,8 +188,6 @@ function runJsonTests() {
 
   const jsonFiles = [
     'package.json',
-    'claude.json',
-    '.claude-plugin/marketplace.json',
     'frameworks/index.json',
   ];
 
@@ -211,14 +209,6 @@ function runJsonTests() {
     const required = ['name', 'version', 'description', 'main', 'bin', 'license', 'repository'];
     required.forEach((field) => {
       assert(pkg[field] !== undefined, `package.json missing field "${field}"`);
-    });
-  });
-
-  test('claude.json has required fields', () => {
-    const claude = JSON.parse(fs.readFileSync(path.join(ROOT, 'claude.json'), 'utf-8'));
-    const required = ['name', 'version', 'description', 'type', 'entry', 'author', 'license'];
-    required.forEach((field) => {
-      assert(claude[field] !== undefined, `claude.json missing field "${field}"`);
     });
   });
 

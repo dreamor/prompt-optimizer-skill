@@ -46,9 +46,7 @@ jobs:
       - name: Check JSON validity
         run: |
           node -e "JSON.parse(require('fs').readFileSync('package.json','utf8'))" && \
-          node -e "JSON.parse(require('fs').readFileSync('frameworks/index.json','utf8'))" && \
-          node -e "JSON.parse(require('fs').readFileSync('claude.json','utf8'))" && \
-          node -e "JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('frameworks/index.json','utf8'))"
 
       - name: Check VERSION consistency
         run: |

@@ -1,6 +1,5 @@
 .github/
 .git/
-.claude-plugin/
 .claude/
 node_modules/
 promo/

@@ -1,6 +1,6 @@
 [English](./README.md) | 简体中文
 
-# Prompt Optimizer v2.1
+# Prompt Optimizer
 
 > 专业的 Agent Skill，将简单的指令转化为生产级的高质量提示词。兼容任何支持 `SKILL.md` 技能格式的 AI Agent（包括 Claude Code 及其他）。
 
@@ -77,6 +77,9 @@ npx prompt-optimizer-skill template "Write an email to a customer"
 # 列出所有框架
 npx prompt-optimizer-skill frameworks
 
+# 打印某个框架的完整定义
+npx prompt-optimizer-skill frameworks race
+
 # 按领域或类别查询框架
 npx prompt-optimizer-skill frameworks --filter marketing
 npx prompt-optimizer-skill frameworks --category medium
@@ -101,6 +104,9 @@ npx prompt-optimizer-skill optimize "Write code"   # template 的别名
 npx prompt-optimizer-skill template "Write code" --basic      # 基础版
 npx prompt-optimizer-skill template "Write code" --enhanced   # 增强版（默认）
 npx prompt-optimizer-skill template "Write code" --expert     # 专家版
+
+# 按某个具体框架自己的 elements 生成脚手架（框架 id 见 `frameworks --json`）
+npx prompt-optimizer-skill template "Write code" --framework race
 ```
 
 ### 方法三：手动安装 / 符号链接（开发/自定义）

@@ -6,7 +6,8 @@
  */
 
 const path = require('path');
-const { readFileSync, readdirSync, existsSync } = require('fs');
+const { readFileSync, readdirSync } = require('fs');
+const skillLib = require('../index.js');
 
 const VERSION = require('../package.json').version;
 
@@ -28,6 +29,7 @@ Usage:
 Commands:
   template <text>          Print a static template scaffold (alias: optimize, o)
   frameworks               List all frameworks (alias: f)
+    <id>                   Print one framework's full definition (e.g. "frameworks race")
     --json                 Print frameworks/index.json
     --filter <domain>      Filter by domain (e.g. marketing, education)
     --category <cat>       Filter by category (simple/medium/complex/patterns)
@@ -39,10 +41,14 @@ Options for template:
   -b, --basic              Basic scaffold
   -e, --enhanced           Enhanced scaffold (default)
   -x, --expert             Expert scaffold
+  --framework <id>         Scaffold using a specific framework's own elements
+                           (see "frameworks --json" for valid ids)
 
 Examples:
   npx prompt-optimizer-skill template "Write an email to a customer"
+  npx prompt-optimizer-skill template "Write an email to a customer" --framework race
   npx prompt-optimizer-skill frameworks
+  npx prompt-optimizer-skill frameworks race
   npx prompt-optimizer-skill frameworks --filter marketing
   npx prompt-optimizer-skill frameworks --json
 
@@ -54,11 +60,21 @@ function showVersion() {
   console.log(`Prompt Optimizer v${VERSION}`);
 }
 
-function optimizePrompt(input, version = 'enhanced') {
+function optimizePrompt(input, version = 'enhanced', frameworkId = null) {
   if (typeof input !== 'string' || !input.trim()) {
     console.error('❌ Error: Please provide a prompt');
     console.log('Usage: npx prompt-optimizer-skill template "your prompt"');
     process.exit(1);
+  }
+
+  let framework = null;
+  if (frameworkId) {
+    framework = findFramework(frameworkId);
+    if (!framework) {
+      console.error(`❌ Error: Unknown framework id "${frameworkId}"`);
+      console.log('Run "npx prompt-optimizer-skill frameworks --json" to see valid ids');
+      process.exit(1);
+    }
   }
 
   console.log(`
@@ -73,19 +89,78 @@ For real optimization, invoke this skill from your AI agent.
 
   console.log(`📥 Input: ${input}`);
   console.log(`📊 Version: ${version}`);
+  if (framework) console.log(`🧩 Framework: ${framework.name} (${framework.full_name})`);
   console.log('\n' + '─'.repeat(56) + '\n');
 
-  const templates = {
-    basic: generateBasicTemplate(input),
-    enhanced: generateEnhancedTemplate(input),
-    expert: generateExpertTemplate(input)
-  };
-
-  console.log(templates[version] || templates.enhanced);
+  if (framework) {
+    console.log(generateFrameworkTemplate(input, framework, version));
+  } else {
+    const templates = {
+      basic: generateBasicTemplate(input),
+      enhanced: generateEnhancedTemplate(input),
+      expert: generateExpertTemplate(input)
+    };
+    console.log(templates[version] || templates.enhanced);
+  }
 
   console.log('\n' + '─'.repeat(56));
-  console.log('\n💡 Use -e for enhanced, -x for expert');
+  console.log('\n💡 Use -e for enhanced, -x for expert, --framework <id> for a framework-specific scaffold');
   console.log('📖 Docs: https://github.com/dreamor/prompt-optimizer-skill');
+}
+
+function findFramework(frameworkId) {
+  const index = skillLib.loadFrameworkIndex();
+  if (!index) return null;
+  const needle = frameworkId.toLowerCase();
+  return index.frameworks.find((fw) => fw.id.toLowerCase() === needle) || null;
+}
+
+function showFrameworkDetail(frameworkId) {
+  const framework = findFramework(frameworkId);
+  if (!framework) {
+    console.error(`❌ Error: Unknown framework id "${frameworkId}"`);
+    console.log('Run "npx prompt-optimizer-skill frameworks --json" to see valid ids');
+    process.exit(1);
+  }
+  const content = skillLib.getFramework(framework.id);
+  if (!content) {
+    console.error(`❌ Error: Could not read definition file for "${framework.id}"`);
+    process.exit(1);
+  }
+  console.log(content);
+}
+
+function generateFrameworkTemplate(input, framework, version) {
+  const lines = [
+    `# ${framework.full_name} (${framework.name}) Template`,
+    '',
+    `> Category: ${framework.category} | Elements: ${framework.element_count}`,
+    ''
+  ];
+
+  framework.elements.forEach((element, i) => {
+    lines.push(`## ${i + 1}. ${element}`);
+    lines.push(`[Fill in ${element} for: ${input}]`);
+    if (version !== 'basic') {
+      lines.push(`_Guidance: describe the "${element}" aspect of the task in 1-3 sentences._`);
+    }
+    lines.push('');
+  });
+
+  if (version === 'expert') {
+    lines.push('## Validation Checklist');
+    (framework.use_cases || []).slice(0, 3).forEach((useCase) => {
+      lines.push(`- [ ] Relevant to use case: ${useCase}`);
+    });
+    lines.push('- [ ] Every element above is filled with task-specific (not generic) content');
+    lines.push('');
+  }
+
+  lines.push('## Meta');
+  lines.push(`- Framework: ${framework.name} (${framework.category})`);
+  lines.push(`- Domains: ${framework.domains.join(', ')}`);
+
+  return lines.join('\n');
 }
 
 function generateBasicTemplate(input) {
@@ -223,17 +298,8 @@ ${input}
 `;
 }
 
-function loadIndex() {
-  const indexPath = path.join(__dirname, '..', 'frameworks', 'index.json');
-  try {
-    return JSON.parse(readFileSync(indexPath, 'utf-8'));
-  } catch (err) {
-    return null;
-  }
-}
-
 function listFrameworks({ json = false, filterDomain = null, filterCategory = null } = {}) {
-  const index = loadIndex();
+  const index = skillLib.loadFrameworkIndex();
 
   if (json) {
     if (!index) {
@@ -312,7 +378,7 @@ function listFrameworks({ json = false, filterDomain = null, filterCategory = nu
 
   console.log(`\n${'─'.repeat(56)}`);
   console.log('Usage:');
-  console.log('  1. View framework details: cat frameworks/<category>/<NAME>.md');
+  console.log('  1. View framework details: npx prompt-optimizer-skill frameworks <id>');
   console.log('  2. Print structured index: npx prompt-optimizer-skill frameworks --json');
   console.log('  3. More info: https://github.com/dreamor/prompt-optimizer-skill');
 }
@@ -383,9 +449,13 @@ function main() {
   }
 
   let version = 'enhanced';
-  let input = '';
+  let frameworkId = null;
+  let inputParts = [];
   let frameworksOpts = { json: false, filterDomain: null, filterCategory: null };
 
+  // Flags are recognized regardless of position; everything else is collected,
+  // in order, as free-text input. This keeps `template "text" --basic` and
+  // `template --basic "text"` equivalent.
   for (let i = 0; i < options.length; i++) {
     const opt = options[i];
 
@@ -431,27 +501,33 @@ function main() {
         }
         break;
       }
-      default:
-        if (!opt.startsWith('-')) {
-          input = options.slice(i).join(' ');
-          i = options.length;
+      case '--framework': {
+        const next = options[++i];
+        if (next !== undefined && !next.startsWith('-')) {
+          frameworkId = next;
+        } else {
+          i--; // put back — no valid value
         }
+        break;
+      }
+      default:
+        inputParts.push(opt);
     }
-  }
-
-  if (!input && options.length > 0 && !options[0].startsWith('-')) {
-    input = options.filter(o => !o.startsWith('-')).join(' ');
   }
 
   switch (command) {
     case 'template':
     case 'optimize':
     case 'o':
-      optimizePrompt(input, version);
+      optimizePrompt(inputParts.join(' '), version, frameworkId);
       break;
     case 'frameworks':
     case 'f':
-      listFrameworks(frameworksOpts);
+      if (inputParts.length > 0) {
+        showFrameworkDetail(inputParts.join(' '));
+      } else {
+        listFrameworks(frameworksOpts);
+      }
       break;
     case 'test':
     case 't':
@@ -467,7 +543,7 @@ function main() {
       break;
     default:
       if (command && !command.startsWith('-')) {
-        optimizePrompt([command, ...options].join(' '), version);
+        optimizePrompt([command, ...inputParts].join(' '), version, frameworkId);
       } else {
         console.error(`❌ Unknown command: ${command}`);
         console.log('Use "npx prompt-optimizer-skill help" to see available commands');

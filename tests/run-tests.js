@@ -13,6 +13,7 @@
 const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const integrity = require('./framework-integrity.test.js');
 
 const ROOT = path.join(__dirname, '..');
 const passed = [];
@@ -62,15 +63,8 @@ function runFrameworkTests() {
   });
 
   test('by_category counts match actual file counts on disk', () => {
-    const categories = ['simple', 'medium', 'complex', 'patterns'];
-    for (const cat of categories) {
-      const dir = path.join(ROOT, 'frameworks', cat);
-      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
-      assert(
-        files.length === index.by_category[cat],
-        `Category "${cat}": disk has ${files.length} .md files, index says ${index.by_category[cat]}`
-      );
-    }
+    const errors = integrity.validateCategoryCounts();
+    assert(errors.length === 0, errors.join('; '));
   });
 
   test('every framework entry has required fields', () => {
@@ -83,35 +77,18 @@ function runFrameworkTests() {
   });
 
   test('every framework file path exists on disk', () => {
-    index.frameworks.forEach((fw) => {
-      const filePath = path.join(ROOT, fw.file);
-      assert(fs.existsSync(filePath), `File not found: ${fw.file}`);
-    });
+    const errors = integrity.validateNoMissingFiles();
+    assert(errors.length === 0, errors.join('; '));
   });
 
   test('every .md file in framework dirs has a corresponding index entry', () => {
-    const indexedFiles = new Set(index.frameworks.map((fw) => fw.file));
-    const categories = ['simple', 'medium', 'complex', 'patterns'];
-    for (const cat of categories) {
-      const dir = path.join(ROOT, 'frameworks', cat);
-      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
-      files.forEach((file) => {
-        const relativePath = `frameworks/${cat}/${file}`;
-        assert(indexedFiles.has(relativePath), `Orphan file not in index.json: ${relativePath}`);
-      });
-    }
+    const errors = integrity.validateNoOrphans();
+    assert(errors.length === 0, errors.join('; '));
   });
 
-  test('no duplicate framework ids', () => {
-    const ids = index.frameworks.map((fw) => fw.id);
-    const unique = new Set(ids);
-    assert(ids.length === unique.size, `Duplicate ids found: ${ids.filter((id, i) => ids.indexOf(id) !== i)}`);
-  });
-
-  test('no duplicate framework names', () => {
-    const names = index.frameworks.map((fw) => fw.name);
-    const unique = new Set(names);
-    assert(names.length === unique.size, `Duplicate names found: ${names.filter((n, i) => names.indexOf(n) !== i)}`);
+  test('no duplicate framework ids or names', () => {
+    const errors = integrity.validateNoDuplicates();
+    assert(errors.length === 0, errors.join('; '));
   });
 
   test('all domains listed in index.domains are used by at least one framework', () => {
@@ -121,12 +98,9 @@ function runFrameworkTests() {
     });
   });
 
-  test('each .md framework file has a top-level heading', () => {
-    index.frameworks.forEach((fw) => {
-      const filePath = path.join(ROOT, fw.file);
-      const content = fs.readFileSync(filePath, 'utf-8');
-      assert(/^#\s/.test(content), `Framework "${fw.name}" missing top-level heading in ${fw.file}`);
-    });
+  test('every framework file has required sections and mentions its name', () => {
+    const errors = integrity.validateFrameworkSections();
+    assert(errors.length === 0, errors.join('; '));
   });
 }
 
@@ -159,8 +133,30 @@ function runCliTests() {
   cliTest('template command exits 0', ['template', 'test prompt']);
   cliTest('template --basic exits 0', ['template', 'test prompt', '--basic']);
   cliTest('template --expert exits 0', ['template', 'test prompt', '--expert']);
+  cliTest('template --framework race exits 0', ['template', 'test prompt', '--framework', 'race']);
+  cliTest('template --framework <unknown> exits non-zero', ['template', 'test prompt', '--framework', 'nope'], false);
+  cliTest('frameworks <id> exits 0', ['frameworks', 'race']);
+  cliTest('frameworks <unknown id> exits non-zero', ['frameworks', 'nope'], false);
   cliTest('no-args shows help (exit 0)', []);
   cliTest('test command exits 0', ['test']);
+
+  test('flags after free-text input still apply (regression: flag/input order)', () => {
+    const output = execFileSync('node', [cli, 'template', 'test prompt', '--basic'], { encoding: 'utf-8' });
+    assert(/📊 Version: basic/.test(output), 'Version should be "basic" regardless of flag position');
+    assert(!output.includes('test prompt --basic'), 'Input should not swallow the trailing flag as literal text');
+  });
+
+  test('--framework scaffold uses the framework\'s own elements', () => {
+    const output = execFileSync('node', [cli, 'template', 'test prompt', '--framework', 'race'], { encoding: 'utf-8' });
+    assert(output.includes('Role-Action-Context-Expectation'), 'Should include the framework full name');
+    assert(output.includes('## 1. Role'), 'Should render the framework\'s own elements as sections');
+  });
+
+  test('frameworks <id> prints the framework\'s full definition', () => {
+    const output = execFileSync('node', [cli, 'frameworks', 'race'], { encoding: 'utf-8' });
+    assert(output.includes('RACE'), 'Should print the framework definition markdown');
+    assert(output.includes('Role-Action-Context-Expectation'), 'Should print the framework full name');
+  });
 
   test('version output matches package.json', () => {
     const output = execFileSync('node', [cli, 'version'], { encoding: 'utf-8' }).trim();

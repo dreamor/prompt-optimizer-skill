@@ -6,7 +6,7 @@ description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE
 license: MIT
 ---
 
-# Prompt Optimizer v2.2
+# Prompt Optimizer
 
 Helps users select the most suitable prompt framework for a given task context and generates clearer, more actionable prompts.
 

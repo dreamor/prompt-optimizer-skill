@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.0] - 2026-08-13
+
+### Added
+
+- **CLI `template --framework <id>`**: Generate a static scaffold structured around a specific framework's own `elements` (from `frameworks/index.json`) instead of always falling back to the generic Basic/Enhanced/Expert templates. Errors out with a helpful message on unknown ids.
+- **CLI `frameworks <id>`**: Print a single framework's full markdown definition (e.g. `frameworks race`) instead of requiring `cat frameworks/<category>/<NAME>.md`.
+
+### Refactored
+
+- **bin/prompt-optimizer.js**: Now reuses `index.js`'s `loadFrameworkIndex()` / `getFramework()` (which already have error handling and path-traversal protection) instead of re-implementing its own `index.json` reader. Removed an unused `existsSync` import.
+
+### Fixed
+
+- **bin/prompt-optimizer.js**: Fixed an argument-parsing bug where flags placed *after* the free-text input (e.g. `template "write an email" --basic`, the order shown in every doc example) were silently swallowed into the input string instead of being applied — `--basic`/`--enhanced`/`--expert`/`--framework` now work regardless of position.
+
+### Changed
+
+- **README.md / README_zh.md / SKILL.md**: Dropped hardcoded minor version numbers from H1 titles (e.g. "Prompt Optimizer v2.1") — they went stale every release since only the version badge/frontmatter were kept in sync by `postversion.js`.
+- **tests/run-tests.js**: `runFrameworkTests()` now delegates file-system-level checks (category counts, orphan/missing files, duplicate ids/names) to the shared `tests/framework-integrity.test.js` module instead of re-implementing them, removing duplicated validation logic. Also added a check that every framework file has a `Structure` section and mentions its own name — previously only exercised by the unused `test:integrity` script, now run by default `npm test`.
+- **CONTRIBUTING.md**: Fixed stale "Node.js >= 14.0.0" prerequisite to match `package.json` engines (`>= 16.0.0`).
+- **CHANGELOG.md**: Renamed the stale "Planned for v2.2.0" roadmap heading to "Planned (next minor)" so it doesn't need a version bump every release.
+
+### Removed
+
+- **WELCOME.md**: Deleted — it was only ever displayed via `claude.json`'s `onInstall` hook, which was removed when the project went agent-agnostic. Nothing referenced it anymore.
+
+### Security
+
+- **devDependencies**: Ran `npm audit fix` to resolve a high-severity DoS advisory in the transitive `brace-expansion` dependency (via `standard-version`). Dev-only; not shipped in the published package.
+
 ## [2.3.0] - 2026-08-13
 
 ### Changed
@@ -296,6 +326,7 @@ prompt-optimizer-skill/
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 2.4.0 | 2026-08-13 | CLI `--framework <id>` scaffold + `frameworks <id>` detail view, arg-parsing order bug fix, doc/test cleanup, npm audit fix |
 | 2.3.0 | 2026-08-13 | Agent-agnostic skill — removed Claude Code plugin infra (claude.json, marketplace.json), generalized SKILL.md/README/CLI wording |
 | 2.2.0 | 2026-06-24 | Progressive disclosure refactor, Step 4 why rationale, Chinese triggers, CI duplicate-guard |
 | 2.1.10 | 2026-06-17 | Bump to unpublishable 2.1.9 (already on npm despite CI failure) |
@@ -315,7 +346,7 @@ prompt-optimizer-skill/
 
 ## Roadmap
 
-### Planned for v2.2.0
+### Planned (next minor)
 - [ ] Interactive web interface for framework selection
 - [ ] Prompt version history and comparison
 - [ ] Batch optimization for multiple prompts

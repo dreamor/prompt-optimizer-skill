@@ -1,6 +1,6 @@
 English | [简体中文](./README_zh.md)
 
-# Prompt Optimizer v2.1
+# Prompt Optimizer
 
 > A professional agent skill that transforms simple instructions into production-ready prompts. Works with any AI agent that supports the `SKILL.md` skill format (Claude Code and others).
 
@@ -77,6 +77,9 @@ npx prompt-optimizer-skill template "Write an email to a customer"
 # List all frameworks
 npx prompt-optimizer-skill frameworks
 
+# Print one framework's full definition
+npx prompt-optimizer-skill frameworks race
+
 # Query frameworks by domain or category
 npx prompt-optimizer-skill frameworks --filter marketing
 npx prompt-optimizer-skill frameworks --category medium
@@ -101,6 +104,9 @@ npx prompt-optimizer-skill optimize "Write code"   # alias for template
 npx prompt-optimizer-skill template "Write code" --basic      # Basic version
 npx prompt-optimizer-skill template "Write code" --enhanced   # Enhanced version (default)
 npx prompt-optimizer-skill template "Write code" --expert     # Expert version
+
+# Scaffold using a specific framework's own elements (see `frameworks --json` for ids)
+npx prompt-optimizer-skill template "Write code" --framework race
 ```
 
 ### Method 3: Manual Install / Symbolic Link (Development/Customization)

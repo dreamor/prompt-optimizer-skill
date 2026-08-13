@@ -6,7 +6,7 @@ Thank you for your interest in contributing! This guide covers everything you ne
 
 ### Prerequisites
 
-- Node.js >= 14.0.0
+- Node.js >= 16.0.0
 - Git
 
 ### Setup

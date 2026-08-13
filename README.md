@@ -4,7 +4,7 @@ English | [简体中文](./README_zh.md)
 
 > A professional agent skill that transforms simple instructions into production-ready prompts. Works with any AI agent that supports the `SKILL.md` skill format (Claude Code and others).
 
-[![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---

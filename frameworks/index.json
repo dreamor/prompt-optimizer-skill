@@ -4,7 +4,7 @@
     "_comment_top": "version — package version; total — sum of all frameworks; by_category — count per tier; domains — all domain tags used across frameworks",
     "_comment_framework": "id — kebab-case unique key; name — display name; full_name — expanded name; category — simple|medium|complex|patterns; file — path to definition markdown; element_count — number of framework elements; elements — framework-specific component names; domains — domain tags for matching; use_cases — human-readable scenario descriptions"
   },
-  "version": "2.3.0",
+  "version": "2.4.0",
   "total": 61,
   "by_category": {
     "simple": 16,

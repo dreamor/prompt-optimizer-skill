@@ -4,7 +4,7 @@
 
 > 专业的 Agent Skill，将简单的指令转化为生产级的高质量提示词。兼容任何支持 `SKILL.md` 技能格式的 AI Agent（包括 Claude Code 及其他）。
 
-[![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---

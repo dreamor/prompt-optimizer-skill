@@ -1,6 +1,6 @@
 ---
 name: prompt-optimizer
-version: 2.2.1
+version: 2.3.0
 compatibility: CLI / test commands require Node.js 16+
 description: Optimize and rewrite prompts using 61 frameworks (APE, RACE, CRISPE, Chain-of-Thought, COAST, SMART, etc.). Trigger on "optimize prompt", "improve this prompt", "make this prompt better", "rewrite for AI", "优化提示词", "改写 prompt", "优化指令", "让提示词更好", "帮我把这个写成 prompt" or any vague/short instruction the user wants turned into a high-quality prompt — even if the user only says "make this clearer" or "help me write this". Also trigger whenever the user pastes raw text and asks for a structured AI-ready version, or expresses dissatisfaction with AI output quality without naming a fix. Always use this skill when the user inputs vague instructions, needs prompt optimization, or is dissatisfied with AI output quality.
 license: MIT

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.1] - 2026-10-13
+
+### Documentation
+
+- **README.md / README_zh.md**: Refreshed for v2.4 — replaced the stale "New in v2.1" section with "What's New in v2.4" plus a v2.0–v2.3 release-history table; completed the project-structure tree (`.github/workflows`, contributing/security docs, test runner + integrity module); documented `npm test`, the per-suite scripts, and the CI matrix; dropped the obsolete `TaskCreate` claim (workflow tracking has been agent-agnostic since v2.3).
+- **SECURITY.md**: Supported versions updated to `2.4.x` / `2.3.x`.
+- **CONTRIBUTING.md**: Versioning examples bumped to `2.4.0`, and a **Publishing** section added documenting the tag → `release.yml` → npm OIDC Trusted Publishing flow.
+- **SKILL.md**: `scripts/postversion.js` description now notes it also syncs the README version badges.
+
 ## [2.4.0] - 2026-08-13
 
 ### Added

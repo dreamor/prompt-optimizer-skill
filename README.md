@@ -20,27 +20,23 @@ English | [简体中文](./README_zh.md)
 - **Boundary Handling**: Intelligently handles vague inputs and situations where users refuse to clarify.
 - **Multiple Installation Methods**: Supports npm, npx, and manual/local installation.
 
-### 🆕 New in v2.1
+### 🆕 What's New in v2.4
 
 | Feature | Description |
 | :--- | :--- |
-| **Structured Framework Index** | `frameworks/index.json` with id, category, elements, domains, use_cases for all 61 frameworks. |
-| **CLARITY Rubric** | Binary pass/fail checklist with explicit criteria per letter — reproducible scores across runs. |
-| **CLI `template` Command** | Renamed from `optimize` to make it explicit that CLI prints static scaffolds; `optimize`/`o` remain as aliases. |
-| **CLI Framework Queries** | `frameworks --json`, `--filter <domain>`, `--category <cat>` for structured lookups. |
-| **Workflow Tracking** | Step 1 now uses `TaskCreate` for the 7 steps instead of plain-text checklists. |
-| **Deduplicated Tests** | 29 unique test cases (was 34 with duplicates) with bash sanity script. |
+| **Framework-specific scaffolding** | `template "<text>" --framework <id>` prints a scaffold structured around that framework's own `elements` (from `frameworks/index.json`) instead of the generic Basic/Enhanced/Expert template. |
+| **Inspect a framework from the CLI** | `frameworks <id>` prints a single framework's full Markdown definition, e.g. `frameworks race`. |
+| **Position-independent CLI flags** | `--basic` / `--enhanced` / `--expert` / `--framework` are applied wherever they appear, so `template "write an email" --basic` behaves as documented. |
+| **Shared, hardened lookups** | The CLI reuses `index.js`'s `loadFrameworkIndex()` / `getFramework()` (path-traversal guarded) instead of re-reading `index.json` itself. |
 
-### 📦 v2.0 Features
+### 📜 Release History
 
-| Feature | Description |
+| Version | Highlights |
 | :--- | :--- |
-| **Framework Library** | 61 detailed framework definitions with structure, examples, and best practices. |
-| **Quality Validation** | CLARITY 7-point checklist to ensure output quality. |
-| **Multi-Version** | Different optimization levels based on user needs. |
-| **Boundary Handling** | Graceful handling of vague inputs and refusal to clarify. |
-| **Test Suite** | 29 test cases covering various usage scenarios. |
-| **npx Support** | Use directly via npx without installation. |
+| **v2.3** | Agent-agnostic packaging — dropped Claude Code plugin infrastructure; works with any `SKILL.md`-compatible agent. |
+| **v2.2** | Security hardening (`index.js` path-traversal guard, `execFileSync` in the release script) and a progressive-disclosure refactor of `SKILL.md` (CLARITY rubric, boundary & refusal tables moved into `references/Decision_Tables.md`). |
+| **v2.1** | Structured `frameworks/index.json`; CLI `template` command (renamed from `optimize`); `frameworks --json/--filter/--category`; 29 deduplicated test cases; agent-agnostic workflow tracking (uses your agent's task tool instead of a hard-coded one). |
+| **v2.0** | 61-framework library with CLARITY validation, multi-version output, boundary handling, and npx support. |
 
 ---
 
@@ -314,14 +310,25 @@ Detailed definitions can be found in the `frameworks/` directory.
 ### Run Tests
 
 ```bash
-# Run full test suite
+# Full suite: framework integrity + CLI smoke + JSON validation
+npm test
+
+# Individual suites
+npm run test:frameworks   # framework definitions & index integrity
+npm run test:cli          # CLI smoke tests
+npm run test:json         # JSON schema validation
+npm run test:integrity    # standalone integrity module
+
+# Or run the runner directly
 node tests/run-tests.js
 
-# Or manually check
+# Quick manual sanity check
 ls frameworks/simple/   # Should see 16 frameworks
 ls frameworks/medium/   # Should see 33 frameworks
 ls frameworks/complex/  # Should see 9 frameworks
 ```
+
+The same suites run in CI (`.github/workflows/test.yml`) against Node.js 16, 18, 20, 22, and 24.
 
 ### Test Cases
 
@@ -339,31 +346,40 @@ View `tests/test-cases.md` for complete test coverage:
 
 ```
 prompt-optimizer-skill/
-├── SKILL.md                 # Main skill file
-├── README.md                # This file
-├── README_zh.md             # Chinese README
-├── CHANGELOG.md             # Changelog
-├── LICENSE                  # MIT License
-├── VERSION                  # Current version
-├── index.js                 # Module entry point
-├── package.json             # npm package manifest
-├── bin/                     # CLI tools
-│   └── prompt-optimizer.js  # CLI (template scaffolds + framework lookup)
-├── frameworks/              # Framework library (61 total)
-│   ├── index.json           # Structured metadata (id, category, elements, domains)
-│   ├── simple/              # Simple frameworks (16)
-│   ├── medium/              # Medium frameworks (33)
-│   ├── complex/             # Complex frameworks (9)
-│   └── patterns/            # Reusable patterns (3)
-├── tests/                   # Test cases
-│   └── test-cases.md
-├── references/              # Reference materials
+├── SKILL.md                     # Main skill definition (agent workflow)
+├── README.md                    # This file (English)
+├── README_zh.md                 # Chinese README
+├── CHANGELOG.md                 # Release history
+├── CONTRIBUTING.md              # Contribution guide
+├── CODE_OF_CONDUCT.md           # Community guidelines
+├── SECURITY.md                  # Security policy
+├── LICENSE                      # MIT License
+├── VERSION                      # Current version (2.4.0)
+├── index.js                     # Library entry point (framework index + lookup)
+├── package.json                 # npm package manifest
+├── bin/
+│   └── prompt-optimizer.js      # CLI (template scaffolds + framework lookup)
+├── frameworks/                  # Framework library (61 total)
+│   ├── index.json               # Structured metadata (id, category, elements, domains, use_cases)
+│   ├── simple/                  # Simple frameworks (16, ≤3 elements)
+│   ├── medium/                  # Medium frameworks (33, 4-5 elements)
+│   ├── complex/                 # Complex frameworks (9, 6+ elements)
+│   └── patterns/                # Reusable patterns (3)
+├── references/                  # Reference materials
 │   ├── Frameworks_Summary.md
 │   ├── Quick_Reference.md
-│   └── Decision_Tables.md
-└── scripts/                 # Build & release scripts
-    ├── postversion.js
-    └── extract-changelog.js
+│   └── Decision_Tables.md       # Domain map, CLARITY rubric, boundary & refusal tables
+├── scripts/                     # Build & release scripts
+│   ├── postversion.js           # Sync version across metadata files
+│   └── extract-changelog.js     # Extract a release's CHANGELOG entry for GitHub Releases
+├── tests/
+│   ├── test-cases.md            # 29 documented test cases
+│   ├── run-tests.js             # Test runner (framework / CLI / JSON modes)
+│   └── framework-integrity.test.js
+└── .github/
+    └── workflows/
+        ├── test.yml             # CI: test matrix (Node 16-24) + lint
+        └── release.yml          # CD: on `v*` tag → test, publish to npm (OIDC), GitHub Release
 ```
 
 ---

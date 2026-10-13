@@ -20,27 +20,23 @@
 - **边界处理**：智能处理模糊输入和用户拒绝澄清的情况。
 - **多种安装方式**：支持 npm、npx 和本地安装。
 
-### 🆕 v2.1 新特性
+### 🆕 v2.4 新特性
 
 | 特性 | 描述 |
 | :--- | :--- |
-| **结构化框架索引** | `frameworks/index.json` 为全部 61 个框架提供 id、类别、元素、领域、用例的结构化元数据。 |
-| **CLARITY 评分标准** | 每个字母有明确标准的二值通过/失败检查清单，跨运行可复现评分。 |
-| **CLI `template` 命令** | 从 `optimize` 重命名，明确 CLI 输出静态脚手架；`optimize`/`o` 仍为别名。 |
-| **CLI 框架查询** | 支持 `--json`、`--filter <领域>`、`--category <类别>` 结构化查询框架。 |
-| **工作流追踪** | 步骤 1 现在使用 `TaskCreate` 追踪 7 个步骤，替代纯文本清单。 |
-| **去重测试** | 29 个唯一测试用例（原 34 个含重复），附带 bash 完整性检查脚本。 |
+| **指定框架生成脚手架** | `template "<文本>" --framework <id>` 按该框架自己的 `elements`（来自 `frameworks/index.json`）生成脚手架，而非通用的基础/增强/专家模板。 |
+| **在 CLI 中查看单个框架** | `frameworks <id>` 直接打印某个框架的完整 Markdown 定义，如 `frameworks race`。 |
+| **标志位位置无关** | `--basic` / `--enhanced` / `--expert` / `--framework` 无论出现在哪里都会生效，因此 `template "write an email" --basic` 与文档一致可用。 |
+| **共享且加固的查找逻辑** | CLI 复用 `index.js` 的 `loadFrameworkIndex()` / `getFramework()`（带路径穿越防护），不再自行重读 `index.json`。 |
 
-### 📦 v2.0 特性
+### 📜 版本历史
 
-| 特性 | 描述 |
+| 版本 | 亮点 |
 | :--- | :--- |
-| **框架库** | 61 个详细的框架定义，包含结构、示例和最佳实践。 |
-| **质量验证** | CLARITY 7 点检查清单，确保输出质量。 |
-| **多版本输出** | 根据用户需求提供不同详细程度的优化结果。 |
-| **边界处理** | 优雅处理模糊输入和拒绝澄清的用户行为。 |
-| **测试套件** | 29 个测试用例，覆盖各种使用场景。 |
-| **npx 支持** | 无需安装，直接通过 npx 使用。 |
+| **v2.3** | 与 Agent 无关的打包方式——移除 Claude Code 插件基础设施；兼容任何支持 `SKILL.md` 的 Agent。 |
+| **v2.2** | 安全加固（`index.js` 路径穿越防护、发布脚本改用 `execFileSync`）并完成 `SKILL.md` 渐进式披露重构（CLARITY 评分标准、边界与拒绝处理表格移入 `references/Decision_Tables.md`）。 |
+| **v2.1** | 结构化 `frameworks/index.json`；CLI `template` 命令（由 `optimize` 重命名）；`frameworks --json/--filter/--category`；29 个去重后的测试用例；工作流追踪不再硬编码具体工具，改用你的 Agent 自带的 task 工具。 |
+| **v2.0** | 61 个框架库，含 CLARITY 质量验证、多版本输出、边界处理与 npx 支持。 |
 
 ---
 
@@ -314,14 +310,25 @@ Write an informative blog post about practical AI tools for developers.
 ### 运行测试
 
 ```bash
-# 运行完整测试套件
+# 完整套件：框架完整性 + CLI 冒烟 + JSON 校验
+npm test
+
+# 单项测试
+npm run test:frameworks   # 框架定义与索引完整性
+npm run test:cli          # CLI 冒烟测试
+npm run test:json         # JSON 校验
+npm run test:integrity    # 独立完整性模块
+
+# 或直接运行测试入口
 node tests/run-tests.js
 
-# 或手动检查
+# 手动快速检查
 ls frameworks/simple/   # 应看到 16 个框架
 ls frameworks/medium/   # 应看到 33 个框架
 ls frameworks/complex/  # 应看到 9 个框架
 ```
+
+同样的套件会在 CI（`.github/workflows/test.yml`）中针对 Node.js 16、18、20、22、24 运行。
 
 ### 测试用例
 
@@ -339,31 +346,40 @@ ls frameworks/complex/  # 应看到 9 个框架
 
 ```
 prompt-optimizer-skill/
-├── SKILL.md                 # 主技能文件
-├── README.md                # 英文 README
-├── README_zh.md             # 本文件（中文 README）
-├── CHANGELOG.md             # 更新日志
-├── LICENSE                  # MIT 许可证
-├── VERSION                  # 当前版本
-├── index.js                 # 模块入口
-├── package.json             # npm 包清单
-├── bin/                     # CLI 工具
-│   └── prompt-optimizer.js  # CLI（模板脚手架 + 框架查找）
-├── frameworks/              # 框架库（共 61 个）
-│   ├── index.json           # 结构化元数据（ID、类别、元素、领域）
-│   ├── simple/              # 简单框架（16 个）
-│   ├── medium/              # 中等框架（33 个）
-│   ├── complex/             # 复杂框架（9 个）
-│   └── patterns/            # 可复用模式（3 个）
-├── tests/                   # 测试用例
-│   └── test-cases.md
-├── references/              # 参考资料
+├── SKILL.md                     # 主技能定义（Agent 工作流）
+├── README.md                    # 英文 README
+├── README_zh.md                 # 本文件（中文 README）
+├── CHANGELOG.md                 # 更新日志
+├── CONTRIBUTING.md              # 贡献指南
+├── CODE_OF_CONDUCT.md           # 社区准则
+├── SECURITY.md                  # 安全策略
+├── LICENSE                      # MIT 许可证
+├── VERSION                      # 当前版本（2.4.0）
+├── index.js                     # 模块入口（框架索引 + 查找）
+├── package.json                 # npm 包清单
+├── bin/
+│   └── prompt-optimizer.js      # CLI（模板脚手架 + 框架查找）
+├── frameworks/                  # 框架库（共 61 个）
+│   ├── index.json               # 结构化元数据（ID、类别、元素、领域、用例）
+│   ├── simple/                  # 简单框架（16 个，≤3 元素）
+│   ├── medium/                  # 中等框架（33 个，4-5 元素）
+│   ├── complex/                 # 复杂框架（9 个，6+ 元素）
+│   └── patterns/                # 可复用模式（3 个）
+├── references/                  # 参考资料
 │   ├── Frameworks_Summary.md
 │   ├── Quick_Reference.md
-│   └── Decision_Tables.md
-└── scripts/                 # 构建与发布脚本
-    ├── postversion.js
-    └── extract-changelog.js
+│   └── Decision_Tables.md       # 领域映射、CLARITY 评分标准、边界/拒绝处理表格
+├── scripts/                     # 构建与发布脚本
+│   ├── postversion.js           # 同步各元数据文件中的版本号
+│   └── extract-changelog.js     # 提取指定版本的更新日志用于 GitHub Release
+├── tests/
+│   ├── test-cases.md            # 29 个测试用例
+│   ├── run-tests.js             # 测试入口（框架 / CLI / JSON 模式）
+│   └── framework-integrity.test.js
+└── .github/
+    └── workflows/
+        ├── test.yml             # CI：测试矩阵（Node 16-24）+ lint
+        └── release.yml          # CD：推送 `v*` tag → 测试、发布到 npm（OIDC）、创建 GitHub Release
 ```
 
 ---

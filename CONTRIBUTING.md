@@ -109,10 +109,20 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/):
 We follow [SemVer](https://semver.org/). Use the release scripts:
 
 ```bash
-npm run release          # Patch: 2.1.0 → 2.1.1
-npm run release:minor    # Minor: 2.1.0 → 2.2.0
-npm run release:major    # Major: 2.1.0 → 3.0.0
+npm run release          # Patch: 2.4.0 → 2.4.1
+npm run release:minor    # Minor: 2.4.0 → 2.5.0
+npm run release:major    # Major: 2.4.0 → 3.0.0
 ```
+
+### Publishing
+
+Releases are automated. Pushing a `v*` tag triggers `.github/workflows/release.yml`, which:
+
+1. Runs the full test suite.
+2. Publishes to npm through **Trusted Publishing (OIDC)** — no `NPM_TOKEN` secret is needed, and the tarball is signed with provenance (`npm publish --provenance`).
+3. Creates a GitHub Release with the matching `CHANGELOG.md` entry.
+
+Both the publish and release steps are idempotent — they skip if that version already exists on npm or GitHub.
 
 ## License
 

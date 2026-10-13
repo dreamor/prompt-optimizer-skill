@@ -364,7 +364,7 @@ Build and release scripts used during `npm version`:
 
 | Script | Trigger | Purpose |
 |--------|---------|---------|
-| `scripts/postversion.js` | `npm version` → `postversion` hook | Sync version string across `VERSION`, `frameworks/index.json`, and SKILL.md frontmatter |
+| `scripts/postversion.js` | `npm version` → `postversion` hook | Sync version string across `VERSION`, `frameworks/index.json`, `SKILL.md` frontmatter, and the README version badges |
 | `scripts/extract-changelog.js` | CI release workflow | Extract the CHANGELOG.md entry for a given version for the GitHub Release body |
 
 These scripts are not invoked during skill runtime — they are tooling for the maintainer.
